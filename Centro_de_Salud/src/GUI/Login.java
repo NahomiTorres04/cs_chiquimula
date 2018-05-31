@@ -4,18 +4,21 @@
  * and open the template in the editor.
  */
 package GUI;
+import clases.usuario;
 
 /**
  *
  * @author Nahomi
  */
 public class Login extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form Login
      */
+    private final usuario us;
     public Login() {
         initComponents();
+        us = new usuario();
     }
 
     /**
