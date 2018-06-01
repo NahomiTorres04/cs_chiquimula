@@ -4,8 +4,9 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-      <Color blue="d3" green="d4" red="22" type="rgb"/>
+      <Color blue="0" green="0" red="0" type="rgb"/>
     </Property>
+    <Property name="undecorated" type="boolean" value="true"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -21,53 +22,608 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,3,1,0,0,5,90"/>
   </AuxValues>
 
-  <Layout>
-    <DimensionLayout dim="0">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
-      </Group>
-    </DimensionLayout>
-    <DimensionLayout dim="1">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
-      </Group>
-    </DimensionLayout>
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+    <Property name="useNullLayout" type="boolean" value="false"/>
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="66" green="34" red="0" type="rgb"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="243" y="0" width="510" height="750"/>
+        </Constraint>
+      </Constraints>
 
-      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="false"/>
+      </Layout>
       <SubComponents>
-        <Container class="rojerusan.RSPanelsSlider" name="rSPanelsSlider1">
+        <Component class="rojeru_san.RSLabelHora" name="rSLabelHora1">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Roboto Bold" size="48" style="1"/>
+            </Property>
+          </Properties>
           <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-              <CardConstraints cardName="card2"/>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="200" y="640" width="300" height="100"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="rojeru_san.RSLabelFecha" name="rSLabelFecha1">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Roboto Bold" size="24" style="1"/>
+            </Property>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="310" y="620" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanel2">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="0" type="rgb"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="12" y="49" width="1290" height="650"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="false"/>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="jPanel3">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="cc" type="rgb"/>
+            </Property>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="770" y="0" width="520" height="650"/>
             </Constraint>
           </Constraints>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="jPanel2">
+            <Container class="rojerusan.RSPanelsSlider" name="RSPPrincipal">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
                   <CardConstraints cardName="card2"/>
                 </Constraint>
               </Constraints>
 
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="1308" max="32767" attributes="0"/>
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="jpingresar">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="jpingresar" noResource="true"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                      <CardConstraints cardName="card2"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                    <Property name="useNullLayout" type="boolean" value="false"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JButton" name="btncerrar">
+                      <Properties>
+                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/imagenes/iconos/general/icons8_Cancel_35px.png"/>
+                        </Property>
+                        <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/imagenes/iconos/general/icons8_Cancel_55px.png"/>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btncerrarMouseClicked"/>
+                      </Events>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="446" y="13" width="-1" height="57"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="btnminimizar">
+                      <Properties>
+                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/imagenes/iconos/general/icons8_Compress_35px.png"/>
+                        </Property>
+                        <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/imagenes/iconos/general/icons8_Compress_55px.png"/>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnminimizarMouseClicked"/>
+                      </Events>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="372" y="13" width="-1" height="57"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="jpRegistrar">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="jpRegistrar" noResource="true"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                      <CardConstraints cardName="card3"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace pref="372" max="32767" attributes="0"/>
+                              <Component id="btnminimizar1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="btncerrar1" min="-2" pref="67" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="btnminimizar1" alignment="0" pref="57" max="32767" attributes="0"/>
+                                  <Component id="btncerrar1" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="580" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JButton" name="btnminimizar1">
+                      <Properties>
+                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/imagenes/iconos/general/icons8_Compress_35px.png"/>
+                        </Property>
+                        <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/imagenes/iconos/general/icons8_Compress_55px.png"/>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnminimizar1MouseClicked"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="btncerrar1">
+                      <Properties>
+                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/imagenes/iconos/general/icons8_Cancel_35px.png"/>
+                        </Property>
+                        <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/imagenes/iconos/general/icons8_Cancel_55px.png"/>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btncerrar1MouseClicked"/>
+                      </Events>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel4">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="330" width="200" height="320"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="RSPRegistrar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="770" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="RSPRegistrar" alignment="0" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="rojerusan.RSPanelsSlider" name="RSPRegistrar">
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="p2registrar">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="66" green="34" red="0" type="rgb"/>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="p2registrar" noResource="true"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                      <CardConstraints cardName="card3"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                    <Property name="useNullLayout" type="boolean" value="false"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JButton" name="btnregistrar1">
+                      <Properties>
+                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/imagenes/iconos/general/icons8_Sort_Up_52px_1.png"/>
+                        </Property>
+                        <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/imagenes/iconos/general/icons8_Sort_Up_62px_2.png"/>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnregistrar1MouseClicked"/>
+                      </Events>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="27" y="100" width="90" height="50"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="btningresar1">
+                      <Properties>
+                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/imagenes/iconos/general/icons8_Sort_Down_52px_1.png"/>
+                        </Property>
+                        <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/imagenes/iconos/general/icons8_Sort_Down_62px_1.png"/>
+                        </Property>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="119" y="135" width="80" height="50"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="rojerusan.RSMaterialButtonCircle" name="cbtning1">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="66" green="34" red="0" type="rgb"/>
+                        </Property>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="110" y="90" width="-1" height="-1"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel3">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tempus Sans ITC" size="24" style="1"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" value="REG&#xcd;STRATE"/>
+                        <Property name="opaque" type="boolean" value="true"/>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="0" y="140" width="200" height="180"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="rojerusan.RSMaterialButtonCircle" name="cbtnreg1">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/imagenes/iconos/general/drunknown.png"/>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="cbtnreg1MouseClicked"/>
+                      </Events>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="22" y="90" width="-1" height="-1"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel6">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="66" green="34" red="0" type="rgb"/>
+                        </Property>
+                        <Property name="opaque" type="boolean" value="true"/>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="0" y="0" width="200" height="140"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="p1registrar">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="p1registrar" noResource="true"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                      <CardConstraints cardName="card2"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                    <Property name="useNullLayout" type="boolean" value="false"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="jLabel8">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tempus Sans ITC" size="30" style="1"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" value="REG&#xcd;STRATE"/>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="0" y="40" width="200" height="100"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel6">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="200" height="330"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="RSPIngresar" alignment="0" pref="200" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="RSPIngresar" min="-2" pref="330" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
-                </DimensionLayout>
-              </Layout>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="rojerusan.RSPanelsSlider" name="RSPIngresar">
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="p2ingresar">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="66" green="34" red="0" type="rgb"/>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="p2ingresar" noResource="true"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                      <CardConstraints cardName="card3"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="jLabel9" min="-2" pref="200" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace pref="170" max="32767" attributes="0"/>
+                              <Component id="jLabel9" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="jLabel9">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tempus Sans ITC" size="36" style="1"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" value="INGRESAR"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="p1ingresar">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="p1ingresar" noResource="true"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                      <CardConstraints cardName="card2"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                    <Property name="useNullLayout" type="boolean" value="false"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JButton" name="btnregistrar">
+                      <Properties>
+                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/imagenes/iconos/general/icons8_Sort_Up_52px_1.png"/>
+                        </Property>
+                        <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/imagenes/iconos/general/icons8_Sort_Up_62px_2.png"/>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnregistrarMouseClicked"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnregistrarActionPerformed"/>
+                      </Events>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="27" y="140" width="90" height="50"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel5">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="opaque" type="boolean" value="true"/>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="5" y="190" width="110" height="100"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="rojerusan.RSMaterialButtonCircle" name="cbtnreg">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/imagenes/iconos/general/drunknown.png"/>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="cbtnregMouseClicked"/>
+                      </Events>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="22" y="140" width="-1" height="-1"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel4">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="66" green="34" red="0" type="rgb"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tempus Sans ITC" size="30" style="1"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" value="INGRESAR"/>
+                        <Property name="opaque" type="boolean" value="true"/>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="0" y="0" width="200" height="190"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="btningresar2">
+                      <Properties>
+                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/imagenes/iconos/general/icons8_Sort_Down_52px_1.png"/>
+                        </Property>
+                        <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/imagenes/iconos/general/icons8_Sort_Down_62px_1.png"/>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btningresar2MouseClicked"/>
+                      </Events>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="119" y="190" width="80" height="50"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="rojerusan.RSMaterialButtonCircle" name="cbtning2">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="66" green="34" red="0" type="rgb"/>
+                        </Property>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="110" y="140" width="-1" height="-1"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel7">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="jLabel7"/>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="20" y="30" width="-1" height="-1"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
             </Container>
           </SubComponents>
         </Container>
