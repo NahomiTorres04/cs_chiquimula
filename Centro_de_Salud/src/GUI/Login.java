@@ -76,6 +76,11 @@ public class Login extends javax.swing.JFrame {
         jpRegistrar = new javax.swing.JPanel();
         btnminimizar1 = new javax.swing.JButton();
         btncerrar1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jButton1 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         RSPRegistrar = new rojerusan.RSPanelsSlider();
         p2registrar = new javax.swing.JPanel();
@@ -167,16 +172,40 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Serif", 1, 36)); // NOI18N
+        jLabel1.setText("Nombre");
+
+        jTextField1.setFont(new java.awt.Font("Serif", 0, 28)); // NOI18N
+
+        jLabel2.setFont(new java.awt.Font("Serif", 1, 36)); // NOI18N
+        jLabel2.setText("Contraseña");
+
+        jPasswordField1.setFont(new java.awt.Font("Serif", 0, 28)); // NOI18N
+
+        jButton1.setFont(new java.awt.Font("Serif", 1, 36)); // NOI18N
+        jButton1.setText("Ingresar");
+
         javax.swing.GroupLayout jpRegistrarLayout = new javax.swing.GroupLayout(jpRegistrar);
         jpRegistrar.setLayout(jpRegistrarLayout);
         jpRegistrarLayout.setHorizontalGroup(
             jpRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpRegistrarLayout.createSequentialGroup()
-                .addContainerGap(372, Short.MAX_VALUE)
+                .addContainerGap(371, Short.MAX_VALUE)
                 .addComponent(btnminimizar1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btncerrar1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(7, 7, 7))
+            .addGroup(jpRegistrarLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(jpRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1)
+                    .addComponent(jTextField1)
+                    .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 372, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpRegistrarLayout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(37, 37, 37)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpRegistrarLayout.setVerticalGroup(
             jpRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -185,7 +214,17 @@ public class Login extends javax.swing.JFrame {
                 .addGroup(jpRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnminimizar1, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
                     .addComponent(btncerrar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(580, Short.MAX_VALUE))
+                .addGap(93, 93, 93)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(56, 56, 56)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         RSPPrincipal.add(jpRegistrar, "card3");
@@ -240,7 +279,7 @@ public class Login extends javax.swing.JFrame {
         p1registrar.setName("p1registrar"); // NOI18N
         p1registrar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setFont(new java.awt.Font("Tempus Sans ITC", 1, 30)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Tempus Sans ITC", 1, 28)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("REGÍSTRATE");
         p1registrar.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 200, 100));
@@ -265,7 +304,7 @@ public class Login extends javax.swing.JFrame {
         p2ingresar.setBackground(new java.awt.Color(0, 52, 102));
         p2ingresar.setName("p2ingresar"); // NOI18N
 
-        jLabel9.setFont(new java.awt.Font("Tempus Sans ITC", 1, 36)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Tempus Sans ITC", 1, 34)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("INGRESAR");
@@ -281,9 +320,9 @@ public class Login extends javax.swing.JFrame {
         p2ingresarLayout.setVerticalGroup(
             p2ingresarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, p2ingresarLayout.createSequentialGroup()
-                .addContainerGap(170, Short.MAX_VALUE)
+                .addContainerGap(167, Short.MAX_VALUE)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60))
+                .addGap(63, 63, 63))
         );
 
         RSPIngresar.add(p2ingresar, "card3");
@@ -366,7 +405,7 @@ public class Login extends javax.swing.JFrame {
 
     private void btncerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncerrarMouseClicked
         this.dispose();
-        //System.exit(WIDTH);
+        System.exit(0);
     }//GEN-LAST:event_btncerrarMouseClicked
 
     private void btnminimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnminimizarMouseClicked
@@ -378,7 +417,8 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_btnminimizar1MouseClicked
 
     private void btncerrar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncerrar1MouseClicked
-        // TODO add your handling code here:
+        this.dispose();
+        System.exit(0);
     }//GEN-LAST:event_btncerrar1MouseClicked
 
     private void cbtnregMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbtnregMouseClicked
@@ -463,6 +503,9 @@ public class Login extends javax.swing.JFrame {
     private rojerusan.RSMaterialButtonCircle cbtning2;
     private rojerusan.RSMaterialButtonCircle cbtnreg;
     private rojerusan.RSMaterialButtonCircle cbtnreg1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -475,6 +518,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JPanel jpRegistrar;
     private javax.swing.JPanel jpingresar;
     private javax.swing.JPanel p1ingresar;
