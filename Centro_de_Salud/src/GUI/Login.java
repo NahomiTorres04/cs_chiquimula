@@ -73,6 +73,7 @@ public class Login extends javax.swing.JFrame {
         jpingresar = new javax.swing.JPanel();
         btncerrar = new javax.swing.JButton();
         btnminimizar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jpRegistrar = new javax.swing.JPanel();
         btnminimizar1 = new javax.swing.JButton();
         btncerrar1 = new javax.swing.JButton();
@@ -135,7 +136,7 @@ public class Login extends javax.swing.JFrame {
                 btncerrarMouseClicked(evt);
             }
         });
-        jpingresar.add(btncerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(446, 13, -1, 57));
+        jpingresar.add(btncerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, -1, 57));
 
         btnminimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Compress_35px.png"))); // NOI18N
         btnminimizar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Compress_55px.png"))); // NOI18N
@@ -144,7 +145,10 @@ public class Login extends javax.swing.JFrame {
                 btnminimizarMouseClicked(evt);
             }
         });
-        jpingresar.add(btnminimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(372, 13, -1, 57));
+        jpingresar.add(btnminimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 0, -1, 57));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/login.png"))); // NOI18N
+        jpingresar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 470, 640));
 
         RSPPrincipal.add(jpingresar, "card2");
 
@@ -463,6 +467,7 @@ public class Login extends javax.swing.JFrame {
     private rojerusan.RSMaterialButtonCircle cbtning2;
     private rojerusan.RSMaterialButtonCircle cbtnreg;
     private rojerusan.RSMaterialButtonCircle cbtnreg1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
