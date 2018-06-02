@@ -75,14 +75,14 @@ public class splash1 extends javax.swing.JFrame {
                 ProgresoStateChanged(evt);
             }
         });
-        getContentPane().add(Progreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 500, 360, -1));
+        getContentPane().add(Progreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 390, 370, -1));
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 370, 140, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/splashb.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1040, 620));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/splashm.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-2, -2, -1, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
