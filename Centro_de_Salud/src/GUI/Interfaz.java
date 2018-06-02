@@ -58,8 +58,8 @@ public class Interfaz extends javax.swing.JFrame {
         VerInventario = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        rSTableMetro1 = new rojerusan.RSTableMetro();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -218,45 +218,41 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel1.setText("Ingresar Código:");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        rSTableMetro1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Descripción", "Cantidad", "Precio unitario", "Precio total"
+                "Title 1", "Title 2", "Title 3", "Title 4"
             }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(jTable1);
+        ));
+        jScrollPane2.setViewportView(rSTableMetro1);
 
         javax.swing.GroupLayout VerInventarioLayout = new javax.swing.GroupLayout(VerInventario);
         VerInventario.setLayout(VerInventarioLayout);
         VerInventarioLayout.setHorizontalGroup(
             VerInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 835, Short.MAX_VALUE)
+            .addGroup(VerInventarioLayout.createSequentialGroup()
+                .addGap(245, 245, 245)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(281, Short.MAX_VALUE))
             .addGroup(VerInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(VerInventarioLayout.createSequentialGroup()
                     .addGap(0, 164, Short.MAX_VALUE)
-                    .addGroup(VerInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(VerInventarioLayout.createSequentialGroup()
-                            .addComponent(jLabel1)
-                            .addGap(34, 34, 34)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(VerInventarioLayout.createSequentialGroup()
-                            .addGap(55, 55, 55)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 164, Short.MAX_VALUE)))
+                    .addComponent(jLabel1)
+                    .addGap(34, 34, 34)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 338, Short.MAX_VALUE)))
         );
         VerInventarioLayout.setVerticalGroup(
             VerInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 550, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, VerInventarioLayout.createSequentialGroup()
+                .addContainerGap(183, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61))
             .addGroup(VerInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(VerInventarioLayout.createSequentialGroup()
                     .addGap(0, 137, Short.MAX_VALUE)
@@ -265,9 +261,7 @@ public class Interfaz extends javax.swing.JFrame {
                             .addGap(2, 2, 2)
                             .addComponent(jLabel1))
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(15, 15, 15)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 138, Short.MAX_VALUE)))
+                    .addGap(0, 391, Short.MAX_VALUE)))
         );
 
         rSPanelsSlider1.add(VerInventario, "card4");
@@ -363,11 +357,11 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JPanel menu;
     private rojerusan.RSPanelsSlider rSPanelsSlider1;
+    private rojerusan.RSTableMetro rSTableMetro1;
     private javax.swing.JTextField txtCant;
     private javax.swing.JTextField txtCodigo;
     private javax.swing.JTextArea txtDes;
