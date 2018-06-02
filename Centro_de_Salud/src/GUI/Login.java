@@ -7,6 +7,8 @@ package GUI;
 import clases.usuario;
 import com.sun.awt.AWTUtilities;
 import java.awt.Color;
+import java.awt.MouseInfo;
+import java.awt.Point;
 import java.awt.Shape;
 import java.awt.geom.RoundRectangle2D;
 import javax.swing.ImageIcon;
@@ -17,7 +19,7 @@ import rojerusan.RSPanelsSlider;
  * @author Nahomi
  */
 public class Login extends javax.swing.JFrame {
-    
+    int x, y;
     /**
      * Creates new form Login
      */
@@ -46,6 +48,7 @@ public class Login extends javax.swing.JFrame {
         btncerrar1.setBorderPainted(false);
         btncerrar1.setContentAreaFilled(false);
         jPanel2.setBackground(new Color(0,0,0,0));
+        cmbusuario.setBackground(new Color(0,0,0,0));
         btningresar2.setOpaque(false);
         btningresar2.setBorderPainted(false);
         btningresar2.setContentAreaFilled(false);
@@ -82,10 +85,10 @@ public class Login extends javax.swing.JFrame {
         btncerrar = new javax.swing.JButton();
         btnminimizar = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
         jPasswordField4 = new javax.swing.JPasswordField();
         jLabel21 = new javax.swing.JLabel();
+        cmbusuario = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
         jpRegistrar = new javax.swing.JPanel();
         btnminimizar1 = new javax.swing.JButton();
@@ -133,6 +136,16 @@ public class Login extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 52, 102));
+        jPanel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jPanel1MouseDragged(evt);
+            }
+        });
+        jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel1MouseClicked(evt);
+            }
+        });
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         rSLabelHora1.setForeground(new java.awt.Color(255, 255, 255));
@@ -191,10 +204,6 @@ public class Login extends javax.swing.JFrame {
         jLabel16.setText("Usuario");
         jpingresar.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, -1, -1));
 
-        jTextField4.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-        jpingresar.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 320, 30));
-
         jLabel17.setFont(new java.awt.Font("Yu Gothic Light", 1, 18)); // NOI18N
         jLabel17.setText("Contraseña");
         jpingresar.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, -1, -1));
@@ -206,6 +215,12 @@ public class Login extends javax.swing.JFrame {
 
         jLabel21.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jpingresar.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 560, 250, 50));
+
+        cmbusuario.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
+        cmbusuario.setForeground(new java.awt.Color(0, 52, 102));
+        cmbusuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbusuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        jpingresar.add(cmbusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 320, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/login2.png"))); // NOI18N
         jpingresar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -5, 450, 680));
@@ -289,6 +304,16 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(781, 20, 450, 680));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jPanel2MouseDragged(evt);
+            }
+        });
+        jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel2MouseClicked(evt);
+            }
+        });
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         p2registrar.setBackground(new java.awt.Color(0, 52, 102));
@@ -497,40 +522,60 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnregistrarActionPerformed
 
+    private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
+        x = evt.getX();
+        y = evt.getY();
+    }//GEN-LAST:event_jPanel1MouseClicked
+
+    private void jPanel1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseDragged
+        Point p = MouseInfo.getPointerInfo().getLocation();
+        this.setLocation(p.x-x,p.y-y);
+    }//GEN-LAST:event_jPanel1MouseDragged
+
+    private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
+        x = evt.getX();
+        y = evt.getY();
+    }//GEN-LAST:event_jPanel2MouseClicked
+
+    private void jPanel2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseDragged
+        Point p = MouseInfo.getPointerInfo().getLocation();
+        this.setLocation(p.x-x,p.y-y);
+    }//GEN-LAST:event_jPanel2MouseDragged
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Login().setVisible(true);
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new Login().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private rojerusan.RSPanelsSlider RSPIngresar;
@@ -548,6 +593,7 @@ public class Login extends javax.swing.JFrame {
     private rojerusan.RSMaterialButtonCircle cbtning2;
     private rojerusan.RSMaterialButtonCircle cbtnreg;
     private rojerusan.RSMaterialButtonCircle cbtnreg1;
+    private javax.swing.JComboBox<String> cmbusuario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -580,7 +626,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JPanel jpRegistrar;
     private javax.swing.JPanel jpingresar;
     private javax.swing.JPanel p1ingresar;
