@@ -42,7 +42,7 @@ public class menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(90, 169, 187, 101);
+        jButton1.setBounds(90, 169, 155, 101);
 
         jButton2.setText("Visualizar inventario");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
