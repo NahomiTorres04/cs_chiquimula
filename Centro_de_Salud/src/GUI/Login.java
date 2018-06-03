@@ -11,7 +11,15 @@ import java.awt.MouseInfo;
 import java.awt.Point;
 import java.awt.Shape;
 import java.awt.geom.RoundRectangle2D;
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+import static jdk.nashorn.tools.ShellFunctions.input;
+import org.apache.commons.codec.digest.DigestUtils;
 import rojerusan.RSPanelsSlider;
 
 /**
@@ -32,6 +40,7 @@ public class Login extends javax.swing.JFrame {
         //AWTUtilities.setComponentMixingCutoutShape(this.jPanel1, forma);
         AWTUtilities.setWindowOpaque(this, false);
         us = new usuario();
+        cmbusuario.setModel(us.mostrarU());
     }
     private void transparencia()
     {
@@ -86,24 +95,24 @@ public class Login extends javax.swing.JFrame {
         btnminimizar = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jPasswordField4 = new javax.swing.JPasswordField();
-        jLabel21 = new javax.swing.JLabel();
+        pswcon = new javax.swing.JPasswordField();
+        lbIngresar = new javax.swing.JLabel();
         cmbusuario = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
         jpRegistrar = new javax.swing.JPanel();
         btnminimizar1 = new javax.swing.JButton();
         btncerrar1 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtUsuarioN = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jPasswordField2 = new javax.swing.JPasswordField();
+        pswVContrasenia = new javax.swing.JPasswordField();
         jLabel13 = new javax.swing.JLabel();
-        jPasswordField3 = new javax.swing.JPasswordField();
+        pswContrasenia = new javax.swing.JPasswordField();
         jLabel14 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        txtApellidoN = new javax.swing.JTextField();
+        txtNombreN = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
+        lbRegistrar = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
@@ -208,17 +217,36 @@ public class Login extends javax.swing.JFrame {
         jLabel17.setText("Contraseña");
         jpingresar.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, -1, -1));
 
-        jPasswordField4.setFont(new java.awt.Font("Yu Gothic UI", 0, 15)); // NOI18N
-        jPasswordField4.setText("jPasswordField2");
-        jPasswordField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-        jpingresar.add(jPasswordField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, 320, 30));
+        pswcon.setFont(new java.awt.Font("Yu Gothic UI", 0, 15)); // NOI18N
+        pswcon.setText("jPasswordField2");
+        pswcon.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        pswcon.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                pswconFocusGained(evt);
+            }
+        });
+        pswcon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pswconMouseClicked(evt);
+            }
+        });
+        jpingresar.add(pswcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, 320, 30));
 
-        jLabel21.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jpingresar.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 560, 250, 50));
+        lbIngresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lbIngresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbIngresarMouseClicked(evt);
+            }
+        });
+        lbIngresar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                lbIngresarKeyPressed(evt);
+            }
+        });
+        jpingresar.add(lbIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 560, 250, 50));
 
         cmbusuario.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
         cmbusuario.setForeground(new java.awt.Color(0, 52, 102));
-        cmbusuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cmbusuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         jpingresar.add(cmbusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 320, 30));
 
@@ -253,46 +281,61 @@ public class Login extends javax.swing.JFrame {
         jLabel10.setText("Usuario");
         jpRegistrar.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, -1, -1));
 
-        jTextField1.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-        jpRegistrar.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 320, 30));
+        txtUsuarioN.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        txtUsuarioN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        jpRegistrar.add(txtUsuarioN, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 320, 30));
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic Light", 1, 18)); // NOI18N
         jLabel2.setText("Verificar contraseña");
         jpRegistrar.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 470, -1, -1));
 
-        jPasswordField2.setFont(new java.awt.Font("Yu Gothic UI", 0, 15)); // NOI18N
-        jPasswordField2.setText("jPasswordField2");
-        jPasswordField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-        jpRegistrar.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 320, 30));
+        pswVContrasenia.setFont(new java.awt.Font("Yu Gothic UI", 0, 15)); // NOI18N
+        pswVContrasenia.setText("jPasswordField2");
+        pswVContrasenia.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        pswVContrasenia.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                pswVContraseniaFocusGained(evt);
+            }
+        });
+        jpRegistrar.add(pswVContrasenia, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 320, 30));
 
         jLabel13.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
         jLabel13.setText("Apellidos");
         jpRegistrar.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 270, -1, -1));
 
-        jPasswordField3.setFont(new java.awt.Font("Yu Gothic UI", 0, 15)); // NOI18N
-        jPasswordField3.setText("jPasswordField2");
-        jPasswordField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-        jpRegistrar.add(jPasswordField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, 320, 30));
+        pswContrasenia.setFont(new java.awt.Font("Yu Gothic UI", 0, 15)); // NOI18N
+        pswContrasenia.setText("jPasswordField2");
+        pswContrasenia.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        pswContrasenia.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                pswContraseniaFocusGained(evt);
+            }
+        });
+        jpRegistrar.add(pswContrasenia, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, 320, 30));
 
         jLabel14.setFont(new java.awt.Font("Yu Gothic Light", 1, 18)); // NOI18N
         jLabel14.setText("Contraseña");
         jpRegistrar.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, -1, -1));
 
-        jTextField2.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-        jpRegistrar.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 300, 160, 30));
+        txtApellidoN.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        txtApellidoN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        jpRegistrar.add(txtApellidoN, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 300, 160, 30));
 
-        jTextField3.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-        jpRegistrar.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 150, 30));
+        txtNombreN.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        txtNombreN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        jpRegistrar.add(txtNombreN, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 150, 30));
 
         jLabel15.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
         jLabel15.setText("Nombres");
         jpRegistrar.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, -1, -1));
 
-        jLabel20.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jpRegistrar.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 550, 240, 50));
+        lbRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lbRegistrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbRegistrarMouseClicked(evt);
+            }
+        });
+        jpRegistrar.add(lbRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 550, 240, 50));
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/registro.png"))); // NOI18N
         jpRegistrar.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -5, 450, 680));
@@ -542,6 +585,60 @@ public class Login extends javax.swing.JFrame {
         this.setLocation(p.x-x,p.y-y);
     }//GEN-LAST:event_jPanel2MouseDragged
 
+    private void lbRegistrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbRegistrarMouseClicked
+        String nombre = txtNombreN.getText();
+        String apellido = txtApellidoN.getText();
+        String usuario = txtUsuarioN.getText();
+        String psw = pswContrasenia.getText();
+        String vpsw = pswVContrasenia.getText();
+        if(psw.equals(vpsw))
+        {
+            psw = DigestUtils.md5Hex(psw);
+            if(us.ingresar(nombre, apellido, usuario, psw))
+            {
+                JOptionPane.showMessageDialog(null, "El usuario ha sido ingresado exitoramente");
+                cmbusuario.setModel(us.mostrarU());
+            } else {
+                JOptionPane.showMessageDialog(null, "Error al ingresar el usuario");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Las contraseñas no coinciden");
+        }
+    }//GEN-LAST:event_lbRegistrarMouseClicked
+
+    private void pswconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pswconMouseClicked
+        
+    }//GEN-LAST:event_pswconMouseClicked
+
+    private void pswContraseniaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pswContraseniaFocusGained
+        pswContrasenia.setText("");
+    }//GEN-LAST:event_pswContraseniaFocusGained
+
+    private void pswVContraseniaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pswVContraseniaFocusGained
+        pswVContrasenia.setText("");
+    }//GEN-LAST:event_pswVContraseniaFocusGained
+
+    private void pswconFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pswconFocusGained
+        pswcon.setText("");
+    }//GEN-LAST:event_pswconFocusGained
+
+    private void lbIngresarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lbIngresarKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lbIngresarKeyPressed
+
+    private void lbIngresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbIngresarMouseClicked
+        String pass = DigestUtils.md5Hex(pswcon.getText());
+        if(us.verificarContrasenia(pass, cmbusuario.getSelectedItem().toString()))
+        {
+            this.dispose();
+            Interfaz obj = new Interfaz();
+            obj.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "Contraseña incorrecta, por favor verifique su contraseña");
+            pswcon.setText("");
+        }
+    }//GEN-LAST:event_lbIngresarMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -606,8 +703,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -620,19 +715,21 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JPasswordField jPasswordField3;
-    private javax.swing.JPasswordField jPasswordField4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JPanel jpRegistrar;
     private javax.swing.JPanel jpingresar;
+    private javax.swing.JLabel lbIngresar;
+    private javax.swing.JLabel lbRegistrar;
     private javax.swing.JPanel p1ingresar;
     private javax.swing.JPanel p1registrar;
     private javax.swing.JPanel p2ingresar;
     private javax.swing.JPanel p2registrar;
+    private javax.swing.JPasswordField pswContrasenia;
+    private javax.swing.JPasswordField pswVContrasenia;
+    private javax.swing.JPasswordField pswcon;
     private rojeru_san.RSLabelFecha rSLabelFecha1;
     private rojeru_san.RSLabelHora rSLabelHora1;
+    private javax.swing.JTextField txtApellidoN;
+    private javax.swing.JTextField txtNombreN;
+    private javax.swing.JTextField txtUsuarioN;
     // End of variables declaration//GEN-END:variables
 }
