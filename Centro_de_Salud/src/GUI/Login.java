@@ -159,7 +159,7 @@ public class Login extends javax.swing.JFrame {
 
         rSLabelHora1.setForeground(new java.awt.Color(255, 255, 255));
         rSLabelHora1.setFont(new java.awt.Font("Roboto Bold", 1, 48)); // NOI18N
-        jPanel1.add(rSLabelHora1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 640, 300, 100));
+        jPanel1.add(rSLabelHora1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 640, 350, 100));
 
         rSLabelFecha1.setForeground(new java.awt.Color(255, 255, 255));
         rSLabelFecha1.setFont(new java.awt.Font("Roboto Bold", 1, 24)); // NOI18N
@@ -228,6 +228,11 @@ public class Login extends javax.swing.JFrame {
         pswcon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pswconMouseClicked(evt);
+            }
+        });
+        pswcon.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                pswconKeyPressed(evt);
             }
         });
         jpingresar.add(pswcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, 320, 30));
@@ -627,6 +632,17 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_lbIngresarKeyPressed
 
     private void lbIngresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbIngresarMouseClicked
+        iniciosesion();
+    }//GEN-LAST:event_lbIngresarMouseClicked
+
+    private void pswconKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pswconKeyPressed
+        char c = evt.getKeyChar();
+        if (c == 10) {
+            iniciosesion();
+        }
+    }//GEN-LAST:event_pswconKeyPressed
+    public void iniciosesion()
+    {
         String pass = DigestUtils.md5Hex(pswcon.getText());
         if(us.verificarContrasenia(pass, cmbusuario.getSelectedItem().toString()))
         {
@@ -637,8 +653,7 @@ public class Login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Contraseña incorrecta, por favor verifique su contraseña");
             pswcon.setText("");
         }
-    }//GEN-LAST:event_lbIngresarMouseClicked
-
+    }
     /**
      * @param args the command line arguments
      */

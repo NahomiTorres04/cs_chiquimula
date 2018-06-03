@@ -24,7 +24,7 @@ class cargar extends Thread
          for (int i = 1; i <= 100; i++) 
          {
                   progreso.setValue(i);
-                  pausa(70);
+                  pausa(50);
          }
     }
      public void pausa(int x)   
