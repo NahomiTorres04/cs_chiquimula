@@ -23,8 +23,17 @@ public class Interfaz extends javax.swing.JFrame {
         Shape forma = new RoundRectangle2D.Double(0,0,this.getBounds().width, this.getBounds().height,35,35);
         AWTUtilities.setWindowShape(this, forma);
         this.setLocationRelativeTo(null);
+        transparencia();
     }
-
+    private void transparencia()
+    {
+        btnminimizar.setOpaque(false);
+        btnminimizar.setBorderPainted(false);
+        btnminimizar.setContentAreaFilled(false);
+        btncerrar.setOpaque(false);
+        btncerrar.setBorderPainted(false);
+        btncerrar.setContentAreaFilled(false);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -37,6 +46,9 @@ public class Interfaz extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         rSPanelsSlider1 = new rojerusan.RSPanelsSlider();
         menu = new javax.swing.JPanel();
+        btnminimizar = new javax.swing.JButton();
+        btncerrar = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
         IngresarInventario = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         cmbFungible = new javax.swing.JComboBox<>();
@@ -65,17 +77,29 @@ public class Interfaz extends javax.swing.JFrame {
         setUndecorated(true);
 
         menu.setBackground(new java.awt.Color(255, 255, 255));
+        menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout menuLayout = new javax.swing.GroupLayout(menu);
-        menu.setLayout(menuLayout);
-        menuLayout.setHorizontalGroup(
-            menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1250, Short.MAX_VALUE)
-        );
-        menuLayout.setVerticalGroup(
-            menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 790, Short.MAX_VALUE)
-        );
+        btnminimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_35px.png"))); // NOI18N
+        btnminimizar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_55px.png"))); // NOI18N
+        btnminimizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnminimizarMouseClicked(evt);
+            }
+        });
+        menu.add(btnminimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 0, -1, 57));
+
+        btncerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_35px_1.png"))); // NOI18N
+        btncerrar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_55px_1.png"))); // NOI18N
+        btncerrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btncerrarMouseClicked(evt);
+            }
+        });
+        menu.add(btncerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 0, -1, 57));
+
+        jLabel10.setBackground(new java.awt.Color(0, 54, 102));
+        jLabel10.setOpaque(true);
+        menu.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1270, 60));
 
         rSPanelsSlider1.add(menu, "card2");
 
@@ -117,7 +141,7 @@ public class Interfaz extends javax.swing.JFrame {
         IngresarInventario.setLayout(IngresarInventarioLayout);
         IngresarInventarioLayout.setHorizontalGroup(
             IngresarInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 1260, Short.MAX_VALUE)
             .addGroup(IngresarInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(IngresarInventarioLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -167,7 +191,7 @@ public class Interfaz extends javax.swing.JFrame {
         );
         IngresarInventarioLayout.setVerticalGroup(
             IngresarInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 770, Short.MAX_VALUE)
             .addGroup(IngresarInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(IngresarInventarioLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -238,30 +262,30 @@ public class Interfaz extends javax.swing.JFrame {
             .addGroup(VerInventarioLayout.createSequentialGroup()
                 .addGap(245, 245, 245)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(281, Short.MAX_VALUE))
+                .addContainerGap(706, Short.MAX_VALUE))
             .addGroup(VerInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(VerInventarioLayout.createSequentialGroup()
-                    .addGap(0, 164, Short.MAX_VALUE)
+                    .addGap(0, 377, Short.MAX_VALUE)
                     .addComponent(jLabel1)
                     .addGap(34, 34, 34)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 338, Short.MAX_VALUE)))
+                    .addGap(0, 550, Short.MAX_VALUE)))
         );
         VerInventarioLayout.setVerticalGroup(
             VerInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, VerInventarioLayout.createSequentialGroup()
-                .addContainerGap(183, Short.MAX_VALUE)
+                .addContainerGap(403, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(61, 61, 61))
             .addGroup(VerInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(VerInventarioLayout.createSequentialGroup()
-                    .addGap(0, 137, Short.MAX_VALUE)
+                    .addGap(0, 247, Short.MAX_VALUE)
                     .addGroup(VerInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(VerInventarioLayout.createSequentialGroup()
                             .addGap(2, 2, 2)
                             .addComponent(jLabel1))
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 391, Short.MAX_VALUE)))
+                    .addGap(0, 501, Short.MAX_VALUE)))
         );
 
         rSPanelsSlider1.add(VerInventario, "card4");
@@ -304,6 +328,15 @@ public class Interfaz extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void btnminimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnminimizarMouseClicked
+        this.setExtendedState(ICONIFIED);
+    }//GEN-LAST:event_btnminimizarMouseClicked
+
+    private void btncerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncerrarMouseClicked
+        this.dispose();
+        System.exit(0);
+    }//GEN-LAST:event_btncerrarMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -342,12 +375,15 @@ public class Interfaz extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel IngresarInventario;
     private javax.swing.JPanel VerInventario;
+    private javax.swing.JButton btncerrar;
+    private javax.swing.JButton btnminimizar;
     private javax.swing.JComboBox<String> cmbDep;
     private javax.swing.JComboBox<String> cmbDonado;
     private javax.swing.JComboBox<String> cmbEstado;
     private javax.swing.JComboBox<String> cmbFungible;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
