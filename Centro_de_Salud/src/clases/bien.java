@@ -13,6 +13,8 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author alex
@@ -50,5 +52,39 @@ public class bien {
             Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
         }
         return false;
+    }
+    public DefaultTableModel bienes(String codigo, JTable table)
+    {
+        String titulos[] = new String[6];
+        for(int i = 0; i < 6; i++)
+        {
+            titulos[i] = table.getColumnName(i);
+        }
+        DefaultTableModel tabla = new DefaultTableModel(null, titulos);
+        try {
+            String sql = "SELECT codigo, descripcion, cantidad, precio_unitario, estado, fungible from bien where codigo LIKE '%" + codigo + "%'";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            String registros[] = new String [6];
+            while(rs.next())
+            {
+                registros[0] = rs.getString("codigo");
+                registros[1] = rs.getString("descripcion");
+                registros[2] = rs.getString("cantidad");
+                registros[3] = rs.getString("precio_unitario");
+                if(rs.getBoolean("estado") == true)
+                {
+                    registros[4] = "Bueno";
+                } else registros[4] = "Malo";
+                if(rs.getBoolean("fungible") == true)
+                {
+                    registros[5] = "Sí";
+                } else registros[6] = "No";
+                tabla.addRow(registros);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return tabla;
     }
 }

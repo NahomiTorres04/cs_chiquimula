@@ -81,7 +81,7 @@ public class Interfaz extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         VerInventario = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtCodigoBuscar = new javax.swing.JTextField();
         scrollgai = new javax.swing.JScrollPane();
         tableInventario = new rojerusan.RSTableMetro();
 
@@ -184,7 +184,15 @@ public class Interfaz extends javax.swing.JFrame {
 
         rSPanelsSlider1.add(IngresarInventario, "card3");
 
+        VerInventario.setName("VerInventario"); // NOI18N
+
         jLabel1.setText("Ingresar Código:");
+
+        txtCodigoBuscar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtCodigoBuscarKeyPressed(evt);
+            }
+        });
 
         tableInventario = new rojerusan.RSTableMetro(){
             public boolean isCellEditable(int rowIndex, int ColIndex){
@@ -245,7 +253,7 @@ public class Interfaz extends javax.swing.JFrame {
                     .addGroup(VerInventarioLayout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(34, 34, 34)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtCodigoBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(55, Short.MAX_VALUE))
         );
         VerInventarioLayout.setVerticalGroup(
@@ -254,7 +262,7 @@ public class Interfaz extends javax.swing.JFrame {
                 .addGap(65, 65, 65)
                 .addGroup(VerInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCodigoBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(scrollgai, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(145, Short.MAX_VALUE))
@@ -344,6 +352,10 @@ public class Interfaz extends javax.swing.JFrame {
         rSPanelsSlider1.setPanelSlider(IngresarInventario, RSPanelsSlider.DIRECT.UP);
     }//GEN-LAST:event_jButton2MouseClicked
 
+    private void txtCodigoBuscarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodigoBuscarKeyPressed
+        tableInventario.setModel(bi.bienes(txtCodigoBuscar.getText(), tableInventario));
+    }//GEN-LAST:event_txtCodigoBuscarKeyPressed
+
     /**
      * @param args the command line arguments
      */
@@ -403,13 +415,13 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JPanel menu;
     private rojerusan.RSPanelsSlider rSPanelsSlider1;
     private javax.swing.JScrollPane scrollgai;
     private rojerusan.RSTableMetro tableInventario;
     private javax.swing.JTextField txtCant;
     private javax.swing.JTextField txtCodigo;
+    private javax.swing.JTextField txtCodigoBuscar;
     private javax.swing.JTextArea txtDes;
     private javax.swing.JTextField txtPrecio;
     // End of variables declaration//GEN-END:variables
