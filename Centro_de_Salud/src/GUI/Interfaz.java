@@ -77,11 +77,13 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         txtCant = new javax.swing.JTextField();
+        btn_Inp = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         VerInventario = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        rSTableMetro1 = new rojerusan.RSTableMetro();
+        scrollgai = new javax.swing.JScrollPane();
+        tableInventario = new rojerusan.RSTableMetro();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -125,36 +127,36 @@ public class Interfaz extends javax.swing.JFrame {
         IngresarInventario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel6.setText("Estado");
-        IngresarInventario.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(344, 427, 51, 20));
+        IngresarInventario.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 51, 20));
 
         cmbFungible.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
-        IngresarInventario.add(cmbFungible, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 427, 71, -1));
+        IngresarInventario.add(cmbFungible, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 320, 71, -1));
 
         jLabel8.setText("Fungible");
-        IngresarInventario.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 427, 70, -1));
+        IngresarInventario.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 320, 70, -1));
 
         jLabel2.setText("Código");
-        IngresarInventario.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 243, -1, -1));
+        IngresarInventario.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, -1, -1));
 
         jLabel7.setText("Donado");
-        IngresarInventario.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(525, 427, 60, 20));
+        IngresarInventario.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 310, 60, 20));
 
         jLabel5.setText("Departamento");
-        IngresarInventario.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(713, 369, -1, -1));
+        IngresarInventario.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, -1, -1));
 
         jLabel3.setText("Descripción");
-        IngresarInventario.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 275, -1, -1));
+        IngresarInventario.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, -1, -1));
 
         txtDes.setColumns(20);
         txtDes.setRows(5);
-        IngresarInventario.add(txtDes, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 280, -1, -1));
-        IngresarInventario.add(txtPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(585, 367, 52, -1));
+        IngresarInventario.add(txtDes, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, -1, -1));
+        IngresarInventario.add(txtPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 180, 52, -1));
 
-        IngresarInventario.add(cmbDep, new org.netbeans.lib.awtextra.AbsoluteConstraints(847, 366, 90, -1));
+        IngresarInventario.add(cmbDep, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 220, 90, -1));
 
         cmbDonado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
-        IngresarInventario.add(cmbDonado, new org.netbeans.lib.awtextra.AbsoluteConstraints(595, 427, -1, -1));
-        IngresarInventario.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(417, 241, 114, -1));
+        IngresarInventario.add(cmbDonado, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 310, -1, -1));
+        IngresarInventario.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 114, -1));
 
         jButton1.setText("Guardar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -162,66 +164,100 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        IngresarInventario.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(534, 479, 120, 50));
+        IngresarInventario.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 120, 50));
 
         cmbEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bueno", "Malo" }));
-        IngresarInventario.add(cmbEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(404, 427, -1, -1));
+        IngresarInventario.add(cmbEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 310, -1, -1));
 
         jLabel4.setText("Cantidad");
-        IngresarInventario.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 368, -1, -1));
+        IngresarInventario.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, -1, -1));
 
         jLabel9.setText("Precio");
-        IngresarInventario.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(529, 371, -1, -1));
-        IngresarInventario.add(txtCant, new org.netbeans.lib.awtextra.AbsoluteConstraints(439, 367, 52, -1));
+        IngresarInventario.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, -1, -1));
+        IngresarInventario.add(txtCant, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 140, 52, -1));
+
+        btn_Inp.setText("jButton3");
+        IngresarInventario.add(btn_Inp, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 680, -1, -1));
+
+        jButton3.setText("jButton3");
+        IngresarInventario.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 680, -1, -1));
 
         rSPanelsSlider1.add(IngresarInventario, "card3");
 
         jLabel1.setText("Ingresar Código:");
 
-        rSTableMetro1.setModel(new javax.swing.table.DefaultTableModel(
+        tableInventario = new rojerusan.RSTableMetro(){
+            public boolean isCellEditable(int rowIndex, int ColIndex){
+                return false;
+            }
+        };
+        tableInventario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Código", "Descripción", "Cantidad", "Precio unitario", "Estado", "Fungible"
             }
-        ));
-        jScrollPane2.setViewportView(rSTableMetro1);
+        ) {
+            boolean[] canEdit = new boolean [] {
+                true, true, false, true, true, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tableInventario.setColorBackgoundHead(new java.awt.Color(22, 54, 77));
+        tableInventario.setColorBordeFilas(new java.awt.Color(255, 255, 255));
+        tableInventario.setColorBordeHead(new java.awt.Color(255, 255, 255));
+        tableInventario.setColorFilasBackgound1(new java.awt.Color(163, 214, 249));
+        tableInventario.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
+        tableInventario.setColorFilasForeground1(new java.awt.Color(0, 0, 0));
+        tableInventario.setColorFilasForeground2(new java.awt.Color(0, 0, 0));
+        tableInventario.setColorSelBackgound(new java.awt.Color(22, 54, 77));
+        tableInventario.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        tableInventario.setFuenteFilas(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        tableInventario.setFuenteFilasSelect(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        tableInventario.setFuenteHead(new java.awt.Font("Yu Gothic UI Light", 1, 18)); // NOI18N
+        tableInventario.setGrosorBordeFilas(0);
+        tableInventario.setGrosorBordeHead(0);
+        tableInventario.setRowHeight(22);
+        tableInventario.getTableHeader().setReorderingAllowed(false);
+        scrollgai.setViewportView(tableInventario);
 
         javax.swing.GroupLayout VerInventarioLayout = new javax.swing.GroupLayout(VerInventario);
         VerInventario.setLayout(VerInventarioLayout);
         VerInventarioLayout.setHorizontalGroup(
             VerInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(VerInventarioLayout.createSequentialGroup()
-                .addGap(245, 245, 245)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(706, Short.MAX_VALUE))
-            .addGroup(VerInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(VerInventarioLayout.createSequentialGroup()
-                    .addGap(0, 377, Short.MAX_VALUE)
-                    .addComponent(jLabel1)
-                    .addGap(34, 34, 34)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 550, Short.MAX_VALUE)))
+                .addGap(141, 141, 141)
+                .addGroup(VerInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(scrollgai, javax.swing.GroupLayout.PREFERRED_SIZE, 1084, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(VerInventarioLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(34, 34, 34)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
         VerInventarioLayout.setVerticalGroup(
             VerInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, VerInventarioLayout.createSequentialGroup()
-                .addContainerGap(403, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61))
-            .addGroup(VerInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(VerInventarioLayout.createSequentialGroup()
-                    .addGap(0, 247, Short.MAX_VALUE)
-                    .addGroup(VerInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(VerInventarioLayout.createSequentialGroup()
-                            .addGap(2, 2, 2)
-                            .addComponent(jLabel1))
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 501, Short.MAX_VALUE)))
+                .addGap(65, 65, 65)
+                .addGroup(VerInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(scrollgai, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(145, Short.MAX_VALUE))
         );
 
         rSPanelsSlider1.add(VerInventario, "card4");
@@ -346,6 +382,7 @@ public class Interfaz extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel IngresarInventario;
     private javax.swing.JPanel VerInventario;
+    private javax.swing.JButton btn_Inp;
     private javax.swing.JButton btncerrar;
     private javax.swing.JButton btnminimizar;
     private javax.swing.JComboBox<String> cmbDep;
@@ -354,6 +391,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbFungible;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -365,11 +403,11 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JPanel menu;
     private rojerusan.RSPanelsSlider rSPanelsSlider1;
-    private rojerusan.RSTableMetro rSTableMetro1;
+    private javax.swing.JScrollPane scrollgai;
+    private rojerusan.RSTableMetro tableInventario;
     private javax.swing.JTextField txtCant;
     private javax.swing.JTextField txtCodigo;
     private javax.swing.JTextArea txtDes;
