@@ -33,7 +33,7 @@ public class bien {
             String sql = "INSERT into bien(codigo, descripcion, cantidad"
                     + ", precio_unitario, precio_total, estado, donado"
                     + ", fungible, departamento_id) values(?,?,?,?,?,"
-                    + "?,?,?,?,)";
+                    + "?,?,?,?)";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, codigo);
             ps.setString(2, descripcion);

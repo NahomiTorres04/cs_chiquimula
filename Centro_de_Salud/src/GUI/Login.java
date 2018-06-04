@@ -606,7 +606,7 @@ public class Login extends javax.swing.JFrame {
             psw = DigestUtils.md5Hex(psw);
             if(us.ingresar(nombre, apellido, usuario, psw))
             {
-                JOptionPane.showMessageDialog(null, "El usuario ha sido ingresado exitoramente");
+                JOptionPane.showMessageDialog(null, "El usuario ha sido ingresado exitosamente");
                 cmbusuario.setModel(us.mostrarU());
             } else {
                 JOptionPane.showMessageDialog(null, "Error al ingresar el usuario");

@@ -11,6 +11,7 @@ import com.sun.awt.AWTUtilities;
 import java.awt.Shape;
 import java.awt.geom.RoundRectangle2D;
 import javax.swing.JOptionPane;
+import rojerusan.RSPanelsSlider;
 
 /**
  *
@@ -57,6 +58,7 @@ public class Interfaz extends javax.swing.JFrame {
         btnminimizar = new javax.swing.JButton();
         btncerrar = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         IngresarInventario = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         cmbFungible = new javax.swing.JComboBox<>();
@@ -109,8 +111,17 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel10.setOpaque(true);
         menu.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1290, 60));
 
+        jButton2.setText("botón de prueba");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+        menu.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, 160, 100));
+
         rSPanelsSlider1.add(menu, "card2");
 
+        IngresarInventario.setName("IngresarInventario"); // NOI18N
         IngresarInventario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel6.setText("Estado");
@@ -293,6 +304,10 @@ public class Interfaz extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_btncerrarMouseClicked
 
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        rSPanelsSlider1.setPanelSlider(IngresarInventario, RSPanelsSlider.DIRECT.UP);
+    }//GEN-LAST:event_jButton2MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -338,6 +353,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbEstado;
     private javax.swing.JComboBox<String> cmbFungible;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
