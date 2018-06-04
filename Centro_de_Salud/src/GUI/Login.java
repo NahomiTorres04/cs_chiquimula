@@ -230,6 +230,11 @@ public class Login extends javax.swing.JFrame {
                 pswconMouseClicked(evt);
             }
         });
+        pswcon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pswconActionPerformed(evt);
+            }
+        });
         pswcon.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 pswconKeyPressed(evt);
@@ -641,6 +646,10 @@ public class Login extends javax.swing.JFrame {
             iniciosesion();
         }
     }//GEN-LAST:event_pswconKeyPressed
+
+    private void pswconActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pswconActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pswconActionPerformed
     public void iniciosesion()
     {
         String pass = DigestUtils.md5Hex(pswcon.getText());

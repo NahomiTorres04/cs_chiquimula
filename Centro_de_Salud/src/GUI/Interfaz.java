@@ -5,9 +5,12 @@
  */
 package GUI;
 
+import clases.bien;
+import clases.departamento;
 import com.sun.awt.AWTUtilities;
 import java.awt.Shape;
 import java.awt.geom.RoundRectangle2D;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -18,12 +21,17 @@ public class Interfaz extends javax.swing.JFrame {
     /**
      * Creates new form Interfaz
      */
+    private final bien bi;
+    private final departamento dep;
     public Interfaz() {
         initComponents();
         Shape forma = new RoundRectangle2D.Double(0,0,this.getBounds().width, this.getBounds().height,35,35);
         AWTUtilities.setWindowShape(this, forma);
         this.setLocationRelativeTo(null);
         transparencia();
+        bi = new bien();
+        dep = new departamento();
+        cmbDep.setModel(dep.mostrarDepartamentos());
     }
     private void transparencia()
     {
@@ -86,7 +94,7 @@ public class Interfaz extends javax.swing.JFrame {
                 btnminimizarMouseClicked(evt);
             }
         });
-        menu.add(btnminimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 0, -1, 57));
+        menu.add(btnminimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, -1, 57));
 
         btncerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_35px_1.png"))); // NOI18N
         btncerrar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_55px_1.png"))); // NOI18N
@@ -95,34 +103,47 @@ public class Interfaz extends javax.swing.JFrame {
                 btncerrarMouseClicked(evt);
             }
         });
-        menu.add(btncerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 0, -1, 57));
+        menu.add(btncerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 0, -1, 57));
 
         jLabel10.setBackground(new java.awt.Color(0, 54, 102));
         jLabel10.setOpaque(true);
-        menu.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1270, 60));
+        menu.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1290, 60));
 
         rSPanelsSlider1.add(menu, "card2");
 
+        IngresarInventario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jLabel6.setText("Estado");
+        IngresarInventario.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(344, 427, 51, 20));
 
         cmbFungible.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
+        IngresarInventario.add(cmbFungible, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 427, 71, -1));
 
         jLabel8.setText("Fungible");
+        IngresarInventario.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 427, 70, -1));
 
         jLabel2.setText("Código");
+        IngresarInventario.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 243, -1, -1));
 
         jLabel7.setText("Donado");
+        IngresarInventario.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(525, 427, 60, 20));
 
         jLabel5.setText("Departamento");
+        IngresarInventario.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(713, 369, -1, -1));
 
         jLabel3.setText("Descripción");
+        IngresarInventario.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 275, -1, -1));
 
         txtDes.setColumns(20);
         txtDes.setRows(5);
+        IngresarInventario.add(txtDes, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 280, -1, -1));
+        IngresarInventario.add(txtPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(585, 367, 52, -1));
 
-        cmbDep.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        IngresarInventario.add(cmbDep, new org.netbeans.lib.awtextra.AbsoluteConstraints(847, 366, 90, -1));
 
         cmbDonado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
+        IngresarInventario.add(cmbDonado, new org.netbeans.lib.awtextra.AbsoluteConstraints(595, 427, -1, -1));
+        IngresarInventario.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(417, 241, 114, -1));
 
         jButton1.setText("Guardar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -130,113 +151,17 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        IngresarInventario.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(534, 479, 120, 50));
 
         cmbEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bueno", "Malo" }));
+        IngresarInventario.add(cmbEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(404, 427, -1, -1));
 
         jLabel4.setText("Cantidad");
+        IngresarInventario.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 368, -1, -1));
 
         jLabel9.setText("Precio");
-
-        javax.swing.GroupLayout IngresarInventarioLayout = new javax.swing.GroupLayout(IngresarInventario);
-        IngresarInventario.setLayout(IngresarInventarioLayout);
-        IngresarInventarioLayout.setHorizontalGroup(
-            IngresarInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1260, Short.MAX_VALUE)
-            .addGroup(IngresarInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(IngresarInventarioLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(IngresarInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(IngresarInventarioLayout.createSequentialGroup()
-                            .addGap(2, 2, 2)
-                            .addComponent(jLabel2)
-                            .addGap(22, 22, 22)
-                            .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(IngresarInventarioLayout.createSequentialGroup()
-                            .addGap(2, 2, 2)
-                            .addGroup(IngresarInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel4))
-                            .addGap(11, 11, 11)
-                            .addGroup(IngresarInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(IngresarInventarioLayout.createSequentialGroup()
-                                    .addGap(146, 146, 146)
-                                    .addComponent(txtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(IngresarInventarioLayout.createSequentialGroup()
-                                    .addGap(90, 90, 90)
-                                    .addComponent(jLabel9))
-                                .addComponent(txtCant, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(IngresarInventarioLayout.createSequentialGroup()
-                                    .addGap(12, 12, 12)
-                                    .addComponent(txtDes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGap(42, 42, 42)
-                            .addComponent(jLabel5)
-                            .addGap(31, 31, 31)
-                            .addComponent(cmbDep, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(IngresarInventarioLayout.createSequentialGroup()
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(9, 9, 9)
-                            .addComponent(cmbEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(48, 48, 48)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(10, 10, 10)
-                            .addComponent(cmbDonado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(38, 38, 38)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(10, 10, 10)
-                            .addComponent(cmbFungible, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(IngresarInventarioLayout.createSequentialGroup()
-                            .addGap(190, 190, 190)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        IngresarInventarioLayout.setVerticalGroup(
-            IngresarInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 770, Short.MAX_VALUE)
-            .addGroup(IngresarInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(IngresarInventarioLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(IngresarInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(IngresarInventarioLayout.createSequentialGroup()
-                            .addGap(2, 2, 2)
-                            .addComponent(jLabel2))
-                        .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(15, 15, 15)
-                    .addGroup(IngresarInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(IngresarInventarioLayout.createSequentialGroup()
-                            .addComponent(jLabel3)
-                            .addGap(78, 78, 78)
-                            .addComponent(jLabel4))
-                        .addGroup(IngresarInventarioLayout.createSequentialGroup()
-                            .addGap(1, 1, 1)
-                            .addGroup(IngresarInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(IngresarInventarioLayout.createSequentialGroup()
-                                    .addGap(91, 91, 91)
-                                    .addComponent(txtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(IngresarInventarioLayout.createSequentialGroup()
-                                    .addGap(95, 95, 95)
-                                    .addComponent(jLabel9))
-                                .addGroup(IngresarInventarioLayout.createSequentialGroup()
-                                    .addGap(91, 91, 91)
-                                    .addComponent(txtCant, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(txtDes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(IngresarInventarioLayout.createSequentialGroup()
-                            .addGap(94, 94, 94)
-                            .addComponent(jLabel5))
-                        .addGroup(IngresarInventarioLayout.createSequentialGroup()
-                            .addGap(91, 91, 91)
-                            .addComponent(cmbDep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(37, 37, 37)
-                    .addGroup(IngresarInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(cmbEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(cmbDonado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel8)
-                        .addComponent(cmbFungible, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(28, 28, 28)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        IngresarInventario.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(529, 371, -1, -1));
+        IngresarInventario.add(txtCant, new org.netbeans.lib.awtextra.AbsoluteConstraints(439, 367, 52, -1));
 
         rSPanelsSlider1.add(IngresarInventario, "card3");
 
@@ -321,11 +246,42 @@ public class Interfaz extends javax.swing.JFrame {
         int cantidad = Integer.parseInt(txtCant.getText());
         double preciou = Double.parseDouble(txtPrecio.getText());
         double preciot = cantidad*preciou;
-        String departamento = cmbDep.getSelectedItem().toString();
-        String estado = cmbEstado.getSelectedItem().toString();
-        String donado = cmbDonado.getSelectedItem().toString();
-        String fungible = cmbFungible.getSelectedItem().toString();
-
+        int departamento = dep.seleccionarDepartamento(cmbDep.getSelectedItem().toString());
+        boolean estado;
+        boolean donado;
+        boolean fungible;
+        if(cmbEstado.getSelectedItem().toString().equals("Bueno"))
+        {
+            estado = true;
+        }
+        else
+        {
+            estado = false;
+        }
+        if(cmbDonado.getSelectedItem().toString().equals("Sí"))
+        {
+            donado = true;
+        }
+        else
+        {
+            donado = false;
+        }
+        if(cmbFungible.getSelectedItem().toString().equals("Sí"))
+        {
+            fungible = true;
+        }
+        else
+        {
+            fungible = false;
+        }
+        if(bi.ingresarBien(codigo, descripcion, cantidad, preciou, preciot, estado, donado, fungible, departamento))
+        {
+            JOptionPane.showMessageDialog(null, "Ingreso correcto");
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "Error al ingresar");
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnminimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnminimizarMouseClicked

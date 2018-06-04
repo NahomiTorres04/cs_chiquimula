@@ -35,7 +35,6 @@ public class usuario {
             while(rs.next())
             {
                 modelo.addElement(rs.getString("nombre_usuario"));
-                
             }
         } catch (SQLException ex) {
             Logger.getLogger(usuario.class.getName()).log(Level.SEVERE, null, ex);
