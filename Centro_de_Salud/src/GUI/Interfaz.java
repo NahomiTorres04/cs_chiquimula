@@ -8,6 +8,7 @@ package GUI;
 import clases.bien;
 import clases.departamento;
 import com.sun.awt.AWTUtilities;
+import java.awt.Color;
 import java.awt.Shape;
 import java.awt.geom.RoundRectangle2D;
 import javax.swing.JOptionPane;
@@ -42,6 +43,35 @@ public class Interfaz extends javax.swing.JFrame {
         btncerrar.setOpaque(false);
         btncerrar.setBorderPainted(false);
         btncerrar.setContentAreaFilled(false);
+        cmbFungible.setBackground(new Color(0,0,0,0));
+        txtDes.setBackground(new Color(0,0,0,0));
+        txtPrecio.setBackground(new Color(0,0,0,0));
+        cmbDep.setBackground(new Color(0,0,0,0));
+        cmbDonado.setBackground(new Color(0,0,0,0));
+        txtCodigo.setBackground(new Color(0,0,0,0));
+        cmbEstado.setBackground(new Color(0,0,0,0));
+        txtCant.setBackground(new Color(0,0,0,0));
+        btnhome.setOpaque(false);
+        btnhome.setBorderPainted(false);
+        btnhome.setContentAreaFilled(false);
+        btn_Inp.setOpaque(false);
+        btn_Inp.setBorderPainted(false);
+        btn_Inp.setContentAreaFilled(false);
+        btnatras.setOpaque(false);
+        btnatras.setBorderPainted(false);
+        btnatras.setContentAreaFilled(false);
+        btnguardar.setOpaque(false);
+        btnguardar.setBorderPainted(false);
+        btnguardar.setContentAreaFilled(false);
+        btnminimizar1.setOpaque(false);
+        btnminimizar1.setBorderPainted(false);
+        btnminimizar1.setContentAreaFilled(false);
+        btncerrar1.setOpaque(false);
+        btncerrar1.setBorderPainted(false);
+        btncerrar1.setContentAreaFilled(false);
+        btn_IngP.setOpaque(false);
+        btn_IngP.setBorderPainted(false);
+        btn_IngP.setContentAreaFilled(false);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -58,30 +88,32 @@ public class Interfaz extends javax.swing.JFrame {
         btnminimizar = new javax.swing.JButton();
         btncerrar = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        btn_IngP = new javax.swing.JButton();
+        rSMaterialButtonCircle4 = new rojerusan.RSMaterialButtonCircle();
+        jLabel12 = new javax.swing.JLabel();
         IngresarInventario = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
         cmbFungible = new javax.swing.JComboBox<>();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         txtDes = new javax.swing.JTextArea();
         txtPrecio = new javax.swing.JTextField();
         cmbDep = new javax.swing.JComboBox<>();
         cmbDonado = new javax.swing.JComboBox<>();
         txtCodigo = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btnguardar = new javax.swing.JButton();
         cmbEstado = new javax.swing.JComboBox<>();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         txtCant = new javax.swing.JTextField();
         btn_Inp = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnatras = new javax.swing.JButton();
+        btnminimizar1 = new javax.swing.JButton();
+        btncerrar1 = new javax.swing.JButton();
+        btnhome = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        rSMaterialButtonCircle1 = new rojerusan.RSMaterialButtonCircle();
+        rSMaterialButtonCircle2 = new rojerusan.RSMaterialButtonCircle();
+        rSMaterialButtonCircle3 = new rojerusan.RSMaterialButtonCircle();
+        jLabel13 = new javax.swing.JLabel();
         VerInventario = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        txtCodigoBuscar = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
         scrollgai = new javax.swing.JScrollPane();
         tableInventario = new rojerusan.RSTableMetro();
 
@@ -89,6 +121,7 @@ public class Interfaz extends javax.swing.JFrame {
         setUndecorated(true);
 
         menu.setBackground(new java.awt.Color(255, 255, 255));
+        menu.setName("menu"); // NOI18N
         menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnminimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_35px.png"))); // NOI18N
@@ -113,86 +146,136 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel10.setOpaque(true);
         menu.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1290, 60));
 
-        jButton2.setText("botón de prueba");
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        btn_IngP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Add_70px_2.png"))); // NOI18N
+        btn_IngP.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Add_100px.png"))); // NOI18N
+        btn_IngP.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
+                btn_IngPMouseClicked(evt);
             }
         });
-        menu.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, 160, 100));
+        menu.add(btn_IngP, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 160, 170));
+
+        rSMaterialButtonCircle4.setBackground(new java.awt.Color(0, 52, 102));
+        menu.add(rSMaterialButtonCircle4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 160, 170));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/menu.png"))); // NOI18N
+        menu.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1280, 720));
 
         rSPanelsSlider1.add(menu, "card2");
 
+        IngresarInventario.setBackground(new java.awt.Color(255, 255, 255));
         IngresarInventario.setName("IngresarInventario"); // NOI18N
         IngresarInventario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel6.setText("Estado");
-        IngresarInventario.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 51, 20));
-
+        cmbFungible.setBackground(new java.awt.Color(0, 52, 102));
+        cmbFungible.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
         cmbFungible.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
-        IngresarInventario.add(cmbFungible, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 320, 71, -1));
-
-        jLabel8.setText("Fungible");
-        IngresarInventario.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 320, 70, -1));
-
-        jLabel2.setText("Código");
-        IngresarInventario.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, -1, -1));
-
-        jLabel7.setText("Donado");
-        IngresarInventario.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 310, 60, 20));
-
-        jLabel5.setText("Departamento");
-        IngresarInventario.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, -1, -1));
-
-        jLabel3.setText("Descripción");
-        IngresarInventario.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, -1, -1));
+        cmbFungible.setBorder(null);
+        IngresarInventario.add(cmbFungible, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 630, 230, 40));
 
         txtDes.setColumns(20);
+        txtDes.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
         txtDes.setRows(5);
-        IngresarInventario.add(txtDes, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, -1, -1));
-        IngresarInventario.add(txtPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 180, 52, -1));
+        txtDes.setBorder(null);
+        IngresarInventario.add(txtDes, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 410, 110));
 
-        IngresarInventario.add(cmbDep, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 220, 90, -1));
+        txtPrecio.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        txtPrecio.setBorder(null);
+        IngresarInventario.add(txtPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 307, 220, 40));
 
+        cmbDep.setBackground(new java.awt.Color(0, 52, 102));
+        cmbDep.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        cmbDep.setBorder(null);
+        IngresarInventario.add(cmbDep, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 516, 410, 30));
+
+        cmbDonado.setBackground(new java.awt.Color(0, 52, 102));
+        cmbDonado.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
         cmbDonado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
-        IngresarInventario.add(cmbDonado, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 310, -1, -1));
-        IngresarInventario.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 114, -1));
+        cmbDonado.setBorder(null);
+        IngresarInventario.add(cmbDonado, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 580, 230, 40));
 
-        jButton1.setText("Guardar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        txtCodigo.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        txtCodigo.setBorder(null);
+        IngresarInventario.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 280, 40));
+
+        btnguardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Save_70px.png"))); // NOI18N
+        btnguardar.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Save_100px.png"))); // NOI18N
+        btnguardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnguardarActionPerformed(evt);
             }
         });
-        IngresarInventario.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 120, 50));
+        IngresarInventario.add(btnguardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 610, 130, 140));
 
+        cmbEstado.setBackground(new java.awt.Color(0, 52, 102));
+        cmbEstado.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
         cmbEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bueno", "Malo" }));
-        IngresarInventario.add(cmbEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 310, -1, -1));
+        cmbEstado.setBorder(null);
+        IngresarInventario.add(cmbEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 370, 220, 40));
 
-        jLabel4.setText("Cantidad");
-        IngresarInventario.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, -1, -1));
+        txtCant.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        txtCant.setBorder(null);
+        IngresarInventario.add(txtCant, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 240, 220, 40));
 
-        jLabel9.setText("Precio");
-        IngresarInventario.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, -1, -1));
-        IngresarInventario.add(txtCant, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 140, 52, -1));
+        btn_Inp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Add_70px_2.png"))); // NOI18N
+        btn_Inp.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Add_100px.png"))); // NOI18N
+        IngresarInventario.add(btn_Inp, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 610, 130, 140));
 
-        btn_Inp.setText("jButton3");
-        IngresarInventario.add(btn_Inp, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 680, -1, -1));
+        btnatras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Back_Arrow_70px.png"))); // NOI18N
+        btnatras.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Back_Arrow_100px.png"))); // NOI18N
+        btnatras.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnatrasMouseClicked(evt);
+            }
+        });
+        IngresarInventario.add(btnatras, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 610, 140, 140));
 
-        jButton3.setText("jButton3");
-        IngresarInventario.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 680, -1, -1));
+        btnminimizar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_35px.png"))); // NOI18N
+        btnminimizar1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_55px.png"))); // NOI18N
+        btnminimizar1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnminimizar1MouseClicked(evt);
+            }
+        });
+        IngresarInventario.add(btnminimizar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, -1, 57));
+
+        btncerrar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_35px_1.png"))); // NOI18N
+        btncerrar1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_55px_1.png"))); // NOI18N
+        btncerrar1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btncerrar1MouseClicked(evt);
+            }
+        });
+        IngresarInventario.add(btncerrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 0, -1, 57));
+
+        btnhome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_35px.png"))); // NOI18N
+        btnhome.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_55px.png"))); // NOI18N
+        btnhome.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnhomeMouseClicked(evt);
+            }
+        });
+        IngresarInventario.add(btnhome, new org.netbeans.lib.awtextra.AbsoluteConstraints(1056, 0, 80, 60));
+
+        jLabel11.setBackground(new java.awt.Color(0, 54, 102));
+        jLabel11.setOpaque(true);
+        IngresarInventario.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1290, 60));
+
+        rSMaterialButtonCircle1.setBackground(new java.awt.Color(0, 52, 102));
+        IngresarInventario.add(rSMaterialButtonCircle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 610, 130, 140));
+
+        rSMaterialButtonCircle2.setBackground(new java.awt.Color(0, 52, 102));
+        IngresarInventario.add(rSMaterialButtonCircle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 610, 130, 140));
+
+        rSMaterialButtonCircle3.setBackground(new java.awt.Color(0, 52, 102));
+        IngresarInventario.add(rSMaterialButtonCircle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 610, 130, 140));
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/ingresara.png"))); // NOI18N
+        IngresarInventario.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1280, 720));
 
         rSPanelsSlider1.add(IngresarInventario, "card3");
 
-        VerInventario.setName("VerInventario"); // NOI18N
-
         jLabel1.setText("Ingresar Código:");
-
-        txtCodigoBuscar.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                txtCodigoBuscarKeyPressed(evt);
-            }
-        });
 
         tableInventario = new rojerusan.RSTableMetro(){
             public boolean isCellEditable(int rowIndex, int ColIndex){
@@ -253,7 +336,7 @@ public class Interfaz extends javax.swing.JFrame {
                     .addGroup(VerInventarioLayout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(34, 34, 34)
-                        .addComponent(txtCodigoBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(55, Short.MAX_VALUE))
         );
         VerInventarioLayout.setVerticalGroup(
@@ -262,7 +345,7 @@ public class Interfaz extends javax.swing.JFrame {
                 .addGap(65, 65, 65)
                 .addGroup(VerInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
-                    .addComponent(txtCodigoBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(scrollgai, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(145, Short.MAX_VALUE))
@@ -295,7 +378,7 @@ public class Interfaz extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarActionPerformed
         String codigo = txtCodigo.getText();
         String descripcion = txtDes.getText();
         int cantidad = Integer.parseInt(txtCant.getText());
@@ -337,7 +420,7 @@ public class Interfaz extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(null, "Error al ingresar");
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnguardarActionPerformed
 
     private void btnminimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnminimizarMouseClicked
         this.setExtendedState(ICONIFIED);
@@ -348,13 +431,26 @@ public class Interfaz extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_btncerrarMouseClicked
 
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        rSPanelsSlider1.setPanelSlider(IngresarInventario, RSPanelsSlider.DIRECT.UP);
-    }//GEN-LAST:event_jButton2MouseClicked
+    private void btn_IngPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_IngPMouseClicked
+        rSPanelsSlider1.setPanelSlider(IngresarInventario, RSPanelsSlider.DIRECT.LEFT);
+    }//GEN-LAST:event_btn_IngPMouseClicked
 
-    private void txtCodigoBuscarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodigoBuscarKeyPressed
-        tableInventario.setModel(bi.bienes(txtCodigoBuscar.getText(), tableInventario));
-    }//GEN-LAST:event_txtCodigoBuscarKeyPressed
+    private void btnminimizar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnminimizar1MouseClicked
+        this.setExtendedState(ICONIFIED);
+    }//GEN-LAST:event_btnminimizar1MouseClicked
+
+    private void btncerrar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncerrar1MouseClicked
+        this.dispose();
+        System.exit(0);
+    }//GEN-LAST:event_btncerrar1MouseClicked
+
+    private void btnhomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnhomeMouseClicked
+        rSPanelsSlider1.setPanelSlider(menu, RSPanelsSlider.DIRECT.RIGHT);
+    }//GEN-LAST:event_btnhomeMouseClicked
+
+    private void btnatrasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnatrasMouseClicked
+         rSPanelsSlider1.setPanelSlider(menu, RSPanelsSlider.DIRECT.RIGHT);
+    }//GEN-LAST:event_btnatrasMouseClicked
 
     /**
      * @param args the command line arguments
@@ -394,34 +490,36 @@ public class Interfaz extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel IngresarInventario;
     private javax.swing.JPanel VerInventario;
+    private javax.swing.JButton btn_IngP;
     private javax.swing.JButton btn_Inp;
+    private javax.swing.JButton btnatras;
     private javax.swing.JButton btncerrar;
+    private javax.swing.JButton btncerrar1;
+    private javax.swing.JButton btnguardar;
+    private javax.swing.JButton btnhome;
     private javax.swing.JButton btnminimizar;
+    private javax.swing.JButton btnminimizar1;
     private javax.swing.JComboBox<String> cmbDep;
     private javax.swing.JComboBox<String> cmbDonado;
     private javax.swing.JComboBox<String> cmbEstado;
     private javax.swing.JComboBox<String> cmbFungible;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JPanel menu;
+    private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle1;
+    private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle2;
+    private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle3;
+    private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle4;
     private rojerusan.RSPanelsSlider rSPanelsSlider1;
     private javax.swing.JScrollPane scrollgai;
     private rojerusan.RSTableMetro tableInventario;
     private javax.swing.JTextField txtCant;
     private javax.swing.JTextField txtCodigo;
-    private javax.swing.JTextField txtCodigoBuscar;
     private javax.swing.JTextArea txtDes;
     private javax.swing.JTextField txtPrecio;
     // End of variables declaration//GEN-END:variables
