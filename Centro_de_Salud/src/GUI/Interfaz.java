@@ -12,6 +12,7 @@ import java.awt.Color;
 import java.awt.Shape;
 import java.awt.geom.RoundRectangle2D;
 import javax.swing.JOptionPane;
+import rojerusan.RSNotifyFade;
 import rojerusan.RSPanelsSlider;
 
 /**
@@ -88,7 +89,9 @@ public class Interfaz extends javax.swing.JFrame {
         btnMenuB.setOpaque(false);
         btnMenuB.setBorderPainted(false);
         btnMenuB.setContentAreaFilled(false);
-        
+        btnVerI.setOpaque(false);
+        btnVerI.setBorderPainted(false);
+        btnVerI.setContentAreaFilled(false);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -106,7 +109,7 @@ public class Interfaz extends javax.swing.JFrame {
         btncerrar = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         btn_IngP = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnVerI = new javax.swing.JButton();
         rSMaterialButtonCircle4 = new rojerusan.RSMaterialButtonCircle();
         rSMaterialButtonCircle7 = new rojerusan.RSMaterialButtonCircle();
         jLabel12 = new javax.swing.JLabel();
@@ -193,13 +196,14 @@ public class Interfaz extends javax.swing.JFrame {
         });
         menu.add(btn_IngP, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 160, 170));
 
-        jButton1.setText("ver");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnVerI.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Bulleted_List_70px_1.png"))); // NOI18N
+        btnVerI.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Bulleted_List_100px.png"))); // NOI18N
+        btnVerI.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                btnVerIMouseClicked(evt);
             }
         });
-        menu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 230, 160, 170));
+        menu.add(btnVerI, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 230, 160, 170));
 
         rSMaterialButtonCircle4.setBackground(new java.awt.Color(0, 52, 102));
         menu.add(rSMaterialButtonCircle4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 230, 160, 170));
@@ -572,11 +576,11 @@ public class Interfaz extends javax.swing.JFrame {
         }
         if(bi.ingresarBien(codigo, descripcion, cantidad, preciou, preciot, estado, donado, fungible, departamento))
         {
-            JOptionPane.showMessageDialog(null, "Ingreso correcto");
+            new rojerusan.RSNotifyFade("¡ACEPTADA!", "Ingreso Correcto", Color.WHITE, Color.BLACK, Color.BLACK, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.SUCCESS).setVisible(true);
         }
         else
         {
-            JOptionPane.showMessageDialog(null, "Error al ingresar");
+            new rojerusan.RSNotifyFade("¡ERROR!", "Ingreso incorrecto", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.ERROR).setVisible(true);
         }
     }//GEN-LAST:event_btnguardarActionPerformed
 
@@ -635,9 +639,9 @@ public class Interfaz extends javax.swing.JFrame {
         rSPanelsSlider3.setPanelSlider(JPMenuE, RSPanelsSlider.DIRECT.LEFT);
     }//GEN-LAST:event_menuEMouseClicked
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void btnVerIMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVerIMouseClicked
         rSPanelsSlider1.setPanelSlider(VerInventario, RSPanelsSlider.DIRECT.LEFT);
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_btnVerIMouseClicked
 
     /**
      * @param args the command line arguments
@@ -682,6 +686,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JPanel Magia;
     private javax.swing.JPanel VerInventario;
     private javax.swing.JButton btnMenuB;
+    private javax.swing.JButton btnVerI;
     private javax.swing.JButton btn_IngP;
     private javax.swing.JButton btn_Inp;
     private javax.swing.JButton btnatras;
@@ -698,7 +703,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbDonado;
     private javax.swing.JComboBox<String> cmbEstado;
     private javax.swing.JComboBox<String> cmbFungible;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

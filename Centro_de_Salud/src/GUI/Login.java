@@ -11,6 +11,7 @@ import java.awt.MouseInfo;
 import java.awt.Point;
 import java.awt.Shape;
 import java.awt.geom.RoundRectangle2D;
+import static java.awt.image.ImageObserver.SOMEBITS;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -20,6 +21,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import static jdk.nashorn.tools.ShellFunctions.input;
 import org.apache.commons.codec.digest.DigestUtils;
+import rojerusan.RSNotifyFade;
 import rojerusan.RSPanelsSlider;
 
 /**
@@ -606,13 +608,13 @@ public class Login extends javax.swing.JFrame {
             psw = DigestUtils.md5Hex(psw);
             if(us.ingresar(nombre, apellido, usuario, psw))
             {
-                JOptionPane.showMessageDialog(null, "El usuario ha sido ingresado exitosamente");
+                new rojerusan.RSNotifyFade("¡Excelente!", "Usuario Ingresado Correctamente", Color.WHITE, Color.BLACK, Color.BLACK, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.SUCCESS).setVisible(true);
                 cmbusuario.setModel(us.mostrarU());
             } else {
-                JOptionPane.showMessageDialog(null, "Error al ingresar el usuario");
+                new rojerusan.RSNotifyFade("¡ERROR!", "Error al ingresar usuario", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.ERROR).setVisible(true);
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Las contraseñas no coinciden");
+            new rojerusan.RSNotifyFade("¡ERROR!", "las contraseñas no coinciden", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.ERROR).setVisible(true);
         }
     }//GEN-LAST:event_lbRegistrarMouseClicked
 
@@ -659,7 +661,7 @@ public class Login extends javax.swing.JFrame {
             Interfaz obj = new Interfaz();
             obj.setVisible(true);
         } else {
-            JOptionPane.showMessageDialog(null, "Contraseña incorrecta, por favor verifique su contraseña");
+            new rojerusan.RSNotifyFade("¡ERROR!", "La contraseña es incorrecta, ingrese de nuevo", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.ERROR).setVisible(true);
             pswcon.setText("");
         }
     }
