@@ -149,11 +149,11 @@ public class Interfaz extends javax.swing.JFrame {
         rSMaterialButtonCircle6 = new rojerusan.RSMaterialButtonCircle();
         jLabel2 = new javax.swing.JLabel();
         JPMenuE = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        buenEstado = new javax.swing.JLabel();
+        malEstado = new javax.swing.JLabel();
+        Donado = new javax.swing.JLabel();
+        noDonado = new javax.swing.JLabel();
+        Fungible = new javax.swing.JLabel();
         btnMenuB = new javax.swing.JButton();
         rSMaterialButtonCircle5 = new rojerusan.RSMaterialButtonCircle();
         jLabel1 = new javax.swing.JLabel();
@@ -223,7 +223,6 @@ public class Interfaz extends javax.swing.JFrame {
         cmbFungible.setBackground(new java.awt.Color(0, 52, 102));
         cmbFungible.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
         cmbFungible.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
-        cmbFungible.setBorder(null);
         IngresarInventario.add(cmbFungible, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 630, 230, 40));
 
         txtDes.setColumns(20);
@@ -238,13 +237,11 @@ public class Interfaz extends javax.swing.JFrame {
 
         cmbDep.setBackground(new java.awt.Color(0, 52, 102));
         cmbDep.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        cmbDep.setBorder(null);
         IngresarInventario.add(cmbDep, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 516, 410, 30));
 
         cmbDonado.setBackground(new java.awt.Color(0, 52, 102));
         cmbDonado.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
         cmbDonado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
-        cmbDonado.setBorder(null);
         IngresarInventario.add(cmbDonado, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 580, 230, 40));
 
         txtCodigo.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
@@ -263,7 +260,6 @@ public class Interfaz extends javax.swing.JFrame {
         cmbEstado.setBackground(new java.awt.Color(0, 52, 102));
         cmbEstado.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
         cmbEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bueno", "Malo" }));
-        cmbEstado.setBorder(null);
         IngresarInventario.add(cmbEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 370, 220, 40));
 
         txtCant.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
@@ -386,6 +382,11 @@ public class Interfaz extends javax.swing.JFrame {
 
         Bcodigo.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
         Bcodigo.setBorder(null);
+        Bcodigo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                BcodigoKeyPressed(evt);
+            }
+        });
         InventarioCod.add(Bcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 206, 300, 40));
 
         btnhome1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_35px.png"))); // NOI18N
@@ -444,44 +445,69 @@ public class Interfaz extends javax.swing.JFrame {
         JPMenuE.setName("JPMenuE"); // NOI18N
         JPMenuE.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setBackground(new java.awt.Color(64, 201, 194));
-        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("              Buen Estado");
-        jLabel3.setOpaque(true);
-        JPMenuE.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 260, 70));
+        buenEstado.setBackground(new java.awt.Color(64, 201, 194));
+        buenEstado.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        buenEstado.setForeground(new java.awt.Color(255, 255, 255));
+        buenEstado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        buenEstado.setText("              Buen Estado");
+        buenEstado.setOpaque(true);
+        buenEstado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buenEstadoMouseClicked(evt);
+            }
+        });
+        JPMenuE.add(buenEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 260, 70));
 
-        jLabel4.setBackground(new java.awt.Color(84, 67, 103));
-        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("               Fungible");
-        jLabel4.setOpaque(true);
-        JPMenuE.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 260, 70));
+        malEstado.setBackground(new java.awt.Color(77, 152, 207));
+        malEstado.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        malEstado.setForeground(new java.awt.Color(255, 255, 255));
+        malEstado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        malEstado.setText("               Mal estado");
+        malEstado.setOpaque(true);
+        malEstado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                malEstadoMouseClicked(evt);
+            }
+        });
+        JPMenuE.add(malEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 260, 70));
 
-        jLabel5.setBackground(new java.awt.Color(90, 83, 135));
-        jLabel5.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("                No Donado");
-        jLabel5.setOpaque(true);
-        JPMenuE.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 260, 70));
+        Donado.setBackground(new java.awt.Color(72, 118, 170));
+        Donado.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        Donado.setForeground(new java.awt.Color(255, 255, 255));
+        Donado.setText("                           Donado");
+        Donado.setOpaque(true);
+        Donado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DonadoMouseClicked(evt);
+            }
+        });
+        JPMenuE.add(Donado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 260, 70));
 
-        jLabel6.setBackground(new java.awt.Color(72, 118, 170));
-        jLabel6.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("                           Donado");
-        jLabel6.setOpaque(true);
-        JPMenuE.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 260, 70));
+        noDonado.setBackground(new java.awt.Color(90, 83, 135));
+        noDonado.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        noDonado.setForeground(new java.awt.Color(255, 255, 255));
+        noDonado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        noDonado.setText("                No Donado");
+        noDonado.setOpaque(true);
+        noDonado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                noDonadoMouseClicked(evt);
+            }
+        });
+        JPMenuE.add(noDonado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 260, 70));
 
-        jLabel7.setBackground(new java.awt.Color(77, 152, 207));
-        jLabel7.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("               Mal estado");
-        jLabel7.setOpaque(true);
-        JPMenuE.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 260, 70));
+        Fungible.setBackground(new java.awt.Color(84, 67, 103));
+        Fungible.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        Fungible.setForeground(new java.awt.Color(255, 255, 255));
+        Fungible.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Fungible.setText("               Fungible");
+        Fungible.setOpaque(true);
+        Fungible.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                FungibleMouseClicked(evt);
+            }
+        });
+        JPMenuE.add(Fungible, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 260, 70));
 
         btnMenuB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Double_Right_70px.png"))); // NOI18N
         btnMenuB.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Double_Right_100px.png"))); // NOI18N
@@ -643,6 +669,35 @@ public class Interfaz extends javax.swing.JFrame {
         rSPanelsSlider1.setPanelSlider(VerInventario, RSPanelsSlider.DIRECT.LEFT);
     }//GEN-LAST:event_btnVerIMouseClicked
 
+    private void buenEstadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buenEstadoMouseClicked
+        Bcodigo.setText("");
+        tableInventario.setModel(bi.bienesPorEstado(tableInventario, true));
+    }//GEN-LAST:event_buenEstadoMouseClicked
+
+    private void malEstadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_malEstadoMouseClicked
+        Bcodigo.setText("");
+        tableInventario.setModel(bi.bienesPorEstado(tableInventario, false));
+    }//GEN-LAST:event_malEstadoMouseClicked
+
+    private void DonadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DonadoMouseClicked
+        Bcodigo.setText("");
+        tableInventario.setModel(bi.bienesDonacion(tableInventario, true));
+    }//GEN-LAST:event_DonadoMouseClicked
+
+    private void noDonadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_noDonadoMouseClicked
+        Bcodigo.setText("");
+        tableInventario.setModel(bi.bienesDonacion(tableInventario, false));
+    }//GEN-LAST:event_noDonadoMouseClicked
+
+    private void BcodigoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_BcodigoKeyPressed
+        tableInventario.setModel(bi.bienes(Bcodigo.getText(), tableInventario));
+    }//GEN-LAST:event_BcodigoKeyPressed
+
+    private void FungibleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FungibleMouseClicked
+        Bcodigo.setText("");
+        tableInventario.setModel(bi.bienesFungible(tableInventario, true));
+    }//GEN-LAST:event_FungibleMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -680,6 +735,8 @@ public class Interfaz extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Bcodigo;
+    private javax.swing.JLabel Donado;
+    private javax.swing.JLabel Fungible;
     private javax.swing.JPanel IngresarInventario;
     private javax.swing.JPanel InventarioCod;
     private javax.swing.JPanel JPMenuE;
@@ -699,6 +756,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton btnminimizar;
     private javax.swing.JButton btnminimizar1;
     private javax.swing.JButton btnminimizar2;
+    private javax.swing.JLabel buenEstado;
     private javax.swing.JComboBox<String> cmbDep;
     private javax.swing.JComboBox<String> cmbDonado;
     private javax.swing.JComboBox<String> cmbEstado;
@@ -710,14 +768,11 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel malEstado;
     private javax.swing.JPanel menu;
     private javax.swing.JButton menuE;
+    private javax.swing.JLabel noDonado;
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle1;
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle2;
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle3;

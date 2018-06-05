@@ -87,4 +87,196 @@ public class bien {
         }
         return tabla;
     }
+    public DefaultTableModel bienesPorEstado(JTable table, boolean estado)
+    {
+        String titulos[] = new String[6];
+        for(int i = 0; i < 6; i++)
+        {
+            titulos[i] = table.getColumnName(i);
+        }
+        DefaultTableModel tabla = new DefaultTableModel(null, titulos);
+        if(estado == true)
+        {
+            try {
+                String sql = "SELECT codigo, descripcion, cantidad, precio_unitario, estado, fungible from bien where estado = true";
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery(sql);
+                String registros[] = new String[6];
+                while(rs.next())
+                {
+                    registros[0] = rs.getString("codigo");
+                registros[1] = rs.getString("descripcion");
+                registros[2] = rs.getString("cantidad");
+                registros[3] = rs.getString("precio_unitario");
+                if(rs.getBoolean("estado") == true)
+                {
+                    registros[4] = "Bueno";
+                } else registros[4] = "Malo";
+                if(rs.getBoolean("fungible") == true)
+                {
+                    registros[5] = "Sí";
+                } else registros[6] = "No";
+                tabla.addRow(registros);
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        else
+        {
+            try {
+                String sql = "SELECT codigo, descripcion, cantidad, precio_unitario, estado, fungible from bien where estado = false";
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery(sql);
+                String registros[] = new String[6];
+                while(rs.next())
+                {
+                    registros[0] = rs.getString("codigo");
+                registros[1] = rs.getString("descripcion");
+                registros[2] = rs.getString("cantidad");
+                registros[3] = rs.getString("precio_unitario");
+                if(rs.getBoolean("estado") == true)
+                {
+                    registros[4] = "Bueno";
+                } else registros[4] = "Malo";
+                if(rs.getBoolean("fungible") == true)
+                {
+                    registros[5] = "Sí";
+                } else registros[6] = "No";
+                tabla.addRow(registros);
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return tabla;
+    }
+    public DefaultTableModel bienesDonacion(JTable table, boolean donado)
+    {
+        String titulos[] = new String[6];
+        for(int i = 0; i < 6; i++)
+        {
+            titulos[i] = table.getColumnName(i);
+        }
+        DefaultTableModel tabla = new DefaultTableModel(null, titulos);
+        if(donado == true)
+        {
+            try {
+                String sql = "SELECT codigo, descripcion, cantidad, precio_unitario, estado, fungible from bien where donado = true";
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery(sql);
+                String registros[] = new String[6];
+                while(rs.next())
+                {
+                    registros[0] = rs.getString("codigo");
+                registros[1] = rs.getString("descripcion");
+                registros[2] = rs.getString("cantidad");
+                registros[3] = rs.getString("precio_unitario");
+                if(rs.getBoolean("estado") == true)
+                {
+                    registros[4] = "Bueno";
+                } else registros[4] = "Malo";
+                if(rs.getBoolean("fungible") == true)
+                {
+                    registros[5] = "Sí";
+                } else registros[6] = "No";
+                tabla.addRow(registros);
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        else
+        {
+            try {
+                String sql = "SELECT codigo, descripcion, cantidad, precio_unitario, estado, fungible from bien where donado = false";
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery(sql);
+                String registros[] = new String[6];
+                while(rs.next())
+                {
+                    registros[0] = rs.getString("codigo");
+                registros[1] = rs.getString("descripcion");
+                registros[2] = rs.getString("cantidad");
+                registros[3] = rs.getString("precio_unitario");
+                if(rs.getBoolean("estado") == true)
+                {
+                    registros[4] = "Bueno";
+                } else registros[4] = "Malo";
+                if(rs.getBoolean("fungible") == true)
+                {
+                    registros[5] = "Sí";
+                } else registros[6] = "No";
+                tabla.addRow(registros);
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return tabla;
+    }
+    public DefaultTableModel bienesFungible(JTable table, boolean fungible)
+    {
+        String titulos[] = new String[6];
+        for(int i = 0; i < 6; i++)
+        {
+            titulos[i] = table.getColumnName(i);
+        }
+        DefaultTableModel tabla = new DefaultTableModel(null, titulos);
+        if(fungible == true)
+        {
+            try {
+                String sql = "SELECT codigo, descripcion, cantidad, precio_unitario, estado, fungible from bien where fungible = true";
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery(sql);
+                String registros[] = new String[6];
+                while(rs.next())
+                {
+                    registros[0] = rs.getString("codigo");
+                registros[1] = rs.getString("descripcion");
+                registros[2] = rs.getString("cantidad");
+                registros[3] = rs.getString("precio_unitario");
+                if(rs.getBoolean("estado") == true)
+                {
+                    registros[4] = "Bueno";
+                } else registros[4] = "Malo";
+                if(rs.getBoolean("fungible") == true)
+                {
+                    registros[5] = "Sí";
+                } else registros[6] = "No";
+                tabla.addRow(registros);
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        else
+        {
+            try {
+                String sql = "SELECT codigo, descripcion, cantidad, precio_unitario, estado, fungible from bien where fungible = false";
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery(sql);
+                String registros[] = new String[6];
+                while(rs.next())
+                {
+                    registros[0] = rs.getString("codigo");
+                registros[1] = rs.getString("descripcion");
+                registros[2] = rs.getString("cantidad");
+                registros[3] = rs.getString("precio_unitario");
+                if(rs.getBoolean("estado") == true)
+                {
+                    registros[4] = "Bueno";
+                } else registros[4] = "Malo";
+                if(rs.getBoolean("fungible") == true)
+                {
+                    registros[5] = "Sí";
+                } else registros[6] = "No";
+                tabla.addRow(registros);
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return tabla;
+    }
 }
