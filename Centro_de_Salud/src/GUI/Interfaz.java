@@ -35,6 +35,7 @@ public class Interfaz extends javax.swing.JFrame {
         bi = new bien();
         dep = new departamento();
         cmbDep.setModel(dep.mostrarDepartamentos());
+        lbTotal.setText("Total: Q." + bi.actualizarTotal());
     }
     private void transparencia()
     {
@@ -148,6 +149,7 @@ public class Interfaz extends javax.swing.JFrame {
         btnhome1 = new javax.swing.JButton();
         btnminimizar2 = new javax.swing.JButton();
         btncerrar2 = new javax.swing.JButton();
+        lbTotal = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         rSPanelsSlider3 = new rojerusan.RSPanelsSlider();
         Magia = new javax.swing.JPanel();
@@ -452,6 +454,10 @@ public class Interfaz extends javax.swing.JFrame {
         });
         InventarioCod.add(btncerrar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 0, -1, 57));
 
+        lbTotal.setFont(new java.awt.Font("DejaVu Sans", 1, 36)); // NOI18N
+        lbTotal.setText("Total:");
+        InventarioCod.add(lbTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 200, 300, 50));
+
         jLabel14.setBackground(new java.awt.Color(0, 54, 102));
         jLabel14.setOpaque(true);
         InventarioCod.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1290, 60));
@@ -643,6 +649,7 @@ public class Interfaz extends javax.swing.JFrame {
         if(bi.ingresarBien(codigo, descripcion, cantidad, preciou, preciot, estado, donado, fungible, departamento))
         {
             new rojerusan.RSNotifyFade("¡ACEPTADA!", "Ingreso Correcto", Color.WHITE, Color.BLACK, Color.BLACK, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.SUCCESS).setVisible(true);
+            lbTotal.setText("Total: Q." + bi.actualizarTotal());
         }
         else
         {
@@ -742,6 +749,11 @@ public class Interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnVerIActionPerformed
 
+    public void actualizarTotal()
+    {
+        //Esto permitirá ver el total del valor del inventario
+        lbTotal.setText("Total: Q." + bi.actualizarTotal());
+    }
     /**
      * @param args the command line arguments
      */
@@ -820,6 +832,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lbTotal;
     private javax.swing.JLabel malEstado;
     private javax.swing.JPanel menu;
     private javax.swing.JButton menuE;

@@ -279,4 +279,21 @@ public class bien {
         }
         return tabla;
     }
+    public String actualizarTotal()
+    {
+        String resultado = "";
+        //Hará la suma del precio total de todos los bienes
+        try {
+            String sql = "SELECT sum(precio_total) as total from bien";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                resultado = rs.getString("total");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return resultado;
+    }
 }
