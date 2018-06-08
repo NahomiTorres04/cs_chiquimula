@@ -35,7 +35,6 @@ public class Interfaz extends javax.swing.JFrame {
         bi = new bien();
         dep = new departamento();
         cmbDep.setModel(dep.mostrarDepartamentos());
-        lbTotal.setText("Total: Q." + bi.actualizarTotal());
     }
     private void transparencia()
     {
@@ -149,7 +148,7 @@ public class Interfaz extends javax.swing.JFrame {
         btnhome1 = new javax.swing.JButton();
         btnminimizar2 = new javax.swing.JButton();
         btncerrar2 = new javax.swing.JButton();
-        lbTotal = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
         rSPanelsSlider3 = new rojerusan.RSPanelsSlider();
         Magia = new javax.swing.JPanel();
@@ -203,7 +202,7 @@ public class Interfaz extends javax.swing.JFrame {
                 btn_IngPMouseClicked(evt);
             }
         });
-        menu.add(btn_IngP, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 160, 170));
+        menu.add(btn_IngP, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 160, 170));
 
         btnVerI.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Bulleted_List_70px_1.png"))); // NOI18N
         btnVerI.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Bulleted_List_100px.png"))); // NOI18N
@@ -217,21 +216,21 @@ public class Interfaz extends javax.swing.JFrame {
                 btnVerIActionPerformed(evt);
             }
         });
-        menu.add(btnVerI, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 230, 160, 170));
+        menu.add(btnVerI, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 230, 160, 170));
 
         rSMaterialButtonCircle4.setBackground(new java.awt.Color(0, 52, 102));
-        menu.add(rSMaterialButtonCircle4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 230, 160, 170));
+        menu.add(rSMaterialButtonCircle4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 230, 160, 170));
 
         rSMaterialButtonCircle7.setBackground(new java.awt.Color(0, 52, 102));
-        menu.add(rSMaterialButtonCircle7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 160, 170));
+        menu.add(rSMaterialButtonCircle7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 160, 170));
 
         jLabel3.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel3.setText("Ver Inventario");
-        menu.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, 190, 80));
+        menu.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, 210, 80));
 
         jLabel4.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel4.setText("Ingresar Artículo");
-        menu.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, 190, 80));
+        menu.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, 250, 80));
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/menu.png"))); // NOI18N
         menu.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1280, 720));
@@ -347,15 +346,15 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel5.setText("Guardar Artículo");
-        IngresarInventario.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 550, 190, 80));
+        IngresarInventario.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 550, 230, 80));
 
         jLabel7.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel7.setText("  Ingresar");
-        IngresarInventario.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 510, 190, 80));
+        IngresarInventario.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 510, 190, 80));
 
         jLabel8.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel8.setText("Regresar");
-        IngresarInventario.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 530, 110, 80));
+        IngresarInventario.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 530, 130, 80));
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/ingresara.png"))); // NOI18N
         IngresarInventario.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1280, 720));
@@ -375,23 +374,23 @@ public class Interfaz extends javax.swing.JFrame {
         };
         tableInventario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Código", "Descripción", "Cantidad", "Precio unitario", "Estado", "Fungible"
+                "Código", "Descripción", "Cantidad", "Precio unitario", "Estado", "Fungible", "Total"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                true, true, false, true, true, true
+                true, true, false, true, true, true, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -416,7 +415,7 @@ public class Interfaz extends javax.swing.JFrame {
         tableInventario.getTableHeader().setReorderingAllowed(false);
         scrollgai1.setViewportView(tableInventario);
 
-        InventarioCod.add(scrollgai1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, 860, 440));
+        InventarioCod.add(scrollgai1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 880, 470));
 
         Bcodigo.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
         Bcodigo.setBorder(null);
@@ -454,9 +453,13 @@ public class Interfaz extends javax.swing.JFrame {
         });
         InventarioCod.add(btncerrar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 0, -1, 57));
 
-        lbTotal.setFont(new java.awt.Font("DejaVu Sans", 1, 36)); // NOI18N
-        lbTotal.setText("Total:");
-        InventarioCod.add(lbTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 200, 300, 50));
+        jButton1.setText("Mostrar");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        InventarioCod.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 110, 130));
 
         jLabel14.setBackground(new java.awt.Color(0, 54, 102));
         jLabel14.setOpaque(true);
@@ -479,7 +482,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel9.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel9.setText("  Otras Opciones");
-        Magia.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 190, 80));
+        Magia.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 220, 80));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/inventario.png"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -649,7 +652,6 @@ public class Interfaz extends javax.swing.JFrame {
         if(bi.ingresarBien(codigo, descripcion, cantidad, preciou, preciot, estado, donado, fungible, departamento))
         {
             new rojerusan.RSNotifyFade("¡ACEPTADA!", "Ingreso Correcto", Color.WHITE, Color.BLACK, Color.BLACK, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.SUCCESS).setVisible(true);
-            lbTotal.setText("Total: Q." + bi.actualizarTotal());
         }
         else
         {
@@ -749,11 +751,10 @@ public class Interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnVerIActionPerformed
 
-    public void actualizarTotal()
-    {
-        //Esto permitirá ver el total del valor del inventario
-        lbTotal.setText("Total: Q." + bi.actualizarTotal());
-    }
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        tableInventario.setModel(bi.todosBienes(tableInventario));
+    }//GEN-LAST:event_jButton1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -817,6 +818,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbDonado;
     private javax.swing.JComboBox<String> cmbEstado;
     private javax.swing.JComboBox<String> cmbFungible;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -832,7 +834,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lbTotal;
     private javax.swing.JLabel malEstado;
     private javax.swing.JPanel menu;
     private javax.swing.JButton menuE;
