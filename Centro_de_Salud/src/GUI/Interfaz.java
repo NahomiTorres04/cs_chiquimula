@@ -12,6 +12,7 @@ import java.awt.Color;
 import java.awt.Shape;
 import java.awt.geom.RoundRectangle2D;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import rojerusan.RSNotifyFade;
 import rojerusan.RSPanelsSlider;
 
@@ -744,6 +745,7 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void btnhome1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnhome1MouseClicked
         rSPanelsSlider1.setPanelSlider(menu, RSPanelsSlider.DIRECT.RIGHT);
+        limpiarTabla();
     }//GEN-LAST:event_btnhome1MouseClicked
 
     private void btnminimizar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnminimizar2MouseClicked
@@ -808,6 +810,17 @@ public class Interfaz extends javax.swing.JFrame {
         tableInventario.setModel(bi.todosBienes(tableInventario));
     }//GEN-LAST:event_jButton1MouseClicked
 
+    private void limpiarTabla()
+    {
+        for(int i = 0; i <= tableInventario.getRowCount(); i++)
+        {
+            ((DefaultTableModel)tableInventario.getModel()).removeRow(i);
+        }
+        for(int i = 0; i <= tableInventario.getRowCount(); i++)
+        {
+            ((DefaultTableModel)tableInventario.getModel()).removeRow(i);
+        }
+    }
     private void btn_InpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_InpMouseClicked
         Limpiar();
     }//GEN-LAST:event_btn_InpMouseClicked
