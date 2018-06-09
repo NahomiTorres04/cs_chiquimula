@@ -57,4 +57,20 @@ public class departamento {
         }
         return id;
     }
+    public String seleccionarNombre(int id)
+    {
+        String nombre = "";
+        try {
+            String sql = "SELECT descripcion from departamento where id = " + id;
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                nombre = rs.getString("descripcion");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(departamento.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return nombre;
+    }
 }

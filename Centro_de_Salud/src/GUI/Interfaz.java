@@ -528,7 +528,6 @@ public class Interfaz extends javax.swing.JFrame {
 
         malEstado.setBackground(new java.awt.Color(200, 213, 229));
         malEstado.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        malEstado.setForeground(new java.awt.Color(51, 51, 51));
         malEstado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         malEstado.setText("               Mal estado");
         malEstado.setOpaque(true);
@@ -611,7 +610,6 @@ public class Interfaz extends javax.swing.JFrame {
 
         Departamento.setBackground(new java.awt.Color(236, 241, 246));
         Departamento.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        Departamento.setForeground(new java.awt.Color(51, 51, 51));
         Departamento.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Departamento.setText("               Departamento");
         Departamento.setOpaque(true);

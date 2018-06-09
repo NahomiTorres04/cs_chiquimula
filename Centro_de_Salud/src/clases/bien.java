@@ -55,8 +55,8 @@ public class bien {
     }
     public DefaultTableModel bienes(String codigo, JTable table)
     {
-        String titulos[] = new String[7];
-        for(int i = 0; i < 7; i++)
+        String titulos[] = new String[6];
+        for(int i = 0; i < 6; i++)
         {
             titulos[i] = table.getColumnName(i);
         }
@@ -87,7 +87,7 @@ public class bien {
             rs = st.executeQuery(sql);
             while(rs.next())
             {
-                tabla.addRow(new Object[] {"", "", "", "", "", "", rs.getString("total")});
+                tabla.addRow(new Object[] {"Total", "", "", "", "", rs.getString("total")});
             }
         } catch (SQLException ex) {
             Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
@@ -96,19 +96,26 @@ public class bien {
     }
     public DefaultTableModel todosBienes(JTable table)
     {
-        String titulos[] = new String[7];
-        for(int i = 0; i < 7; i++)
+        departamento dep = new departamento();
+        String titulos[] = new String[6];
+        for(int i = 0; i < 6; i++)
         {
             titulos[i] = table.getColumnName(i);
         }
         DefaultTableModel tabla = new DefaultTableModel(null, titulos);
         try {
-            String sql = "SELECT codigo, descripcion, cantidad, precio_unitario, estado, fungible from bien";
+            String sql = "SELECT codigo, descripcion, cantidad, precio_unitario, estado, fungible, departamento_id from bien order by departamento_id";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
             String registros[] = new String[6];
+            String departamento_actual = "0";
             while(rs.next())
             {
+                if(departamento_actual.equals(rs.getString("departamento_id")) == false)
+                {
+                    tabla.addRow(new Object[] {"", "", "", dep.seleccionarNombre(rs.getInt("departamento_id")), "", "", ""});
+                    departamento_actual = rs.getString("departamento_id");
+                }
                 registros[0] = rs.getString("codigo");
                 registros[1] = rs.getString("descripcion");
                 registros[2] = rs.getString("cantidad");
@@ -128,7 +135,7 @@ public class bien {
             rs = st.executeQuery(sql);
             while(rs.next())
             {
-                tabla.addRow(new Object[] {"", "", "", "", "", "", rs.getString("total")});
+                tabla.addRow(new Object[] {"Total", "", "", "", "", rs.getString("total")});
             }
         } catch (SQLException ex) {
             Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
@@ -137,8 +144,8 @@ public class bien {
     }
     public DefaultTableModel bienesPorEstado(JTable table, boolean estado)
     {
-        String titulos[] = new String[7];
-        for(int i = 0; i < 7; i++)
+        String titulos[] = new String[6];
+        for(int i = 0; i < 6; i++)
         {
             titulos[i] = table.getColumnName(i);
         }
@@ -171,7 +178,7 @@ public class bien {
                 rs = st.executeQuery(sql);
                 while(rs.next())
                 {
-                    tabla.addRow(new Object[] {"", "", "", "", "", "", rs.getString("total")});
+                    tabla.addRow(new Object[] {"Total", "", "", "", "", rs.getString("total")});
                 }
             } catch (SQLException ex) {
                 Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
@@ -205,7 +212,7 @@ public class bien {
                 rs = st.executeQuery(sql);
                 while(rs.next())
                 {
-                    tabla.addRow(new Object[] {"", "", "", "", "", "", rs.getString("total")});
+                    tabla.addRow(new Object[] {"Total", "", "", "", "", rs.getString("total")});
                 }
             } catch (SQLException ex) {
                 Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
@@ -215,8 +222,8 @@ public class bien {
     }
     public DefaultTableModel bienesDonacion(JTable table, boolean donado)
     {
-        String titulos[] = new String[7];
-        for(int i = 0; i < 7; i++)
+        String titulos[] = new String[6];
+        for(int i = 0; i < 6; i++)
         {
             titulos[i] = table.getColumnName(i);
         }
@@ -249,7 +256,7 @@ public class bien {
                 rs = st.executeQuery(sql);
                 while(rs.next())
                 {
-                    tabla.addRow(new Object[] {"", "", "", "", "", "", rs.getString("total")});
+                    tabla.addRow(new Object[] {"Total", "", "", "", "", rs.getString("total")});
                 }
             } catch (SQLException ex) {
                 Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
@@ -283,7 +290,7 @@ public class bien {
                 rs = st.executeQuery(sql);
                 while(rs.next())
                 {
-                    tabla.addRow(new Object[] {"", "", "", "", "", "", rs.getString("total")});
+                    tabla.addRow(new Object[] {"Total", "", "", "", "", rs.getString("total")});
                 }
             } catch (SQLException ex) {
                 Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
@@ -293,8 +300,8 @@ public class bien {
     }
     public DefaultTableModel bienesFungible(JTable table, boolean fungible)
     {
-        String titulos[] = new String[7];
-        for(int i = 0; i < 7; i++)
+        String titulos[] = new String[6];
+        for(int i = 0; i < 6; i++)
         {
             titulos[i] = table.getColumnName(i);
         }
@@ -327,7 +334,7 @@ public class bien {
                 rs = st.executeQuery(sql);
                 while(rs.next())
                 {
-                    tabla.addRow(new Object[] {"", "", "", "", "", "", rs.getString("total")});
+                    tabla.addRow(new Object[] {"Total", "", "", "", "", rs.getString("total")});
                 }
             } catch (SQLException ex) {
                 Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
@@ -361,7 +368,7 @@ public class bien {
                 rs = st.executeQuery(sql);
                 while(rs.next())
                 {
-                    tabla.addRow(new Object[] {"", "", "", "", "", "", rs.getString("total")});
+                    tabla.addRow(new Object[] {"Total", "", "", "", "", rs.getString("total")});
                 }
             } catch (SQLException ex) {
                 Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
