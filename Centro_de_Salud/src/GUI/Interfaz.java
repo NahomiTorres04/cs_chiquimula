@@ -99,15 +99,6 @@ public class Interfaz extends javax.swing.JFrame {
         btnhome1.setOpaque(false);
         btnhome1.setBorderPainted(false);
         btnhome1.setContentAreaFilled(false);
-        btnminimizar3.setOpaque(false);
-        btnminimizar3.setBorderPainted(false);
-        btnminimizar3.setContentAreaFilled(false);
-        btncerrar3.setOpaque(false);
-        btncerrar3.setBorderPainted(false);
-        btncerrar3.setContentAreaFilled(false);
-        btnhome2.setOpaque(false);
-        btnhome2.setBorderPainted(false);
-        btnhome2.setContentAreaFilled(false);
         menuE.setOpaque(false);
         menuE.setBorderPainted(false);
         menuE.setContentAreaFilled(false);
@@ -128,6 +119,7 @@ public class Interfaz extends javax.swing.JFrame {
         txtCodigo.setText("");
         txtCant.setText("");
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -207,12 +199,6 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         btnreporte = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        IngP = new javax.swing.JPanel();
-        jLabel17 = new javax.swing.JLabel();
-        btnhome2 = new javax.swing.JButton();
-        btnminimizar3 = new javax.swing.JButton();
-        btncerrar3 = new javax.swing.JButton();
-        jLabel18 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -488,6 +474,11 @@ public class Interfaz extends javax.swing.JFrame {
         tableInventario.setRowHeight(22);
         tableInventario.getTableHeader().setReorderingAllowed(false);
         scrollgai1.setViewportView(tableInventario);
+        if (tableInventario.getColumnModel().getColumnCount() > 0) {
+            tableInventario.getColumnModel().getColumn(4).setHeaderValue("");
+            tableInventario.getColumnModel().getColumn(5).setHeaderValue("Fungible");
+            tableInventario.getColumnModel().getColumn(6).setHeaderValue("Total");
+        }
 
         InventarioCod.add(scrollgai1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 940, 470));
 
@@ -712,55 +703,6 @@ public class Interfaz extends javax.swing.JFrame {
 
         rSPanelsSlider1.add(VerInventario, "card4");
 
-        IngP.setName("IngP"); // NOI18N
-        IngP.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/ingp.png"))); // NOI18N
-        IngP.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1280, 720));
-
-        btnhome2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_35px.png"))); // NOI18N
-        btnhome2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_55px.png"))); // NOI18N
-        btnhome2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnhome2MouseClicked(evt);
-            }
-        });
-        IngP.add(btnhome2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1056, 0, 80, 60));
-
-        btnminimizar3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_35px.png"))); // NOI18N
-        btnminimizar3.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_55px.png"))); // NOI18N
-        btnminimizar3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnminimizar3MouseClicked(evt);
-            }
-        });
-        btnminimizar3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnminimizar3ActionPerformed(evt);
-            }
-        });
-        IngP.add(btnminimizar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, -1, 57));
-
-        btncerrar3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_35px_1.png"))); // NOI18N
-        btncerrar3.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_55px_1.png"))); // NOI18N
-        btncerrar3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btncerrar3MouseClicked(evt);
-            }
-        });
-        btncerrar3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btncerrar3ActionPerformed(evt);
-            }
-        });
-        IngP.add(btncerrar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 0, -1, 57));
-
-        jLabel18.setBackground(new java.awt.Color(0, 54, 102));
-        jLabel18.setOpaque(true);
-        IngP.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1290, 60));
-
-        rSPanelsSlider1.add(IngP, "card5");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -972,35 +914,15 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btnreporteActionPerformed
 
     private void btnPacientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPacientesMouseClicked
+        this.dispose();
         Doctor D = new Doctor();
         D.setVisible(true);
-        rSPanelsSlider1.setPanelSlider(IngP, RSPanelsSlider.DIRECT.RIGHT);
+        
     }//GEN-LAST:event_btnPacientesMouseClicked
 
     private void btnPacientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPacientesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnPacientesActionPerformed
-
-    private void btnhome2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnhome2MouseClicked
-        rSPanelsSlider1.setPanelSlider(menu, RSPanelsSlider.DIRECT.RIGHT);        
-    }//GEN-LAST:event_btnhome2MouseClicked
-
-    private void btnminimizar3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnminimizar3MouseClicked
-        this.setExtendedState(ICONIFIED);
-    }//GEN-LAST:event_btnminimizar3MouseClicked
-
-    private void btncerrar3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncerrar3MouseClicked
-        this.dispose();
-        System.exit(0);
-    }//GEN-LAST:event_btncerrar3MouseClicked
-
-    private void btnminimizar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnminimizar3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnminimizar3ActionPerformed
-
-    private void btncerrar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncerrar3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btncerrar3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1042,7 +964,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel Departamento;
     private javax.swing.JLabel Donado;
     private javax.swing.JLabel Fungible;
-    private javax.swing.JPanel IngP;
     private javax.swing.JPanel IngresarInventario;
     private javax.swing.JPanel InventarioCod;
     private javax.swing.JPanel JPMenuE;
@@ -1058,15 +979,12 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton btncerrar;
     private javax.swing.JButton btncerrar1;
     private javax.swing.JButton btncerrar2;
-    private javax.swing.JButton btncerrar3;
     private javax.swing.JButton btnguardar;
     private javax.swing.JButton btnhome;
     private javax.swing.JButton btnhome1;
-    private javax.swing.JButton btnhome2;
     private javax.swing.JButton btnminimizar;
     private javax.swing.JButton btnminimizar1;
     private javax.swing.JButton btnminimizar2;
-    private javax.swing.JButton btnminimizar3;
     private javax.swing.JButton btnreporte;
     private javax.swing.JLabel buenEstado;
     private javax.swing.JComboBox<String> cmbDep;
@@ -1082,8 +1000,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

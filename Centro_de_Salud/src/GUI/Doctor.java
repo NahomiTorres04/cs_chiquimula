@@ -191,7 +191,9 @@ public class Doctor extends javax.swing.JFrame {
     }//GEN-LAST:event_txtapellidoRActionPerformed
 
     private void rSMaterialButtonRectangle4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle4ActionPerformed
-        
+        Pacientes_Consultas pc = new Pacientes_Consultas();
+        pc.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_rSMaterialButtonRectangle4ActionPerformed
 
     /**
