@@ -5,6 +5,7 @@
  */
 package GUI;
 
+import clases.empleado;
 import com.sun.awt.AWTUtilities;
 import java.awt.Color;
 import java.awt.Shape;
@@ -17,6 +18,7 @@ import rojerusan.RSPanelsSlider;
  */
 public class Doctor extends javax.swing.JFrame {
 
+    public empleado emp;
     /**
      * Creates new form Doctor
      */
@@ -24,9 +26,11 @@ public class Doctor extends javax.swing.JFrame {
         initComponents();
         txtnombreR.setBackground(new Color(0,0,0,0));
         txtapellidoR.setBackground(new Color(0,0,0,0));
+        txtProfesionR.setBackground(new Color(0,0,0,0));
         Shape forma = new RoundRectangle2D.Double(0,0,this.getBounds().width, this.getBounds().height,35,35);
         AWTUtilities.setWindowShape(this, forma);
         this.setLocationRelativeTo(null);
+        emp = new empleado();
     }
 
     /**
@@ -43,6 +47,7 @@ public class Doctor extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         txtnombreR = new javax.swing.JTextField();
         txtapellidoR = new javax.swing.JTextField();
+        txtProfesionR = new javax.swing.JTextField();
         rSMaterialButtonRectangle1 = new rojerusan.RSMaterialButtonRectangle();
         rSMaterialButtonRectangle2 = new rojerusan.RSMaterialButtonRectangle();
         jLabel7 = new javax.swing.JLabel();
@@ -73,6 +78,11 @@ public class Doctor extends javax.swing.JFrame {
 
         txtnombreR.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
         txtnombreR.setBorder(null);
+        txtnombreR.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtnombreRKeyReleased(evt);
+            }
+        });
         jPanel1.add(txtnombreR, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 173, 310, 30));
 
         txtapellidoR.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
@@ -82,7 +92,22 @@ public class Doctor extends javax.swing.JFrame {
                 txtapellidoRActionPerformed(evt);
             }
         });
+        txtapellidoR.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtapellidoRKeyReleased(evt);
+            }
+        });
         jPanel1.add(txtapellidoR, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, 310, 30));
+
+        txtProfesionR.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
+        txtProfesionR.setBorder(null);
+        txtProfesionR.setEnabled(false);
+        txtProfesionR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtProfesionRActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtProfesionR, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 300, 30));
 
         rSMaterialButtonRectangle1.setBackground(new java.awt.Color(186, 240, 255));
         rSMaterialButtonRectangle1.setEnabled(false);
@@ -196,6 +221,22 @@ public class Doctor extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_rSMaterialButtonRectangle4ActionPerformed
 
+    private void txtProfesionRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtProfesionRActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtProfesionRActionPerformed
+
+    private void txtnombreRKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnombreRKeyReleased
+        String nombre = txtnombreR.getText();
+        String apellido = txtapellidoR.getText();
+        txtProfesionR.setText(emp.getProfesion(nombre, apellido));
+    }//GEN-LAST:event_txtnombreRKeyReleased
+
+    private void txtapellidoRKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtapellidoRKeyReleased
+        String nombre = txtnombreR.getText();
+        String apellido = txtapellidoR.getText();
+        txtProfesionR.setText(emp.getProfesion(nombre, apellido));
+    }//GEN-LAST:event_txtapellidoRKeyReleased
+
     /**
      * @param args the command line arguments
      */
@@ -249,6 +290,7 @@ public class Doctor extends javax.swing.JFrame {
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle2;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle3;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle4;
+    private javax.swing.JTextField txtProfesionR;
     private javax.swing.JTextField txtapellidoR;
     private javax.swing.JTextField txtnombreR;
     // End of variables declaration//GEN-END:variables
