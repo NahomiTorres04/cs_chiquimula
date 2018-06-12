@@ -21,13 +21,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import net.sf.jasperreports.engine.JRException;
-import net.sf.jasperreports.engine.JasperFillManager;
-import net.sf.jasperreports.engine.JasperPrint;
-import net.sf.jasperreports.engine.JasperReport;
-import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
-import net.sf.jasperreports.engine.util.JRLoader;
-import net.sf.jasperreports.view.JasperViewer;
 import rojerusan.RSNotifyFade;
 import rojerusan.RSPanelsSlider;
 
@@ -894,22 +887,22 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_DepartamentoMouseClicked
 
     private void btnreporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnreporteActionPerformed
-        try {
-            List lista = new ArrayList();
-            for(int i = 0; i <= tableInventario.getRowCount(); i++)
-            {
-                ReporteInventario repo = new ReporteInventario(tableInventario.getValueAt(i, 2).toString(), tableInventario.getValueAt(i, 1).toString(),tableInventario.getValueAt(i, 3).toString(),tableInventario.getValueAt(i,4).toString(), tableInventario.getValueAt(i, 0).toString());
-                lista.add(repo);
-            }
-            File file = new File("/GUI/Reportes/Inventario.jasper");
-            JasperReport  r  = (JasperReport) JRLoader.loadObject(file);
-            Map parametro = new HashMap();
-            parametro.put("TipoI", "General");
-            JasperPrint jprint = JasperFillManager.fillReport(r, parametro, new JRBeanCollectionDataSource(lista));
-            JasperViewer.viewReport(jprint);
-        } catch (JRException ex) {
-            Logger.getLogger(Interfaz.class.getName()).log(Level.SEVERE, null, ex);
-        }
+//        try {
+//            List lista = new ArrayList();
+//            for(int i = 0; i <= tableInventario.getRowCount(); i++)
+//            {
+//                ReporteInventario repo = new ReporteInventario(tableInventario.getValueAt(i, 2).toString(), tableInventario.getValueAt(i, 1).toString(),tableInventario.getValueAt(i, 3).toString(),tableInventario.getValueAt(i,4).toString(), tableInventario.getValueAt(i, 0).toString());
+//                lista.add(repo);
+//            }
+//            File file = new File("/GUI/Reportes/Inventario.jasper");
+//            JasperReport  r  = (JasperReport) JRLoader.loadObject(file);
+//            Map parametro = new HashMap();
+//            parametro.put("TipoI", "General");
+//            JasperPrint jprint = JasperFillManager.fillReport(r, parametro, new JRBeanCollectionDataSource(lista));
+//            JasperViewer.viewReport(jprint);
+//        } catch (JRException ex) {
+//            Logger.getLogger(Interfaz.class.getName()).log(Level.SEVERE, null, ex);
+//        }
         
     }//GEN-LAST:event_btnreporteActionPerformed
 
