@@ -5,10 +5,14 @@
  */
 package GUI;
 
+import clases.paciente;
 import com.sun.awt.AWTUtilities;
 import java.awt.Color;
 import java.awt.Shape;
 import java.awt.geom.RoundRectangle2D;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import javax.swing.JOptionPane;
 import rojerusan.RSPanelsSlider;
 
 /**
@@ -17,6 +21,7 @@ import rojerusan.RSPanelsSlider;
  */
 public class Pacientes_Consultas extends javax.swing.JFrame {
 
+    public paciente pa;
     /**
      * Creates new form Pacientes_Consultas
      */
@@ -26,7 +31,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         AWTUtilities.setWindowShape(this, forma);
         this.setLocationRelativeTo(null);
         transparencia();
-        
+        pa = new paciente();
     }
     private void transparencia()
     {
@@ -200,6 +205,11 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
 
         txtApellidop.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
         txtApellidop.setBorder(null);
+        txtApellidop.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtApellidopKeyReleased(evt);
+            }
+        });
         IngP.add(txtApellidop, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 245, 280, 40));
 
         btnconsulta.setText("Consulta");
@@ -215,6 +225,11 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
 
         txtNombrep.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
         txtNombrep.setBorder(null);
+        txtNombrep.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtNombrepKeyReleased(evt);
+            }
+        });
         IngP.add(txtNombrep, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 193, 280, 40));
 
         rSMaterialButtonRectangle3.setBackground(new java.awt.Color(186, 240, 255));
@@ -496,12 +511,12 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
 
         cmbtipos.setBackground(new java.awt.Color(0, 52, 102));
         cmbtipos.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
-        cmbtipos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbtipos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" }));
         IngresarnP.add(cmbtipos, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 280, 130, -1));
 
         cmbsexop.setBackground(new java.awt.Color(0, 52, 102));
         cmbsexop.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
-        cmbsexop.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbsexop.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino" }));
         IngresarnP.add(cmbsexop, new org.netbeans.lib.awtextra.AbsoluteConstraints(865, 590, 160, -1));
         IngresarnP.add(fechanp, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, -1, -1));
 
@@ -626,6 +641,11 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         IngresarnP.add(btnconsultanp, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 610, 190, 80));
 
         btnregistrar.setText("Registrar");
+        btnregistrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnregistrarMouseClicked(evt);
+            }
+        });
         IngresarnP.add(btnregistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 540, 190, -1));
 
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/ingp.png"))); // NOI18N
@@ -967,6 +987,48 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         a.setVisible(true);
     }//GEN-LAST:event_jRadioButton5MouseClicked
 
+    private void txtNombrepKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombrepKeyReleased
+        tablePaciente.setModel(pa.mostrarPacientes(txtNombrep.getText(), txtApellidop.getText(), tablePaciente.getModel()));
+    }//GEN-LAST:event_txtNombrepKeyReleased
+
+    private void txtApellidopKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidopKeyReleased
+        tablePaciente.setModel(pa.mostrarPacientes(txtNombrep.getText(), txtApellidop.getText(), tablePaciente.getModel()));
+    }//GEN-LAST:event_txtApellidopKeyReleased
+
+    private void btnregistrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnregistrarMouseClicked
+        String nombre = txtnombrep.getText();
+        String apellido = txtapellidop.getText();
+        String fecha = formato.format(fechanp.getDatoFecha());
+        String telefono = txttelefonop.getText();
+        String telefono_emergencia = txttelemep.getText();
+        String lugar_de_origen = txtlugop.getText();
+        String comunidad = txtcomunidadp.getText();
+        String dpi = txtdpi.getText();
+        String tipo_sangre = cmbtipos.getSelectedItem().toString();
+        String estatura = txtestaturap.getText();
+        String peso = txtpesop.getText();
+        if(cmbsexop.getSelectedItem().toString().equals("Masculino"))
+        {
+            boolean sexo = true;
+        }
+        else
+        {
+            boolean sexo = false;
+        }
+        if(jRadioButton5.isSelected())
+        {
+            boolean alergias = true;
+        }
+        else
+        {
+            boolean alergias = false;
+        }
+        Date fecha_actual = new Date();
+        int dias = (int) ((fecha_actual.getTime()-fechanp.getDatoFecha().getTime())/86400000);
+        int meses = (int) dias/30;
+        int años = (int) dias/365;
+    }//GEN-LAST:event_btnregistrarMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1002,6 +1064,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         });
     }
 
+    private final SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Consulta;
     private javax.swing.JPanel IngP;
