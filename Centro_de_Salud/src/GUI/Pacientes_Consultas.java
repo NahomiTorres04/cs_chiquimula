@@ -53,7 +53,6 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         txtedadm.setBackground(new Color(0,0,0,0));
         txtedadd.setBackground(new Color(0,0,0,0));
         txttelefonop.setBackground(new Color(0,0,0,0));
-        cmbalergiasp.setBackground(new Color(0,0,0,0));
         cmbtipos.setBackground(new Color(0,0,0,0));
         cmbsexop.setBackground(new Color(0,0,0,0));
     }
@@ -118,10 +117,11 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         txtedadm = new javax.swing.JTextField();
         txtedadd = new javax.swing.JTextField();
         txttelefonop = new javax.swing.JTextField();
-        cmbalergiasp = new javax.swing.JComboBox<>();
         cmbtipos = new javax.swing.JComboBox<>();
         cmbsexop = new javax.swing.JComboBox<>();
         fechanp = new rojeru_san.componentes.RSDateChooser();
+        jRadioButton6 = new javax.swing.JRadioButton();
+        jRadioButton5 = new javax.swing.JRadioButton();
         rSMaterialButtonRectangle1 = new rojerusan.RSMaterialButtonRectangle();
         rSMaterialButtonRectangle2 = new rojerusan.RSMaterialButtonRectangle();
         rSMaterialButtonRectangle5 = new rojerusan.RSMaterialButtonRectangle();
@@ -145,8 +145,49 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
-        rSMaterialButtonRectangle17 = new rojerusan.RSMaterialButtonRectangle();
+        btnconsultanp = new rojerusan.RSMaterialButtonRectangle();
+        btnregistrar = new rojerusan.RSMaterialButtonRectangle();
         jLabel22 = new javax.swing.JLabel();
+        Consulta = new javax.swing.JPanel();
+        btnhome4 = new javax.swing.JButton();
+        btnminimizar5 = new javax.swing.JButton();
+        btncerrar5 = new javax.swing.JButton();
+        jLabel30 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea4 = new javax.swing.JTextArea();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTextArea5 = new javax.swing.JTextArea();
+        rSMaterialButtonRectangle17 = new rojerusan.RSMaterialButtonRectangle();
+        rSMaterialButtonRectangle18 = new rojerusan.RSMaterialButtonRectangle();
+        rSMaterialButtonRectangle20 = new rojerusan.RSMaterialButtonRectangle();
+        rSMaterialButtonRectangle22 = new rojerusan.RSMaterialButtonRectangle();
+        rSMaterialButtonRectangle23 = new rojerusan.RSMaterialButtonRectangle();
+        rSMaterialButtonRectangle24 = new rojerusan.RSMaterialButtonRectangle();
+        rSMaterialButtonRectangle25 = new rojerusan.RSMaterialButtonRectangle();
+        rSMaterialButtonRectangle26 = new rojerusan.RSMaterialButtonRectangle();
+        rSMaterialButtonRectangle27 = new rojerusan.RSMaterialButtonRectangle();
+        rSMaterialButtonRectangle28 = new rojerusan.RSMaterialButtonRectangle();
+        rSMaterialButtonRectangle29 = new rojerusan.RSMaterialButtonRectangle();
+        rSMaterialButtonRectangle30 = new rojerusan.RSMaterialButtonRectangle();
+        rSLabelFecha1 = new rojeru_san.RSLabelFecha();
+        rSLabelHora1 = new rojeru_san.RSLabelHora();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -453,11 +494,6 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         txttelefonop.setBorder(null);
         IngresarnP.add(txttelefonop, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 430, 190, 30));
 
-        cmbalergiasp.setBackground(new java.awt.Color(0, 52, 102));
-        cmbalergiasp.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
-        cmbalergiasp.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        IngresarnP.add(cmbalergiasp, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 640, 160, -1));
-
         cmbtipos.setBackground(new java.awt.Color(0, 52, 102));
         cmbtipos.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
         cmbtipos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -466,8 +502,23 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         cmbsexop.setBackground(new java.awt.Color(0, 52, 102));
         cmbsexop.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
         cmbsexop.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        IngresarnP.add(cmbsexop, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 590, 160, -1));
+        IngresarnP.add(cmbsexop, new org.netbeans.lib.awtextra.AbsoluteConstraints(865, 590, 160, -1));
         IngresarnP.add(fechanp, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, -1, -1));
+
+        jRadioButton6.setBackground(new java.awt.Color(206, 246, 255));
+        jRadioButton6.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
+        jRadioButton6.setText("No");
+        IngresarnP.add(jRadioButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 639, -1, -1));
+
+        jRadioButton5.setBackground(new java.awt.Color(206, 246, 255));
+        jRadioButton5.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
+        jRadioButton5.setText("Si");
+        jRadioButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jRadioButton5MouseClicked(evt);
+            }
+        });
+        IngresarnP.add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(885, 639, -1, -1));
 
         rSMaterialButtonRectangle1.setBackground(new java.awt.Color(186, 240, 255));
         rSMaterialButtonRectangle1.setEnabled(false);
@@ -566,13 +617,230 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         jLabel29.setText("lb");
         IngresarnP.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 542, -1, -1));
 
-        rSMaterialButtonRectangle17.setText("Consulta");
-        IngresarnP.add(rSMaterialButtonRectangle17, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 610, 190, 80));
+        btnconsultanp.setText("Consulta");
+        btnconsultanp.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnconsultanpMouseClicked(evt);
+            }
+        });
+        IngresarnP.add(btnconsultanp, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 610, 190, 80));
+
+        btnregistrar.setText("Registrar");
+        IngresarnP.add(btnregistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 540, 190, -1));
 
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/ingp.png"))); // NOI18N
         IngresarnP.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1280, 720));
 
         rSPanelsSlider1.add(IngresarnP, "card3");
+
+        Consulta.setName("Consulta"); // NOI18N
+        Consulta.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnhome4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_35px.png"))); // NOI18N
+        btnhome4.setBorderPainted(false);
+        btnhome4.setContentAreaFilled(false);
+        btnhome4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_55px.png"))); // NOI18N
+        btnhome4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnhome4MouseClicked(evt);
+            }
+        });
+        Consulta.add(btnhome4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1056, 0, 80, 60));
+
+        btnminimizar5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_35px.png"))); // NOI18N
+        btnminimizar5.setBorderPainted(false);
+        btnminimizar5.setContentAreaFilled(false);
+        btnminimizar5.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_55px.png"))); // NOI18N
+        btnminimizar5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnminimizar5MouseClicked(evt);
+            }
+        });
+        btnminimizar5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnminimizar5ActionPerformed(evt);
+            }
+        });
+        Consulta.add(btnminimizar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, -1, 60));
+
+        btncerrar5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_35px_1.png"))); // NOI18N
+        btncerrar5.setBorderPainted(false);
+        btncerrar5.setContentAreaFilled(false);
+        btncerrar5.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_55px_1.png"))); // NOI18N
+        btncerrar5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btncerrar5MouseClicked(evt);
+            }
+        });
+        btncerrar5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncerrar5ActionPerformed(evt);
+            }
+        });
+        Consulta.add(btncerrar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 0, -1, 60));
+
+        jLabel30.setBackground(new java.awt.Color(0, 54, 102));
+        jLabel30.setOpaque(true);
+        Consulta.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1290, 60));
+
+        jRadioButton1.setBackground(new java.awt.Color(214, 246, 255));
+        jRadioButton1.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
+        jRadioButton1.setText("No Referido");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
+        Consulta.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(899, 99, -1, -1));
+
+        jRadioButton2.setBackground(new java.awt.Color(214, 246, 255));
+        jRadioButton2.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
+        jRadioButton2.setText("Consulta");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
+        Consulta.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(519, 99, -1, -1));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Microsoft JhengHei Light", 0, 18)); // NOI18N
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        Consulta.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 290, 450, 180));
+
+        jLabel31.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 24)); // NOI18N
+        jLabel31.setText("Examenes:");
+        Consulta.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 510, 150, 30));
+
+        jLabel32.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 24)); // NOI18N
+        jLabel32.setText("Síntomas");
+        Consulta.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 110, 30));
+
+        jTextArea3.setColumns(20);
+        jTextArea3.setFont(new java.awt.Font("Microsoft JhengHei Light", 0, 18)); // NOI18N
+        jTextArea3.setRows(5);
+        jScrollPane3.setViewportView(jTextArea3);
+
+        Consulta.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, 450, 180));
+
+        jTextArea4.setColumns(20);
+        jTextArea4.setFont(new java.awt.Font("Microsoft JhengHei Light", 0, 18)); // NOI18N
+        jTextArea4.setRows(5);
+        jScrollPane4.setViewportView(jTextArea4);
+
+        Consulta.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 550, 450, 180));
+
+        jLabel33.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 24)); // NOI18N
+        jLabel33.setText("Diagnóstico:");
+        Consulta.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 250, 150, 30));
+
+        jLabel34.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 24)); // NOI18N
+        jLabel34.setText("Tratamiento:");
+        Consulta.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 510, 150, 30));
+
+        jRadioButton3.setBackground(new java.awt.Color(214, 246, 255));
+        jRadioButton3.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
+        jRadioButton3.setText("Reconsulta");
+        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton3ActionPerformed(evt);
+            }
+        });
+        Consulta.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(639, 99, -1, -1));
+
+        jRadioButton4.setBackground(new java.awt.Color(214, 246, 255));
+        jRadioButton4.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
+        jRadioButton4.setText("Referido");
+        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton4ActionPerformed(evt);
+            }
+        });
+        Consulta.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(779, 99, -1, -1));
+
+        jTextArea5.setColumns(20);
+        jTextArea5.setFont(new java.awt.Font("Microsoft JhengHei Light", 0, 18)); // NOI18N
+        jTextArea5.setRows(5);
+        jScrollPane5.setViewportView(jTextArea5);
+
+        Consulta.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 550, 450, 180));
+
+        rSMaterialButtonRectangle17.setBackground(new java.awt.Color(186, 240, 255));
+        rSMaterialButtonRectangle17.setEnabled(false);
+        Consulta.add(rSMaterialButtonRectangle17, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 540, 470, 200));
+
+        rSMaterialButtonRectangle18.setBackground(new java.awt.Color(186, 240, 255));
+        rSMaterialButtonRectangle18.setEnabled(false);
+        Consulta.add(rSMaterialButtonRectangle18, new org.netbeans.lib.awtextra.AbsoluteConstraints(625, 90, 150, 50));
+
+        rSMaterialButtonRectangle20.setBackground(new java.awt.Color(186, 240, 255));
+        rSMaterialButtonRectangle20.setEnabled(false);
+        Consulta.add(rSMaterialButtonRectangle20, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 540, 470, 200));
+
+        rSMaterialButtonRectangle22.setBackground(new java.awt.Color(186, 240, 255));
+        rSMaterialButtonRectangle22.setEnabled(false);
+        Consulta.add(rSMaterialButtonRectangle22, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 280, 470, 200));
+
+        rSMaterialButtonRectangle23.setText("Imprimir");
+        Consulta.add(rSMaterialButtonRectangle23, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 230, 160, 50));
+
+        rSMaterialButtonRectangle24.setText("Imprimir");
+        Consulta.add(rSMaterialButtonRectangle24, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 490, 160, 50));
+
+        rSMaterialButtonRectangle25.setText("Imprimir");
+        Consulta.add(rSMaterialButtonRectangle25, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 490, 160, 50));
+
+        rSMaterialButtonRectangle26.setLabel("Guardar");
+        Consulta.add(rSMaterialButtonRectangle26, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 640, 170, -1));
+
+        rSMaterialButtonRectangle27.setBackground(new java.awt.Color(186, 240, 255));
+        rSMaterialButtonRectangle27.setEnabled(false);
+        Consulta.add(rSMaterialButtonRectangle27, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 470, 200));
+
+        rSMaterialButtonRectangle28.setBackground(new java.awt.Color(186, 240, 255));
+        rSMaterialButtonRectangle28.setEnabled(false);
+        Consulta.add(rSMaterialButtonRectangle28, new org.netbeans.lib.awtextra.AbsoluteConstraints(765, 90, 130, 50));
+
+        rSMaterialButtonRectangle29.setBackground(new java.awt.Color(186, 240, 255));
+        rSMaterialButtonRectangle29.setEnabled(false);
+        Consulta.add(rSMaterialButtonRectangle29, new org.netbeans.lib.awtextra.AbsoluteConstraints(885, 90, 160, 50));
+
+        rSMaterialButtonRectangle30.setBackground(new java.awt.Color(186, 240, 255));
+        rSMaterialButtonRectangle30.setEnabled(false);
+        Consulta.add(rSMaterialButtonRectangle30, new org.netbeans.lib.awtextra.AbsoluteConstraints(505, 90, 130, 50));
+
+        rSLabelFecha1.setForeground(new java.awt.Color(0, 52, 102));
+        rSLabelFecha1.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 18)); // NOI18N
+        Consulta.add(rSLabelFecha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, -1));
+
+        rSLabelHora1.setForeground(new java.awt.Color(0, 52, 102));
+        rSLabelHora1.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 18)); // NOI18N
+        Consulta.add(rSLabelHora1, new org.netbeans.lib.awtextra.AbsoluteConstraints(55, 210, -1, -1));
+
+        jLabel37.setFont(new java.awt.Font("Microsoft JhengHei Light", 1, 45)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel37.setText("consulta");
+        Consulta.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, 200, 90));
+
+        jLabel38.setFont(new java.awt.Font("Microsoft JhengHei Light", 1, 45)); // NOI18N
+        jLabel38.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel38.setText("Ingresar");
+        Consulta.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(222, 42, 200, 90));
+
+        jLabel36.setBackground(new java.awt.Color(0, 54, 102));
+        jLabel36.setOpaque(true);
+        Consulta.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, 240, 110));
+
+        jLabel39.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 24)); // NOI18N
+        jLabel39.setText("Seria bueno poner el nombre del paciente aca");
+        Consulta.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 540, 40));
+
+        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/ingp.png"))); // NOI18N
+        Consulta.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1280, 720));
+
+        rSPanelsSlider1.add(Consulta, "card4");
 
         jPanel1.add(rSPanelsSlider1, "card2");
 
@@ -652,6 +920,53 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         rSPanelsSlider1.setPanelSlider(IngresarnP, RSPanelsSlider.DIRECT.LEFT);
     }//GEN-LAST:event_btnNpMouseClicked
 
+    private void btnhome4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnhome4MouseClicked
+        Interfaz in = new Interfaz();
+        in.setVisible(true);
+    }//GEN-LAST:event_btnhome4MouseClicked
+
+    private void btnminimizar5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnminimizar5MouseClicked
+         this.setExtendedState(ICONIFIED);
+    }//GEN-LAST:event_btnminimizar5MouseClicked
+
+    private void btnminimizar5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnminimizar5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnminimizar5ActionPerformed
+
+    private void btncerrar5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncerrar5MouseClicked
+        this.dispose();
+        System.exit(0);
+    }//GEN-LAST:event_btncerrar5MouseClicked
+
+    private void btncerrar5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncerrar5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btncerrar5ActionPerformed
+
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
+
+    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton3ActionPerformed
+
+    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton4ActionPerformed
+
+    private void btnconsultanpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnconsultanpMouseClicked
+        rSPanelsSlider1.setPanelSlider(Consulta, RSPanelsSlider.DIRECT.LEFT);
+    }//GEN-LAST:event_btnconsultanpMouseClicked
+
+    private void jRadioButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton5MouseClicked
+        Alergias a = new Alergias();
+        a.setVisible(true);
+    }//GEN-LAST:event_jRadioButton5MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -688,17 +1003,22 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Consulta;
     private javax.swing.JPanel IngP;
     private javax.swing.JPanel IngresarnP;
     private rojerusan.RSMaterialButtonRectangle btnNp;
     private javax.swing.JButton btncerrar3;
     private javax.swing.JButton btncerrar4;
+    private javax.swing.JButton btncerrar5;
     private rojerusan.RSMaterialButtonRectangle btnconsulta;
+    private rojerusan.RSMaterialButtonRectangle btnconsultanp;
     private javax.swing.JButton btnhome2;
     private javax.swing.JButton btnhome3;
+    private javax.swing.JButton btnhome4;
     private javax.swing.JButton btnminimizar3;
     private javax.swing.JButton btnminimizar4;
-    private javax.swing.JComboBox<String> cmbalergiasp;
+    private javax.swing.JButton btnminimizar5;
+    private rojerusan.RSMaterialButtonRectangle btnregistrar;
     private javax.swing.JComboBox<String> cmbsexop;
     private javax.swing.JComboBox<String> cmbtipos;
     private rojeru_san.componentes.RSDateChooser fechanp;
@@ -725,6 +1045,16 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -732,6 +1062,22 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JRadioButton jRadioButton5;
+    private javax.swing.JRadioButton jRadioButton6;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea3;
+    private javax.swing.JTextArea jTextArea4;
+    private javax.swing.JTextArea jTextArea5;
+    private rojeru_san.RSLabelFecha rSLabelFecha1;
+    private rojeru_san.RSLabelHora rSLabelHora1;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle1;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle10;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle11;
@@ -741,10 +1087,21 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle15;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle16;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle17;
+    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle18;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle19;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle2;
+    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle20;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle21;
+    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle22;
+    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle23;
+    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle24;
+    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle25;
+    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle26;
+    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle27;
+    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle28;
+    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle29;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle3;
+    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle30;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle4;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle5;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle6;
