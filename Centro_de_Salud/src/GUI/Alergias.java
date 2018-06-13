@@ -149,6 +149,7 @@ public class Alergias extends javax.swing.JFrame {
                 Logger.getLogger(Alergias.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+        this.dispose();
     }//GEN-LAST:event_rSMaterialButtonRectangle4ActionPerformed
 
     private void btnminimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnminimizarMouseClicked
@@ -160,10 +161,6 @@ public class Alergias extends javax.swing.JFrame {
       
     }//GEN-LAST:event_btncerrarMouseClicked
 
-    public String retornarAlergias()
-    {
-        return txtAlergias.getText();
-    }
     /**
      * @param args the command line arguments
      */

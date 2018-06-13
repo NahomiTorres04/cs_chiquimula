@@ -19,8 +19,10 @@ import rojerusan.RSNotifyFade;
 import rojerusan.RSPanelsSlider;
 import java.io.FileReader;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.RandomAccessFile;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -31,7 +33,6 @@ import java.util.logging.Logger;
 public class Pacientes_Consultas extends javax.swing.JFrame {
 
     public paciente pa;
-    String alergia = "";
     /**
      * Creates new form Pacientes_Consultas
      */
@@ -1024,6 +1025,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         int estatura = Integer.parseInt(txtestaturap.getText());
         int peso = Integer.parseInt(txtpesop.getText());
         boolean sexo;
+        String alergia = "";
         if(cmbsexop.getSelectedItem().toString().equals("Masculino"))
         {
             sexo = true;
@@ -1034,23 +1036,23 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         }
         if(jRadioButton5.isSelected())
         {
-//            try {
-//                FileReader lector = new FileReader("./alergia.txt");
-//                BufferedReader br = new BufferedReader(lector);
-//                try {
-//                    while(true)
-//                    {
-//                        alergia = alergia + br.readLine();
-//                    }
-//                } catch (IOException ex) {
-//                    //Logger.getLogger(Pacientes_Consultas.class.getName()).log(Level.SEVERE, null, ex);
-//                }
-//            } catch (FileNotFoundException ex) {
-//                Logger.getLogger(Pacientes_Consultas.class.getName()).log(Level.SEVERE, null, ex);
-//            }
+            try {
+                RandomAccessFile raf = new RandomAccessFile("./alergia.txt", "rw");
+                File fichero = new File("./alergia.txt");
+                int contador = 0;
+                while(contador < raf.length())
+                {
+                    alergia = alergia + (char)raf.readByte();
+                    contador++;
+                }
+                fichero.delete();
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(Pacientes_Consultas.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
+                Logger.getLogger(Pacientes_Consultas.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         Date fecha_actual = new Date();
-        //debe funcionar
         int dias = (int) ((fecha_actual.getTime()-fechanp.getDatoFecha().getTime())/86400000);
 //        int meses = (int) dias/30; ESTO ES EXPERIMENTAL
         int años = (int) dias/365;
@@ -1065,10 +1067,6 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnregistrarMouseClicked
 
-    public void agregarAlergia(String aler)
-    {
-        alergia = aler;
-    }
     /**
      * @param args the command line arguments
      */
