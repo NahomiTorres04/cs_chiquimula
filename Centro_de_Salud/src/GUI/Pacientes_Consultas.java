@@ -1050,6 +1050,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
 //            }
         }
         Date fecha_actual = new Date();
+        //debe funcionar
         int dias = (int) ((fecha_actual.getTime()-fechanp.getDatoFecha().getTime())/86400000);
 //        int meses = (int) dias/30; ESTO ES EXPERIMENTAL
         int años = (int) dias/365;
