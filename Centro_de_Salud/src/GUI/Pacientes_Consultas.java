@@ -10,10 +10,19 @@ import com.sun.awt.AWTUtilities;
 import java.awt.Color;
 import java.awt.Shape;
 import java.awt.geom.RoundRectangle2D;
+import static java.awt.image.ImageObserver.SOMEBITS;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.ButtonGroup;
 import javax.swing.JOptionPane;
+import rojerusan.RSNotifyFade;
 import rojerusan.RSPanelsSlider;
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -22,6 +31,7 @@ import rojerusan.RSPanelsSlider;
 public class Pacientes_Consultas extends javax.swing.JFrame {
 
     public paciente pa;
+    String alergia = "";
     /**
      * Creates new form Pacientes_Consultas
      */
@@ -32,6 +42,9 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         transparencia();
         pa = new paciente();
+        ButtonGroup bg = new ButtonGroup();
+        bg.add(jRadioButton5);
+        bg.add(jRadioButton6);
     }
     private void transparencia()
     {
@@ -983,8 +996,11 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
     }//GEN-LAST:event_btnconsultanpMouseClicked
 
     private void jRadioButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton5MouseClicked
-        Alergias a = new Alergias();
-        a.setVisible(true);
+        if(jRadioButton5.isSelected())
+        {
+            Alergias a = new Alergias();
+            a.setVisible(true);
+        }
     }//GEN-LAST:event_jRadioButton5MouseClicked
 
     private void txtNombrepKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombrepKeyReleased
@@ -1005,30 +1021,53 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         String comunidad = txtcomunidadp.getText();
         String dpi = txtdpi.getText();
         String tipo_sangre = cmbtipos.getSelectedItem().toString();
-        String estatura = txtestaturap.getText();
-        String peso = txtpesop.getText();
+        int estatura = Integer.parseInt(txtestaturap.getText());
+        int peso = Integer.parseInt(txtpesop.getText());
+        boolean sexo;
         if(cmbsexop.getSelectedItem().toString().equals("Masculino"))
         {
-            boolean sexo = true;
+            sexo = true;
         }
         else
         {
-            boolean sexo = false;
+            sexo = false;
         }
         if(jRadioButton5.isSelected())
         {
-            boolean alergias = true;
-        }
-        else
-        {
-            boolean alergias = false;
+//            try {
+//                FileReader lector = new FileReader("./alergia.txt");
+//                BufferedReader br = new BufferedReader(lector);
+//                try {
+//                    while(true)
+//                    {
+//                        alergia = alergia + br.readLine();
+//                    }
+//                } catch (IOException ex) {
+//                    //Logger.getLogger(Pacientes_Consultas.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//            } catch (FileNotFoundException ex) {
+//                Logger.getLogger(Pacientes_Consultas.class.getName()).log(Level.SEVERE, null, ex);
+//            }
         }
         Date fecha_actual = new Date();
         int dias = (int) ((fecha_actual.getTime()-fechanp.getDatoFecha().getTime())/86400000);
-        int meses = (int) dias/30;
+//        int meses = (int) dias/30; ESTO ES EXPERIMENTAL
         int años = (int) dias/365;
+        if(pa.ingresarPaciente(nombre, apellido, fecha, telefono, telefono_emergencia, lugar_de_origen, comunidad,
+                dpi, tipo_sangre, estatura, peso, sexo, alergia, años))
+        {
+            new rojerusan.RSNotifyFade("¡ACEPTADA!", "Ingreso Correcto", Color.WHITE, Color.BLACK, Color.BLACK, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.SUCCESS).setVisible(true);
+        }
+        else
+        {
+            new rojerusan.RSNotifyFade("¡ERROR!", "Ingreso incorrecto", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.ERROR).setVisible(true);
+        }
     }//GEN-LAST:event_btnregistrarMouseClicked
 
+    public void agregarAlergia(String aler)
+    {
+        alergia = aler;
+    }
     /**
      * @param args the command line arguments
      */

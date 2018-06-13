@@ -9,6 +9,11 @@ import com.sun.awt.AWTUtilities;
 import java.awt.Color;
 import java.awt.Shape;
 import java.awt.geom.RoundRectangle2D;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -22,7 +27,6 @@ public class Alergias extends javax.swing.JFrame {
     public Alergias() {
         initComponents();
         this.setLocationRelativeTo(null);
-        
         Shape forma = new RoundRectangle2D.Double(0,0,this.getBounds().width, this.getBounds().height,35,35);
         AWTUtilities.setWindowShape(this, forma);
     }
@@ -131,7 +135,20 @@ public class Alergias extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void rSMaterialButtonRectangle4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle4ActionPerformed
-        
+        FileWriter fw = null;
+        try {
+            File archivo = new File("./alergia.txt");
+            fw = new FileWriter(archivo);
+            fw.write(txtAlergias.getText());
+        } catch (IOException ex) {
+            Logger.getLogger(Alergias.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                fw.close();
+            } catch (IOException ex) {
+                Logger.getLogger(Alergias.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }//GEN-LAST:event_rSMaterialButtonRectangle4ActionPerformed
 
     private void btnminimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnminimizarMouseClicked
@@ -143,6 +160,10 @@ public class Alergias extends javax.swing.JFrame {
       
     }//GEN-LAST:event_btncerrarMouseClicked
 
+    public String retornarAlergias()
+    {
+        return txtAlergias.getText();
+    }
     /**
      * @param args the command line arguments
      */
