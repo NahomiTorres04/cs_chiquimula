@@ -101,18 +101,42 @@ public class paciente
             {
                 id = rs.getInt("max_id") + "";
             }
-            sql = "SELECT nombres, apellidos from paciente where id = " + id;
+            sql = "SELECT nombres from paciente where id = " + id;
             st = con.createStatement();
             rs = st.executeQuery(sql);
             while(rs.next())
             {
-                nombre = nombre + rs.getString("nombres") + " ";
-                nombre = nombre + rs.getString("apellidos");
+                nombre = rs.getString("nombres");
             }
         } catch (SQLException ex) {
             Logger.getLogger(paciente.class.getName()).log(Level.SEVERE, null, ex);
         }
         return nombre;
+    }
+    
+    public String getLastPatientLastName()
+    {
+        String id = "";
+        String apellido = "";
+        try {
+            String sql = "SELECT max(id) as max_id from paciente";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                id = rs.getInt("max_id") + "";
+            }
+            sql = "SELECT apellidos from paciente where id = " + id;
+            st = con.createStatement();
+            rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                apellido = rs.getString("apellidos");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(paciente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return apellido;
     }
     
     public String getLastPatientDpi()

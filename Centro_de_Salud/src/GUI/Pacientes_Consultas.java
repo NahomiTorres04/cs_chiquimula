@@ -536,14 +536,17 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
 
         txredada.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
         txredada.setBorder(null);
+        txredada.setEnabled(false);
         IngresarnP.add(txredada, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 340, 90, 30));
 
         txtedadm.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
         txtedadm.setBorder(null);
+        txtedadm.setEnabled(false);
         IngresarnP.add(txtedadm, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 390, 90, 30));
 
         txtedadd.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
         txtedadd.setBorder(null);
+        txtedadd.setEnabled(false);
         IngresarnP.add(txtedadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 440, 90, 30));
 
         txttelefonop.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
@@ -1045,6 +1048,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
 
     private void btnconsultanpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnconsultanpMouseClicked
         lbnombrep.setText(pa.getLastPatientName());
+        lbapellidop.setText(pa.getLastPatientLastName());
         jLabel40.setText(pa.getLastPatientDpi());
         rSPanelsSlider1.setPanelSlider(Consulta, RSPanelsSlider.DIRECT.LEFT);
     }//GEN-LAST:event_btnconsultanpMouseClicked
@@ -1147,7 +1151,8 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
             else
             {
                 rSPanelsSlider1.setPanelSlider(Consulta, RSPanelsSlider.DIRECT.RIGHT);
-                lbnombrep.setText(nombre + " " + apellido);
+                lbnombrep.setText(nombre);
+                lbapellidop.setText(apellido);
                 jLabel40.setText(dpi);
             }
         }
