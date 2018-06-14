@@ -5,6 +5,7 @@
  */
 package GUI;
 
+import clases.consulta;
 import clases.paciente;
 import com.sun.awt.AWTUtilities;
 import java.awt.Color;
@@ -17,14 +18,13 @@ import javax.swing.ButtonGroup;
 import javax.swing.JOptionPane;
 import rojerusan.RSNotifyFade;
 import rojerusan.RSPanelsSlider;
-import java.io.FileReader;
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.table.TableModel;
 
 /**
  *
@@ -33,6 +33,7 @@ import java.util.logging.Logger;
 public class Pacientes_Consultas extends javax.swing.JFrame {
 
     public paciente pa;
+    public consulta co;
     /**
      * Creates new form Pacientes_Consultas
      */
@@ -43,9 +44,16 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         transparencia();
         pa = new paciente();
-        ButtonGroup bg = new ButtonGroup();
-        bg.add(jRadioButton5);
-        bg.add(jRadioButton6);
+        co = new consulta();
+        ButtonGroup grupo_ingresar_paciente = new ButtonGroup();
+        ButtonGroup grupo_consulta = new ButtonGroup();
+        ButtonGroup grupo_referido = new ButtonGroup();
+        grupo_ingresar_paciente.add(jRadioButton5);
+        grupo_ingresar_paciente.add(jRadioButton6);
+        grupo_consulta.add(jRadioButton2);
+        grupo_consulta.add(jRadioButton3);
+        grupo_referido.add(jRadioButton4);
+        grupo_referido.add(jRadioButton1);
     }
     private void transparencia()
     {
@@ -175,11 +183,11 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txtdiagnostico = new javax.swing.JTextArea();
         jLabel31 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
+        txtsintomas = new javax.swing.JTextArea();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextArea4 = new javax.swing.JTextArea();
         jLabel33 = new javax.swing.JLabel();
@@ -187,7 +195,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         jRadioButton3 = new javax.swing.JRadioButton();
         jRadioButton4 = new javax.swing.JRadioButton();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTextArea5 = new javax.swing.JTextArea();
+        txttratamiento = new javax.swing.JTextArea();
         rSMaterialButtonRectangle17 = new rojerusan.RSMaterialButtonRectangle();
         rSMaterialButtonRectangle18 = new rojerusan.RSMaterialButtonRectangle();
         rSMaterialButtonRectangle20 = new rojerusan.RSMaterialButtonRectangle();
@@ -206,6 +214,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         jLabel38 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -219,6 +228,11 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
 
         txtApellidop.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
         txtApellidop.setBorder(null);
+        txtApellidop.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtApellidopFocusGained(evt);
+            }
+        });
         txtApellidop.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtApellidopKeyReleased(evt);
@@ -227,6 +241,11 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         IngP.add(txtApellidop, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 245, 280, 40));
 
         btnconsulta.setText("Consulta");
+        btnconsulta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnconsultaMouseClicked(evt);
+            }
+        });
         IngP.add(btnconsulta, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 240, 210, 60));
 
         btnNp.setText("Nuevo Paciente");
@@ -239,6 +258,11 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
 
         txtNombrep.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
         txtNombrep.setBorder(null);
+        txtNombrep.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtNombrepFocusGained(evt);
+            }
+        });
         txtNombrep.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtNombrepKeyReleased(evt);
@@ -647,6 +671,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         IngresarnP.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 542, -1, -1));
 
         btnconsultanp.setText("Consulta");
+        btnconsultanp.setEnabled(false);
         btnconsultanp.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnconsultanpMouseClicked(evt);
@@ -737,10 +762,10 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         });
         Consulta.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(519, 99, -1, -1));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Microsoft JhengHei Light", 0, 18)); // NOI18N
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txtdiagnostico.setColumns(20);
+        txtdiagnostico.setFont(new java.awt.Font("Microsoft JhengHei Light", 0, 18)); // NOI18N
+        txtdiagnostico.setRows(5);
+        jScrollPane1.setViewportView(txtdiagnostico);
 
         Consulta.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 290, 450, 180));
 
@@ -752,10 +777,10 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         jLabel32.setText("Síntomas");
         Consulta.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 110, 30));
 
-        jTextArea3.setColumns(20);
-        jTextArea3.setFont(new java.awt.Font("Microsoft JhengHei Light", 0, 18)); // NOI18N
-        jTextArea3.setRows(5);
-        jScrollPane3.setViewportView(jTextArea3);
+        txtsintomas.setColumns(20);
+        txtsintomas.setFont(new java.awt.Font("Microsoft JhengHei Light", 0, 18)); // NOI18N
+        txtsintomas.setRows(5);
+        jScrollPane3.setViewportView(txtsintomas);
 
         Consulta.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, 450, 180));
 
@@ -772,7 +797,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
 
         jLabel34.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 24)); // NOI18N
         jLabel34.setText("Tratamiento:");
-        Consulta.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 510, 150, 30));
+        Consulta.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 510, 160, 30));
 
         jRadioButton3.setBackground(new java.awt.Color(214, 246, 255));
         jRadioButton3.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
@@ -794,10 +819,10 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         });
         Consulta.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(779, 99, -1, -1));
 
-        jTextArea5.setColumns(20);
-        jTextArea5.setFont(new java.awt.Font("Microsoft JhengHei Light", 0, 18)); // NOI18N
-        jTextArea5.setRows(5);
-        jScrollPane5.setViewportView(jTextArea5);
+        txttratamiento.setColumns(20);
+        txttratamiento.setFont(new java.awt.Font("Microsoft JhengHei Light", 0, 18)); // NOI18N
+        txttratamiento.setRows(5);
+        jScrollPane5.setViewportView(txttratamiento);
 
         Consulta.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 550, 450, 180));
 
@@ -827,6 +852,11 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         Consulta.add(rSMaterialButtonRectangle25, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 490, 160, 50));
 
         rSMaterialButtonRectangle26.setLabel("Guardar");
+        rSMaterialButtonRectangle26.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rSMaterialButtonRectangle26MouseClicked(evt);
+            }
+        });
         Consulta.add(rSMaterialButtonRectangle26, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 640, 170, -1));
 
         rSMaterialButtonRectangle27.setBackground(new java.awt.Color(186, 240, 255));
@@ -869,7 +899,11 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
 
         jLabel39.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 24)); // NOI18N
         jLabel39.setText("Seria bueno poner el nombre del paciente aca");
-        Consulta.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 540, 40));
+        Consulta.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 460, 40));
+
+        jLabel40.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 24)); // NOI18N
+        jLabel40.setText("Seria bueno poner el nombre del paciente aca");
+        Consulta.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 200, 190, 40));
 
         jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/ingp.png"))); // NOI18N
         Consulta.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1280, 720));
@@ -993,6 +1027,8 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton4ActionPerformed
 
     private void btnconsultanpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnconsultanpMouseClicked
+        jLabel39.setText(pa.getLastPatientName());
+        jLabel40.setText(pa.getLastPatientDpi());
         rSPanelsSlider1.setPanelSlider(Consulta, RSPanelsSlider.DIRECT.LEFT);
     }//GEN-LAST:event_btnconsultanpMouseClicked
 
@@ -1055,17 +1091,72 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         Date fecha_actual = new Date();
         int dias = (int) ((fecha_actual.getTime()-fechanp.getDatoFecha().getTime())/86400000);
 //        int meses = (int) dias/30; ESTO ES EXPERIMENTAL
-        int años = (int) dias/365;
+        int anios = (int) dias/365;
         if(pa.ingresarPaciente(nombre, apellido, fecha, telefono, telefono_emergencia, lugar_de_origen, comunidad,
-                dpi, tipo_sangre, estatura, peso, sexo, alergia, años))
+                dpi, tipo_sangre, estatura, peso, sexo, alergia, anios))
         {
             new rojerusan.RSNotifyFade("¡ACEPTADA!", "Ingreso Correcto", Color.WHITE, Color.BLACK, Color.BLACK, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.SUCCESS).setVisible(true);
+            btnconsultanp.setEnabled(true);
         }
         else
         {
             new rojerusan.RSNotifyFade("¡ERROR!", "Ingreso incorrecto", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.ERROR).setVisible(true);
         }
     }//GEN-LAST:event_btnregistrarMouseClicked
+
+    private void txtNombrepFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNombrepFocusGained
+        txtNombrep.setText("");
+    }//GEN-LAST:event_txtNombrepFocusGained
+
+    private void txtApellidopFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtApellidopFocusGained
+        txtApellidop.setText("");
+    }//GEN-LAST:event_txtApellidopFocusGained
+
+    private void btnconsultaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnconsultaMouseClicked
+        if(tablePaciente.getSelectedRow() == -1)
+        {
+            new rojerusan.RSNotifyFade("¡ERROR!", "Por favor seleccione un paciente", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.ERROR).setVisible(true);
+        }
+        else
+        {
+            TableModel tm = tablePaciente.getModel();
+            String nombre = String.valueOf(tm.getValueAt(tablePaciente.getSelectedRow(), 0));
+            String apellido = String.valueOf(tm.getValueAt(tablePaciente.getSelectedRow(), 1));
+            String dpi = String.valueOf(tm.getValueAt(tablePaciente.getSelectedRow(), 3));
+            if(String.valueOf(tm.getValueAt(tablePaciente.getSelectedRow(), 0)).equals("null"))
+            {
+                new rojerusan.RSNotifyFade("¡ERROR!", "Por favor seleccione un paciente", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.ERROR).setVisible(true);
+            }
+            else
+            {
+                rSPanelsSlider1.setPanelSlider(Consulta, RSPanelsSlider.DIRECT.RIGHT);
+                jLabel39.setText(nombre + " " + apellido);
+                jLabel40.setText(dpi);
+            }
+        }
+    }//GEN-LAST:event_btnconsultaMouseClicked
+
+    private void rSMaterialButtonRectangle26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle26MouseClicked
+        String sintomas = txtsintomas.getText();
+        String diagnostico = txtdiagnostico.getText();
+        String tratamiento = txttratamiento.getText();
+        String examenes = jTextArea4.getText();
+        boolean reconsulta;
+        boolean referido;
+        if(jRadioButton3.isSelected()) reconsulta = true;
+        else reconsulta = false;
+        if(jRadioButton4.isSelected()) referido = true;
+        else referido = false;
+        int paciente_id = pa.retornarid(jLabel40.getText());
+        if(co.ingresarConsulta(sintomas, diagnostico, tratamiento, examenes, reconsulta, referido, paciente_id))
+        {
+            new rojerusan.RSNotifyFade("¡ACEPTADA!", "Consulta ingresada", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.SUCCESS).setVisible(true);
+        }
+        else
+        {
+            new rojerusan.RSNotifyFade("¡ERROR!", "Ingreso incorrecto", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.ERROR).setVisible(true);
+        }
+    }//GEN-LAST:event_rSMaterialButtonRectangle26MouseClicked
 
     /**
      * @param args the command line arguments
@@ -1157,6 +1248,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1173,10 +1265,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
-    private javax.swing.JTextArea jTextArea5;
     private rojeru_san.RSLabelFecha rSLabelFecha1;
     private rojeru_san.RSLabelHora rSLabelHora1;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle1;
@@ -1217,6 +1306,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
     private javax.swing.JTextField txtNombrep;
     private javax.swing.JTextField txtapellidop;
     private javax.swing.JTextField txtcomunidadp;
+    private javax.swing.JTextArea txtdiagnostico;
     private javax.swing.JTextField txtdpi;
     private javax.swing.JTextField txtedadd;
     private javax.swing.JTextField txtedadm;
@@ -1224,7 +1314,9 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
     private javax.swing.JTextField txtlugop;
     private javax.swing.JTextField txtnombrep;
     private javax.swing.JTextField txtpesop;
+    private javax.swing.JTextArea txtsintomas;
     private javax.swing.JTextField txttelefonop;
     private javax.swing.JTextField txttelemep;
+    private javax.swing.JTextArea txttratamiento;
     // End of variables declaration//GEN-END:variables
 }

@@ -88,4 +88,72 @@ public class paciente
         }
         return tabla;
     }
+    
+    public String getLastPatientName()
+    {
+        String id = "";
+        String nombre = "";
+        try {
+            String sql = "SELECT max(id) as max_id from paciente";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                id = rs.getInt("max_id") + "";
+            }
+            sql = "SELECT nombres, apellidos from paciente where id = " + id;
+            st = con.createStatement();
+            rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                nombre = nombre + rs.getString("nombres") + " ";
+                nombre = nombre + rs.getString("apellidos");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(paciente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return nombre;
+    }
+    
+    public String getLastPatientDpi()
+    {
+        String id = "";
+        String dpi = "";
+        try {
+            String sql = "SELECT max(id) as max_id from paciente";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                id = rs.getInt("max_id") + "";
+            }
+            sql = "SELECT dpi from paciente where id = " + id;
+            st = con.createStatement();
+            rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                dpi = rs.getString("dpi");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(paciente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return dpi;
+    }
+    
+    public int retornarid(String dpi)
+    {
+        int id = 0;
+        try {
+            String sql = "SELECT id from paciente where dpi = '" + dpi + "'";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                id = rs.getInt("id");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(paciente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return id;
+    }
 }
