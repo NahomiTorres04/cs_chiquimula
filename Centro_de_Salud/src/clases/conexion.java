@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 public class conexion {
     private String nombreBD="cs_santa_maria_chiquimula";
     private String usuario="root";
-    private String password="alex123"; //cambiar por la contraseña de root (normalmente vacía)
+    private String password=""; //cambiar por la contraseña de root (normalmente vacía)
     private String url="jdbc:mysql://localhost:3306/"+nombreBD+"?autoReconnect=true&useSSL=false";
     private Connection con = null;
     public  conexion()

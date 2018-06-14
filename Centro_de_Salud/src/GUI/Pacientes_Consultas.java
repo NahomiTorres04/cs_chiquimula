@@ -22,6 +22,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.TableModel;
@@ -213,7 +215,8 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         jLabel37 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
+        lbapellidop = new javax.swing.JLabel();
+        lbnombrep = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
 
@@ -843,6 +846,11 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         Consulta.add(rSMaterialButtonRectangle22, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 280, 470, 200));
 
         rSMaterialButtonRectangle23.setText("Imprimir");
+        rSMaterialButtonRectangle23.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rSMaterialButtonRectangle23MouseClicked(evt);
+            }
+        });
         Consulta.add(rSMaterialButtonRectangle23, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 230, 160, 50));
 
         rSMaterialButtonRectangle24.setText("Imprimir");
@@ -897,13 +905,17 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         jLabel36.setOpaque(true);
         Consulta.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, 240, 110));
 
-        jLabel39.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 24)); // NOI18N
-        jLabel39.setText("Seria bueno poner el nombre del paciente aca");
-        Consulta.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 460, 40));
+        lbapellidop.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 24)); // NOI18N
+        lbapellidop.setText("jLabel39");
+        Consulta.add(lbapellidop, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, 190, 40));
+
+        lbnombrep.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 24)); // NOI18N
+        lbnombrep.setText("Seria bueno poner el nombre del paciente aca");
+        Consulta.add(lbnombrep, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 230, 40));
 
         jLabel40.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 24)); // NOI18N
         jLabel40.setText("Seria bueno poner el nombre del paciente aca");
-        Consulta.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 200, 190, 40));
+        Consulta.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 200, 190, 40));
 
         jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/ingp.png"))); // NOI18N
         Consulta.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1280, 720));
@@ -937,6 +949,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnhome2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnhome2MouseClicked
+         this.dispose();
         Interfaz in = new Interfaz();
         in.setVisible(true);
     }//GEN-LAST:event_btnhome2MouseClicked
@@ -959,6 +972,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
     }//GEN-LAST:event_btncerrar3ActionPerformed
 
     private void btnhome3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnhome3MouseClicked
+         this.dispose();
         Interfaz in = new Interfaz();
         in.setVisible(true);
     }//GEN-LAST:event_btnhome3MouseClicked
@@ -989,8 +1003,11 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNpMouseClicked
 
     private void btnhome4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnhome4MouseClicked
+        this.dispose();
+        
         Interfaz in = new Interfaz();
         in.setVisible(true);
+        
     }//GEN-LAST:event_btnhome4MouseClicked
 
     private void btnminimizar5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnminimizar5MouseClicked
@@ -1027,7 +1044,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton4ActionPerformed
 
     private void btnconsultanpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnconsultanpMouseClicked
-        jLabel39.setText(pa.getLastPatientName());
+        lbnombrep.setText(pa.getLastPatientName());
         jLabel40.setText(pa.getLastPatientDpi());
         rSPanelsSlider1.setPanelSlider(Consulta, RSPanelsSlider.DIRECT.LEFT);
     }//GEN-LAST:event_btnconsultanpMouseClicked
@@ -1130,7 +1147,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
             else
             {
                 rSPanelsSlider1.setPanelSlider(Consulta, RSPanelsSlider.DIRECT.RIGHT);
-                jLabel39.setText(nombre + " " + apellido);
+                lbnombrep.setText(nombre + " " + apellido);
                 jLabel40.setText(dpi);
             }
         }
@@ -1157,6 +1174,10 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
             new rojerusan.RSNotifyFade("¡ERROR!", "Ingreso incorrecto", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.ERROR).setVisible(true);
         }
     }//GEN-LAST:event_rSMaterialButtonRectangle26MouseClicked
+
+    private void rSMaterialButtonRectangle23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle23MouseClicked
+        
+    }//GEN-LAST:event_rSMaterialButtonRectangle23MouseClicked
 
     /**
      * @param args the command line arguments
@@ -1246,7 +1267,6 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel5;
@@ -1266,6 +1286,8 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTextArea jTextArea4;
+    private javax.swing.JLabel lbapellidop;
+    private javax.swing.JLabel lbnombrep;
     private rojeru_san.RSLabelFecha rSLabelFecha1;
     private rojeru_san.RSLabelHora rSLabelHora1;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle1;
