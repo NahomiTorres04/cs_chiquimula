@@ -6,6 +6,7 @@
 package clases;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -24,6 +25,21 @@ public class empleado
     {
         conexion = new conexion();
         con = conexion.getConnection();
+    }
+    
+    public boolean ingresarEmpleado(String nombre, String apellido)
+    {
+        try {
+            String sql = "INSERT into empleado(nombres, apellidos) values (?,?)";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, nombre);
+            ps.setString(2, apellido);
+            int n = ps.executeUpdate();
+            return n != 0;
+        } catch (SQLException ex) {
+            Logger.getLogger(empleado.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
     }
     public String getProfesion(String nombre, String apellido)
     {
