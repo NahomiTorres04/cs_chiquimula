@@ -5,6 +5,7 @@
  */
 package GUI;
 
+import clases.conexion;
 import clases.consulta;
 import clases.paciente;
 import com.sun.awt.AWTUtilities;
@@ -27,6 +28,19 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.TableModel;
+import java.awt.Image;
+import java.sql.Connection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.ImageIcon;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
@@ -860,6 +874,11 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         Consulta.add(rSMaterialButtonRectangle24, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 490, 160, 50));
 
         rSMaterialButtonRectangle25.setText("Imprimir");
+        rSMaterialButtonRectangle25.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rSMaterialButtonRectangle25MouseClicked(evt);
+            }
+        });
         Consulta.add(rSMaterialButtonRectangle25, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 490, 160, 50));
 
         rSMaterialButtonRectangle26.setLabel("Guardar");
@@ -1181,8 +1200,46 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
     }//GEN-LAST:event_rSMaterialButtonRectangle26MouseClicked
 
     private void rSMaterialButtonRectangle23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle23MouseClicked
-        
+try {
+            conexion con= new conexion();
+            String path = "src\\GUI\\Reportes\\diagnostico.jasper";
+            Map parametro = new HashMap();
+            parametro.put("nombre",lbnombrep.getText());
+            parametro.put("apellido", lbapellidop.getText());
+            JasperReport jr = (JasperReport) JRLoader.loadObjectFromFile(path);
+            JasperPrint jp = JasperFillManager.fillReport(jr, parametro, con.getConnection());
+            JasperViewer jv = new JasperViewer(jp, false);
+            jv.setVisible(true);
+            jv.setTitle("Diagnostico");
+
+        } catch (JRException ex) {
+            System.out.println(ex.getMessage());
+             new rojerusan.RSNotifyFade("¡ERROR!", "No se puede imprimir", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.ERROR).setVisible(true);
+        }
+            
+
+
     }//GEN-LAST:event_rSMaterialButtonRectangle23MouseClicked
+
+    private void rSMaterialButtonRectangle25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle25MouseClicked
+        try {
+            conexion con= new conexion();
+            String path = "src\\GUI\\Reportes\\PTratamiento.jasper";
+            Map parametro = new HashMap();
+            parametro.put("nombre",lbnombrep.getText());
+            parametro.put("apellido", lbapellidop.getText());
+            JasperReport jr = (JasperReport) JRLoader.loadObjectFromFile(path);
+            JasperPrint jp = JasperFillManager.fillReport(jr, parametro, con.getConnection());
+            JasperViewer jv = new JasperViewer(jp, false);
+            jv.setVisible(true);
+            jv.setTitle("Tratamiento");
+
+        } catch (JRException ex) {
+            System.out.println(ex.getMessage());
+             new rojerusan.RSNotifyFade("¡ERROR!", "No se puede imprimir", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.ERROR).setVisible(true);
+        }
+            
+    }//GEN-LAST:event_rSMaterialButtonRectangle25MouseClicked
 
     /**
      * @param args the command line arguments

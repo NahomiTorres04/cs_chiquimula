@@ -71,7 +71,7 @@ public class paciente
         DefaultTableModel tabla = new DefaultTableModel(null, titulos);
         try {
             String sql = "SELECT nombres, apellidos, edad, dpi from paciente where nombres LIKE '%" +
-                    nombre + "%' OR apellidos LIKE '%" + apellido + "%'";
+                    nombre + "%' AND apellidos LIKE '%" + apellido + "%'";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
             String registros[] = new String[4];

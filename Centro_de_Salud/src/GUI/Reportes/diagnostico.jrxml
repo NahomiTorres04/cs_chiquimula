@@ -14,9 +14,11 @@
 		</conditionalStyle>
 	</style>
 	<parameter name="nombre" class="java.lang.String"/>
-	<parameter name="apellido" class="java.lang.String"/>
+	<parameter name="apellido" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
 	<queryString>
-		<![CDATA[select nombres as nom, apellidos as ape, diagnostico dg from paciente P inner join consulta c on P.id = c.paciente_id where p.nombres = $p(nombre) and p.apellidos = $P(apellido);]]>
+		<![CDATA[select nombres as nom, apellidos as ape, diagnostico dg from paciente P inner join consulta c on P.id = c.paciente_id where p.nombres = $P{nombre} and p.apellidos = $P{apellido};]]>
 	</queryString>
 	<field name="nom" class="java.lang.String"/>
 	<field name="ape" class="java.lang.String"/>
@@ -26,43 +28,39 @@
 	</background>
 	<title>
 		<band height="136" splitType="Stretch">
-			<image>
-				<reportElement x="0" y="0" width="164" height="126" uuid="9d467813-321a-444b-ba33-e134f0141f99"/>
-				<imageExpression><![CDATA["coffee.jpg"]]></imageExpression>
-			</image>
 			<staticText>
-				<reportElement style="Title" x="270" y="0" width="263" height="62" uuid="4437ed0b-f200-4115-aed8-218eb2a9ff18"/>
+				<reportElement style="Title" x="219" y="0" width="363" height="62" forecolor="#003466" uuid="4437ed0b-f200-4115-aed8-218eb2a9ff18"/>
 				<textElement verticalAlignment="Middle">
 					<font pdfFontName="Times-Roman"/>
 				</textElement>
-				<text><![CDATA[Coffee Title]]></text>
+				<text><![CDATA[Centro de Salud]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="SubTitle" x="303" y="62" width="196" height="22" uuid="cb2d9579-6f96-4eca-96b9-f23f40bd3042"/>
+				<reportElement style="SubTitle" x="251" y="62" width="294" height="22" forecolor="#003466" uuid="cb2d9579-6f96-4eca-96b9-f23f40bd3042"/>
 				<textElement>
 					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
 				</textElement>
-				<text><![CDATA[Coffee SubTitle]]></text>
+				<text><![CDATA[Santa María Chiquimula Totonicapan]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="172" y="94" width="383" height="42" uuid="abaf9328-dfd1-427c-8d70-05adfc687f64"/>
+				<reportElement x="307" y="94" width="149" height="42" uuid="abaf9328-dfd1-427c-8d70-05adfc687f64"/>
 				<textElement textAlignment="Right">
 					<font size="10"/>
 				</textElement>
-				<text><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor purus gravida arcu aliquam mattis. Donec et nulla libero, ut varius massa. Nulla sed turpis elit. Etiam aliquet mauris a ligula hendrerit in auctor leo lobortis.]]></text>
+				<text><![CDATA[Anatsu system developers work]]></text>
 			</staticText>
-			<image>
-				<reportElement x="633" y="-73" width="219" height="209" uuid="aa97f824-d6d7-44f3-9b99-6a178994dd79"/>
-				<imageExpression><![CDATA["coffee_stain.png"]]></imageExpression>
-			</image>
 			<textField>
-				<reportElement x="701" y="-20" width="100" height="20" uuid="75f6ce20-7946-473c-8fa1-26f26386e8f0"/>
+				<reportElement x="701" y="0" width="100" height="20" uuid="75f6ce20-7946-473c-8fa1-26f26386e8f0"/>
 				<textFieldExpression><![CDATA[$P{apellido}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="582" y="-20" width="100" height="20" uuid="e60a2e7c-4ab7-4469-8d95-a1730f5590be"/>
+				<reportElement x="615" y="0" width="68" height="20" uuid="e60a2e7c-4ab7-4469-8d95-a1730f5590be"/>
 				<textFieldExpression><![CDATA[$P{nombre}]]></textFieldExpression>
 			</textField>
+			<image>
+				<reportElement x="615" y="0" width="167" height="100" uuid="39a6f161-84b1-4f8a-b392-5593b07cc9fa"/>
+				<imageExpression><![CDATA["C:\\Users\\Nahomi\\Desktop\\SGBD centro de salud\\Centro_de_Salud\\src\\GUI\\Reportes\\mlog.png"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>
@@ -77,21 +75,17 @@
 				</graphicElement>
 			</line>
 			<staticText>
-				<reportElement style="Column header" x="0" y="0" width="267" height="15" forecolor="#736343" uuid="91d12ebb-d57f-438a-ae83-401ec129da23"/>
-				<text><![CDATA[nom]]></text>
+				<reportElement style="Column header" x="0" y="0" width="267" height="15" forecolor="#003466" uuid="91d12ebb-d57f-438a-ae83-401ec129da23"/>
+				<text><![CDATA[Nombre]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="267" y="0" width="267" height="15" forecolor="#736343" uuid="87044f3b-f2ae-428e-b794-7c8876d8518d"/>
-				<text><![CDATA[ape]]></text>
-			</staticText>
-			<staticText>
-				<reportElement style="Column header" x="534" y="0" width="267" height="15" forecolor="#736343" uuid="60cba2a2-a53a-4ed5-8be3-de68321468bb"/>
-				<text><![CDATA[dg]]></text>
+				<reportElement style="Column header" x="267" y="0" width="267" height="15" forecolor="#003466" uuid="87044f3b-f2ae-428e-b794-7c8876d8518d"/>
+				<text><![CDATA[Apellido]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="15" splitType="Stretch">
+		<band height="84" splitType="Stretch">
 			<frame>
 				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="9df2303f-a4b3-49be-9f62-d776f5fefbad"/>
 				<textField isStretchWithOverflow="true">
@@ -102,38 +96,38 @@
 					<reportElement style="Detail" x="267" y="0" width="267" height="15" uuid="6caf243d-8780-44ee-9adf-5781615bc0e3"/>
 					<textFieldExpression><![CDATA[$F{ape}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true">
-					<reportElement style="Detail" x="534" y="0" width="267" height="15" uuid="3e1afa80-ee0b-4e93-8a50-f36c48b5b639"/>
-					<textFieldExpression><![CDATA[$F{dg}]]></textFieldExpression>
-				</textField>
-				<textField>
-					<reportElement x="602" y="218" width="100" height="20" uuid="299723f7-e6bf-4fec-b841-564860156fe0"/>
-					<textFieldExpression><![CDATA[$P{nombre}]]></textFieldExpression>
-				</textField>
 			</frame>
+			<staticText>
+				<reportElement style="Column header" x="0" y="15" width="267" height="15" forecolor="#003466" uuid="60cba2a2-a53a-4ed5-8be3-de68321468bb"/>
+				<text><![CDATA[Diagnóstico]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" x="0" y="30" width="801" height="48" uuid="3e1afa80-ee0b-4e93-8a50-f36c48b5b639"/>
+				<textFieldExpression><![CDATA[$F{dg}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 	<columnFooter>
-		<band height="6" splitType="Stretch">
+		<band height="94" splitType="Stretch">
 			<line>
 				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="610c4591-d3cf-41fc-a71b-d74037d490c2"/>
 				<graphicElement>
 					<pen lineWidth="0.5" lineColor="#999999"/>
 				</graphicElement>
 			</line>
+			<staticText>
+				<reportElement x="682" y="47" width="100" height="20" uuid="14d3a7df-ea23-4da8-b746-d6dc4d22aefc"/>
+				<text><![CDATA[Firma del encargado]]></text>
+			</staticText>
+			<line>
+				<reportElement x="682" y="46" width="100" height="1" uuid="6eefce1c-1eac-4890-96a6-4dbed454f68b"/>
+			</line>
 		</band>
 	</columnFooter>
 	<pageFooter>
-		<band height="25" splitType="Stretch">
+		<band splitType="Stretch">
 			<frame>
-				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="f76b29cd-6d6b-46b1-999e-8744534fc80c"/>
-				<textField evaluationTime="Report">
-					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="1d3c3652-5d00-4d58-a579-19188b465993"/>
-					<textElement verticalAlignment="Middle">
-						<font size="10" isBold="false"/>
-					</textElement>
-					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
-				</textField>
+				<reportElement mode="Opaque" x="-20" y="-27" width="843" height="24" forecolor="#CCFFFF" backcolor="#CCFFFF" uuid="f76b29cd-6d6b-46b1-999e-8744534fc80c"/>
 				<textField>
 					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="ab45f698-8baa-4142-9589-ebfd7fd0e0de"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle">
@@ -147,6 +141,13 @@
 						<font size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="782" y="1" width="40" height="20" forecolor="#736343" uuid="1d3c3652-5d00-4d58-a579-19188b465993"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
 				</textField>
 			</frame>
 		</band>
