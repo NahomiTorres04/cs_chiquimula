@@ -82,6 +82,7 @@ public class Interfaz extends javax.swing.JFrame {
         txtcargo.setBackground(new Color(0,0,0,0));
         txtpuesto.setBackground(new Color(0,0,0,0));
         txtdpi.setBackground(new Color(0,0,0,0));
+        txttelE.setBackground(new Color(0,0,0,0));
         btnhome.setOpaque(false);
         btnhome.setBorderPainted(false);
         btnhome.setContentAreaFilled(false);

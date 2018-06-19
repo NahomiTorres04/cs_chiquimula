@@ -228,13 +228,13 @@ public class Doctor extends javax.swing.JFrame {
     private void txtnombreRKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnombreRKeyReleased
         String nombre = txtnombreR.getText();
         String apellido = txtapellidoR.getText();
-        txtProfesionR.setText(emp.getProfesion(nombre, apellido));
+        txtProfesionR.setText(emp.getCargo(nombre, apellido));
     }//GEN-LAST:event_txtnombreRKeyReleased
 
     private void txtapellidoRKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtapellidoRKeyReleased
         String nombre = txtnombreR.getText();
         String apellido = txtapellidoR.getText();
-        txtProfesionR.setText(emp.getProfesion(nombre, apellido));
+        txtProfesionR.setText(emp.getCargo(nombre, apellido));
     }//GEN-LAST:event_txtapellidoRKeyReleased
 
     /**
