@@ -8,11 +8,15 @@ package GUI;
 import clases.ReporteInventario;
 import clases.bien;
 import clases.departamento;
+import clases.empleado;
 import com.sun.awt.AWTUtilities;
 import java.awt.Color;
 import java.awt.Shape;
 import java.awt.geom.RoundRectangle2D;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.RandomAccessFile;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -37,6 +41,8 @@ public class Interfaz extends javax.swing.JFrame {
      */
     private final bien bi;
     private final departamento dep;
+    private final empleado emp;
+    private boolean alergiasEmpleado = false;
     public Interfaz() {
         initComponents();
         Shape forma = new RoundRectangle2D.Double(0,0,this.getBounds().width, this.getBounds().height,35,35);
@@ -45,6 +51,7 @@ public class Interfaz extends javax.swing.JFrame {
         transparencia();
         bi = new bien();
         dep = new departamento();
+        emp = new empleado();
         cmbDep.setModel(dep.mostrarDepartamentos());
     }
     private void transparencia()
@@ -74,6 +81,7 @@ public class Interfaz extends javax.swing.JFrame {
         cmbtipo.setBackground(new Color(0,0,0,0));
         txtcargo.setBackground(new Color(0,0,0,0));
         txtpuesto.setBackground(new Color(0,0,0,0));
+        txtdpi.setBackground(new Color(0,0,0,0));
         btnhome.setOpaque(false);
         btnhome.setBorderPainted(false);
         btnhome.setContentAreaFilled(false);
@@ -359,7 +367,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel16.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel16.setText("Ingresar Empleado");
-        menu.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 620, 210, 80));
+        menu.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 620, 260, 80));
 
         jLabel4.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel4.setText("Ingresar Artículo");
@@ -845,6 +853,7 @@ public class Interfaz extends javax.swing.JFrame {
         cmbclasificacion.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
         cmbclasificacion.setForeground(new java.awt.Color(0, 52, 102));
         cmbclasificacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione una clasificación", "Tipo A", "Tipo B" }));
+        cmbclasificacion.setEnabled(false);
         Empleado.add(cmbclasificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 630, 180, 30));
 
         txtmunicipio.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 18)); // NOI18N
@@ -875,6 +884,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         cmblugar.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 18)); // NOI18N
         cmblugar.setBorder(null);
+        cmblugar.setEnabled(false);
         Empleado.add(cmblugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 690, 330, 30));
 
         cmbtipo.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
@@ -1296,6 +1306,7 @@ public class Interfaz extends javax.swing.JFrame {
     private void rSMaterialButtonRectangle1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle1MouseClicked
        Alergias a = new Alergias();
        a.setVisible(true);
+       alergiasEmpleado = true;
     }//GEN-LAST:event_rSMaterialButtonRectangle1MouseClicked
 
     private void cmbtipoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbtipoItemStateChanged
@@ -1312,6 +1323,13 @@ public class Interfaz extends javax.swing.JFrame {
             cmbclasificacion.setEnabled(false);
             cmbclasificacion.setSelectedIndex(0);
         }
+        else
+        {
+            cmblugar.setEnabled(false);
+            cmbclasificacion.setEnabled(false);
+            cmblugar.setText("");
+            cmbclasificacion.setSelectedItem(0);
+        }
     }//GEN-LAST:event_cmbtipoItemStateChanged
 
     private void rSMaterialButtonRectangle2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle2MouseClicked
@@ -1320,6 +1338,26 @@ public class Interfaz extends javax.swing.JFrame {
         String municipio = txtmunicipio.getText();
         String departamento = cmbdepartamento.getSelectedItem().toString();
         String tipo;
+        String alergias = "";
+        if(alergiasEmpleado == true)
+        {
+            try {
+                RandomAccessFile raf = new RandomAccessFile("./alergia.txt", "rw");
+                File fichero = new File("./alergia.txt");
+                int contador = 0;
+                while(contador < raf.length())
+                {
+                    alergias = alergias + (char)raf.readByte();
+                    contador++;
+                }
+                fichero.delete();
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(Pacientes_Consultas.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
+                Logger.getLogger(Pacientes_Consultas.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            alergiasEmpleado = false;
+        }
         if(jRadioButton4.isSelected())
         {
             tipo = JOptionPane.showInputDialog("Ingrese el tipo");
@@ -1352,6 +1390,14 @@ public class Interfaz extends javax.swing.JFrame {
         } else fechad = formato.format(fechadE.getDatoFecha());
         String telefono = txttelE.getText();
         double sueldo = Double.parseDouble(txtsueldo.getText());
+        if(emp.ingresarEmpleado(nombre, apellido, dpi, municipio, departamento, tipo, clasificacion, lugar, cargo, renglon, puesto, fechai, fechad, sueldo, telefono, alergias))
+        {
+            new rojerusan.RSNotifyFade("¡ACEPTADA!", "Ingreso Correcto", Color.WHITE, Color.BLACK, Color.BLACK, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.SUCCESS).setVisible(true);
+        }
+        else
+        {
+            new rojerusan.RSNotifyFade("¡ERROR!", "Ingreso incorrecto", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.ERROR).setVisible(true);
+        }
     }//GEN-LAST:event_rSMaterialButtonRectangle2MouseClicked
 
     /**
