@@ -12,6 +12,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 
 /**
  *
@@ -79,5 +81,32 @@ public class empleado
             Logger.getLogger(empleado.class.getName()).log(Level.SEVERE, null, ex);
         }
         return profesion;
+    }
+    
+    public DefaultTableModel mostrarEmpleados(TableModel table)
+    {
+        String titulos[] = new String[4];
+        for(int i = 0; i < 4; i++)
+        {
+            titulos[i] = table.getColumnName(i);
+        }
+        DefaultTableModel tabla = new DefaultTableModel(null, titulos);
+        try {
+            String sql = "SELECT nombres, apellidos, tipo, cargo from empleado";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            String registros[] = new String[4];
+            while(rs.next())
+            {
+                registros[0] = rs.getString("nombres");
+                registros[1] = rs.getString("apellidos");
+                registros[2] = rs.getString("tipo");
+                registros[3] = rs.getString("cargo");
+                tabla.addRow(registros);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(paciente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return tabla;
     }
 }
