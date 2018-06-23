@@ -10,6 +10,7 @@ import clases.bien;
 import clases.conexion;
 import clases.departamento;
 import clases.empleado;
+import clases.cuenta;
 import com.sun.awt.AWTUtilities;
 import java.awt.Color;
 import java.awt.Shape;
@@ -50,6 +51,7 @@ public class Interfaz extends javax.swing.JFrame {
     private final bien bi;
     private final departamento dep;
     private final empleado emp;
+    private final cuenta cu;
     private boolean alergiasEmpleado = false;
     public Interfaz() {
         initComponents();
@@ -60,7 +62,9 @@ public class Interfaz extends javax.swing.JFrame {
         bi = new bien();
         dep = new departamento();
         emp = new empleado();
+        cu = new cuenta();
         cmbDep.setModel(dep.mostrarDepartamentos());
+        cmbCuenta.setModel(cu.mostrarCuentas());
     }
     private void transparencia()
     {
@@ -134,6 +138,10 @@ public class Interfaz extends javax.swing.JFrame {
         btnPacientes.setOpaque(false);
         btnPacientes.setBorderPainted(false);
         btnPacientes.setContentAreaFilled(false);
+        cmbCuenta.setBackground(new Color(0,0,0,0));
+        jButton4.setOpaque(false);
+        jButton4.setBorderPainted(false);
+        jButton4.setContentAreaFilled(false);
     }
     private void Limpiar()
     {
@@ -161,12 +169,16 @@ public class Interfaz extends javax.swing.JFrame {
         btn_IngP = new javax.swing.JButton();
         btnPacientes = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        rSMaterialButtonCircle11 = new rojerusan.RSMaterialButtonCircle();
         rSMaterialButtonCircle10 = new rojerusan.RSMaterialButtonCircle();
         jButton2 = new javax.swing.JButton();
         rSMaterialButtonCircle8 = new rojerusan.RSMaterialButtonCircle();
         btnVerI = new javax.swing.JButton();
         rSMaterialButtonCircle4 = new rojerusan.RSMaterialButtonCircle();
         rSMaterialButtonCircle7 = new rojerusan.RSMaterialButtonCircle();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -182,6 +194,7 @@ public class Interfaz extends javax.swing.JFrame {
         cmbDonado = new javax.swing.JComboBox<>();
         txtCodigo = new javax.swing.JTextField();
         btnguardar = new javax.swing.JButton();
+        cmbCuenta = new javax.swing.JComboBox<>();
         cmbEstado = new javax.swing.JComboBox<>();
         txtCant = new javax.swing.JTextField();
         btn_Inp = new javax.swing.JButton();
@@ -194,6 +207,7 @@ public class Interfaz extends javax.swing.JFrame {
         rSMaterialButtonCircle2 = new rojerusan.RSMaterialButtonCircle();
         rSMaterialButtonCircle3 = new rojerusan.RSMaterialButtonCircle();
         jLabel6 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -367,6 +381,16 @@ public class Interfaz extends javax.swing.JFrame {
         });
         menu.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 470, 160, 170));
 
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Bulleted_List_70px_1.png"))); // NOI18N
+        jButton4.setBorder(null);
+        jButton4.setBorderPainted(false);
+        jButton4.setContentAreaFilled(false);
+        jButton4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Bulleted_List_100px.png"))); // NOI18N
+        menu.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 480, 180, 170));
+
+        rSMaterialButtonCircle11.setBackground(new java.awt.Color(0, 52, 102));
+        menu.add(rSMaterialButtonCircle11, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 480, 180, 170));
+
         rSMaterialButtonCircle10.setBackground(new java.awt.Color(0, 52, 102));
         menu.add(rSMaterialButtonCircle10, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 470, 160, 170));
 
@@ -405,9 +429,17 @@ public class Interfaz extends javax.swing.JFrame {
         rSMaterialButtonCircle7.setBackground(new java.awt.Color(0, 52, 102));
         menu.add(rSMaterialButtonCircle7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, 160, 170));
 
+        jLabel30.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        jLabel30.setText("Imprimir");
+        menu.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 640, 130, 40));
+
+        jLabel31.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        jLabel31.setText("Estado de resultados");
+        menu.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 670, 300, 40));
+
         jLabel28.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel28.setText("Ver Empleado");
-        menu.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 610, 200, 80));
+        menu.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 620, 200, 80));
 
         jLabel16.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel16.setText("Ingresar Empleado");
@@ -426,7 +458,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel17.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel17.setText("Ingresar Paciente");
-        menu.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 390, 190, 80));
+        menu.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 390, 250, 80));
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/menu.png"))); // NOI18N
         menu.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1280, 720));
@@ -473,6 +505,10 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
         IngresarInventario.add(btnguardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 610, 130, 140));
+
+        cmbCuenta.setBackground(new java.awt.Color(0, 52, 102));
+        cmbCuenta.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        IngresarInventario.add(cmbCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 460, 220, 40));
 
         cmbEstado.setBackground(new java.awt.Color(0, 52, 102));
         cmbEstado.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
@@ -545,17 +581,21 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel6.setText("Otro Artículo");
         IngresarInventario.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 550, 190, 80));
 
+        jLabel29.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        jLabel29.setText("Cuenta:");
+        IngresarInventario.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, 120, 80));
+
         jLabel5.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel5.setText("Guardar Artículo");
         IngresarInventario.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 550, 230, 80));
 
         jLabel7.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel7.setText("  Ingresar");
-        IngresarInventario.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 510, 190, 80));
+        IngresarInventario.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 510, 190, 80));
 
         jLabel8.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel8.setText(" Regresar");
-        IngresarInventario.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 550, 130, 80));
+        IngresarInventario.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 550, 130, 80));
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/ingresara.png"))); // NOI18N
         IngresarInventario.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1280, 720));
@@ -909,7 +949,6 @@ public class Interfaz extends javax.swing.JFrame {
         cmbclasificacion.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
         cmbclasificacion.setForeground(new java.awt.Color(0, 52, 102));
         cmbclasificacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione una clasificación", "Tipo A", "Tipo B" }));
-        cmbclasificacion.setEnabled(false);
         Empleado.add(cmbclasificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 630, 180, 30));
 
         txtmunicipio.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 18)); // NOI18N
@@ -1062,7 +1101,6 @@ public class Interfaz extends javax.swing.JFrame {
         Empleado.add(rSMaterialButtonRectangle26, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 280, 120, 50));
 
         rSMaterialButtonRectangle27.setBackground(new java.awt.Color(186, 240, 255));
-        rSMaterialButtonRectangle27.setEnabled(false);
         Empleado.add(rSMaterialButtonRectangle27, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 620, 200, 50));
 
         jLabel43.setFont(new java.awt.Font("Microsoft JhengHei Light", 1, 45)); // NOI18N
@@ -1282,6 +1320,8 @@ public class Interfaz extends javax.swing.JFrame {
         boolean estado;
         boolean donado;
         boolean fungible;
+        String cuenta_nombre = cmbCuenta.getSelectedItem().toString();
+        int cuenta = cu.encontrar_cuenta(cuenta_nombre);
         if(cmbEstado.getSelectedItem().toString().equals("Bueno"))
         {
             estado = true;
@@ -1306,7 +1346,7 @@ public class Interfaz extends javax.swing.JFrame {
         {
             fungible = false;
         }
-        if(bi.ingresarBien(codigo, descripcion, cantidad, preciou, preciot, estado, donado, fungible, departamento))
+        if((cu.aumentarValor(cuenta, preciot)) && (bi.ingresarBien(codigo, descripcion, cantidad, preciou, preciot, estado, donado, fungible, departamento, cuenta)))
         {
             new rojerusan.RSNotifyFade("¡ACEPTADA!", "Ingreso Correcto", Color.WHITE, Color.BLACK, Color.BLACK, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.SUCCESS).setVisible(true);
         }
@@ -1506,7 +1546,7 @@ public class Interfaz extends javax.swing.JFrame {
             cmblugar.setEnabled(false);
             cmbclasificacion.setEnabled(false);
             cmblugar.setText("");
-            cmbclasificacion.setSelectedItem(0);
+            cmbclasificacion.setSelectedIndex(0);
         }
     }//GEN-LAST:event_cmbtipoItemStateChanged
 
@@ -1568,7 +1608,8 @@ public class Interfaz extends javax.swing.JFrame {
         } else fechad = formato.format(fechadE.getDatoFecha());
         String telefono = txttelE.getText();
         double sueldo = Double.parseDouble(txtsueldo.getText());
-        if(emp.ingresarEmpleado(nombre, apellido, dpi, municipio, departamento, tipo, clasificacion, lugar, cargo, renglon, puesto, fechai, fechad, sueldo, telefono, alergias))
+        if(emp.ingresarEmpleado(nombre, apellido, dpi, municipio, departamento, tipo, clasificacion, lugar, cargo, renglon, puesto, fechai, fechad, sueldo, telefono, alergias) &&
+                cu.aumentarSueldos(sueldo))
         {
             new rojerusan.RSNotifyFade("¡ACEPTADA!", "Ingreso Correcto", Color.WHITE, Color.BLACK, Color.BLACK, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.SUCCESS).setVisible(true);
         }
@@ -1695,6 +1736,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton btnminimizar4;
     private javax.swing.JButton btnreporte;
     private javax.swing.JLabel buenEstado;
+    private javax.swing.JComboBox<String> cmbCuenta;
     private javax.swing.JComboBox<String> cmbDep;
     private javax.swing.JComboBox<String> cmbDonado;
     private javax.swing.JComboBox<String> cmbEstado;
@@ -1709,6 +1751,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1730,7 +1773,10 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
@@ -1763,6 +1809,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel noDonado;
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle1;
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle10;
+    private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle11;
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle2;
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle3;
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle4;

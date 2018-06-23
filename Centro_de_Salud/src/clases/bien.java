@@ -29,13 +29,13 @@ public class bien {
     }
     public boolean ingresarBien(String codigo, String descripcion, int cantidad,
     double precio_unitario, double precio_total, boolean estado, boolean donado,
-    boolean fungible, int departamento_id)
+    boolean fungible, int departamento_id, int cuenta)
     {
         try {
             String sql = "INSERT into bien(codigo, descripcion, cantidad"
                     + ", precio_unitario, precio_total, estado, donado"
-                    + ", fungible, departamento_id) values(?,?,?,?,?,"
-                    + "?,?,?,?)";
+                    + ", fungible, departamento_id, cuenta_id) values(?,?,?,?,?,"
+                    + "?,?,?,?,?)";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, codigo);
             ps.setString(2, descripcion);
@@ -46,6 +46,7 @@ public class bien {
             ps.setBoolean(7, donado);
             ps.setBoolean(8, fungible);
             ps.setInt(9, departamento_id);
+            ps.setInt(10, cuenta);
             int n = ps.executeUpdate();
             return n != 0;
         } catch (SQLException ex) {
