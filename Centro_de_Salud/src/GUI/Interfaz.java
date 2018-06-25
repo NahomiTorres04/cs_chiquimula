@@ -317,6 +317,19 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         rSMaterialButtonRectangle3 = new rojerusan.RSMaterialButtonRectangle();
         jLabel25 = new javax.swing.JLabel();
+        estadoR = new javax.swing.JPanel();
+        btnhome4 = new javax.swing.JButton();
+        btnminimizar5 = new javax.swing.JButton();
+        btncerrar5 = new javax.swing.JButton();
+        jLabel49 = new javax.swing.JLabel();
+        scrollgai4 = new javax.swing.JScrollPane();
+        tableEstado = new rojerusan.RSTableMetro();
+        rSMaterialButtonRectangle32 = new rojerusan.RSMaterialButtonRectangle();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -1220,6 +1233,10 @@ public class Interfaz extends javax.swing.JFrame {
         tableEmpleado.setRowHeight(22);
         tableEmpleado.getTableHeader().setReorderingAllowed(false);
         scrollgai2.setViewportView(tableEmpleado);
+        if (tableEmpleado.getColumnModel().getColumnCount() > 0) {
+            tableEmpleado.getColumnModel().getColumn(1).setHeaderValue("Apellido");
+            tableEmpleado.getColumnModel().getColumn(2).setHeaderValue("lugar");
+        }
 
         verEmpleado.add(scrollgai2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, 940, 470));
 
@@ -1296,6 +1313,117 @@ public class Interfaz extends javax.swing.JFrame {
         verEmpleado.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1280, 720));
 
         rSPanelsSlider1.add(verEmpleado, "card6");
+
+        estadoR.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnhome4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_35px.png"))); // NOI18N
+        btnhome4.setBorder(null);
+        btnhome4.setBorderPainted(false);
+        btnhome4.setContentAreaFilled(false);
+        btnhome4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_55px.png"))); // NOI18N
+        btnhome4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnhome4MouseClicked(evt);
+            }
+        });
+        estadoR.add(btnhome4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1056, 0, 80, 60));
+
+        btnminimizar5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_35px.png"))); // NOI18N
+        btnminimizar5.setBorder(null);
+        btnminimizar5.setBorderPainted(false);
+        btnminimizar5.setContentAreaFilled(false);
+        btnminimizar5.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_55px.png"))); // NOI18N
+        btnminimizar5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnminimizar5MouseClicked(evt);
+            }
+        });
+        estadoR.add(btnminimizar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, 60, 57));
+
+        btncerrar5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_35px_1.png"))); // NOI18N
+        btncerrar5.setBorder(null);
+        btncerrar5.setBorderPainted(false);
+        btncerrar5.setContentAreaFilled(false);
+        btncerrar5.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_55px_1.png"))); // NOI18N
+        btncerrar5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btncerrar5MouseClicked(evt);
+            }
+        });
+        estadoR.add(btncerrar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 0, 60, 57));
+
+        jLabel49.setBackground(new java.awt.Color(0, 54, 102));
+        jLabel49.setOpaque(true);
+        estadoR.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1290, 60));
+
+        tableInventario = new rojerusan.RSTableMetro(){
+            public boolean isCellEditable(int rowIndex, int ColIndex){
+                return false;
+            }
+        };
+        tableEstado.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Estado de Resultados  ", ""
+            }
+        ));
+        tableEstado.setColorBackgoundHead(new java.awt.Color(22, 54, 77));
+        tableEstado.setColorBordeFilas(new java.awt.Color(255, 255, 255));
+        tableEstado.setColorBordeHead(new java.awt.Color(255, 255, 255));
+        tableEstado.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
+        tableEstado.setColorFilasForeground1(new java.awt.Color(0, 0, 0));
+        tableEstado.setColorFilasForeground2(new java.awt.Color(0, 0, 0));
+        tableEstado.setColorSelBackgound(new java.awt.Color(22, 54, 77));
+        tableEstado.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        tableEstado.setFuenteFilas(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        tableEstado.setFuenteFilasSelect(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        tableEstado.setFuenteHead(new java.awt.Font("Yu Gothic UI Light", 1, 18)); // NOI18N
+        tableEstado.setGridColor(new java.awt.Color(255, 255, 255));
+        tableEstado.setGrosorBordeFilas(0);
+        tableEstado.setGrosorBordeHead(0);
+        tableEstado.setName("tableEmpleado"); // NOI18N
+        tableEstado.setRowHeight(22);
+        tableEstado.getTableHeader().setReorderingAllowed(false);
+        scrollgai4.setViewportView(tableEstado);
+
+        estadoR.add(scrollgai4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, 940, 470));
+
+        rSMaterialButtonRectangle32.setBackground(new java.awt.Color(186, 240, 255));
+        rSMaterialButtonRectangle32.setEnabled(false);
+        estadoR.add(rSMaterialButtonRectangle32, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 980, 510));
+
+        jLabel51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Document_100px.png"))); // NOI18N
+        estadoR.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 110, 120));
+
+        jLabel53.setFont(new java.awt.Font("Microsoft JhengHei Light", 1, 45)); // NOI18N
+        jLabel53.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel53.setText("Resultados");
+        estadoR.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, -1, 90));
+
+        jLabel52.setFont(new java.awt.Font("Microsoft JhengHei Light", 1, 45)); // NOI18N
+        jLabel52.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel52.setText("Estado de");
+        estadoR.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, 260, 90));
+
+        jLabel54.setBackground(new java.awt.Color(0, 52, 102));
+        jLabel54.setOpaque(true);
+        estadoR.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 350, 110));
+
+        jLabel50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/ingp.png"))); // NOI18N
+        estadoR.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1280, 720));
+
+        rSPanelsSlider1.add(estadoR, "card7");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -1686,6 +1814,18 @@ public class Interfaz extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jRadioButton1MouseClicked
 
+    private void btnhome4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnhome4MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnhome4MouseClicked
+
+    private void btnminimizar5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnminimizar5MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnminimizar5MouseClicked
+
+    private void btncerrar5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncerrar5MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btncerrar5MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1744,16 +1884,19 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton btncerrar2;
     private javax.swing.JButton btncerrar3;
     private javax.swing.JButton btncerrar4;
+    private javax.swing.JButton btncerrar5;
     private javax.swing.JButton btnguardar;
     private javax.swing.JButton btnhome;
     private javax.swing.JButton btnhome1;
     private javax.swing.JButton btnhome2;
     private javax.swing.JButton btnhome3;
+    private javax.swing.JButton btnhome4;
     private javax.swing.JButton btnminimizar;
     private javax.swing.JButton btnminimizar1;
     private javax.swing.JButton btnminimizar2;
     private javax.swing.JButton btnminimizar3;
     private javax.swing.JButton btnminimizar4;
+    private javax.swing.JButton btnminimizar5;
     private javax.swing.JButton btnreporte;
     private javax.swing.JLabel buenEstado;
     private javax.swing.JComboBox<String> cmbCuenta;
@@ -1766,6 +1909,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JTextField cmblugar;
     private javax.swing.JComboBox<String> cmbrenglonp;
     private javax.swing.JComboBox<String> cmbtipo;
+    private javax.swing.JPanel estadoR;
     private rojeru_san.componentes.RSDateChooser fechadE;
     private rojeru_san.componentes.RSDateChooser fechaiE;
     private javax.swing.JButton jButton1;
@@ -1815,7 +1959,13 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -1857,6 +2007,7 @@ public class Interfaz extends javax.swing.JFrame {
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle3;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle30;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle31;
+    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle32;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle5;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle6;
     private rojerusan.RSPanelsSlider rSPanelsSlider1;
@@ -1864,7 +2015,9 @@ public class Interfaz extends javax.swing.JFrame {
     private rojerusan.RSPanelsSlider rSPanelsSlider3;
     private javax.swing.JScrollPane scrollgai2;
     private javax.swing.JScrollPane scrollgai3;
+    private javax.swing.JScrollPane scrollgai4;
     private rojerusan.RSTableMetro tableEmpleado;
+    private rojerusan.RSTableMetro tableEstado;
     private rojerusan.RSTableMetro tableInventario;
     private javax.swing.JTextField txtCant;
     private javax.swing.JTextField txtCodigo;
