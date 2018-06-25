@@ -202,6 +202,8 @@ public class Interfaz extends javax.swing.JFrame {
         btnminimizar1 = new javax.swing.JButton();
         btncerrar1 = new javax.swing.JButton();
         btnhome = new javax.swing.JButton();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        rSMaterialButtonRectangle31 = new rojerusan.RSMaterialButtonRectangle();
         jLabel11 = new javax.swing.JLabel();
         rSMaterialButtonCircle1 = new rojerusan.RSMaterialButtonCircle();
         rSMaterialButtonCircle2 = new rojerusan.RSMaterialButtonCircle();
@@ -508,7 +510,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         cmbCuenta.setBackground(new java.awt.Color(0, 52, 102));
         cmbCuenta.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        IngresarInventario.add(cmbCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 460, 220, 40));
+        IngresarInventario.add(cmbCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 440, 220, 30));
 
         cmbEstado.setBackground(new java.awt.Color(0, 52, 102));
         cmbEstado.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
@@ -564,6 +566,20 @@ public class Interfaz extends javax.swing.JFrame {
         });
         IngresarInventario.add(btnhome, new org.netbeans.lib.awtextra.AbsoluteConstraints(1056, 0, 80, 60));
 
+        jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jRadioButton1.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 18)); // NOI18N
+        jRadioButton1.setText("Otro");
+        jRadioButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jRadioButton1MouseClicked(evt);
+            }
+        });
+        IngresarInventario.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 480, -1, -1));
+
+        rSMaterialButtonRectangle31.setBackground(new java.awt.Color(186, 240, 255));
+        rSMaterialButtonRectangle31.setEnabled(false);
+        IngresarInventario.add(rSMaterialButtonRectangle31, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 430, 240, 50));
+
         jLabel11.setBackground(new java.awt.Color(0, 54, 102));
         jLabel11.setOpaque(true);
         IngresarInventario.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1290, 60));
@@ -583,7 +599,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel29.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel29.setText("Cuenta:");
-        IngresarInventario.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, 120, 80));
+        IngresarInventario.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 410, 120, 80));
 
         jLabel5.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel5.setText("Guardar Artículo");
@@ -1662,6 +1678,14 @@ public class Interfaz extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_rSMaterialButtonRectangle3MouseClicked
 
+    private void jRadioButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton1MouseClicked
+        if(jRadioButton1.isSelected())
+        {
+            Cuenta c = new Cuenta();
+            c.setVisible(true);
+        }
+    }//GEN-LAST:event_jRadioButton1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1797,6 +1821,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JLabel malEstado;
@@ -1831,6 +1856,7 @@ public class Interfaz extends javax.swing.JFrame {
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle29;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle3;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle30;
+    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle31;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle5;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle6;
     private rojerusan.RSPanelsSlider rSPanelsSlider1;
