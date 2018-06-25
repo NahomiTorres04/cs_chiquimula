@@ -215,8 +215,6 @@ public class Interfaz extends javax.swing.JFrame {
         VerInventario = new javax.swing.JPanel();
         rSPanelsSlider2 = new rojerusan.RSPanelsSlider();
         InventarioCod = new javax.swing.JPanel();
-        scrollgai1 = new javax.swing.JScrollPane();
-        tableInventario = new rojerusan.RSTableMetro();
         Bcodigo = new javax.swing.JTextField();
         btnhome1 = new javax.swing.JButton();
         btnminimizar2 = new javax.swing.JButton();
@@ -241,6 +239,8 @@ public class Interfaz extends javax.swing.JFrame {
         Departamento = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         btnreporte = new javax.swing.JButton();
+        scrollgai3 = new javax.swing.JScrollPane();
+        tableInventario = new rojerusan.RSTableMetro();
         jLabel1 = new javax.swing.JLabel();
         Empleado = new javax.swing.JPanel();
         btnminimizar3 = new javax.swing.JButton();
@@ -608,61 +608,6 @@ public class Interfaz extends javax.swing.JFrame {
         InventarioCod.setName("InventarioCod"); // NOI18N
         InventarioCod.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tableInventario = new rojerusan.RSTableMetro(){
-            public boolean isCellEditable(int rowIndex, int ColIndex){
-                return false;
-            }
-        };
-        tableInventario.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Código", "Descripción", "Cantidad", "Precio unitario", "Estado", "Fungible", "Total"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                true, true, false, true, true, true, true
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        tableInventario.setColorBackgoundHead(new java.awt.Color(22, 54, 77));
-        tableInventario.setColorBordeFilas(new java.awt.Color(255, 255, 255));
-        tableInventario.setColorBordeHead(new java.awt.Color(255, 255, 255));
-        tableInventario.setColorFilasBackgound1(new java.awt.Color(163, 214, 249));
-        tableInventario.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
-        tableInventario.setColorFilasForeground1(new java.awt.Color(0, 0, 0));
-        tableInventario.setColorFilasForeground2(new java.awt.Color(0, 0, 0));
-        tableInventario.setColorSelBackgound(new java.awt.Color(22, 54, 77));
-        tableInventario.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        tableInventario.setFuenteFilas(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        tableInventario.setFuenteFilasSelect(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        tableInventario.setFuenteHead(new java.awt.Font("Yu Gothic UI Light", 1, 18)); // NOI18N
-        tableInventario.setGrosorBordeFilas(0);
-        tableInventario.setGrosorBordeHead(0);
-        tableInventario.setRowHeight(22);
-        tableInventario.getTableHeader().setReorderingAllowed(false);
-        scrollgai1.setViewportView(tableInventario);
-        if (tableInventario.getColumnModel().getColumnCount() > 0) {
-            tableInventario.getColumnModel().getColumn(4).setHeaderValue("");
-            tableInventario.getColumnModel().getColumn(5).setHeaderValue("Fungible");
-            tableInventario.getColumnModel().getColumn(6).setHeaderValue("Total");
-        }
-
-        InventarioCod.add(scrollgai1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 940, 470));
-
         Bcodigo.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
         Bcodigo.setBorder(null);
         Bcodigo.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -871,6 +816,57 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
         InventarioCod.add(btnreporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 200, 170, 50));
+
+        tableInventario = new rojerusan.RSTableMetro(){
+            public boolean isCellEditable(int rowIndex, int ColIndex){
+                return false;
+            }
+        };
+        tableInventario.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Código", "Descripción", "Cantidad", "Precio/u", "Fungible", "total"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                true, true, false, true, true, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tableInventario.setColorBackgoundHead(new java.awt.Color(22, 54, 77));
+        tableInventario.setColorBordeFilas(new java.awt.Color(255, 255, 255));
+        tableInventario.setColorBordeHead(new java.awt.Color(255, 255, 255));
+        tableInventario.setColorFilasBackgound1(new java.awt.Color(163, 214, 249));
+        tableInventario.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
+        tableInventario.setColorFilasForeground1(new java.awt.Color(0, 0, 0));
+        tableInventario.setColorFilasForeground2(new java.awt.Color(0, 0, 0));
+        tableInventario.setColorSelBackgound(new java.awt.Color(22, 54, 77));
+        tableInventario.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        tableInventario.setFuenteFilas(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        tableInventario.setFuenteFilasSelect(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        tableInventario.setFuenteHead(new java.awt.Font("Yu Gothic UI Light", 1, 18)); // NOI18N
+        tableInventario.setGrosorBordeFilas(0);
+        tableInventario.setGrosorBordeHead(0);
+        tableInventario.setName("tableEmpleado"); // NOI18N
+        tableInventario.setRowHeight(22);
+        tableInventario.getTableHeader().setReorderingAllowed(false);
+        scrollgai3.setViewportView(tableInventario);
+
+        InventarioCod.add(scrollgai3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 860, 450));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/inventario.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -1840,8 +1836,8 @@ public class Interfaz extends javax.swing.JFrame {
     private rojerusan.RSPanelsSlider rSPanelsSlider1;
     private rojerusan.RSPanelsSlider rSPanelsSlider2;
     private rojerusan.RSPanelsSlider rSPanelsSlider3;
-    private javax.swing.JScrollPane scrollgai1;
     private javax.swing.JScrollPane scrollgai2;
+    private javax.swing.JScrollPane scrollgai3;
     private rojerusan.RSTableMetro tableEmpleado;
     private rojerusan.RSTableMetro tableInventario;
     private javax.swing.JTextField txtCant;
