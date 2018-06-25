@@ -7,6 +7,7 @@ package GUI;
 
 import clases.conexion;
 import clases.consulta;
+import clases.cuenta;
 import clases.paciente;
 import com.sun.awt.AWTUtilities;
 import java.awt.Color;
@@ -50,6 +51,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
 
     public paciente pa;
     public consulta co;
+    public cuenta cu;
     /**
      * Creates new form Pacientes_Consultas
      */
@@ -61,6 +63,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         transparencia();
         pa = new paciente();
         co = new consulta();
+        cu = new cuenta();
         ButtonGroup grupo_ingresar_paciente = new ButtonGroup();
         ButtonGroup grupo_consulta = new ButtonGroup();
         ButtonGroup grupo_referido = new ButtonGroup();
@@ -1189,7 +1192,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         if(jRadioButton4.isSelected()) referido = true;
         else referido = false;
         int paciente_id = pa.retornarid(jLabel40.getText());
-        if(co.ingresarConsulta(sintomas, diagnostico, tratamiento, examenes, reconsulta, referido, paciente_id))
+        if(co.ingresarConsulta(sintomas, diagnostico, tratamiento, examenes, reconsulta, referido, paciente_id) && cu.aumentarServicios(100))
         {
             new rojerusan.RSNotifyFade("¡ACEPTADA!", "Consulta ingresada", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.SUCCESS).setVisible(true);
         }

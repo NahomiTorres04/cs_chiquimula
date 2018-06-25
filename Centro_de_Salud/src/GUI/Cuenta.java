@@ -5,11 +5,14 @@
  */
 package GUI;
 
+import clases.cuenta;
 import com.sun.awt.AWTUtilities;
 import java.awt.Color;
 import java.awt.Shape;
 import java.awt.geom.RoundRectangle2D;
+import static java.awt.image.ImageObserver.SOMEBITS;
 import javax.swing.ButtonGroup;
+import rojerusan.RSNotifyFade;
 
 /**
  *
@@ -17,6 +20,7 @@ import javax.swing.ButtonGroup;
  */
 public class Cuenta extends javax.swing.JFrame {
 
+    public cuenta cu;
     /**
      * Creates new form Cuenta
      */
@@ -32,6 +36,7 @@ public class Cuenta extends javax.swing.JFrame {
         grupo_activo.add(btnpasivo);
         grupo_corriente.add(btncorriente);
         grupo_corriente.add(btnncorriente);
+        cu = new cuenta();
     }
 
     /**
@@ -84,20 +89,22 @@ public class Cuenta extends javax.swing.JFrame {
         btnncorriente.setBackground(new java.awt.Color(214, 246, 255));
         btnncorriente.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 24)); // NOI18N
         btnncorriente.setText("  No Corriente");
-        jPanel1.add(btnncorriente, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 190, 30));
+        jPanel1.add(btnncorriente, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, 200, 30));
 
         btncorriente.setBackground(new java.awt.Color(214, 246, 255));
         btncorriente.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 24)); // NOI18N
+        btncorriente.setSelected(true);
         btncorriente.setText("    Corriente");
         jPanel1.add(btncorriente, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 190, 30));
 
         btnpasivo.setBackground(new java.awt.Color(214, 246, 255));
         btnpasivo.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 24)); // NOI18N
         btnpasivo.setText("       Pasivo");
-        jPanel1.add(btnpasivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, 180, 30));
+        jPanel1.add(btnpasivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 200, 180, 30));
 
         btnactivo.setBackground(new java.awt.Color(214, 246, 255));
         btnactivo.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 24)); // NOI18N
+        btnactivo.setSelected(true);
         btnactivo.setText("       Activo");
         jPanel1.add(btnactivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 190, 30));
 
@@ -192,7 +199,22 @@ public class Cuenta extends javax.swing.JFrame {
     }//GEN-LAST:event_txtnombreCKeyReleased
 
     private void rSMaterialButtonRectangle4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle4ActionPerformed
-  
+        String nombre = txtnombreC.getText();
+        boolean activo;
+        if(btnactivo.isSelected()) activo = true;
+        else activo = false;
+        boolean corriente;
+        if(btncorriente.isSelected()) corriente = true;
+        else corriente = false;
+        if(cu.ingresarCuenta(nombre, activo, corriente))
+        {
+            new rojerusan.RSNotifyFade("¡ACEPTADA!", "Ingreso Correcto", Color.WHITE, Color.BLACK, Color.BLACK, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.SUCCESS).setVisible(true);
+            this.dispose();
+        }
+        else
+        {
+            new rojerusan.RSNotifyFade("¡ERROR!", "Ingreso incorrecto, o cuenta repetida", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.ERROR).setVisible(true);
+        }
     }//GEN-LAST:event_rSMaterialButtonRectangle4ActionPerformed
 
     private void btnminimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnminimizarMouseClicked

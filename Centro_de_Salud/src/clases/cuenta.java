@@ -107,4 +107,55 @@ public class cuenta
         }
         return false;
     }
+    
+    public boolean aumentarServicios(double precio)
+    {
+        double precioi = 0;
+        try {
+            String sql = "SELECT cantidad from cuenta where nombre = 'Servicios'";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                precioi = rs.getDouble("cantidad");
+            }
+            precioi += precio;
+            sql = "UPDATE cuenta set cantidad = ? where nombre = 'Servicios'";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setDouble(1, precioi);
+            int n = ps.executeUpdate();
+            return n != 0;
+        } catch (SQLException ex) {
+            Logger.getLogger(cuenta.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
+    
+    public boolean ingresarCuenta(String nombre, boolean activo, boolean corriente)
+    {
+        String nombreCuenta = "";
+        try {
+            String sql = "SELECT nombre from cuenta where nombre = '" + nombre + "'";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                nombreCuenta = rs.getString("nombre");
+            }
+            if(nombreCuenta.isEmpty())
+            {
+                sql = "INSERT into cuenta(nombre, activo, corriente) values (?,?,?)";
+                PreparedStatement ps = con.prepareStatement(sql);
+                ps.setString(1, nombre);
+                ps.setBoolean(2, activo);
+                ps.setBoolean(3, corriente);
+                int n = ps.executeUpdate();
+                return n != 0;
+            }
+            else return false;
+        } catch (SQLException ex) {
+            Logger.getLogger(cuenta.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
 }

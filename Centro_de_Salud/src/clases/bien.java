@@ -15,6 +15,7 @@ import java.util.logging.Logger;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 /**
  *
  * @author alex
@@ -57,10 +58,16 @@ public class bien {
     public DefaultTableModel bienes(String codigo, JTable table)
     {
         String titulos[] = new String[6];
-        for(int i = 0; i < 6; i++)
-        {
-            titulos[i] = table.getColumnName(i);
-        }
+//        for(int i = 1; i < 6; i++)
+//        {
+//            titulos[i] = table.getColumnName(i);
+//        }
+        titulos[0] = "Código";
+        titulos[1] = "Descripción";
+        titulos[2] = "Cantidad";
+        titulos[3] = "Precio Unitario";
+        titulos[4] = "Fungible";
+        titulos[5] = "Total";
         DefaultTableModel tabla = new DefaultTableModel(null, titulos);
         try {
             String sql = "SELECT codigo, descripcion, cantidad, precio_unitario, estado, fungible from bien where codigo LIKE '%" + codigo + "%'";
@@ -99,10 +106,16 @@ public class bien {
     {
         departamento dep = new departamento();
         String titulos[] = new String[6];
-        for(int i = 0; i < 6; i++)
-        {
-            titulos[i] = table.getColumnName(i);
-        }
+//        for(int i = 0; i < 6; i++)
+//        {
+//            titulos[i] = table.getColumnName(i);
+//        }
+        titulos[0] = "Código";
+        titulos[1] = "Descripción";
+        titulos[2] = "Cantidad";
+        titulos[3] = "Precio Unitario";
+        titulos[4] = "Fungible";
+        titulos[5] = "Total";
         DefaultTableModel tabla = new DefaultTableModel(null, titulos);
         try {
             String sql = "SELECT codigo, descripcion, cantidad, precio_unitario, estado, fungible, departamento_id from bien order by departamento_id";
