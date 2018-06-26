@@ -206,6 +206,8 @@ public class Interfaz extends javax.swing.JFrame {
         btncerrar1 = new javax.swing.JButton();
         btnhome = new javax.swing.JButton();
         jRadioButton1 = new javax.swing.JRadioButton();
+        fechaA = new rojeru_san.componentes.RSDateChooser();
+        rSMaterialButtonRectangle36 = new rojerusan.RSMaterialButtonRectangle();
         rSMaterialButtonRectangle31 = new rojerusan.RSMaterialButtonRectangle();
         jLabel11 = new javax.swing.JLabel();
         rSMaterialButtonCircle1 = new rojerusan.RSMaterialButtonCircle();
@@ -615,12 +617,19 @@ public class Interfaz extends javax.swing.JFrame {
         jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton1.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 18)); // NOI18N
         jRadioButton1.setText("Otro");
+        jRadioButton1.setBorder(null);
+        jRadioButton1.setContentAreaFilled(false);
         jRadioButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jRadioButton1MouseClicked(evt);
             }
         });
-        IngresarInventario.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 480, -1, -1));
+        IngresarInventario.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 450, -1, -1));
+        IngresarInventario.add(fechaA, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 480, -1, -1));
+
+        rSMaterialButtonRectangle36.setBackground(new java.awt.Color(186, 240, 255));
+        rSMaterialButtonRectangle36.setEnabled(false);
+        IngresarInventario.add(rSMaterialButtonRectangle36, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 480, 240, 50));
 
         rSMaterialButtonRectangle31.setBackground(new java.awt.Color(186, 240, 255));
         rSMaterialButtonRectangle31.setEnabled(false);
@@ -1690,6 +1699,7 @@ public class Interfaz extends javax.swing.JFrame {
         boolean estado;
         boolean donado;
         boolean fungible;
+        String fecha = formato.format(fechaA);
         String cuenta_nombre = cmbCuenta.getSelectedItem().toString();
         int cuenta = cu.encontrar_cuenta(cuenta_nombre);
         if(cmbEstado.getSelectedItem().toString().equals("Bueno"))
@@ -1716,7 +1726,7 @@ public class Interfaz extends javax.swing.JFrame {
         {
             fungible = false;
         }
-        if((cu.aumentarValor(cuenta, preciot)) && (bi.ingresarBien(codigo, descripcion, cantidad, preciou, preciot, estado, donado, fungible, departamento, cuenta)))
+        if((cu.aumentarValor(cuenta, preciot)) && (bi.ingresarBien(codigo, descripcion, cantidad, preciou, preciot, estado, donado, fungible, fecha, departamento, cuenta)))
         {
             new rojerusan.RSNotifyFade("¡ACEPTADA!", "Ingreso Correcto", Color.WHITE, Color.BLACK, Color.BLACK, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.SUCCESS).setVisible(true);
         }
@@ -2083,7 +2093,9 @@ public class Interfaz extends javax.swing.JFrame {
         DefaultTableModel tabla = new DefaultTableModel(null, titulos);
         double servicios = co.getServicios(fecha);
         double costos = co.getCostoServicios(fecha);
-        double utilidad_antes_isr = servicios - costos;
+        double depreciacion_equipo_computo = bi.calcularDep(fecha);
+        double utilidad_bruta = servicios - costos;
+        double utilidad_antes_isr = utilidad_bruta - depreciacion_equipo_computo;
         double isr = 0;
         if(utilidad_antes_isr <= 300000) isr = utilidad_antes_isr*0.05;
         else isr = (utilidad_antes_isr - 300000)*0.07 + 15000;
@@ -2092,6 +2104,8 @@ public class Interfaz extends javax.swing.JFrame {
         double utilidad_neta = utilidad_antes_reserva - reserva;
         tabla.addRow(new Object[] {"Servicios", String.format("%.2f", servicios)});
         tabla.addRow(new Object[] {"Costos por servicios", String.format("%.2f",costos)});
+        tabla.addRow(new Object[] {"Utilidad bruta", String.format("%.2f", utilidad_bruta)});
+        tabla.addRow(new Object[] {"Depreciación equipo de cómputo", String.format("%.2f", depreciacion_equipo_computo)});
         tabla.addRow(new Object[] {"Utilidad antes del ISR", String.format("%.2f", utilidad_antes_isr)});
         tabla.addRow(new Object[] {"ISR", String.format("%.2f", isr)});
         tabla.addRow(new Object[] {"Utilidad antes de la reserva", String.format("%.2f", utilidad_antes_reserva)});
@@ -2189,6 +2203,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbrenglonp;
     private javax.swing.JComboBox<String> cmbtipo;
     private javax.swing.JPanel estadoR;
+    private rojeru_san.componentes.RSDateChooser fechaA;
     private rojeru_san.componentes.RSDateChooser fechadE;
     private rojeru_san.componentes.RSDateChooser fechaiE;
     private javax.swing.JButton jButton1;
@@ -2306,6 +2321,7 @@ public class Interfaz extends javax.swing.JFrame {
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle33;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle34;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle35;
+    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle36;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle5;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle6;
     private rojerusan.RSPanelsSlider rSPanelsSlider1;

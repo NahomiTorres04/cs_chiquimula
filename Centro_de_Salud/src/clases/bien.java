@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultComboBoxModel;
@@ -30,13 +31,13 @@ public class bien {
     }
     public boolean ingresarBien(String codigo, String descripcion, int cantidad,
     double precio_unitario, double precio_total, boolean estado, boolean donado,
-    boolean fungible, int departamento_id, int cuenta)
+    boolean fungible, String fecha, int departamento_id, int cuenta)
     {
         try {
             String sql = "INSERT into bien(codigo, descripcion, cantidad"
                     + ", precio_unitario, precio_total, estado, donado"
-                    + ", fungible, departamento_id, cuenta_id) values(?,?,?,?,?,"
-                    + "?,?,?,?,?)";
+                    + ", fungible, fecha, departamento_id, cuenta_id) values(?,?,?,?,?,"
+                    + "?,?,?,?,?,?)";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, codigo);
             ps.setString(2, descripcion);
@@ -46,8 +47,9 @@ public class bien {
             ps.setBoolean(6, estado);
             ps.setBoolean(7, donado);
             ps.setBoolean(8, fungible);
-            ps.setInt(9, departamento_id);
-            ps.setInt(10, cuenta);
+            ps.setString(9, fecha);
+            ps.setInt(10, departamento_id);
+            ps.setInt(11, cuenta);
             int n = ps.executeUpdate();
             return n != 0;
         } catch (SQLException ex) {
@@ -389,5 +391,42 @@ public class bien {
             }
         }
         return tabla;
+    }
+    
+    public double calcularDep(int anio)
+    {
+        double depreciacion = 0;
+        try {
+            String sql = "SELECT id from cuenta where nombre = 'Equipo de cómputo'";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            int id = 0;
+            while(rs.next())
+            {
+                id = rs.getInt("id");
+            }
+            sql = "SELECT precio_total, year(fecha) from bien where cuenta_id = " + id;
+            st = con.createStatement();
+            rs = st.executeQuery(sql);
+            String anio_bien;
+            while(rs.next())
+            {
+                anio_bien = rs.getString("year(fecha)");
+                int diferencia = anio - Integer.parseInt(anio_bien);
+                double precio_total;
+                if(diferencia > 0);
+                {
+                    precio_total = rs.getDouble("precio_total");
+                    for(int i = 0; i < diferencia; i++)
+                    {
+                        precio_total = precio_total - (precio_total*0.3333);
+                    }
+                }
+                depreciacion += precio_total;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return depreciacion;
     }
 }
