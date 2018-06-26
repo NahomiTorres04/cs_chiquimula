@@ -8,6 +8,7 @@ package GUI;
 import clases.ReporteInventario;
 import clases.bien;
 import clases.conexion;
+import clases.consulta;
 import clases.departamento;
 import clases.empleado;
 import clases.cuenta;
@@ -52,6 +53,7 @@ public class Interfaz extends javax.swing.JFrame {
     private final departamento dep;
     private final empleado emp;
     private final cuenta cu;
+    private final consulta co;
     private boolean alergiasEmpleado = false;
     public Interfaz() {
         initComponents();
@@ -63,6 +65,7 @@ public class Interfaz extends javax.swing.JFrame {
         dep = new departamento();
         emp = new empleado();
         cu = new cuenta();
+        co = new consulta();
         cmbDep.setModel(dep.mostrarDepartamentos());
         cmbCuenta.setModel(cu.mostrarCuentas());
     }
@@ -177,7 +180,6 @@ public class Interfaz extends javax.swing.JFrame {
         btnVerI = new javax.swing.JButton();
         rSMaterialButtonCircle4 = new rojerusan.RSMaterialButtonCircle();
         rSMaterialButtonCircle7 = new rojerusan.RSMaterialButtonCircle();
-        jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -401,6 +403,11 @@ public class Interfaz extends javax.swing.JFrame {
         jButton4.setBorderPainted(false);
         jButton4.setContentAreaFilled(false);
         jButton4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Bulleted_List_100px.png"))); // NOI18N
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
         menu.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 480, 180, 170));
 
         rSMaterialButtonCircle11.setBackground(new java.awt.Color(0, 52, 102));
@@ -444,13 +451,9 @@ public class Interfaz extends javax.swing.JFrame {
         rSMaterialButtonCircle7.setBackground(new java.awt.Color(0, 52, 102));
         menu.add(rSMaterialButtonCircle7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, 160, 170));
 
-        jLabel30.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
-        jLabel30.setText("Imprimir");
-        menu.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 640, 130, 40));
-
         jLabel31.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel31.setText("Estado de resultados");
-        menu.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 670, 300, 40));
+        menu.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 650, 300, 40));
 
         jLabel28.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel28.setText("Ver Empleado");
@@ -1314,6 +1317,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         rSPanelsSlider1.add(verEmpleado, "card6");
 
+        estadoR.setName("estadoR"); // NOI18N
         estadoR.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnhome4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_35px.png"))); // NOI18N
@@ -1815,16 +1819,43 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton1MouseClicked
 
     private void btnhome4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnhome4MouseClicked
-        // TODO add your handling code here:
+        rSPanelsSlider1.setPanelSlider(menu, RSPanelsSlider.DIRECT.RIGHT);
     }//GEN-LAST:event_btnhome4MouseClicked
 
     private void btnminimizar5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnminimizar5MouseClicked
-        // TODO add your handling code here:
+        this.setExtendedState(ICONIFIED);
     }//GEN-LAST:event_btnminimizar5MouseClicked
 
     private void btncerrar5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncerrar5MouseClicked
-        // TODO add your handling code here:
+        this.dispose();
+        System.exit(0);
     }//GEN-LAST:event_btncerrar5MouseClicked
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        int fecha = 2018;
+        rSPanelsSlider1.setPanelSlider(estadoR, RSPanelsSlider.DIRECT.LEFT);
+        String titulos[] = new String[2];
+        titulos[0] = "Estado de resultados";
+        titulos[1] = "";
+        DefaultTableModel tabla = new DefaultTableModel(null, titulos);
+        double servicios = co.getServicios(fecha);
+        double costos = co.getCostoServicios(fecha);
+        double utilidad_antes_isr = servicios - costos;
+        double isr = 0;
+        if(utilidad_antes_isr <= 300000) isr = utilidad_antes_isr*0.05;
+        else isr = (utilidad_antes_isr - 300000)*0.07 + 15000;
+        double utilidad_antes_reserva = utilidad_antes_isr - isr;
+        double reserva = utilidad_antes_reserva*0.05;
+        double utilidad_neta = utilidad_antes_reserva - reserva;
+        tabla.addRow(new Object[] {"Servicios", String.format("%.2f", servicios)});
+        tabla.addRow(new Object[] {"Costos por servicios", String.format("%.2f",costos)});
+        tabla.addRow(new Object[] {"Utilidad antes del ISR", String.format("%.2f", utilidad_antes_isr)});
+        tabla.addRow(new Object[] {"ISR", String.format("%.2f", isr)});
+        tabla.addRow(new Object[] {"Utilidad antes de la reserva", String.format("%.2f", utilidad_antes_reserva)});
+        tabla.addRow(new Object[] {"Reserva legal", String.format("%.2f", reserva)});
+        tabla.addRow(new Object[] {"Utilidad neta", String.format("%.2f", utilidad_neta)});
+        tableEstado.setModel(tabla);
+    }//GEN-LAST:event_jButton4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -1861,6 +1892,7 @@ public class Interfaz extends javax.swing.JFrame {
         });
     }
     private final SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Bcodigo;
     private javax.swing.JLabel Departamento;
@@ -1939,7 +1971,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;

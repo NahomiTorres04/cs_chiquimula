@@ -1192,7 +1192,9 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         if(jRadioButton4.isSelected()) referido = true;
         else referido = false;
         int paciente_id = pa.retornarid(jLabel40.getText());
-        if(co.ingresarConsulta(sintomas, diagnostico, tratamiento, examenes, reconsulta, referido, paciente_id) && cu.aumentarServicios(100))
+        Date fecha_actual = new Date();
+        String fechaa = formato.format(fecha_actual);
+        if(co.ingresarConsulta(sintomas, diagnostico, tratamiento, examenes, reconsulta, referido, fechaa, paciente_id) && cu.aumentarServicios(100))
         {
             new rojerusan.RSNotifyFade("¡ACEPTADA!", "Consulta ingresada", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.SUCCESS).setVisible(true);
         }
