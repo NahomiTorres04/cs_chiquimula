@@ -1363,12 +1363,13 @@
                             <Component class="rojerusan.RSTableMetro" name="tableInventario">
                               <Properties>
                                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                                  <Table columnCount="6" rowCount="10">
+                                  <Table columnCount="7" rowCount="10">
                                     <Column editable="true" title="C&#xf3;digo" type="java.lang.Object"/>
                                     <Column editable="true" title="Descripci&#xf3;n" type="java.lang.Object"/>
                                     <Column editable="false" title="Cantidad" type="java.lang.Object"/>
                                     <Column editable="true" title="Precio/u" type="java.lang.Object"/>
                                     <Column editable="true" title="Fungible" type="java.lang.Object"/>
+                                    <Column editable="true" title="estado" type="java.lang.Object"/>
                                     <Column editable="true" title="total" type="java.lang.Object"/>
                                   </Table>
                                 </Property>
@@ -1398,6 +1399,11 @@
                                 </Property>
                                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                                   <TableColumnModel selectionModel="0">
+                                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                      <Title/>
+                                      <Editor/>
+                                      <Renderer/>
+                                    </Column>
                                     <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                                       <Title/>
                                       <Editor/>
@@ -2745,6 +2751,38 @@
                     </Constraint>
                   </Constraints>
                 </Component>
+                <Component class="javax.swing.JLabel" name="jLabel55">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Microsoft YaHei UI" size="24" style="0"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="--"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="720" y="240" width="20" height="30"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel30">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Microsoft YaHei UI" size="24" style="0"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="01/01/"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="570" y="230" width="100" height="50"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
                 <Component class="javax.swing.JLabel" name="jLabel49">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -2758,7 +2796,61 @@
                     </Constraint>
                   </Constraints>
                 </Component>
+                <Component class="rojeru_san.RSLabelFecha" name="rSLabelFecha2">
+                  <Properties>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="enabled" type="boolean" value="false"/>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Microsoft JhengHei Light" size="24" style="1"/>
+                    </Property>
+                    <Property name="formato" type="java.lang.String" value="yyyy"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="640" y="230" width="70" height="50"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+                <Component class="rojeru_san.RSLabelHora" name="rSLabelHora1">
+                  <Properties>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="enabled" type="boolean" value="false"/>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Microsoft JhengHei UI" size="24" style="0"/>
+                    </Property>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="890" y="230" width="200" height="50"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+                <Component class="rojeru_san.RSLabelFecha" name="rSLabelFecha1">
+                  <Properties>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="enabled" type="boolean" value="false"/>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Microsoft JhengHei Light" size="24" style="1"/>
+                    </Property>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="720" y="230" width="200" height="50"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
                 <Container class="javax.swing.JScrollPane" name="scrollgai4">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                  </Properties>
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
@@ -2773,7 +2865,7 @@
                     <Component class="rojerusan.RSTableMetro" name="tableEstado">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="2" rowCount="10">
+                          <Table columnCount="2" rowCount="19">
                             <Column editable="true" title="Estado de Resultados  " type="java.lang.Object"/>
                             <Column editable="true" title="" type="java.lang.Object"/>
                           </Table>
@@ -2813,17 +2905,19 @@
                             </Column>
                           </TableColumnModel>
                         </Property>
+                        <Property name="dragEnabled" type="boolean" value="true"/>
+                        <Property name="enabled" type="boolean" value="false"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Yu Gothic UI Light" size="18" style="0"/>
+                          <Font name="Microsoft YaHei Light" size="18" style="0"/>
                         </Property>
                         <Property name="fuenteFilas" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Yu Gothic UI Light" size="18" style="0"/>
+                          <Font name="Microsoft YaHei Light" size="18" style="0"/>
                         </Property>
                         <Property name="fuenteFilasSelect" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Yu Gothic UI Light" size="18" style="0"/>
+                          <Font name="Microsoft YaHei Light" size="18" style="0"/>
                         </Property>
                         <Property name="fuenteHead" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Yu Gothic UI Light" size="18" style="1"/>
+                          <Font name="Microsoft YaHei UI" size="24" style="0"/>
                         </Property>
                         <Property name="gridColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2831,7 +2925,11 @@
                         <Property name="grosorBordeFilas" type="int" value="0"/>
                         <Property name="grosorBordeHead" type="int" value="0"/>
                         <Property name="name" type="java.lang.String" value="tableEmpleado" noResource="true"/>
-                        <Property name="rowHeight" type="int" value="22"/>
+                        <Property name="rowHeight" type="int" value="28"/>
+                        <Property name="rowSelectionAllowed" type="boolean" value="false"/>
+                        <Property name="selectionBackground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
                         <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                           <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
                         </Property>

@@ -323,7 +323,12 @@ public class Interfaz extends javax.swing.JFrame {
         btnhome4 = new javax.swing.JButton();
         btnminimizar5 = new javax.swing.JButton();
         btncerrar5 = new javax.swing.JButton();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
         jLabel49 = new javax.swing.JLabel();
+        rSLabelFecha2 = new rojeru_san.RSLabelFecha();
+        rSLabelHora1 = new rojeru_san.RSLabelHora();
+        rSLabelFecha1 = new rojeru_san.RSLabelFecha();
         scrollgai4 = new javax.swing.JScrollPane();
         tableEstado = new rojerusan.RSTableMetro();
         rSMaterialButtonRectangle32 = new rojerusan.RSMaterialButtonRectangle();
@@ -856,23 +861,23 @@ public class Interfaz extends javax.swing.JFrame {
         };
         tableInventario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Código", "Descripción", "Cantidad", "Precio/u", "Fungible", "total"
+                "Código", "Descripción", "Cantidad", "Precio/u", "Fungible", "estado", "total"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                true, true, false, true, true, true
+                true, true, false, true, true, true, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -1356,9 +1361,37 @@ public class Interfaz extends javax.swing.JFrame {
         });
         estadoR.add(btncerrar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 0, 60, 57));
 
+        jLabel55.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 24)); // NOI18N
+        jLabel55.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel55.setText("--");
+        estadoR.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 240, 20, 30));
+
+        jLabel30.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 24)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel30.setText("01/01/");
+        estadoR.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 230, 100, 50));
+
         jLabel49.setBackground(new java.awt.Color(0, 54, 102));
         jLabel49.setOpaque(true);
         estadoR.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1290, 60));
+
+        rSLabelFecha2.setForeground(new java.awt.Color(255, 255, 255));
+        rSLabelFecha2.setEnabled(false);
+        rSLabelFecha2.setFont(new java.awt.Font("Microsoft JhengHei Light", 1, 24)); // NOI18N
+        rSLabelFecha2.setFormato("yyyy");
+        estadoR.add(rSLabelFecha2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 230, 70, 50));
+
+        rSLabelHora1.setForeground(new java.awt.Color(255, 255, 255));
+        rSLabelHora1.setEnabled(false);
+        rSLabelHora1.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 24)); // NOI18N
+        estadoR.add(rSLabelHora1, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 230, 200, 50));
+
+        rSLabelFecha1.setForeground(new java.awt.Color(255, 255, 255));
+        rSLabelFecha1.setEnabled(false);
+        rSLabelFecha1.setFont(new java.awt.Font("Microsoft JhengHei Light", 1, 24)); // NOI18N
+        estadoR.add(rSLabelFecha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 230, 200, 50));
+
+        scrollgai4.setBackground(new java.awt.Color(255, 255, 255));
 
         tableInventario = new rojerusan.RSTableMetro(){
             public boolean isCellEditable(int rowIndex, int ColIndex){
@@ -1367,6 +1400,15 @@ public class Interfaz extends javax.swing.JFrame {
         };
         tableEstado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
                 {null, null},
                 {null, null},
                 {null, null},
@@ -1389,15 +1431,19 @@ public class Interfaz extends javax.swing.JFrame {
         tableEstado.setColorFilasForeground1(new java.awt.Color(0, 0, 0));
         tableEstado.setColorFilasForeground2(new java.awt.Color(0, 0, 0));
         tableEstado.setColorSelBackgound(new java.awt.Color(22, 54, 77));
-        tableEstado.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        tableEstado.setFuenteFilas(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        tableEstado.setFuenteFilasSelect(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        tableEstado.setFuenteHead(new java.awt.Font("Yu Gothic UI Light", 1, 18)); // NOI18N
+        tableEstado.setDragEnabled(true);
+        tableEstado.setEnabled(false);
+        tableEstado.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
+        tableEstado.setFuenteFilas(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
+        tableEstado.setFuenteFilasSelect(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
+        tableEstado.setFuenteHead(new java.awt.Font("Microsoft YaHei UI", 0, 24)); // NOI18N
         tableEstado.setGridColor(new java.awt.Color(255, 255, 255));
         tableEstado.setGrosorBordeFilas(0);
         tableEstado.setGrosorBordeHead(0);
         tableEstado.setName("tableEmpleado"); // NOI18N
-        tableEstado.setRowHeight(22);
+        tableEstado.setRowHeight(28);
+        tableEstado.setRowSelectionAllowed(false);
+        tableEstado.setSelectionBackground(new java.awt.Color(255, 255, 255));
         tableEstado.getTableHeader().setReorderingAllowed(false);
         scrollgai4.setViewportView(tableEstado);
 
@@ -1971,6 +2017,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
@@ -1997,6 +2044,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -2009,6 +2057,9 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JPanel menu;
     private javax.swing.JButton menuE;
     private javax.swing.JLabel noDonado;
+    private rojeru_san.RSLabelFecha rSLabelFecha1;
+    private rojeru_san.RSLabelFecha rSLabelFecha2;
+    private rojeru_san.RSLabelHora rSLabelHora1;
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle1;
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle10;
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle11;

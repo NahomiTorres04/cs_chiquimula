@@ -127,7 +127,7 @@ public class bien {
             {
                 if(departamento_actual.equals(rs.getString("departamento_id")) == false)
                 {
-                    tabla.addRow(new Object[] {"", "", "", dep.seleccionarNombre(rs.getInt("departamento_id")), "", "", ""});
+                    tabla.addRow(new Object[] {"", "","", dep.seleccionarNombre(rs.getInt("departamento_id")), "", "", ""});
                     departamento_actual = rs.getString("departamento_id");
                 }
                 registros[0] = rs.getString("codigo");
@@ -149,7 +149,7 @@ public class bien {
             rs = st.executeQuery(sql);
             while(rs.next())
             {
-                tabla.addRow(new Object[] {"Total", "", "", "", "", rs.getString("total")});
+                tabla.addRow(new Object[] {"Total", "", "", "", "","", rs.getString("total")});
             }
         } catch (SQLException ex) {
             Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
