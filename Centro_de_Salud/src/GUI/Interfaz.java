@@ -347,7 +347,7 @@ public class Interfaz extends javax.swing.JFrame {
         btncerrar6 = new javax.swing.JButton();
         jLabel57 = new javax.swing.JLabel();
         scrollgai1 = new javax.swing.JScrollPane();
-        tablePaciente = new rojerusan.RSTableMetro();
+        tableIgeneral = new rojerusan.RSTableMetro();
         rSMaterialButtonRectangle34 = new rojerusan.RSMaterialButtonRectangle();
         jLabel63 = new javax.swing.JLabel();
         jLabel64 = new javax.swing.JLabel();
@@ -1556,12 +1556,12 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel57.setOpaque(true);
         ResumenI.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1290, 60));
 
-        tablePaciente = new rojerusan.RSTableMetro(){
+        tableIgeneral = new rojerusan.RSTableMetro(){
             public boolean isCellEditable(int rowIndex, int ColIndex){
                 return false;
             }
         };
-        tablePaciente.setModel(new javax.swing.table.DefaultTableModel(
+        tableIgeneral.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -1586,22 +1586,22 @@ public class Interfaz extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        tablePaciente.setColorBackgoundHead(new java.awt.Color(22, 54, 77));
-        tablePaciente.setColorBordeFilas(new java.awt.Color(255, 255, 255));
-        tablePaciente.setColorBordeHead(new java.awt.Color(255, 255, 255));
-        tablePaciente.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
-        tablePaciente.setColorFilasForeground1(new java.awt.Color(0, 0, 0));
-        tablePaciente.setColorFilasForeground2(new java.awt.Color(0, 0, 0));
-        tablePaciente.setColorSelBackgound(new java.awt.Color(22, 54, 77));
-        tablePaciente.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        tablePaciente.setFuenteFilas(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        tablePaciente.setFuenteFilasSelect(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        tablePaciente.setFuenteHead(new java.awt.Font("Yu Gothic UI Light", 1, 18)); // NOI18N
-        tablePaciente.setGrosorBordeFilas(0);
-        tablePaciente.setGrosorBordeHead(0);
-        tablePaciente.setRowHeight(22);
-        tablePaciente.getTableHeader().setReorderingAllowed(false);
-        scrollgai1.setViewportView(tablePaciente);
+        tableIgeneral.setColorBackgoundHead(new java.awt.Color(22, 54, 77));
+        tableIgeneral.setColorBordeFilas(new java.awt.Color(255, 255, 255));
+        tableIgeneral.setColorBordeHead(new java.awt.Color(255, 255, 255));
+        tableIgeneral.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
+        tableIgeneral.setColorFilasForeground1(new java.awt.Color(0, 0, 0));
+        tableIgeneral.setColorFilasForeground2(new java.awt.Color(0, 0, 0));
+        tableIgeneral.setColorSelBackgound(new java.awt.Color(22, 54, 77));
+        tableIgeneral.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        tableIgeneral.setFuenteFilas(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        tableIgeneral.setFuenteFilasSelect(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        tableIgeneral.setFuenteHead(new java.awt.Font("Yu Gothic UI Light", 1, 18)); // NOI18N
+        tableIgeneral.setGrosorBordeFilas(0);
+        tableIgeneral.setGrosorBordeHead(0);
+        tableIgeneral.setRowHeight(22);
+        tableIgeneral.getTableHeader().setReorderingAllowed(false);
+        scrollgai1.setViewportView(tableIgeneral);
 
         ResumenI.add(scrollgai1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 320, 920, 360));
 
@@ -1699,7 +1699,7 @@ public class Interfaz extends javax.swing.JFrame {
         boolean estado;
         boolean donado;
         boolean fungible;
-        String fecha = formato.format(fechaA);
+        String fecha = formato.format(fechaA.getDatoFecha());
         String cuenta_nombre = cmbCuenta.getSelectedItem().toString();
         int cuenta = cu.encontrar_cuenta(cuenta_nombre);
         if(cmbEstado.getSelectedItem().toString().equals("Bueno"))
@@ -2068,8 +2068,9 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btncerrar5MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+         int fecha = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el año a consultar"));
          rSPanelsSlider1.setPanelSlider(ResumenI, RSPanelsSlider.DIRECT.LEFT);
-         //proceso de inventario
+         tableIgeneral.setModel(bi.mostrarResumen(fecha, tableIgeneral.getModel()));
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void btnhome5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnhome5MouseClicked
@@ -2085,7 +2086,7 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btncerrar6MouseClicked
 
     private void rSMaterialButtonRectangle35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle35MouseClicked
-        int fecha = 2018;
+        int fecha =Integer.parseInt( JOptionPane.showInputDialog(null, "ingrese el año a consultar"));
         rSPanelsSlider1.setPanelSlider(estadoR, RSPanelsSlider.DIRECT.LEFT);
         String titulos[] = new String[2];
         titulos[0] = "Estado de resultados";
@@ -2333,8 +2334,8 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JScrollPane scrollgai4;
     private rojerusan.RSTableMetro tableEmpleado;
     private rojerusan.RSTableMetro tableEstado;
+    private rojerusan.RSTableMetro tableIgeneral;
     private rojerusan.RSTableMetro tableInventario;
-    private rojerusan.RSTableMetro tablePaciente;
     private javax.swing.JTextField txtCant;
     private javax.swing.JTextField txtCodigo;
     private javax.swing.JTextArea txtDes;

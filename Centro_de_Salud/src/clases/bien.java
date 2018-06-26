@@ -413,7 +413,7 @@ public class bien {
             {
                 anio_bien = rs.getString("year(fecha)");
                 int diferencia = anio - Integer.parseInt(anio_bien);
-                double precio_total;
+                double precio_total =0;
                 if(diferencia > 0);
                 {
                     precio_total = rs.getDouble("precio_total");
@@ -428,5 +428,31 @@ public class bien {
             Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
         }
         return depreciacion;
+    }
+    
+    public DefaultTableModel mostrarResumen(int anio, TableModel modelo)
+    {
+        String titulos[ ] = new String[5];
+        for(int i = 0; i  < 5; i++)
+        {
+            titulos[i] = modelo.getColumnName(i);
+        }
+        DefaultTableModel tabla = new DefaultTableModel(null, titulos);
+        try {
+            String sql = "SELECT year(fecha), cantidad, descripcion, precio_unitario, codigo from bien";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                if(rs.getString("year(fecha)").equals(String.valueOf(anio)))
+                {
+                    tabla.addRow(new Object[] {rs.getInt("cantidad"), rs.getString("descripcion"),
+                    rs.getDouble("precio_unitario"), "", rs.getString("codigo")});
+                }
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return tabla;
     }
 }
