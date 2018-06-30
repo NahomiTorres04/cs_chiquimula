@@ -219,36 +219,6 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        VerInventario = new javax.swing.JPanel();
-        rSPanelsSlider2 = new rojerusan.RSPanelsSlider();
-        InventarioCod = new javax.swing.JPanel();
-        Bcodigo = new javax.swing.JTextField();
-        btnhome1 = new javax.swing.JButton();
-        btnminimizar2 = new javax.swing.JButton();
-        btncerrar2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jLabel14 = new javax.swing.JLabel();
-        rSPanelsSlider3 = new rojerusan.RSPanelsSlider();
-        Magia = new javax.swing.JPanel();
-        menuE = new javax.swing.JButton();
-        rSMaterialButtonCircle6 = new rojerusan.RSMaterialButtonCircle();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        JPMenuE = new javax.swing.JPanel();
-        buenEstado = new javax.swing.JLabel();
-        malEstado = new javax.swing.JLabel();
-        Donado = new javax.swing.JLabel();
-        noDonado = new javax.swing.JLabel();
-        Fungible = new javax.swing.JLabel();
-        btnMenuB = new javax.swing.JButton();
-        NoFungible = new javax.swing.JLabel();
-        rSMaterialButtonCircle5 = new rojerusan.RSMaterialButtonCircle();
-        Departamento = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        btnreporte = new javax.swing.JButton();
-        scrollgai3 = new javax.swing.JScrollPane();
-        tableInventario = new rojerusan.RSTableMetro();
-        jLabel1 = new javax.swing.JLabel();
         Empleado = new javax.swing.JPanel();
         btnminimizar3 = new javax.swing.JButton();
         btnhome2 = new javax.swing.JButton();
@@ -360,6 +330,32 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel62 = new javax.swing.JLabel();
         rSMaterialButtonRectangle35 = new rojerusan.RSMaterialButtonRectangle();
         jLabel61 = new javax.swing.JLabel();
+        VerInventario = new javax.swing.JPanel();
+        rSPanelsSlider2 = new rojerusan.RSPanelsSlider();
+        InventarioCod = new javax.swing.JPanel();
+        scrollgai5 = new javax.swing.JScrollPane();
+        tableInventario = new rojerusan.RSTableMetro();
+        Bcodigo = new javax.swing.JTextField();
+        btnhome1 = new javax.swing.JButton();
+        btnminimizar2 = new javax.swing.JButton();
+        btncerrar2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        rSPanelsSlider3 = new rojerusan.RSPanelsSlider();
+        Magia = new javax.swing.JPanel();
+        menuE = new javax.swing.JButton();
+        rSMaterialButtonCircle6 = new rojerusan.RSMaterialButtonCircle();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        JPMenuE = new javax.swing.JPanel();
+        buenEstado = new javax.swing.JLabel();
+        malEstado = new javax.swing.JLabel();
+        Donado = new javax.swing.JLabel();
+        noDonado = new javax.swing.JLabel();
+        Fungible = new javax.swing.JLabel();
+        btnMenuB = new javax.swing.JButton();
+        rSMaterialButtonCircle5 = new rojerusan.RSMaterialButtonCircle();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -672,282 +668,6 @@ public class Interfaz extends javax.swing.JFrame {
         IngresarInventario.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1280, 720));
 
         rSPanelsSlider1.add(IngresarInventario, "card3");
-
-        VerInventario.setName("VerInventario"); // NOI18N
-        VerInventario.setLayout(new java.awt.CardLayout());
-
-        InventarioCod.setName("InventarioCod"); // NOI18N
-        InventarioCod.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        Bcodigo.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        Bcodigo.setBorder(null);
-        Bcodigo.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                BcodigoKeyPressed(evt);
-            }
-        });
-        InventarioCod.add(Bcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 206, 300, 40));
-
-        btnhome1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_35px.png"))); // NOI18N
-        btnhome1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_55px.png"))); // NOI18N
-        btnhome1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnhome1MouseClicked(evt);
-            }
-        });
-        InventarioCod.add(btnhome1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1056, 0, 80, 60));
-
-        btnminimizar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_35px.png"))); // NOI18N
-        btnminimizar2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_55px.png"))); // NOI18N
-        btnminimizar2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnminimizar2MouseClicked(evt);
-            }
-        });
-        InventarioCod.add(btnminimizar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, -1, 57));
-
-        btncerrar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_35px_1.png"))); // NOI18N
-        btncerrar2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_55px_1.png"))); // NOI18N
-        btncerrar2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btncerrar2MouseClicked(evt);
-            }
-        });
-        InventarioCod.add(btncerrar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 0, -1, 57));
-
-        jButton1.setBackground(new java.awt.Color(0, 52, 102));
-        jButton1.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Ver Todo");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
-            }
-        });
-        InventarioCod.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 200, 180, 50));
-
-        jLabel14.setBackground(new java.awt.Color(0, 54, 102));
-        jLabel14.setOpaque(true);
-        InventarioCod.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1290, 60));
-
-        Magia.setName("Magia"); // NOI18N
-        Magia.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        menuE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Double_Left_70px.png"))); // NOI18N
-        menuE.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Double_Left_100px.png"))); // NOI18N
-        menuE.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                menuEMouseClicked(evt);
-            }
-        });
-        Magia.add(menuE, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 430, 130, 110));
-
-        rSMaterialButtonCircle6.setEnabled(false);
-        Magia.add(rSMaterialButtonCircle6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 410, 150, 150));
-
-        jLabel9.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
-        jLabel9.setText("  Otras Opciones");
-        Magia.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 220, 80));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/inventario.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        Magia.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1012, -201, 1280, 910));
-
-        rSPanelsSlider3.add(Magia, "card2");
-
-        JPMenuE.setBackground(new java.awt.Color(153, 255, 255));
-        JPMenuE.setName("JPMenuE"); // NOI18N
-        JPMenuE.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        buenEstado.setBackground(new java.awt.Color(133, 163, 198));
-        buenEstado.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        buenEstado.setForeground(new java.awt.Color(255, 255, 255));
-        buenEstado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        buenEstado.setText("              Buen Estado");
-        buenEstado.setOpaque(true);
-        buenEstado.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                buenEstadoMouseClicked(evt);
-            }
-        });
-        JPMenuE.add(buenEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 260, 70));
-
-        malEstado.setBackground(new java.awt.Color(200, 213, 229));
-        malEstado.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        malEstado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        malEstado.setText("               Mal estado");
-        malEstado.setOpaque(true);
-        malEstado.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                malEstadoMouseClicked(evt);
-            }
-        });
-        JPMenuE.add(malEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 260, 70));
-
-        Donado.setBackground(new java.awt.Color(90, 83, 135));
-        Donado.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        Donado.setForeground(new java.awt.Color(255, 255, 255));
-        Donado.setText("                           Donado");
-        Donado.setOpaque(true);
-        Donado.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                DonadoMouseClicked(evt);
-            }
-        });
-        JPMenuE.add(Donado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 260, 70));
-
-        noDonado.setBackground(new java.awt.Color(72, 118, 170));
-        noDonado.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        noDonado.setForeground(new java.awt.Color(255, 255, 255));
-        noDonado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        noDonado.setText("                No Donado");
-        noDonado.setOpaque(true);
-        noDonado.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                noDonadoMouseClicked(evt);
-            }
-        });
-        JPMenuE.add(noDonado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 260, 70));
-
-        Fungible.setBackground(new java.awt.Color(34, 3, 73));
-        Fungible.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        Fungible.setForeground(new java.awt.Color(255, 255, 255));
-        Fungible.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Fungible.setText("               Fungible");
-        Fungible.setOpaque(true);
-        Fungible.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                FungibleMouseClicked(evt);
-            }
-        });
-        JPMenuE.add(Fungible, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 260, 70));
-
-        btnMenuB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Circled_Right_45px.png"))); // NOI18N
-        btnMenuB.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Circled_Right_60px.png"))); // NOI18N
-        btnMenuB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnMenuBMouseClicked(evt);
-            }
-        });
-        btnMenuB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMenuBActionPerformed(evt);
-            }
-        });
-        JPMenuE.add(btnMenuB, new org.netbeans.lib.awtextra.AbsoluteConstraints(3, 0, 80, 80));
-
-        NoFungible.setBackground(new java.awt.Color(56, 32, 97));
-        NoFungible.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        NoFungible.setForeground(new java.awt.Color(255, 255, 255));
-        NoFungible.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        NoFungible.setText("                No Fungible");
-        NoFungible.setOpaque(true);
-        NoFungible.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                NoFungibleMouseClicked(evt);
-            }
-        });
-        JPMenuE.add(NoFungible, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 260, 70));
-
-        rSMaterialButtonCircle5.setBackground(new java.awt.Color(0, 52, 102));
-        rSMaterialButtonCircle5.setToolTipText("");
-        rSMaterialButtonCircle5.setEnabled(false);
-        JPMenuE.add(rSMaterialButtonCircle5, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 6, 70, 70));
-
-        Departamento.setBackground(new java.awt.Color(236, 241, 246));
-        Departamento.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        Departamento.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Departamento.setText("               Departamento");
-        Departamento.setOpaque(true);
-        Departamento.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                DepartamentoMouseClicked(evt);
-            }
-        });
-        JPMenuE.add(Departamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 260, 70));
-
-        jLabel15.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel15.setFont(new java.awt.Font("Yu Gothic UI", 0, 24)); // NOI18N
-        jLabel15.setText("            Inventario por:");
-        jLabel15.setToolTipText("");
-        jLabel15.setOpaque(true);
-        JPMenuE.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 80));
-
-        rSPanelsSlider3.add(JPMenuE, "card3");
-
-        InventarioCod.add(rSPanelsSlider3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 170, 260, 570));
-
-        btnreporte.setBackground(new java.awt.Color(0, 52, 102));
-        btnreporte.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
-        btnreporte.setForeground(new java.awt.Color(255, 255, 255));
-        btnreporte.setText("Imprimir");
-        btnreporte.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnreporteActionPerformed(evt);
-            }
-        });
-        InventarioCod.add(btnreporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 200, 170, 50));
-
-        tableInventario = new rojerusan.RSTableMetro(){
-            public boolean isCellEditable(int rowIndex, int ColIndex){
-                return false;
-            }
-        };
-        tableInventario.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Código", "Descripción", "Cantidad", "Precio/u", "Fungible", "estado", "total"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                true, true, false, true, true, true, true
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        tableInventario.setColorBackgoundHead(new java.awt.Color(22, 54, 77));
-        tableInventario.setColorBordeFilas(new java.awt.Color(255, 255, 255));
-        tableInventario.setColorBordeHead(new java.awt.Color(255, 255, 255));
-        tableInventario.setColorFilasBackgound1(new java.awt.Color(163, 214, 249));
-        tableInventario.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
-        tableInventario.setColorFilasForeground1(new java.awt.Color(0, 0, 0));
-        tableInventario.setColorFilasForeground2(new java.awt.Color(0, 0, 0));
-        tableInventario.setColorSelBackgound(new java.awt.Color(22, 54, 77));
-        tableInventario.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        tableInventario.setFuenteFilas(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        tableInventario.setFuenteFilasSelect(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        tableInventario.setFuenteHead(new java.awt.Font("Yu Gothic UI Light", 1, 18)); // NOI18N
-        tableInventario.setGrosorBordeFilas(0);
-        tableInventario.setGrosorBordeHead(0);
-        tableInventario.setName("tableEmpleado"); // NOI18N
-        tableInventario.setRowHeight(22);
-        tableInventario.getTableHeader().setReorderingAllowed(false);
-        scrollgai3.setViewportView(tableInventario);
-
-        InventarioCod.add(scrollgai3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 860, 450));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/inventario.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        InventarioCod.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1280, 720));
-
-        rSPanelsSlider2.add(InventarioCod, "card2");
-
-        VerInventario.add(rSPanelsSlider2, "card2");
-
-        rSPanelsSlider1.add(VerInventario, "card4");
 
         Empleado.setName("Empleado"); // NOI18N
         Empleado.setPreferredSize(new java.awt.Dimension(1280, 780));
@@ -1664,6 +1384,233 @@ public class Interfaz extends javax.swing.JFrame {
 
         rSPanelsSlider1.add(ResumenI, "card8");
 
+        VerInventario.setName("VerInventario"); // NOI18N
+        VerInventario.setLayout(new java.awt.CardLayout());
+
+        InventarioCod.setName("InventarioCod"); // NOI18N
+        InventarioCod.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tableInventario = new rojerusan.RSTableMetro(){
+            public boolean isCellEditable(int rowIndex, int ColIndex){
+                return false;
+            }
+        };
+        tableInventario.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Código", "Descripción", "Cantidad", "Precio unitario", "Estado", "Fungible", "Total"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                true, true, false, true, true, true, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tableInventario.setColorBackgoundHead(new java.awt.Color(22, 54, 77));
+        tableInventario.setColorBordeFilas(new java.awt.Color(255, 255, 255));
+        tableInventario.setColorBordeHead(new java.awt.Color(255, 255, 255));
+        tableInventario.setColorFilasBackgound1(new java.awt.Color(163, 214, 249));
+        tableInventario.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
+        tableInventario.setColorFilasForeground1(new java.awt.Color(0, 0, 0));
+        tableInventario.setColorFilasForeground2(new java.awt.Color(0, 0, 0));
+        tableInventario.setColorSelBackgound(new java.awt.Color(22, 54, 77));
+        tableInventario.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        tableInventario.setFuenteFilas(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        tableInventario.setFuenteFilasSelect(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        tableInventario.setFuenteHead(new java.awt.Font("Yu Gothic UI Light", 1, 18)); // NOI18N
+        tableInventario.setGrosorBordeFilas(0);
+        tableInventario.setGrosorBordeHead(0);
+        tableInventario.setRowHeight(22);
+        tableInventario.getTableHeader().setReorderingAllowed(false);
+        scrollgai5.setViewportView(tableInventario);
+
+        InventarioCod.add(scrollgai5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 880, 470));
+
+        Bcodigo.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        Bcodigo.setBorder(null);
+        Bcodigo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                BcodigoKeyPressed(evt);
+            }
+        });
+        InventarioCod.add(Bcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 206, 300, 40));
+
+        btnhome1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_35px.png"))); // NOI18N
+        btnhome1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_55px.png"))); // NOI18N
+        btnhome1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnhome1MouseClicked(evt);
+            }
+        });
+        InventarioCod.add(btnhome1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1056, 0, 80, 60));
+
+        btnminimizar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_35px.png"))); // NOI18N
+        btnminimizar2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_55px.png"))); // NOI18N
+        btnminimizar2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnminimizar2MouseClicked(evt);
+            }
+        });
+        InventarioCod.add(btnminimizar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, -1, 57));
+
+        btncerrar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_35px_1.png"))); // NOI18N
+        btncerrar2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_55px_1.png"))); // NOI18N
+        btncerrar2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btncerrar2MouseClicked(evt);
+            }
+        });
+        InventarioCod.add(btncerrar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 0, -1, 57));
+
+        jButton1.setText("Mostrar");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        InventarioCod.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 110, 130));
+
+        jLabel14.setBackground(new java.awt.Color(0, 54, 102));
+        jLabel14.setOpaque(true);
+        InventarioCod.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1290, 60));
+
+        Magia.setName("Magia"); // NOI18N
+        Magia.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        menuE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Double_Left_70px.png"))); // NOI18N
+        menuE.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Double_Left_100px.png"))); // NOI18N
+        menuE.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                menuEMouseClicked(evt);
+            }
+        });
+        Magia.add(menuE, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, 130, 110));
+
+        rSMaterialButtonCircle6.setEnabled(false);
+        Magia.add(rSMaterialButtonCircle6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, 150, 150));
+
+        jLabel9.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        jLabel9.setText("  Otras Opciones");
+        Magia.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 220, 80));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/inventario.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        Magia.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1012, -201, 1280, 720));
+
+        rSPanelsSlider3.add(Magia, "card2");
+
+        JPMenuE.setBackground(new java.awt.Color(153, 255, 255));
+        JPMenuE.setName("JPMenuE"); // NOI18N
+        JPMenuE.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        buenEstado.setBackground(new java.awt.Color(64, 201, 194));
+        buenEstado.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        buenEstado.setForeground(new java.awt.Color(255, 255, 255));
+        buenEstado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        buenEstado.setText("              Buen Estado");
+        buenEstado.setOpaque(true);
+        buenEstado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buenEstadoMouseClicked(evt);
+            }
+        });
+        JPMenuE.add(buenEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 260, 70));
+
+        malEstado.setBackground(new java.awt.Color(77, 152, 207));
+        malEstado.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        malEstado.setForeground(new java.awt.Color(255, 255, 255));
+        malEstado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        malEstado.setText("               Mal estado");
+        malEstado.setOpaque(true);
+        malEstado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                malEstadoMouseClicked(evt);
+            }
+        });
+        JPMenuE.add(malEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 260, 70));
+
+        Donado.setBackground(new java.awt.Color(72, 118, 170));
+        Donado.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        Donado.setForeground(new java.awt.Color(255, 255, 255));
+        Donado.setText("                           Donado");
+        Donado.setOpaque(true);
+        Donado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DonadoMouseClicked(evt);
+            }
+        });
+        JPMenuE.add(Donado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 260, 70));
+
+        noDonado.setBackground(new java.awt.Color(90, 83, 135));
+        noDonado.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        noDonado.setForeground(new java.awt.Color(255, 255, 255));
+        noDonado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        noDonado.setText("                No Donado");
+        noDonado.setOpaque(true);
+        noDonado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                noDonadoMouseClicked(evt);
+            }
+        });
+        JPMenuE.add(noDonado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 260, 70));
+
+        Fungible.setBackground(new java.awt.Color(84, 67, 103));
+        Fungible.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        Fungible.setForeground(new java.awt.Color(255, 255, 255));
+        Fungible.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Fungible.setText("               Fungible");
+        Fungible.setOpaque(true);
+        Fungible.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                FungibleMouseClicked(evt);
+            }
+        });
+        JPMenuE.add(Fungible, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 260, 70));
+
+        btnMenuB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnMenuBMouseClicked(evt);
+            }
+        });
+        btnMenuB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuBActionPerformed(evt);
+            }
+        });
+        JPMenuE.add(btnMenuB, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 120, 100));
+
+        rSMaterialButtonCircle5.setToolTipText("");
+        rSMaterialButtonCircle5.setEnabled(false);
+        JPMenuE.add(rSMaterialButtonCircle5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 120, 120));
+
+        rSPanelsSlider3.add(JPMenuE, "card3");
+
+        InventarioCod.add(rSPanelsSlider3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 260, 260, 470));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/inventario.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        InventarioCod.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1280, 720));
+
+        rSPanelsSlider2.add(InventarioCod, "card2");
+
+        VerInventario.add(rSPanelsSlider2, "card2");
+
+        rSPanelsSlider1.add(VerInventario, "card4");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -1767,72 +1714,13 @@ public class Interfaz extends javax.swing.JFrame {
          Limpiar();
     }//GEN-LAST:event_btnatrasMouseClicked
 
-    private void btnhome1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnhome1MouseClicked
-        rSPanelsSlider1.setPanelSlider(menu, RSPanelsSlider.DIRECT.RIGHT);
-        limpiarTabla();
-    }//GEN-LAST:event_btnhome1MouseClicked
-
-    private void btnminimizar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnminimizar2MouseClicked
-         this.setExtendedState(ICONIFIED);
-    }//GEN-LAST:event_btnminimizar2MouseClicked
-
-    private void btncerrar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncerrar2MouseClicked
-        this.dispose();
-        System.exit(0);
-    }//GEN-LAST:event_btncerrar2MouseClicked
-
-    private void btnMenuBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuBActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnMenuBActionPerformed
-
-    private void btnMenuBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuBMouseClicked
-        rSPanelsSlider3.setPanelSlider(Magia, RSPanelsSlider.DIRECT.RIGHT);
-    }//GEN-LAST:event_btnMenuBMouseClicked
-
-    private void menuEMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuEMouseClicked
-        rSPanelsSlider3.setPanelSlider(JPMenuE, RSPanelsSlider.DIRECT.LEFT);
-    }//GEN-LAST:event_menuEMouseClicked
-
     private void btnVerIMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVerIMouseClicked
         rSPanelsSlider1.setPanelSlider(VerInventario, RSPanelsSlider.DIRECT.LEFT);
     }//GEN-LAST:event_btnVerIMouseClicked
 
-    private void buenEstadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buenEstadoMouseClicked
-        Bcodigo.setText("");
-        tableInventario.setModel(bi.bienesPorEstado(tableInventario, true));
-    }//GEN-LAST:event_buenEstadoMouseClicked
-
-    private void malEstadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_malEstadoMouseClicked
-        Bcodigo.setText("");
-        tableInventario.setModel(bi.bienesPorEstado(tableInventario, false));
-    }//GEN-LAST:event_malEstadoMouseClicked
-
-    private void DonadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DonadoMouseClicked
-        Bcodigo.setText("");
-        tableInventario.setModel(bi.bienesDonacion(tableInventario, true));
-    }//GEN-LAST:event_DonadoMouseClicked
-
-    private void noDonadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_noDonadoMouseClicked
-        Bcodigo.setText("");
-        tableInventario.setModel(bi.bienesDonacion(tableInventario, false));
-    }//GEN-LAST:event_noDonadoMouseClicked
-
-    private void BcodigoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_BcodigoKeyPressed
-        tableInventario.setModel(bi.bienes(Bcodigo.getText(), tableInventario));
-    }//GEN-LAST:event_BcodigoKeyPressed
-
-    private void FungibleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FungibleMouseClicked
-        Bcodigo.setText("");
-        tableInventario.setModel(bi.bienesFungible(tableInventario, true));
-    }//GEN-LAST:event_FungibleMouseClicked
-
     private void btnVerIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerIActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnVerIActionPerformed
-
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        tableInventario.setModel(bi.todosBienes(tableInventario));
-    }//GEN-LAST:event_jButton1MouseClicked
 
     private void limpiarTabla()
     {
@@ -1848,34 +1736,6 @@ public class Interfaz extends javax.swing.JFrame {
     private void btn_InpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_InpMouseClicked
         Limpiar();
     }//GEN-LAST:event_btn_InpMouseClicked
-
-    private void NoFungibleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NoFungibleMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NoFungibleMouseClicked
-
-    private void DepartamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DepartamentoMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_DepartamentoMouseClicked
-
-    private void btnreporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnreporteActionPerformed
-//        try {
-//            List lista = new ArrayList();
-//            for(int i = 0; i <= tableInventario.getRowCount(); i++)
-//            {
-//                ReporteInventario repo = new ReporteInventario(tableInventario.getValueAt(i, 2).toString(), tableInventario.getValueAt(i, 1).toString(),tableInventario.getValueAt(i, 3).toString(),tableInventario.getValueAt(i,4).toString(), tableInventario.getValueAt(i, 0).toString());
-//                lista.add(repo);
-//            }
-//            File file = new File("/GUI/Reportes/Inventario.jasper");
-//            JasperReport  r  = (JasperReport) JRLoader.loadObject(file);
-//            Map parametro = new HashMap();
-//            parametro.put("TipoI", "General");
-//            JasperPrint jprint = JasperFillManager.fillReport(r, parametro, new JRBeanCollectionDataSource(lista));
-//            JasperViewer.viewReport(jprint);
-//        } catch (JRException ex) {
-//            Logger.getLogger(Interfaz.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-        
-    }//GEN-LAST:event_btnreporteActionPerformed
 
     private void btnPacientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPacientesMouseClicked
         this.dispose();
@@ -2115,6 +1975,64 @@ public class Interfaz extends javax.swing.JFrame {
         tableEstado.setModel(tabla);
     }//GEN-LAST:event_rSMaterialButtonRectangle35MouseClicked
 
+    private void BcodigoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_BcodigoKeyPressed
+        tableInventario.setModel(bi.bienes(Bcodigo.getText(), tableInventario));
+    }//GEN-LAST:event_BcodigoKeyPressed
+
+    private void btnhome1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnhome1MouseClicked
+        rSPanelsSlider1.setPanelSlider(menu, RSPanelsSlider.DIRECT.RIGHT);
+    }//GEN-LAST:event_btnhome1MouseClicked
+
+    private void btnminimizar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnminimizar2MouseClicked
+        this.setExtendedState(ICONIFIED);
+    }//GEN-LAST:event_btnminimizar2MouseClicked
+
+    private void btncerrar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncerrar2MouseClicked
+        this.dispose();
+        System.exit(0);
+    }//GEN-LAST:event_btncerrar2MouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        tableInventario.setModel(bi.todosBienes(tableInventario));
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void menuEMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuEMouseClicked
+        rSPanelsSlider3.setPanelSlider(JPMenuE, RSPanelsSlider.DIRECT.LEFT);
+    }//GEN-LAST:event_menuEMouseClicked
+
+    private void buenEstadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buenEstadoMouseClicked
+        Bcodigo.setText("");
+        tableInventario.setModel(bi.bienesPorEstado(tableInventario, true));
+    }//GEN-LAST:event_buenEstadoMouseClicked
+
+    private void malEstadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_malEstadoMouseClicked
+        Bcodigo.setText("");
+        tableInventario.setModel(bi.bienesPorEstado(tableInventario, false));
+    }//GEN-LAST:event_malEstadoMouseClicked
+
+    private void DonadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DonadoMouseClicked
+        Bcodigo.setText("");
+        tableInventario.setModel(bi.bienesDonacion(tableInventario, true));
+    }//GEN-LAST:event_DonadoMouseClicked
+
+    private void noDonadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_noDonadoMouseClicked
+        Bcodigo.setText("");
+        tableInventario.setModel(bi.bienesDonacion(tableInventario, false));
+    }//GEN-LAST:event_noDonadoMouseClicked
+
+    private void FungibleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FungibleMouseClicked
+        Bcodigo.setText("");
+        tableInventario.setModel(bi.bienesFungible(tableInventario, true));
+    }//GEN-LAST:event_FungibleMouseClicked
+
+    private void btnMenuBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuBMouseClicked
+        rSPanelsSlider3.setPanelSlider(Magia, RSPanelsSlider.DIRECT.RIGHT);
+    }//GEN-LAST:event_btnMenuBMouseClicked
+
+    private void btnMenuBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMenuBActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2153,7 +2071,6 @@ public class Interfaz extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Bcodigo;
-    private javax.swing.JLabel Departamento;
     private javax.swing.JLabel Donado;
     private javax.swing.JPanel Empleado;
     private javax.swing.JLabel Fungible;
@@ -2161,7 +2078,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JPanel InventarioCod;
     private javax.swing.JPanel JPMenuE;
     private javax.swing.JPanel Magia;
-    private javax.swing.JLabel NoFungible;
     private javax.swing.JPanel ResumenI;
     private javax.swing.JPanel VerInventario;
     private javax.swing.JButton btnMenuB;
@@ -2191,7 +2107,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton btnminimizar4;
     private javax.swing.JButton btnminimizar5;
     private javax.swing.JButton btnminimizar6;
-    private javax.swing.JButton btnreporte;
     private javax.swing.JLabel buenEstado;
     private javax.swing.JComboBox<String> cmbCuenta;
     private javax.swing.JComboBox<String> cmbDep;
@@ -2217,7 +2132,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
@@ -2330,8 +2244,8 @@ public class Interfaz extends javax.swing.JFrame {
     private rojerusan.RSPanelsSlider rSPanelsSlider3;
     private javax.swing.JScrollPane scrollgai1;
     private javax.swing.JScrollPane scrollgai2;
-    private javax.swing.JScrollPane scrollgai3;
     private javax.swing.JScrollPane scrollgai4;
+    private javax.swing.JScrollPane scrollgai5;
     private rojerusan.RSTableMetro tableEmpleado;
     private rojerusan.RSTableMetro tableEstado;
     private rojerusan.RSTableMetro tableIgeneral;
