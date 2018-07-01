@@ -35,6 +35,7 @@ import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.engine.util.JRLoader;
 import net.sf.jasperreports.view.JasperViewer;
 import rojerusan.RSNotifyFade;
@@ -328,6 +329,7 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel59 = new javax.swing.JLabel();
         jLabel60 = new javax.swing.JLabel();
         jLabel62 = new javax.swing.JLabel();
+        rSMaterialButtonRectangle37 = new rojerusan.RSMaterialButtonRectangle();
         rSMaterialButtonRectangle35 = new rojerusan.RSMaterialButtonRectangle();
         jLabel61 = new javax.swing.JLabel();
         VerInventario = new javax.swing.JPanel();
@@ -339,7 +341,8 @@ public class Interfaz extends javax.swing.JFrame {
         btnhome1 = new javax.swing.JButton();
         btnminimizar2 = new javax.swing.JButton();
         btncerrar2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnMostrarTodo = new rojerusan.RSMaterialButtonRectangle();
+        btnImprimir = new rojerusan.RSMaterialButtonRectangle();
         jLabel14 = new javax.swing.JLabel();
         rSPanelsSlider3 = new rojerusan.RSPanelsSlider();
         Magia = new javax.swing.JPanel();
@@ -477,11 +480,11 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel31.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel31.setText("Estado de resultados");
-        menu.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 690, 230, 40));
+        menu.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 680, 290, 40));
 
         jLabel56.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel56.setText("Balance General");
-        menu.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 650, 300, 40));
+        menu.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 650, 230, 40));
 
         jLabel28.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel28.setText("Ver Empleado");
@@ -1204,7 +1207,12 @@ public class Interfaz extends javax.swing.JFrame {
         estadoR.add(scrollgai4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, 940, 470));
 
         rSMaterialButtonRectangle32.setBackground(new java.awt.Color(0, 52, 102));
-        rSMaterialButtonRectangle32.setText("Estado de Resultados");
+        rSMaterialButtonRectangle32.setText("Inventario");
+        rSMaterialButtonRectangle32.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rSMaterialButtonRectangle32MouseClicked(evt);
+            }
+        });
         estadoR.add(rSMaterialButtonRectangle32, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 640, 180, 60));
 
         rSMaterialButtonRectangle33.setBackground(new java.awt.Color(186, 240, 255));
@@ -1331,7 +1339,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel63.setFont(new java.awt.Font("Microsoft JhengHei Light", 0, 24)); // NOI18N
         jLabel63.setText("Inventario General del Centro de Salud Santa Maria Chiquimula Totonicapán");
-        ResumenI.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 860, 50));
+        ResumenI.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 920, 50));
 
         jLabel64.setBackground(new java.awt.Color(255, 255, 255));
         jLabel64.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 24)); // NOI18N
@@ -1369,6 +1377,16 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel62.setBackground(new java.awt.Color(0, 52, 102));
         jLabel62.setOpaque(true);
         ResumenI.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 350, 110));
+
+        rSMaterialButtonRectangle37.setBackground(new java.awt.Color(0, 52, 102));
+        rSMaterialButtonRectangle37.setText("Ver estado de resultados");
+        rSMaterialButtonRectangle37.setFont(new java.awt.Font("Roboto Medium", 0, 10)); // NOI18N
+        rSMaterialButtonRectangle37.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rSMaterialButtonRectangle37MouseClicked(evt);
+            }
+        });
+        ResumenI.add(rSMaterialButtonRectangle37, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 580, 180, 60));
 
         rSMaterialButtonRectangle35.setBackground(new java.awt.Color(0, 52, 102));
         rSMaterialButtonRectangle35.setText("Estado de Resultados");
@@ -1476,13 +1494,22 @@ public class Interfaz extends javax.swing.JFrame {
         });
         InventarioCod.add(btncerrar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 0, -1, 57));
 
-        jButton1.setText("Mostrar");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnMostrarTodo.setText("Ver todo");
+        btnMostrarTodo.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        btnMostrarTodo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                btnMostrarTodoMouseClicked(evt);
             }
         });
-        InventarioCod.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 110, 130));
+        InventarioCod.add(btnMostrarTodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 190, 170, -1));
+
+        btnImprimir.setText("imprimir");
+        btnImprimir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnImprimirMouseClicked(evt);
+            }
+        });
+        InventarioCod.add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 190, 210, -1));
 
         jLabel14.setBackground(new java.awt.Color(0, 54, 102));
         jLabel14.setOpaque(true);
@@ -1909,6 +1936,7 @@ public class Interfaz extends javax.swing.JFrame {
     private void jRadioButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton1MouseClicked
         if(jRadioButton1.isSelected())
         {
+            this.dispose();
             Cuenta c = new Cuenta();
             c.setVisible(true);
         }
@@ -1931,18 +1959,21 @@ public class Interfaz extends javax.swing.JFrame {
          int fecha = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el año a consultar"));
          rSPanelsSlider1.setPanelSlider(ResumenI, RSPanelsSlider.DIRECT.LEFT);
          tableIgeneral.setModel(bi.mostrarResumen(fecha, tableIgeneral.getModel()));
+         rSMaterialButtonRectangle35.setVisible(true);
+         rSMaterialButtonRectangle37.setVisible(false);
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void btnhome5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnhome5MouseClicked
-        // TODO add your handling code here:
+        rSPanelsSlider1.setPanelSlider(menu, RSPanelsSlider.DIRECT.RIGHT);
     }//GEN-LAST:event_btnhome5MouseClicked
 
     private void btnminimizar6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnminimizar6MouseClicked
-        // TODO add your handling code here:
+        this.setExtendedState(ICONIFIED);
     }//GEN-LAST:event_btnminimizar6MouseClicked
 
     private void btncerrar6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncerrar6MouseClicked
-        // TODO add your handling code here:
+        this.dispose();
+        System.exit(0);
     }//GEN-LAST:event_btncerrar6MouseClicked
 
     private void rSMaterialButtonRectangle35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle35MouseClicked
@@ -1973,6 +2004,8 @@ public class Interfaz extends javax.swing.JFrame {
         tabla.addRow(new Object[] {"Reserva legal", String.format("%.2f", reserva)});
         tabla.addRow(new Object[] {"Utilidad neta", String.format("%.2f", utilidad_neta)});
         tableEstado.setModel(tabla);
+        rSMaterialButtonRectangle37.setVisible(true);
+        rSMaterialButtonRectangle35.setVisible(false);
     }//GEN-LAST:event_rSMaterialButtonRectangle35MouseClicked
 
     private void BcodigoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_BcodigoKeyPressed
@@ -1991,10 +2024,6 @@ public class Interfaz extends javax.swing.JFrame {
         this.dispose();
         System.exit(0);
     }//GEN-LAST:event_btncerrar2MouseClicked
-
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        tableInventario.setModel(bi.todosBienes(tableInventario));
-    }//GEN-LAST:event_jButton1MouseClicked
 
     private void menuEMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuEMouseClicked
         rSPanelsSlider3.setPanelSlider(JPMenuE, RSPanelsSlider.DIRECT.LEFT);
@@ -2032,6 +2061,37 @@ public class Interfaz extends javax.swing.JFrame {
     private void btnMenuBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnMenuBActionPerformed
+
+    private void btnMostrarTodoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMostrarTodoMouseClicked
+        tableInventario.setModel(bi.todosBienes(tableInventario));
+    }//GEN-LAST:event_btnMostrarTodoMouseClicked
+
+    private void btnImprimirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnImprimirMouseClicked
+//        try {
+//            List lista = new ArrayList();
+//            for(int i = 0; i <= tableInventario.getRowCount(); i++)
+//            {
+//                ReporteInventario repo = new ReporteInventario(tableInventario.getValueAt(i, 2).toString(), tableInventario.getValueAt(i, 1).toString(),tableInventario.getValueAt(i, 3).toString(),tableInventario.getValueAt(i,4).toString(), tableInventario.getValueAt(i, 0).toString());
+//                lista.add(repo);
+//            }
+//            File file = new File("/GUI/Reportes/Inventario.jasper");
+//            JasperReport  r  = (JasperReport) JRLoader.loadObject(file);
+//            Map parametro = new HashMap();
+//            parametro.put("TipoI", "General");
+//            JasperPrint jprint = JasperFillManager.fillReport(r, parametro, new JRBeanCollectionDataSource(lista));
+//            JasperViewer.viewReport(jprint);
+//        } catch (JRException ex) {
+//            Logger.getLogger(Interfaz.class.getName()).log(Level.SEVERE, null, ex);
+//        } 
+    }//GEN-LAST:event_btnImprimirMouseClicked
+
+    private void rSMaterialButtonRectangle32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle32MouseClicked
+        rSPanelsSlider1.setPanelSlider(ResumenI, RSPanelsSlider.DIRECT.RIGHT);
+    }//GEN-LAST:event_rSMaterialButtonRectangle32MouseClicked
+
+    private void rSMaterialButtonRectangle37MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle37MouseClicked
+        rSPanelsSlider1.setPanelSlider(estadoR, RSPanelsSlider.DIRECT.LEFT);
+    }//GEN-LAST:event_rSMaterialButtonRectangle37MouseClicked
 
     /**
      * @param args the command line arguments
@@ -2080,7 +2140,9 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JPanel Magia;
     private javax.swing.JPanel ResumenI;
     private javax.swing.JPanel VerInventario;
+    private rojerusan.RSMaterialButtonRectangle btnImprimir;
     private javax.swing.JButton btnMenuB;
+    private rojerusan.RSMaterialButtonRectangle btnMostrarTodo;
     private javax.swing.JButton btnPacientes;
     private javax.swing.JButton btnVerI;
     private javax.swing.JButton btn_IngP;
@@ -2122,7 +2184,6 @@ public class Interfaz extends javax.swing.JFrame {
     private rojeru_san.componentes.RSDateChooser fechaA;
     private rojeru_san.componentes.RSDateChooser fechadE;
     private rojeru_san.componentes.RSDateChooser fechaiE;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -2237,6 +2298,7 @@ public class Interfaz extends javax.swing.JFrame {
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle34;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle35;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle36;
+    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle37;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle5;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle6;
     private rojerusan.RSPanelsSlider rSPanelsSlider1;

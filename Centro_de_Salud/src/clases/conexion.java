@@ -28,6 +28,7 @@ public class conexion {
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Error al conectar con la Base de Datos");
             Logger.getLogger(conexion.class.getName()).log(Level.SEVERE, null, ex);
+            System.exit(0);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(conexion.class.getName()).log(Level.SEVERE, null, ex);
         }

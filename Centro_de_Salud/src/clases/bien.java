@@ -439,15 +439,26 @@ public class bien {
         }
         DefaultTableModel tabla = new DefaultTableModel(null, titulos);
         try {
-            String sql = "SELECT year(fecha), cantidad, descripcion, precio_unitario, codigo from bien";
+            String sql = "SELECT year(fecha) as anios, cantidad, descripcion, precio_unitario, cuenta_id, codigo from bien";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
             while(rs.next())
             {
-                if(rs.getString("year(fecha)").equals(String.valueOf(anio)))
+                String fecha = rs.getString("anios");
+                if(fecha.equals(String.valueOf(anio)))
                 {
-                    tabla.addRow(new Object[] {rs.getInt("cantidad"), rs.getString("descripcion"),
-                    rs.getDouble("precio_unitario"), "", rs.getString("codigo")});
+                    cuenta cu = new cuenta();
+                    int cuenta = rs.getInt("cuenta_id");
+                    if(cu.verificarActivo(cuenta))
+                    {
+                        tabla.addRow(new Object[] {rs.getInt("cantidad"), rs.getString("descripcion"),
+                        rs.getDouble("precio_unitario"), "", rs.getString("codigo")});
+                    }
+                    else
+                    {
+                        tabla.addRow(new Object[] {rs.getInt("cantidad"), rs.getString("descripcion"),
+                        "", rs.getDouble("precio_unitario"), rs.getString("codigo")});
+                    }
                 }
             }
         } catch (SQLException ex) {

@@ -158,4 +158,20 @@ public class cuenta
         }
         return false;
     }
+    
+    public boolean verificarActivo(int id)
+    {
+        try {
+            String sql = "SELECT activo from cuenta where id = " + id;
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                return rs.getBoolean("activo");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(cuenta.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
 }

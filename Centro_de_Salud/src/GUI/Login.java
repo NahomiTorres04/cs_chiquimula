@@ -19,6 +19,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
 import static jdk.nashorn.tools.ShellFunctions.input;
 import org.apache.commons.codec.digest.DigestUtils;
 import rojerusan.RSNotifyFade;
@@ -104,6 +105,7 @@ public class Login extends javax.swing.JFrame {
         jpRegistrar = new javax.swing.JPanel();
         btnminimizar1 = new javax.swing.JButton();
         btncerrar1 = new javax.swing.JButton();
+        lbExisteUsuario = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         txtUsuarioN = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -289,12 +291,21 @@ public class Login extends javax.swing.JFrame {
         });
         jpRegistrar.add(btncerrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(376, 13, -1, 57));
 
+        lbExisteUsuario.setFont(new java.awt.Font("Yu Gothic UI", 0, 12)); // NOI18N
+        lbExisteUsuario.setForeground(new java.awt.Color(234, 18, 18));
+        jpRegistrar.add(lbExisteUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 390, 130, 30));
+
         jLabel10.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
         jLabel10.setText("Usuario");
         jpRegistrar.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, -1, -1));
 
         txtUsuarioN.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
         txtUsuarioN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        txtUsuarioN.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtUsuarioNKeyReleased(evt);
+            }
+        });
         jpRegistrar.add(txtUsuarioN, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 320, 30));
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic Light", 1, 18)); // NOI18N
@@ -598,23 +609,36 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel2MouseDragged
 
     private void lbRegistrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbRegistrarMouseClicked
-        String nombre = txtNombreN.getText();
-        String apellido = txtApellidoN.getText();
-        String usuario = txtUsuarioN.getText();
-        String psw = pswContrasenia.getText();
-        String vpsw = pswVContrasenia.getText();
-        if(psw.equals(vpsw))
+        JPasswordField pf = new JPasswordField();
+        int x = JOptionPane.showConfirmDialog(null, pf, "contraseña del administrador", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+        if(x == JOptionPane.OK_OPTION)
         {
-            psw = DigestUtils.md5Hex(psw);
-            if(us.ingresar(nombre, apellido, usuario, psw))
+            String contrasenia_admin = DigestUtils.md5Hex(new String(pf.getPassword()));
+            if(us.verificarContrasenia(contrasenia_admin, "Administrador"))
             {
-                new rojerusan.RSNotifyFade("¡Excelente!", "Usuario Ingresado Correctamente", Color.WHITE, Color.BLACK, Color.BLACK, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.SUCCESS).setVisible(true);
-                cmbusuario.setModel(us.mostrarU());
-            } else {
-                new rojerusan.RSNotifyFade("¡ERROR!", "Error al ingresar usuario", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.ERROR).setVisible(true);
+                String nombre = txtNombreN.getText();
+                String apellido = txtApellidoN.getText();
+                String usuario = txtUsuarioN.getText();
+                String psw = pswContrasenia.getText();
+                String vpsw = pswVContrasenia.getText();
+                if(psw.equals(vpsw))
+                {
+                    psw = DigestUtils.md5Hex(psw);
+                    if(us.ingresar(nombre, apellido, usuario, psw))
+                    {
+                        new rojerusan.RSNotifyFade("¡Excelente!", "Usuario Ingresado Correctamente", Color.WHITE, Color.BLACK, Color.BLACK, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.SUCCESS).setVisible(true);
+                        cmbusuario.setModel(us.mostrarU());
+                    } else {
+                        new rojerusan.RSNotifyFade("¡ERROR!", "Error al ingresar usuario", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.ERROR).setVisible(true);
+                    }
+                } else {
+                    new rojerusan.RSNotifyFade("¡ERROR!", "las contraseñas no coinciden", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.ERROR).setVisible(true);
+                }
             }
-        } else {
-            new rojerusan.RSNotifyFade("¡ERROR!", "las contraseñas no coinciden", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.ERROR).setVisible(true);
+            else
+            {
+                new rojerusan.RSNotifyFade("¡ERROR!", "Contraseña del administrador incorrecta", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.ERROR).setVisible(true);
+            }
         }
     }//GEN-LAST:event_lbRegistrarMouseClicked
 
@@ -652,6 +676,19 @@ public class Login extends javax.swing.JFrame {
     private void pswconActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pswconActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_pswconActionPerformed
+
+    private void txtUsuarioNKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUsuarioNKeyReleased
+        if(us.existeUsuario(txtUsuarioN.getText()))
+        {
+            txtUsuarioN.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(234, 18, 18)));
+            lbExisteUsuario.setText("El usuario ya existe");
+        }
+        else
+        {
+            txtUsuarioN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+            lbExisteUsuario.setText("");
+        }
+    }//GEN-LAST:event_txtUsuarioNKeyReleased
     public void iniciosesion()
     {
         String pass = DigestUtils.md5Hex(pswcon.getText());
@@ -743,6 +780,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jpRegistrar;
     private javax.swing.JPanel jpingresar;
+    private javax.swing.JLabel lbExisteUsuario;
     private javax.swing.JLabel lbIngresar;
     private javax.swing.JLabel lbRegistrar;
     private javax.swing.JPanel p1ingresar;

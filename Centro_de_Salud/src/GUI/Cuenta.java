@@ -210,6 +210,8 @@ public class Cuenta extends javax.swing.JFrame {
         {
             new rojerusan.RSNotifyFade("¡ACEPTADA!", "Ingreso Correcto", Color.WHITE, Color.BLACK, Color.BLACK, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.SUCCESS).setVisible(true);
             this.dispose();
+            Interfaz in = new Interfaz();
+            in.setVisible(true);
         }
         else
         {
