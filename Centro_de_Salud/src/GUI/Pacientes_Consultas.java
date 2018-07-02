@@ -1194,7 +1194,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         int paciente_id = pa.retornarid(jLabel40.getText());
         Date fecha_actual = new Date();
         String fechaa = formato.format(fecha_actual);
-        if(co.ingresarConsulta(sintomas, diagnostico, tratamiento, examenes, reconsulta, referido, fechaa, paciente_id) && cu.aumentarServicios(100))
+        if(co.ingresarConsulta(sintomas, diagnostico, tratamiento, examenes, reconsulta, referido, fechaa, paciente_id))
         {
             new rojerusan.RSNotifyFade("¡ACEPTADA!", "Consulta ingresada", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.SUCCESS).setVisible(true);
         }

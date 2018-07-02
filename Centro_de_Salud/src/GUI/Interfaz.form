@@ -653,7 +653,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnatras">
+                <Component class="javax.swing.JButton" name="btnActualizar">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/ingresar/icons8_Back_Arrow_70px.png"/>
@@ -663,7 +663,7 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnatrasMouseClicked"/>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnActualizarMouseClicked"/>
                   </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -887,11 +887,11 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tempus Sans ITC" size="24" style="1"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value=" Regresar"/>
+                    <Property name="text" type="java.lang.String" value="Actualizar"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="1110" y="550" width="130" height="80"/>
+                      <AbsoluteConstraints x="1110" y="550" width="140" height="80"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -3037,6 +3037,19 @@
                             </Constraint>
                           </Constraints>
                         </Component>
+                        <Component class="rojerusan.RSMaterialButtonRectangle" name="btnEditar">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Editar"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnEditarMouseClicked"/>
+                          </Events>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="820" y="190" width="130" height="-1"/>
+                            </Constraint>
+                          </Constraints>
+                        </Component>
                         <Component class="rojerusan.RSMaterialButtonRectangle" name="btnMostrarTodo">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Ver todo"/>
@@ -3049,7 +3062,7 @@
                           </Events>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="560" y="190" width="170" height="-1"/>
+                              <AbsoluteConstraints x="560" y="190" width="130" height="-1"/>
                             </Constraint>
                           </Constraints>
                         </Component>
@@ -3062,7 +3075,7 @@
                           </Events>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="730" y="190" width="210" height="-1"/>
+                              <AbsoluteConstraints x="690" y="190" width="130" height="-1"/>
                             </Constraint>
                           </Constraints>
                         </Component>
@@ -3295,6 +3308,14 @@
                                   </Constraints>
                                 </Component>
                                 <Component class="javax.swing.JButton" name="btnMenuB">
+                                  <Properties>
+                                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                      <Image iconType="3" name="/imagenes/iconos/general/icons8_Circled_Right_45px.png"/>
+                                    </Property>
+                                    <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                      <Image iconType="3" name="/imagenes/iconos/general/icons8_Circled_Right_60px.png"/>
+                                    </Property>
+                                  </Properties>
                                   <Events>
                                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnMenuBMouseClicked"/>
                                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMenuBActionPerformed"/>

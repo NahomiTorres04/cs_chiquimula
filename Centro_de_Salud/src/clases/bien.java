@@ -9,6 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.logging.Level;
@@ -465,5 +466,68 @@ public class bien {
             Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
         }
         return tabla;
+    }
+    
+    public String[] recopilarParaEdicion(String codigo)
+    {
+        String[] valores = new String[10];
+        try {
+            String sql = "select B.codigo, B.descripcion, B.donado, B.fungible, "
+                    + "B.cantidad, B.estado, B.precio_unitario, B.fecha, D.descripcion as descripcion_dep, C.nombre as nombre_cuenta "
+                    + "from bien B inner join departamento D on B.departamento_id = D.id "
+                    + "inner join cuenta C on B.cuenta_id = C.id where B.codigo = '" + codigo + "'";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                valores[0] = rs.getString("B.codigo");
+                valores[1] = rs.getString("B.descripcion");
+                valores[2] = rs.getString("descripcion_dep");
+                if(rs.getBoolean("B.donado") == true) valores[3] = "1";
+                else valores[3] = "0";
+                if(rs.getBoolean("B.fungible") == true) valores[4] = "1";
+                else valores[4] = "0";
+                valores[5] = String.valueOf(rs.getInt("B.cantidad"));
+                valores[6] = String.valueOf(rs.getInt("B.precio_unitario"));
+                if(rs.getBoolean("B.estado") == true) valores[7] = "1";
+                else valores[7] = "0";
+                valores[8] = rs.getString("nombre_cuenta");
+                SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
+                valores[9] = formato.format(rs.getDate("B.fecha"));
+            }
+            return valores;
+        } catch (SQLException ex) {
+            Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return valores;
+    }
+
+    public boolean actualizarBien(String codigo, String descripcion, int cantidad,
+    double precio_unitario, double precio_total, boolean estado, boolean donado,
+    boolean fungible, String fecha, int departamento_id, int cuenta) {
+        /**
+         * Este proceso actualiza los datos de algún bien
+         */
+        try {
+            String sql = "UPDATE bien set descripcion = ?, cantidad = ?, precio_unitario = ?"
+                    + ", precio_total = ?, estado = ?, donado = ?, fungible = ?"
+                    + ", fecha = ?, departamento_id = ?, cuenta_id = ? where codigo = '" + codigo + "'";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, descripcion);
+            ps.setInt(2, cantidad);
+            ps.setDouble(3, precio_unitario);
+            ps.setDouble(4, precio_total);
+            ps.setBoolean(5, estado);
+            ps.setBoolean(6, donado);
+            ps.setBoolean(7, fungible);
+            ps.setString(8, fecha);
+            ps.setInt(9, departamento_id);
+            ps.setInt(10, cuenta);
+            int n = ps.executeUpdate();
+            return n != 0;
+        } catch (SQLException ex) {
+            Logger.getLogger(bien.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
     }
 }

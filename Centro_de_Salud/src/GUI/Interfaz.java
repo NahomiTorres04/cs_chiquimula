@@ -21,6 +21,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -105,9 +106,9 @@ public class Interfaz extends javax.swing.JFrame {
         btn_Inp.setOpaque(false);
         btn_Inp.setBorderPainted(false);
         btn_Inp.setContentAreaFilled(false);
-        btnatras.setOpaque(false);
-        btnatras.setBorderPainted(false);
-        btnatras.setContentAreaFilled(false);
+        btnActualizar.setOpaque(false);
+        btnActualizar.setBorderPainted(false);
+        btnActualizar.setContentAreaFilled(false);
         btnguardar.setOpaque(false);
         btnguardar.setBorderPainted(false);
         btnguardar.setContentAreaFilled(false);
@@ -202,7 +203,7 @@ public class Interfaz extends javax.swing.JFrame {
         cmbEstado = new javax.swing.JComboBox<>();
         txtCant = new javax.swing.JTextField();
         btn_Inp = new javax.swing.JButton();
-        btnatras = new javax.swing.JButton();
+        btnActualizar = new javax.swing.JButton();
         btnminimizar1 = new javax.swing.JButton();
         btncerrar1 = new javax.swing.JButton();
         btnhome = new javax.swing.JButton();
@@ -341,6 +342,7 @@ public class Interfaz extends javax.swing.JFrame {
         btnhome1 = new javax.swing.JButton();
         btnminimizar2 = new javax.swing.JButton();
         btncerrar2 = new javax.swing.JButton();
+        btnEditar = new rojerusan.RSMaterialButtonRectangle();
         btnMostrarTodo = new rojerusan.RSMaterialButtonRectangle();
         btnImprimir = new rojerusan.RSMaterialButtonRectangle();
         jLabel14 = new javax.swing.JLabel();
@@ -577,14 +579,14 @@ public class Interfaz extends javax.swing.JFrame {
         });
         IngresarInventario.add(btn_Inp, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 610, 130, 140));
 
-        btnatras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Back_Arrow_70px.png"))); // NOI18N
-        btnatras.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Back_Arrow_100px.png"))); // NOI18N
-        btnatras.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Back_Arrow_70px.png"))); // NOI18N
+        btnActualizar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Back_Arrow_100px.png"))); // NOI18N
+        btnActualizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnatrasMouseClicked(evt);
+                btnActualizarMouseClicked(evt);
             }
         });
-        IngresarInventario.add(btnatras, new org.netbeans.lib.awtextra.AbsoluteConstraints(1105, 610, 140, 140));
+        IngresarInventario.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1105, 610, 140, 140));
 
         btnminimizar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_35px.png"))); // NOI18N
         btnminimizar1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_55px.png"))); // NOI18N
@@ -664,8 +666,8 @@ public class Interfaz extends javax.swing.JFrame {
         IngresarInventario.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 510, 190, 80));
 
         jLabel8.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
-        jLabel8.setText(" Regresar");
-        IngresarInventario.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 550, 130, 80));
+        jLabel8.setText("Actualizar");
+        IngresarInventario.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 550, 140, 80));
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/ingresara.png"))); // NOI18N
         IngresarInventario.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1280, 720));
@@ -1494,6 +1496,14 @@ public class Interfaz extends javax.swing.JFrame {
         });
         InventarioCod.add(btncerrar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 0, -1, 57));
 
+        btnEditar.setText("Editar");
+        btnEditar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnEditarMouseClicked(evt);
+            }
+        });
+        InventarioCod.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 190, 130, -1));
+
         btnMostrarTodo.setText("Ver todo");
         btnMostrarTodo.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         btnMostrarTodo.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1501,7 +1511,7 @@ public class Interfaz extends javax.swing.JFrame {
                 btnMostrarTodoMouseClicked(evt);
             }
         });
-        InventarioCod.add(btnMostrarTodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 190, 170, -1));
+        InventarioCod.add(btnMostrarTodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 190, 130, -1));
 
         btnImprimir.setText("imprimir");
         btnImprimir.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1509,7 +1519,7 @@ public class Interfaz extends javax.swing.JFrame {
                 btnImprimirMouseClicked(evt);
             }
         });
-        InventarioCod.add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 190, 210, -1));
+        InventarioCod.add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 190, 130, -1));
 
         jLabel14.setBackground(new java.awt.Color(0, 54, 102));
         jLabel14.setOpaque(true);
@@ -1608,6 +1618,8 @@ public class Interfaz extends javax.swing.JFrame {
         });
         JPMenuE.add(Fungible, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 260, 70));
 
+        btnMenuB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Circled_Right_45px.png"))); // NOI18N
+        btnMenuB.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Circled_Right_60px.png"))); // NOI18N
         btnMenuB.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnMenuBMouseClicked(evt);
@@ -1700,7 +1712,7 @@ public class Interfaz extends javax.swing.JFrame {
         {
             fungible = false;
         }
-        if((cu.aumentarValor(cuenta, preciot)) && (bi.ingresarBien(codigo, descripcion, cantidad, preciou, preciot, estado, donado, fungible, fecha, departamento, cuenta)))
+        if(bi.ingresarBien(codigo, descripcion, cantidad, preciou, preciot, estado, donado, fungible, fecha, departamento, cuenta))
         {
             new rojerusan.RSNotifyFade("¡ACEPTADA!", "Ingreso Correcto", Color.WHITE, Color.BLACK, Color.BLACK, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.SUCCESS).setVisible(true);
         }
@@ -1720,6 +1732,10 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btncerrarMouseClicked
 
     private void btn_IngPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_IngPMouseClicked
+        jLabel8.setVisible(false);
+        btnActualizar.setVisible(false);
+        rSMaterialButtonCircle1.setVisible(false);
+        txtCodigo.setEnabled(true);
         rSPanelsSlider1.setPanelSlider(IngresarInventario, RSPanelsSlider.DIRECT.LEFT);
     }//GEN-LAST:event_btn_IngPMouseClicked
 
@@ -1736,10 +1752,55 @@ public class Interfaz extends javax.swing.JFrame {
         rSPanelsSlider1.setPanelSlider(menu, RSPanelsSlider.DIRECT.RIGHT);
     }//GEN-LAST:event_btnhomeMouseClicked
 
-    private void btnatrasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnatrasMouseClicked
-         rSPanelsSlider1.setPanelSlider(menu, RSPanelsSlider.DIRECT.RIGHT);
-         Limpiar();
-    }//GEN-LAST:event_btnatrasMouseClicked
+    private void btnActualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizarMouseClicked
+        /**
+         * En este botón se va a actualizar la información del paciente
+         */
+        String codigo = txtCodigo.getText();
+        String descripcion = txtDes.getText();
+        int cantidad = Integer.parseInt(txtCant.getText());
+        double preciou = Double.parseDouble(txtPrecio.getText());
+        double preciot = cantidad*preciou;
+        int departamento = dep.seleccionarDepartamento(cmbDep.getSelectedItem().toString());
+        boolean estado;
+        boolean donado;
+        boolean fungible;
+        String fecha = formato.format(fechaA.getDatoFecha());
+        String cuenta_nombre = cmbCuenta.getSelectedItem().toString();
+        int cuenta = cu.encontrar_cuenta(cuenta_nombre);
+        if(cmbEstado.getSelectedItem().toString().equals("Bueno"))
+        {
+            estado = true;
+        }
+        else
+        {
+            estado = false;
+        }
+        if(cmbDonado.getSelectedItem().toString().equals("Sí"))
+        {
+            donado = true;
+        }
+        else
+        {
+            donado = false;
+        }
+        if(cmbFungible.getSelectedItem().toString().equals("Sí"))
+        {
+            fungible = true;
+        }
+        else
+        {
+            fungible = false;
+        }
+        if(bi.actualizarBien(codigo, descripcion, cantidad, preciou, preciot, estado, donado, fungible, fecha, departamento, cuenta))
+        {
+            new rojerusan.RSNotifyFade("¡ACEPTADA!", "Actualización Correcta", Color.WHITE, Color.BLACK, Color.BLACK, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.SUCCESS).setVisible(true);
+        }
+        else
+        {
+            new rojerusan.RSNotifyFade("¡ERROR!", "Ocurrió un problema con la actualización", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.ERROR).setVisible(true);
+        }
+    }//GEN-LAST:event_btnActualizarMouseClicked
 
     private void btnVerIMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVerIMouseClicked
         rSPanelsSlider1.setPanelSlider(VerInventario, RSPanelsSlider.DIRECT.LEFT);
@@ -1875,8 +1936,7 @@ public class Interfaz extends javax.swing.JFrame {
         } else fechad = formato.format(fechadE.getDatoFecha());
         String telefono = txttelE.getText();
         double sueldo = Double.parseDouble(txtsueldo.getText());
-        if(emp.ingresarEmpleado(nombre, apellido, dpi, municipio, departamento, tipo, clasificacion, lugar, cargo, renglon, puesto, fechai, fechad, sueldo, telefono, alergias) &&
-                cu.aumentarSueldos(sueldo))
+        if(emp.ingresarEmpleado(nombre, apellido, dpi, municipio, departamento, tipo, clasificacion, lugar, cargo, renglon, puesto, fechai, fechad, sueldo, telefono, alergias))
         {
             new rojerusan.RSNotifyFade("¡ACEPTADA!", "Ingreso Correcto", Color.WHITE, Color.BLACK, Color.BLACK, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.SUCCESS).setVisible(true);
         }
@@ -2093,6 +2153,34 @@ public class Interfaz extends javax.swing.JFrame {
         rSPanelsSlider1.setPanelSlider(estadoR, RSPanelsSlider.DIRECT.LEFT);
     }//GEN-LAST:event_rSMaterialButtonRectangle37MouseClicked
 
+    private void btnEditarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditarMouseClicked
+        DefaultTableModel tabla = (DefaultTableModel) tableInventario.getModel();
+        String codigo = String.valueOf(tabla.getValueAt(tableInventario.getSelectedRow(), 0));
+        String[] datos = bi.recopilarParaEdicion(codigo);
+        txtCodigo.setText(datos[0]);
+        txtDes.setText(datos[1]);
+        cmbDep.setSelectedItem(datos[2]);
+        if(datos[3].equals("1")) cmbDonado.setSelectedItem("Sí");
+        else cmbDonado.setSelectedItem("No");
+        if(datos[4].equals("1")) cmbFungible.setSelectedItem("Sí");
+        else cmbFungible.setSelectedItem("No");
+        txtCant.setText(datos[5]);
+        txtPrecio.setText(datos[6]);
+        if(datos[7].equals("1")) cmbEstado.setSelectedItem("Bueno");
+        else cmbEstado.setSelectedItem("Malo");
+        cmbCuenta.setSelectedItem(datos[8]);
+        try {
+            fechaA.setDatoFecha(formato.parse(datos[9]));
+        } catch (ParseException ex) {
+            Logger.getLogger(Interfaz.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        jLabel8.setVisible(true);
+        rSMaterialButtonCircle1.setVisible(true);
+        btnActualizar.setVisible(true);
+        txtCodigo.setEnabled(false);
+        rSPanelsSlider1.setPanelSlider(IngresarInventario, RSPanelsSlider.DIRECT.RIGHT);
+    }//GEN-LAST:event_btnEditarMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -2140,6 +2228,8 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JPanel Magia;
     private javax.swing.JPanel ResumenI;
     private javax.swing.JPanel VerInventario;
+    private javax.swing.JButton btnActualizar;
+    private rojerusan.RSMaterialButtonRectangle btnEditar;
     private rojerusan.RSMaterialButtonRectangle btnImprimir;
     private javax.swing.JButton btnMenuB;
     private rojerusan.RSMaterialButtonRectangle btnMostrarTodo;
@@ -2147,7 +2237,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton btnVerI;
     private javax.swing.JButton btn_IngP;
     private javax.swing.JButton btn_Inp;
-    private javax.swing.JButton btnatras;
     private javax.swing.JButton btncerrar;
     private javax.swing.JButton btncerrar1;
     private javax.swing.JButton btncerrar2;
