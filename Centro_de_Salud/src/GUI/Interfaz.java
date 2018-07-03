@@ -208,6 +208,8 @@ public class Interfaz extends javax.swing.JFrame {
         btncerrar1 = new javax.swing.JButton();
         btnhome = new javax.swing.JButton();
         jRadioButton1 = new javax.swing.JRadioButton();
+        jLabel67 = new javax.swing.JLabel();
+        jLabel66 = new javax.swing.JLabel();
         fechaA = new rojeru_san.componentes.RSDateChooser();
         rSMaterialButtonRectangle36 = new rojerusan.RSMaterialButtonRectangle();
         rSMaterialButtonRectangle31 = new rojerusan.RSMaterialButtonRectangle();
@@ -371,6 +373,8 @@ public class Interfaz extends javax.swing.JFrame {
         menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnminimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_35px.png"))); // NOI18N
+        btnminimizar.setToolTipText("minimizaar");
+        btnminimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnminimizar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_55px.png"))); // NOI18N
         btnminimizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -380,6 +384,8 @@ public class Interfaz extends javax.swing.JFrame {
         menu.add(btnminimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, -1, 57));
 
         btncerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_35px_1.png"))); // NOI18N
+        btncerrar.setToolTipText("cerrar");
+        btncerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btncerrar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_55px_1.png"))); // NOI18N
         btncerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -393,6 +399,8 @@ public class Interfaz extends javax.swing.JFrame {
         menu.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1290, 60));
 
         btn_IngP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Add_70px_2.png"))); // NOI18N
+        btn_IngP.setToolTipText("ingresar articulo");
+        btn_IngP.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_IngP.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Add_100px.png"))); // NOI18N
         btn_IngP.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -402,6 +410,8 @@ public class Interfaz extends javax.swing.JFrame {
         menu.add(btn_IngP, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, 160, 170));
 
         btnPacientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_User_Account_70px_1.png"))); // NOI18N
+        btnPacientes.setToolTipText("Ingresa paciente");
+        btnPacientes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnPacientes.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_User_Account_100px.png"))); // NOI18N
         btnPacientes.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -415,11 +425,13 @@ public class Interfaz extends javax.swing.JFrame {
         });
         menu.add(btnPacientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 230, 160, 170));
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_User_Groups_70px.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Multicultural_People_70px.png"))); // NOI18N
+        jButton3.setToolTipText("ver empleado");
         jButton3.setBorder(null);
         jButton3.setBorderPainted(false);
         jButton3.setContentAreaFilled(false);
-        jButton3.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_User_Groups_100px.png"))); // NOI18N
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton3.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Multicultural_People_100px.png"))); // NOI18N
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton3MouseClicked(evt);
@@ -428,9 +440,11 @@ public class Interfaz extends javax.swing.JFrame {
         menu.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 470, 160, 170));
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Bulleted_List_70px_1.png"))); // NOI18N
+        jButton4.setToolTipText("balance general y estado de resultados");
         jButton4.setBorder(null);
         jButton4.setBorderPainted(false);
         jButton4.setContentAreaFilled(false);
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Bulleted_List_100px.png"))); // NOI18N
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -446,9 +460,11 @@ public class Interfaz extends javax.swing.JFrame {
         menu.add(rSMaterialButtonCircle10, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 470, 160, 170));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_User_Groups_70px.png"))); // NOI18N
+        jButton2.setToolTipText("ingresar empleado");
         jButton2.setBorder(null);
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_User_Groups_100px.png"))); // NOI18N
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -461,6 +477,8 @@ public class Interfaz extends javax.swing.JFrame {
         menu.add(rSMaterialButtonCircle8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 470, 160, 170));
 
         btnVerI.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Bulleted_List_70px_1.png"))); // NOI18N
+        btnVerI.setToolTipText("ver inventario");
+        btnVerI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnVerI.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Bulleted_List_100px.png"))); // NOI18N
         btnVerI.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -482,23 +500,23 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel31.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel31.setText("Estado de resultados");
-        menu.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 680, 290, 40));
+        menu.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 680, 290, 40));
 
         jLabel56.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel56.setText("Balance General");
-        menu.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 650, 230, 40));
+        menu.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 650, 230, 40));
 
         jLabel28.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel28.setText("Ver Empleado");
-        menu.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 620, 200, 80));
+        menu.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 620, 200, 80));
 
         jLabel16.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel16.setText("Ingresar Empleado");
-        menu.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 620, 260, 80));
+        menu.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 620, 260, 80));
 
         jLabel4.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel4.setText("Ingresar Artículo");
-        menu.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 390, 250, 80));
+        menu.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 390, 250, 80));
 
         jLabel3.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel3.setText("Ver Inventario");
@@ -509,7 +527,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel17.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel17.setText("Ingresar Paciente");
-        menu.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 390, 250, 80));
+        menu.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 390, 250, 80));
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/menu.png"))); // NOI18N
         menu.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1280, 720));
@@ -523,32 +541,44 @@ public class Interfaz extends javax.swing.JFrame {
         cmbFungible.setBackground(new java.awt.Color(0, 52, 102));
         cmbFungible.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
         cmbFungible.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
+        cmbFungible.setToolTipText("¿Es fungible?");
+        cmbFungible.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         IngresarInventario.add(cmbFungible, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 630, 230, 40));
 
         txtDes.setColumns(20);
         txtDes.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
         txtDes.setRows(5);
+        txtDes.setToolTipText("descripción o nombre del artículo\n");
         txtDes.setBorder(null);
         IngresarInventario.add(txtDes, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 410, 110));
 
         txtPrecio.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        txtPrecio.setToolTipText("Precio del artículo");
         txtPrecio.setBorder(null);
         IngresarInventario.add(txtPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 307, 220, 40));
 
         cmbDep.setBackground(new java.awt.Color(0, 52, 102));
         cmbDep.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        cmbDep.setToolTipText("seleccionar departamento");
+        cmbDep.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         IngresarInventario.add(cmbDep, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 516, 410, 30));
 
         cmbDonado.setBackground(new java.awt.Color(0, 52, 102));
         cmbDonado.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
         cmbDonado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
+        cmbDonado.setToolTipText("¿es donación?");
+        cmbDonado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         IngresarInventario.add(cmbDonado, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 580, 230, 40));
 
         txtCodigo.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        txtCodigo.setToolTipText("Código del artículo");
         txtCodigo.setBorder(null);
+        txtCodigo.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         IngresarInventario.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 280, 40));
 
         btnguardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Save_70px.png"))); // NOI18N
+        btnguardar.setToolTipText("Guardar artículo");
+        btnguardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnguardar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Save_100px.png"))); // NOI18N
         btnguardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -559,18 +589,25 @@ public class Interfaz extends javax.swing.JFrame {
 
         cmbCuenta.setBackground(new java.awt.Color(0, 52, 102));
         cmbCuenta.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        cmbCuenta.setToolTipText("Seleccione la cuenta a la que pertenence el artículo");
+        cmbCuenta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         IngresarInventario.add(cmbCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 440, 220, 30));
 
         cmbEstado.setBackground(new java.awt.Color(0, 52, 102));
         cmbEstado.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
         cmbEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bueno", "Malo" }));
+        cmbEstado.setToolTipText("¿En qué estado se encuentra el artículo?");
+        cmbEstado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         IngresarInventario.add(cmbEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 370, 220, 40));
 
         txtCant.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        txtCant.setToolTipText("Cantidad de artículos");
         txtCant.setBorder(null);
         IngresarInventario.add(txtCant, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 240, 220, 40));
 
         btn_Inp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Add_70px_2.png"))); // NOI18N
+        btn_Inp.setToolTipText("Ingresar otro artículo");
+        btn_Inp.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_Inp.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Add_100px.png"))); // NOI18N
         btn_Inp.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -579,8 +616,10 @@ public class Interfaz extends javax.swing.JFrame {
         });
         IngresarInventario.add(btn_Inp, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 610, 130, 140));
 
-        btnActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Back_Arrow_70px.png"))); // NOI18N
-        btnActualizar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Back_Arrow_100px.png"))); // NOI18N
+        btnActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Refresh_70px.png"))); // NOI18N
+        btnActualizar.setToolTipText("Guardar actualización");
+        btnActualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnActualizar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/ingresar/icons8_Refresh_100px.png"))); // NOI18N
         btnActualizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnActualizarMouseClicked(evt);
@@ -589,6 +628,8 @@ public class Interfaz extends javax.swing.JFrame {
         IngresarInventario.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1105, 610, 140, 140));
 
         btnminimizar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_35px.png"))); // NOI18N
+        btnminimizar1.setToolTipText("minimizar");
+        btnminimizar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnminimizar1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_55px.png"))); // NOI18N
         btnminimizar1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -598,6 +639,8 @@ public class Interfaz extends javax.swing.JFrame {
         IngresarInventario.add(btnminimizar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, -1, 57));
 
         btncerrar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_35px_1.png"))); // NOI18N
+        btncerrar1.setToolTipText("cerrar");
+        btncerrar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btncerrar1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_55px_1.png"))); // NOI18N
         btncerrar1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -607,6 +650,8 @@ public class Interfaz extends javax.swing.JFrame {
         IngresarInventario.add(btncerrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 0, -1, 57));
 
         btnhome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_35px.png"))); // NOI18N
+        btnhome.setToolTipText("menu");
+        btnhome.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnhome.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_55px.png"))); // NOI18N
         btnhome.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -618,19 +663,31 @@ public class Interfaz extends javax.swing.JFrame {
         jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton1.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 18)); // NOI18N
         jRadioButton1.setText("Otro");
+        jRadioButton1.setToolTipText("Otra cuenta");
         jRadioButton1.setBorder(null);
         jRadioButton1.setContentAreaFilled(false);
+        jRadioButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jRadioButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jRadioButton1MouseClicked(evt);
             }
         });
         IngresarInventario.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 450, -1, -1));
-        IngresarInventario.add(fechaA, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 480, -1, -1));
+
+        jLabel67.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        jLabel67.setText("Adquisición:");
+        IngresarInventario.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 480, 160, 80));
+
+        jLabel66.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        jLabel66.setText("Fecha de");
+        IngresarInventario.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 450, 120, 80));
+
+        fechaA.setToolTipText("Fecha de compra");
+        IngresarInventario.add(fechaA, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 490, -1, -1));
 
         rSMaterialButtonRectangle36.setBackground(new java.awt.Color(186, 240, 255));
         rSMaterialButtonRectangle36.setEnabled(false);
-        IngresarInventario.add(rSMaterialButtonRectangle36, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 480, 240, 50));
+        IngresarInventario.add(rSMaterialButtonRectangle36, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 490, 240, 50));
 
         rSMaterialButtonRectangle31.setBackground(new java.awt.Color(186, 240, 255));
         rSMaterialButtonRectangle31.setEnabled(false);
@@ -663,7 +720,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel7.setText("  Ingresar");
-        IngresarInventario.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 510, 190, 80));
+        IngresarInventario.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 520, 190, 80));
 
         jLabel8.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel8.setText("Actualizar");
@@ -679,21 +736,25 @@ public class Interfaz extends javax.swing.JFrame {
         Empleado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnminimizar3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_35px.png"))); // NOI18N
+        btnminimizar3.setToolTipText("minimizar");
         btnminimizar3.setBorder(null);
         btnminimizar3.setBorderPainted(false);
         btnminimizar3.setContentAreaFilled(false);
+        btnminimizar3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnminimizar3.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_55px.png"))); // NOI18N
         btnminimizar3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnminimizar3MouseClicked(evt);
             }
         });
-        Empleado.add(btnminimizar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 0, 70, 57));
+        Empleado.add(btnminimizar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, 70, 57));
 
         btnhome2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_35px.png"))); // NOI18N
+        btnhome2.setToolTipText("menú");
         btnhome2.setBorder(null);
         btnhome2.setBorderPainted(false);
         btnhome2.setContentAreaFilled(false);
+        btnhome2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnhome2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_55px.png"))); // NOI18N
         btnhome2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -703,9 +764,11 @@ public class Interfaz extends javax.swing.JFrame {
         Empleado.add(btnhome2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1056, 0, 80, 60));
 
         btncerrar3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_35px_1.png"))); // NOI18N
+        btncerrar3.setToolTipText("cerrar");
         btncerrar3.setBorder(null);
         btncerrar3.setBorderPainted(false);
         btncerrar3.setContentAreaFilled(false);
+        btncerrar3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btncerrar3.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_55px_1.png"))); // NOI18N
         btncerrar3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -719,10 +782,12 @@ public class Interfaz extends javax.swing.JFrame {
         Empleado.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1300, 60));
 
         txtsueldo.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 18)); // NOI18N
+        txtsueldo.setToolTipText("sueldo del empleado");
         txtsueldo.setBorder(null);
         Empleado.add(txtsueldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 630, 280, 30));
 
         txtnombreE.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 18)); // NOI18N
+        txtnombreE.setToolTipText("Nombre o nombres del empleado");
         txtnombreE.setBorder(null);
         Empleado.add(txtnombreE, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 300, 30));
 
@@ -741,27 +806,33 @@ public class Interfaz extends javax.swing.JFrame {
         cmbclasificacion.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
         cmbclasificacion.setForeground(new java.awt.Color(0, 52, 102));
         cmbclasificacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione una clasificación", "Tipo A", "Tipo B" }));
+        cmbclasificacion.setToolTipText("clasificaciones");
         Empleado.add(cmbclasificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 630, 180, 30));
 
         txtmunicipio.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 18)); // NOI18N
+        txtmunicipio.setToolTipText("municipio o aldea de origen del empleado");
         txtmunicipio.setBorder(null);
         Empleado.add(txtmunicipio, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 410, 300, 30));
 
         cmbdepartamento.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
         cmbdepartamento.setForeground(new java.awt.Color(0, 52, 102));
         cmbdepartamento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Totonicapán", "Quetzaltenango", "Guatemala", "Izabal", "Petén", "Huehuetenango", "Quiché", "Alta Verapaz", "San Marcos", "Sololá", "Chimaltenango", "Sacatepéquez", "Baja Verapaz", "El Progreso", "Jalapa", "Zacapa", "Chiquimula", "Retalhuleu", "Suchitepéquez", "Escuintla", "Santa Rosa", "Jutiapa" }));
+        cmbdepartamento.setToolTipText("seleccione departamento de origen del empleado");
         Empleado.add(cmbdepartamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 510, 410, -1));
 
         cmbrenglonp.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
         cmbrenglonp.setForeground(new java.awt.Color(0, 52, 102));
         cmbrenglonp.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "011", "182", "189", "029", "036" }));
+        cmbrenglonp.setToolTipText("seleccione renglón presupuestario del empleado");
         Empleado.add(cmbrenglonp, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 290, 100, 30));
 
         txtapellidoE.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 18)); // NOI18N
+        txtapellidoE.setToolTipText("Apellidos del empleado");
         txtapellidoE.setBorder(null);
         Empleado.add(txtapellidoE, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 290, 300, 30));
 
         txtdpi.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 18)); // NOI18N
+        txtdpi.setToolTipText("DPI del empleado");
         txtdpi.setBorder(null);
         Empleado.add(txtdpi, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 350, 300, 30));
 
@@ -770,6 +841,7 @@ public class Interfaz extends javax.swing.JFrame {
         Empleado.add(rSMaterialButtonRectangle6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 320, 50));
 
         cmblugar.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 18)); // NOI18N
+        cmblugar.setToolTipText("ubicación del cetnro de atención");
         cmblugar.setBorder(null);
         cmblugar.setEnabled(false);
         Empleado.add(cmblugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 690, 330, 30));
@@ -777,6 +849,7 @@ public class Interfaz extends javax.swing.JFrame {
         cmbtipo.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
         cmbtipo.setForeground(new java.awt.Color(0, 52, 102));
         cmbtipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Centro de Salud", "Puesto de Salud", "Racana", "Territorio I", "Territorio II", "Territorio III", "Territorio IV", "Territorio V", "Territorio VI", "Territorio VII" }));
+        cmbtipo.setToolTipText("seleccione tipo de lugar de atención médica");
         cmbtipo.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 cmbtipoItemStateChanged(evt);
@@ -785,17 +858,22 @@ public class Interfaz extends javax.swing.JFrame {
         Empleado.add(cmbtipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 570, 270, -1));
 
         txtcargo.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 18)); // NOI18N
+        txtcargo.setToolTipText("cargo del empleado");
         txtcargo.setBorder(null);
         Empleado.add(txtcargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 230, 300, 30));
 
         txtpuesto.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 18)); // NOI18N
+        txtpuesto.setToolTipText("Profesión del empleado");
         txtpuesto.setBorder(null);
         Empleado.add(txtpuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 390, 380, 30));
 
         txttelE.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 18)); // NOI18N
+        txttelE.setToolTipText("Teléfono en caso de emergencia");
         txttelE.setBorder(null);
         Empleado.add(txttelE, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 690, 180, 30));
         Empleado.add(fechadE, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 570, 380, 30));
+
+        fechaiE.setToolTipText("");
         Empleado.add(fechaiE, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 480, 380, 30));
 
         jLabel32.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 24)); // NOI18N
@@ -913,6 +991,7 @@ public class Interfaz extends javax.swing.JFrame {
         Empleado.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 350, 110));
 
         rSMaterialButtonRectangle1.setText("Alergias");
+        rSMaterialButtonRectangle1.setToolTipText("¿Es alergico a algo?");
         rSMaterialButtonRectangle1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 rSMaterialButtonRectangle1MouseClicked(evt);
@@ -921,6 +1000,7 @@ public class Interfaz extends javax.swing.JFrame {
         Empleado.add(rSMaterialButtonRectangle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 540, 180, 70));
 
         rSMaterialButtonRectangle2.setText("Guardar");
+        rSMaterialButtonRectangle2.setToolTipText("Gaurdar empleado");
         rSMaterialButtonRectangle2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 rSMaterialButtonRectangle2MouseClicked(evt);
@@ -982,6 +1062,7 @@ public class Interfaz extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tableEmpleado.setToolTipText("Lista de empleados");
         tableEmpleado.setColorBackgoundHead(new java.awt.Color(22, 54, 77));
         tableEmpleado.setColorBordeFilas(new java.awt.Color(255, 255, 255));
         tableEmpleado.setColorBordeHead(new java.awt.Color(255, 255, 255));
@@ -1012,9 +1093,11 @@ public class Interfaz extends javax.swing.JFrame {
         verEmpleado.add(rSMaterialButtonRectangle30, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 980, 510));
 
         btnhome3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_35px.png"))); // NOI18N
+        btnhome3.setToolTipText("menú");
         btnhome3.setBorder(null);
         btnhome3.setBorderPainted(false);
         btnhome3.setContentAreaFilled(false);
+        btnhome3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnhome3.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_55px.png"))); // NOI18N
         btnhome3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1024,21 +1107,25 @@ public class Interfaz extends javax.swing.JFrame {
         verEmpleado.add(btnhome3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1056, 0, 80, 60));
 
         btnminimizar4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_35px.png"))); // NOI18N
+        btnminimizar4.setToolTipText("minimizar");
         btnminimizar4.setBorder(null);
         btnminimizar4.setBorderPainted(false);
         btnminimizar4.setContentAreaFilled(false);
+        btnminimizar4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnminimizar4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_55px.png"))); // NOI18N
         btnminimizar4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnminimizar4MouseClicked(evt);
             }
         });
-        verEmpleado.add(btnminimizar4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 0, 70, 57));
+        verEmpleado.add(btnminimizar4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, 70, 60));
 
         btncerrar4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_35px_1.png"))); // NOI18N
+        btncerrar4.setToolTipText("cerrar");
         btncerrar4.setBorder(null);
         btncerrar4.setBorderPainted(false);
         btncerrar4.setContentAreaFilled(false);
+        btncerrar4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btncerrar4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_55px_1.png"))); // NOI18N
         btncerrar4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1069,6 +1156,8 @@ public class Interfaz extends javax.swing.JFrame {
         verEmpleado.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 350, 110));
 
         rSMaterialButtonRectangle3.setText("Imprimir");
+        rSMaterialButtonRectangle3.setToolTipText("Imprimir");
+        rSMaterialButtonRectangle3.setContentAreaFilled(false);
         rSMaterialButtonRectangle3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 rSMaterialButtonRectangle3MouseClicked(evt);
@@ -1085,9 +1174,11 @@ public class Interfaz extends javax.swing.JFrame {
         estadoR.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnhome4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_35px.png"))); // NOI18N
+        btnhome4.setToolTipText("menú");
         btnhome4.setBorder(null);
         btnhome4.setBorderPainted(false);
         btnhome4.setContentAreaFilled(false);
+        btnhome4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnhome4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_55px.png"))); // NOI18N
         btnhome4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1097,9 +1188,11 @@ public class Interfaz extends javax.swing.JFrame {
         estadoR.add(btnhome4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1056, 0, 80, 60));
 
         btnminimizar5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_35px.png"))); // NOI18N
+        btnminimizar5.setToolTipText("minimizar");
         btnminimizar5.setBorder(null);
         btnminimizar5.setBorderPainted(false);
         btnminimizar5.setContentAreaFilled(false);
+        btnminimizar5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnminimizar5.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_55px.png"))); // NOI18N
         btnminimizar5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1109,9 +1202,11 @@ public class Interfaz extends javax.swing.JFrame {
         estadoR.add(btnminimizar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, 60, 57));
 
         btncerrar5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_35px_1.png"))); // NOI18N
+        btncerrar5.setToolTipText("cerrar");
         btncerrar5.setBorder(null);
         btncerrar5.setBorderPainted(false);
         btncerrar5.setContentAreaFilled(false);
+        btncerrar5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btncerrar5.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_55px_1.png"))); // NOI18N
         btncerrar5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1210,6 +1305,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         rSMaterialButtonRectangle32.setBackground(new java.awt.Color(0, 52, 102));
         rSMaterialButtonRectangle32.setText("Inventario");
+        rSMaterialButtonRectangle32.setToolTipText("Ver inventario");
         rSMaterialButtonRectangle32.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 rSMaterialButtonRectangle32MouseClicked(evt);
@@ -1247,9 +1343,11 @@ public class Interfaz extends javax.swing.JFrame {
         ResumenI.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnhome5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_35px.png"))); // NOI18N
+        btnhome5.setToolTipText("menú");
         btnhome5.setBorder(null);
         btnhome5.setBorderPainted(false);
         btnhome5.setContentAreaFilled(false);
+        btnhome5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnhome5.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_55px.png"))); // NOI18N
         btnhome5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1259,9 +1357,11 @@ public class Interfaz extends javax.swing.JFrame {
         ResumenI.add(btnhome5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1056, 0, 80, 60));
 
         btnminimizar6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_35px.png"))); // NOI18N
+        btnminimizar6.setToolTipText("minimizar");
         btnminimizar6.setBorder(null);
         btnminimizar6.setBorderPainted(false);
         btnminimizar6.setContentAreaFilled(false);
+        btnminimizar6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnminimizar6.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_55px.png"))); // NOI18N
         btnminimizar6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1271,9 +1371,11 @@ public class Interfaz extends javax.swing.JFrame {
         ResumenI.add(btnminimizar6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, 60, 57));
 
         btncerrar6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_35px_1.png"))); // NOI18N
+        btncerrar6.setToolTipText("cerrar");
         btncerrar6.setBorder(null);
         btncerrar6.setBorderPainted(false);
         btncerrar6.setContentAreaFilled(false);
+        btncerrar6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btncerrar6.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_55px_1.png"))); // NOI18N
         btncerrar6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1316,6 +1418,7 @@ public class Interfaz extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tableIgeneral.setToolTipText("Resumen de inventario");
         tableIgeneral.setColorBackgoundHead(new java.awt.Color(22, 54, 77));
         tableIgeneral.setColorBordeFilas(new java.awt.Color(255, 255, 255));
         tableIgeneral.setColorBordeHead(new java.awt.Color(255, 255, 255));
@@ -1461,6 +1564,7 @@ public class Interfaz extends javax.swing.JFrame {
         InventarioCod.add(scrollgai5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 880, 470));
 
         Bcodigo.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        Bcodigo.setToolTipText("Código del artículo que desea ver");
         Bcodigo.setBorder(null);
         Bcodigo.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -1470,6 +1574,8 @@ public class Interfaz extends javax.swing.JFrame {
         InventarioCod.add(Bcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 206, 300, 40));
 
         btnhome1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_35px.png"))); // NOI18N
+        btnhome1.setToolTipText("menú");
+        btnhome1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnhome1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_55px.png"))); // NOI18N
         btnhome1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1479,6 +1585,8 @@ public class Interfaz extends javax.swing.JFrame {
         InventarioCod.add(btnhome1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1056, 0, 80, 60));
 
         btnminimizar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_35px.png"))); // NOI18N
+        btnminimizar2.setToolTipText("minimizar");
+        btnminimizar2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnminimizar2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_55px.png"))); // NOI18N
         btnminimizar2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1488,6 +1596,8 @@ public class Interfaz extends javax.swing.JFrame {
         InventarioCod.add(btnminimizar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, -1, 57));
 
         btncerrar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_35px_1.png"))); // NOI18N
+        btncerrar2.setToolTipText("cerrar");
+        btncerrar2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btncerrar2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_55px_1.png"))); // NOI18N
         btncerrar2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1497,6 +1607,7 @@ public class Interfaz extends javax.swing.JFrame {
         InventarioCod.add(btncerrar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 0, -1, 57));
 
         btnEditar.setText("Editar");
+        btnEditar.setToolTipText("Editar artícuo seleccionado");
         btnEditar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnEditarMouseClicked(evt);
@@ -1505,6 +1616,7 @@ public class Interfaz extends javax.swing.JFrame {
         InventarioCod.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 190, 130, -1));
 
         btnMostrarTodo.setText("Ver todo");
+        btnMostrarTodo.setToolTipText("Ver todo el inventario");
         btnMostrarTodo.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         btnMostrarTodo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1514,6 +1626,7 @@ public class Interfaz extends javax.swing.JFrame {
         InventarioCod.add(btnMostrarTodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 190, 130, -1));
 
         btnImprimir.setText("imprimir");
+        btnImprimir.setToolTipText("Imprimir inventario");
         btnImprimir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnImprimirMouseClicked(evt);
@@ -1529,6 +1642,7 @@ public class Interfaz extends javax.swing.JFrame {
         Magia.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         menuE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Double_Left_70px.png"))); // NOI18N
+        menuE.setToolTipText("Otras opciones de búsquedas");
         menuE.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Double_Left_100px.png"))); // NOI18N
         menuE.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1559,6 +1673,8 @@ public class Interfaz extends javax.swing.JFrame {
         buenEstado.setForeground(new java.awt.Color(255, 255, 255));
         buenEstado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         buenEstado.setText("              Buen Estado");
+        buenEstado.setToolTipText("artículos en buen estado");
+        buenEstado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         buenEstado.setOpaque(true);
         buenEstado.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1572,6 +1688,8 @@ public class Interfaz extends javax.swing.JFrame {
         malEstado.setForeground(new java.awt.Color(255, 255, 255));
         malEstado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         malEstado.setText("               Mal estado");
+        malEstado.setToolTipText("artículos en mal estado");
+        malEstado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         malEstado.setOpaque(true);
         malEstado.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1584,6 +1702,8 @@ public class Interfaz extends javax.swing.JFrame {
         Donado.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         Donado.setForeground(new java.awt.Color(255, 255, 255));
         Donado.setText("                           Donado");
+        Donado.setToolTipText("artículos donados");
+        Donado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Donado.setOpaque(true);
         Donado.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1597,6 +1717,8 @@ public class Interfaz extends javax.swing.JFrame {
         noDonado.setForeground(new java.awt.Color(255, 255, 255));
         noDonado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         noDonado.setText("                No Donado");
+        noDonado.setToolTipText("Artículos no donados");
+        noDonado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         noDonado.setOpaque(true);
         noDonado.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1610,6 +1732,8 @@ public class Interfaz extends javax.swing.JFrame {
         Fungible.setForeground(new java.awt.Color(255, 255, 255));
         Fungible.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Fungible.setText("               Fungible");
+        Fungible.setToolTipText("articulos fungibles");
+        Fungible.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Fungible.setOpaque(true);
         Fungible.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1619,6 +1743,7 @@ public class Interfaz extends javax.swing.JFrame {
         JPMenuE.add(Fungible, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 260, 70));
 
         btnMenuB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Circled_Right_45px.png"))); // NOI18N
+        btnMenuB.setToolTipText("cerrar este menú");
         btnMenuB.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Circled_Right_60px.png"))); // NOI18N
         btnMenuB.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1736,6 +1861,13 @@ public class Interfaz extends javax.swing.JFrame {
         btnActualizar.setVisible(false);
         rSMaterialButtonCircle1.setVisible(false);
         txtCodigo.setEnabled(true);
+        btnguardar.setVisible(true);
+        btn_Inp.setVisible(true);
+        rSMaterialButtonCircle2.setVisible(true);
+        rSMaterialButtonCircle3.setVisible(true);
+        jLabel5.setVisible(true);
+        jLabel6.setVisible(true);
+        jLabel7.setVisible(true);
         rSPanelsSlider1.setPanelSlider(IngresarInventario, RSPanelsSlider.DIRECT.LEFT);
     }//GEN-LAST:event_btn_IngPMouseClicked
 
@@ -1985,7 +2117,7 @@ public class Interfaz extends javax.swing.JFrame {
             JasperPrint jp = JasperFillManager.fillReport(jr, null, con.getConnection());
             JasperViewer jv = new JasperViewer(jp, false);
             jv.setVisible(true);
-            jv.setTitle("Tratamiento");
+            jv.setTitle("Empleados");
 
         } catch (JRException ex) {
             System.out.println(ex.getMessage());
@@ -2127,22 +2259,20 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMostrarTodoMouseClicked
 
     private void btnImprimirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnImprimirMouseClicked
-//        try {
-//            List lista = new ArrayList();
-//            for(int i = 0; i <= tableInventario.getRowCount(); i++)
-//            {
-//                ReporteInventario repo = new ReporteInventario(tableInventario.getValueAt(i, 2).toString(), tableInventario.getValueAt(i, 1).toString(),tableInventario.getValueAt(i, 3).toString(),tableInventario.getValueAt(i,4).toString(), tableInventario.getValueAt(i, 0).toString());
-//                lista.add(repo);
-//            }
-//            File file = new File("/GUI/Reportes/Inventario.jasper");
-//            JasperReport  r  = (JasperReport) JRLoader.loadObject(file);
-//            Map parametro = new HashMap();
-//            parametro.put("TipoI", "General");
-//            JasperPrint jprint = JasperFillManager.fillReport(r, parametro, new JRBeanCollectionDataSource(lista));
-//            JasperViewer.viewReport(jprint);
-//        } catch (JRException ex) {
-//            Logger.getLogger(Interfaz.class.getName()).log(Level.SEVERE, null, ex);
-//        } 
+        try {
+            
+            conexion con= new conexion();
+            String path = "src\\GUI\\Reportes\\inventario.jasper";
+            JasperReport jr = (JasperReport) JRLoader.loadObjectFromFile(path);
+            JasperPrint jp = JasperFillManager.fillReport(jr, null, con.getConnection());
+            JasperViewer jv = new JasperViewer(jp, false);
+            jv.setVisible(true);
+            jv.setTitle("inventario");
+
+        } catch (JRException ex) {
+            System.out.println(ex.getMessage());
+             new rojerusan.RSNotifyFade("¡ERROR!", "No se puede imprimir", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.ERROR).setVisible(true);
+        }
     }//GEN-LAST:event_btnImprimirMouseClicked
 
     private void rSMaterialButtonRectangle32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle32MouseClicked
@@ -2178,6 +2308,13 @@ public class Interfaz extends javax.swing.JFrame {
         rSMaterialButtonCircle1.setVisible(true);
         btnActualizar.setVisible(true);
         txtCodigo.setEnabled(false);
+        btnguardar.setVisible(false);
+        btn_Inp.setVisible(false);
+        rSMaterialButtonCircle2.setVisible(false);
+        rSMaterialButtonCircle3.setVisible(false);
+        jLabel5.setVisible(false);
+        jLabel6.setVisible(false);
+        jLabel7.setVisible(false);
         rSPanelsSlider1.setPanelSlider(IngresarInventario, RSPanelsSlider.DIRECT.RIGHT);
     }//GEN-LAST:event_btnEditarMouseClicked
 
@@ -2337,6 +2474,8 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;

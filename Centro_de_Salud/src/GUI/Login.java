@@ -177,6 +177,7 @@ public class Login extends javax.swing.JFrame {
         jLabel18.setFont(new java.awt.Font("Tempus Sans ITC", 1, 48)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/logo-24131_960_720.png"))); // NOI18N
+        jLabel18.setToolTipText("Anatsu Health");
         jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(-400, -10, 1040, 780));
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/0ff4a61bd6b090ea9e8d50d498eca17f.jpg"))); // NOI18N
@@ -196,6 +197,8 @@ public class Login extends javax.swing.JFrame {
         jpingresar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btncerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_35px_1.png"))); // NOI18N
+        btncerrar.setToolTipText("cerrar");
+        btncerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btncerrar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_55px_1.png"))); // NOI18N
         btncerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -205,6 +208,8 @@ public class Login extends javax.swing.JFrame {
         jpingresar.add(btncerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 0, -1, 57));
 
         btnminimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_35px.png"))); // NOI18N
+        btnminimizar.setToolTipText("minimizar");
+        btnminimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnminimizar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_55px.png"))); // NOI18N
         btnminimizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -223,6 +228,7 @@ public class Login extends javax.swing.JFrame {
 
         pswcon.setFont(new java.awt.Font("Yu Gothic UI", 0, 15)); // NOI18N
         pswcon.setText("jPasswordField2");
+        pswcon.setToolTipText("Ingrese contraseña");
         pswcon.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         pswcon.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -246,6 +252,7 @@ public class Login extends javax.swing.JFrame {
         });
         jpingresar.add(pswcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, 320, 30));
 
+        lbIngresar.setToolTipText("Ingresar");
         lbIngresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbIngresar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -261,6 +268,7 @@ public class Login extends javax.swing.JFrame {
 
         cmbusuario.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
         cmbusuario.setForeground(new java.awt.Color(0, 52, 102));
+        cmbusuario.setToolTipText("Seleccione su usuario");
         cmbusuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         jpingresar.add(cmbusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 320, 30));
 
@@ -274,6 +282,8 @@ public class Login extends javax.swing.JFrame {
         jpRegistrar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnminimizar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_35px.png"))); // NOI18N
+        btnminimizar1.setToolTipText("minimizar");
+        btnminimizar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnminimizar1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_55px.png"))); // NOI18N
         btnminimizar1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -283,6 +293,8 @@ public class Login extends javax.swing.JFrame {
         jpRegistrar.add(btnminimizar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(302, 13, -1, 57));
 
         btncerrar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_35px_1.png"))); // NOI18N
+        btncerrar1.setToolTipText("cerrar");
+        btncerrar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btncerrar1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_55px_1.png"))); // NOI18N
         btncerrar1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -300,6 +312,7 @@ public class Login extends javax.swing.JFrame {
         jpRegistrar.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, -1, -1));
 
         txtUsuarioN.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        txtUsuarioN.setToolTipText("Nombre de usuario");
         txtUsuarioN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         txtUsuarioN.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -314,6 +327,7 @@ public class Login extends javax.swing.JFrame {
 
         pswVContrasenia.setFont(new java.awt.Font("Yu Gothic UI", 0, 15)); // NOI18N
         pswVContrasenia.setText("jPasswordField2");
+        pswVContrasenia.setToolTipText("Verificar contraseña");
         pswVContrasenia.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         pswVContrasenia.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -328,6 +342,7 @@ public class Login extends javax.swing.JFrame {
 
         pswContrasenia.setFont(new java.awt.Font("Yu Gothic UI", 0, 15)); // NOI18N
         pswContrasenia.setText("jPasswordField2");
+        pswContrasenia.setToolTipText("cree una contraseña");
         pswContrasenia.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         pswContrasenia.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -341,10 +356,12 @@ public class Login extends javax.swing.JFrame {
         jpRegistrar.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, -1, -1));
 
         txtApellidoN.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        txtApellidoN.setToolTipText("Apellidos");
         txtApellidoN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         jpRegistrar.add(txtApellidoN, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 300, 160, 30));
 
         txtNombreN.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        txtNombreN.setToolTipText("Nombres ");
         txtNombreN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         jpRegistrar.add(txtNombreN, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 150, 30));
 
@@ -352,6 +369,7 @@ public class Login extends javax.swing.JFrame {
         jLabel15.setText("Nombres");
         jpRegistrar.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, -1, -1));
 
+        lbRegistrar.setToolTipText("Registrarse");
         lbRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbRegistrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -379,6 +397,9 @@ public class Login extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanel2MouseClicked(evt);
             }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPanel2MousePressed(evt);
+            }
         });
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -387,6 +408,8 @@ public class Login extends javax.swing.JFrame {
         p2registrar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnregistrar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Sort_Up_52px_1.png"))); // NOI18N
+        btnregistrar1.setToolTipText("Registrar nuevo usuario");
+        btnregistrar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnregistrar1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Sort_Up_62px_2.png"))); // NOI18N
         btnregistrar1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -396,6 +419,8 @@ public class Login extends javax.swing.JFrame {
         p2registrar.add(btnregistrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 100, 90, 50));
 
         btningresar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Sort_Down_52px_1.png"))); // NOI18N
+        btningresar1.setToolTipText("ingresar");
+        btningresar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btningresar1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Sort_Down_62px_1.png"))); // NOI18N
         p2registrar.add(btningresar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 135, 80, 50));
 
@@ -468,6 +493,7 @@ public class Login extends javax.swing.JFrame {
         p1ingresar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnregistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Sort_Up_52px_1.png"))); // NOI18N
+        btnregistrar.setToolTipText("Registrar nuevo usuario");
         btnregistrar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Sort_Up_62px_2.png"))); // NOI18N
         btnregistrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -503,6 +529,7 @@ public class Login extends javax.swing.JFrame {
         p1ingresar.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 190));
 
         btningresar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Sort_Down_52px_1.png"))); // NOI18N
+        btningresar2.setToolTipText("Ingresar ");
         btningresar2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Sort_Down_62px_1.png"))); // NOI18N
         btningresar2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -594,8 +621,8 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel1MouseClicked
 
     private void jPanel1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseDragged
-        Point p = MouseInfo.getPointerInfo().getLocation();
-        this.setLocation(p.x-x,p.y-y);
+//        Point p = MouseInfo.getPointerInfo().getLocation();
+//        this.setLocation(p.x-x,p.y-y);
     }//GEN-LAST:event_jPanel1MouseDragged
 
     private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
@@ -604,8 +631,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel2MouseClicked
 
     private void jPanel2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseDragged
-        Point p = MouseInfo.getPointerInfo().getLocation();
-        this.setLocation(p.x-x,p.y-y);
+        
     }//GEN-LAST:event_jPanel2MouseDragged
 
     private void lbRegistrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbRegistrarMouseClicked
@@ -689,6 +715,11 @@ public class Login extends javax.swing.JFrame {
             lbExisteUsuario.setText("");
         }
     }//GEN-LAST:event_txtUsuarioNKeyReleased
+
+    private void jPanel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MousePressed
+//        Point p = MouseInfo.getPointerInfo().getLocation();
+//        this.setLocation(p.x-x,p.y-y);
+    }//GEN-LAST:event_jPanel2MousePressed
     public void iniciosesion()
     {
         String pass = DigestUtils.md5Hex(pswcon.getText());

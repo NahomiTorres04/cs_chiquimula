@@ -78,6 +78,7 @@ public class Cuenta extends javax.swing.JFrame {
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 120, -1));
 
         txtnombreC.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
+        txtnombreC.setToolTipText("Nombre de la cuenta");
         txtnombreC.setBorder(null);
         txtnombreC.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -130,6 +131,7 @@ public class Cuenta extends javax.swing.JFrame {
 
         rSMaterialButtonRectangle4.setBackground(new java.awt.Color(0, 52, 102));
         rSMaterialButtonRectangle4.setText("Guardar");
+        rSMaterialButtonRectangle4.setToolTipText("Guardar cuenta");
         rSMaterialButtonRectangle4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rSMaterialButtonRectangle4ActionPerformed(evt);
@@ -149,9 +151,11 @@ public class Cuenta extends javax.swing.JFrame {
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 570, 150));
 
         btnminimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_35px.png"))); // NOI18N
+        btnminimizar.setToolTipText("minimizar");
         btnminimizar.setBorder(null);
         btnminimizar.setBorderPainted(false);
         btnminimizar.setContentAreaFilled(false);
+        btnminimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnminimizar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_55px.png"))); // NOI18N
         btnminimizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -166,8 +170,10 @@ public class Cuenta extends javax.swing.JFrame {
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 240, 70));
 
         btncerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_35px_1.png"))); // NOI18N
+        btncerrar.setToolTipText("cerrar");
         btncerrar.setBorderPainted(false);
         btncerrar.setContentAreaFilled(false);
+        btncerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btncerrar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_55px_1.png"))); // NOI18N
         btncerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

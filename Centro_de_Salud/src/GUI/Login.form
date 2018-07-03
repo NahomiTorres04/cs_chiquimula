@@ -106,6 +106,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/imagenes/fondos/logo-24131_960_720.png"/>
             </Property>
+            <Property name="toolTipText" type="java.lang.String" value="Anatsu Health"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -183,6 +184,10 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Cancel_35px_1.png"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="cerrar"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Cancel_55px_1.png"/>
                     </Property>
@@ -200,6 +205,10 @@
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Chevron_Down_35px.png"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="minimizar"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
                     </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Chevron_Down_55px.png"/>
@@ -246,6 +255,7 @@
                       <Font name="Yu Gothic UI" size="15" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="jPasswordField2"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Ingrese contrase&#xf1;a"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder>
@@ -268,6 +278,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="lbIngresar">
                   <Properties>
+                    <Property name="toolTipText" type="java.lang.String" value="Ingresar"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                       <Color id="Cursor de Mano"/>
                     </Property>
@@ -293,6 +304,7 @@
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="0"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Seleccione su usuario"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder>
@@ -346,6 +358,10 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Chevron_Down_35px.png"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="minimizar"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Chevron_Down_55px.png"/>
                     </Property>
@@ -363,6 +379,10 @@
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Cancel_35px_1.png"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="cerrar"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
                     </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Cancel_55px_1.png"/>
@@ -410,6 +430,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Yu Gothic UI Light" size="18" style="0"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Nombre de usuario"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder>
@@ -446,6 +467,7 @@
                       <Font name="Yu Gothic UI" size="15" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="jPasswordField2"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Verificar contrase&#xf1;a"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder>
@@ -482,6 +504,7 @@
                       <Font name="Yu Gothic UI" size="15" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="jPasswordField2"/>
+                    <Property name="toolTipText" type="java.lang.String" value="cree una contrase&#xf1;a"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder>
@@ -517,6 +540,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Yu Gothic UI Light" size="18" style="0"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Apellidos"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder>
@@ -536,6 +560,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Yu Gothic UI Light" size="18" style="0"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Nombres "/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder>
@@ -565,6 +590,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="lbRegistrar">
                   <Properties>
+                    <Property name="toolTipText" type="java.lang.String" value="Registrarse"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                       <Color id="Cursor de Mano"/>
                     </Property>
@@ -605,6 +631,7 @@
       <Events>
         <EventHandler event="mouseDragged" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jPanel2MouseDragged"/>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jPanel2MouseClicked"/>
+        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jPanel2MousePressed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -665,6 +692,10 @@
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/imagenes/iconos/general/icons8_Sort_Up_52px_1.png"/>
                         </Property>
+                        <Property name="toolTipText" type="java.lang.String" value="Registrar nuevo usuario"/>
+                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                          <Color id="Cursor de Mano"/>
+                        </Property>
                         <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/imagenes/iconos/general/icons8_Sort_Up_62px_2.png"/>
                         </Property>
@@ -682,6 +713,10 @@
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/imagenes/iconos/general/icons8_Sort_Down_52px_1.png"/>
+                        </Property>
+                        <Property name="toolTipText" type="java.lang.String" value="ingresar"/>
+                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                          <Color id="Cursor de Mano"/>
                         </Property>
                         <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/imagenes/iconos/general/icons8_Sort_Down_62px_1.png"/>
@@ -885,6 +920,7 @@
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/imagenes/iconos/general/icons8_Sort_Up_52px_1.png"/>
                         </Property>
+                        <Property name="toolTipText" type="java.lang.String" value="Registrar nuevo usuario"/>
                         <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/imagenes/iconos/general/icons8_Sort_Up_62px_2.png"/>
                         </Property>
@@ -958,6 +994,7 @@
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/imagenes/iconos/general/icons8_Sort_Down_52px_1.png"/>
                         </Property>
+                        <Property name="toolTipText" type="java.lang.String" value="Ingresar "/>
                         <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/imagenes/iconos/general/icons8_Sort_Down_62px_1.png"/>
                         </Property>

@@ -247,6 +247,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         IngP.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtApellidop.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
+        txtApellidop.setToolTipText("Apellidos del paciente");
         txtApellidop.setBorder(null);
         txtApellidop.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -261,6 +262,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         IngP.add(txtApellidop, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 245, 280, 40));
 
         btnconsulta.setText("Consulta");
+        btnconsulta.setToolTipText("Realizar consulta");
         btnconsulta.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnconsultaMouseClicked(evt);
@@ -269,6 +271,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         IngP.add(btnconsulta, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 240, 210, 60));
 
         btnNp.setText("Nuevo Paciente");
+        btnNp.setToolTipText("Ingresar nuevo paciente");
         btnNp.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnNpMouseClicked(evt);
@@ -277,6 +280,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         IngP.add(btnNp, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 240, 210, 60));
 
         txtNombrep.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
+        txtNombrep.setToolTipText("Nombres del paciente");
         txtNombrep.setBorder(null);
         txtNombrep.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -336,6 +340,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tablePaciente.setToolTipText("Pacietntes");
         tablePaciente.setColorBackgoundHead(new java.awt.Color(22, 54, 77));
         tablePaciente.setColorBordeFilas(new java.awt.Color(255, 255, 255));
         tablePaciente.setColorBordeHead(new java.awt.Color(255, 255, 255));
@@ -360,6 +365,8 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         IngP.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 59, 1280, 720));
 
         btnhome2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_35px.png"))); // NOI18N
+        btnhome2.setToolTipText("menú");
+        btnhome2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnhome2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_55px.png"))); // NOI18N
         btnhome2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -369,6 +376,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         IngP.add(btnhome2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1056, 0, 80, 60));
 
         btnminimizar3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_35px.png"))); // NOI18N
+        btnminimizar3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnminimizar3.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_55px.png"))); // NOI18N
         btnminimizar3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -383,6 +391,8 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         IngP.add(btnminimizar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, -1, 57));
 
         btncerrar3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_35px_1.png"))); // NOI18N
+        btncerrar3.setToolTipText("cerrar");
+        btncerrar3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btncerrar3.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_55px_1.png"))); // NOI18N
         btncerrar3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -397,6 +407,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         IngP.add(btncerrar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 0, -1, 57));
 
         jLabel18.setBackground(new java.awt.Color(0, 54, 102));
+        jLabel18.setToolTipText("minimizar");
         jLabel18.setOpaque(true);
         IngP.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1290, 60));
 
@@ -406,9 +417,11 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         IngresarnP.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnhome3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_35px.png"))); // NOI18N
+        btnhome3.setToolTipText("menú");
         btnhome3.setBorder(null);
         btnhome3.setBorderPainted(false);
         btnhome3.setContentAreaFilled(false);
+        btnhome3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnhome3.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_55px.png"))); // NOI18N
         btnhome3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -418,9 +431,11 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         IngresarnP.add(btnhome3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1056, 0, 80, 60));
 
         btnminimizar4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_35px.png"))); // NOI18N
+        btnminimizar4.setToolTipText("minimizar");
         btnminimizar4.setBorder(null);
         btnminimizar4.setBorderPainted(false);
         btnminimizar4.setContentAreaFilled(false);
+        btnminimizar4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnminimizar4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_55px.png"))); // NOI18N
         btnminimizar4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -435,9 +450,11 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         IngresarnP.add(btnminimizar4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, 70, 57));
 
         btncerrar4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_35px_1.png"))); // NOI18N
+        btncerrar4.setToolTipText("cerrar");
         btncerrar4.setBorder(null);
         btncerrar4.setBorderPainted(false);
         btncerrar4.setContentAreaFilled(false);
+        btncerrar4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btncerrar4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_55px_1.png"))); // NOI18N
         btncerrar4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -520,34 +537,42 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         IngresarnP.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 430, -1, -1));
 
         txttelemep.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
+        txttelemep.setToolTipText("Teléfono en caso de emergencia");
         txttelemep.setBorder(null);
         IngresarnP.add(txttelemep, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 500, 180, 30));
 
         txtnombrep.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
+        txtnombrep.setToolTipText("Nombres del paciente");
         txtnombrep.setBorder(null);
         IngresarnP.add(txtnombrep, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 240, 240, 30));
 
         txtapellidop.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
+        txtapellidop.setToolTipText("Apellidos del paciente");
         txtapellidop.setBorder(null);
         IngresarnP.add(txtapellidop, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 290, 240, 30));
 
         txtlugop.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
+        txtlugop.setToolTipText("Lugar de origen del paciente");
         txtlugop.setBorder(null);
         IngresarnP.add(txtlugop, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 600, 380, 30));
 
         txtcomunidadp.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
+        txtcomunidadp.setToolTipText("Comunidad a la que pertenence");
         txtcomunidadp.setBorder(null);
         IngresarnP.add(txtcomunidadp, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 650, 230, 30));
 
         txtestaturap.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
+        txtestaturap.setToolTipText("Estatura del paciente en cm");
         txtestaturap.setBorder(null);
         IngresarnP.add(txtestaturap, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 490, 100, 30));
 
         txtpesop.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
+        txtpesop.setToolTipText("peso del paciente en lb");
         txtpesop.setBorder(null);
         IngresarnP.add(txtpesop, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 540, 100, 30));
 
         txtdpi.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
+        txtdpi.setToolTipText("DPI o CUI del paciente");
         txtdpi.setBorder(null);
         IngresarnP.add(txtdpi, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 230, 230, 30));
 
@@ -567,18 +592,24 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         IngresarnP.add(txtedadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 440, 90, 30));
 
         txttelefonop.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
+        txttelefonop.setToolTipText("Teléfono del paciente");
         txttelefonop.setBorder(null);
         IngresarnP.add(txttelefonop, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 430, 190, 30));
 
         cmbtipos.setBackground(new java.awt.Color(0, 52, 102));
         cmbtipos.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
         cmbtipos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" }));
+        cmbtipos.setToolTipText("Seleccionar tipo de sangre del paciente");
+        cmbtipos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         IngresarnP.add(cmbtipos, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 280, 130, -1));
 
         cmbsexop.setBackground(new java.awt.Color(0, 52, 102));
         cmbsexop.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
         cmbsexop.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino" }));
+        cmbsexop.setToolTipText("Sexo del paciente");
         IngresarnP.add(cmbsexop, new org.netbeans.lib.awtextra.AbsoluteConstraints(865, 590, 160, -1));
+
+        fechanp.setToolTipText("fecha de nacimiento");
         IngresarnP.add(fechanp, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, -1, -1));
 
         jRadioButton6.setBackground(new java.awt.Color(206, 246, 255));
@@ -694,6 +725,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         IngresarnP.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 542, -1, -1));
 
         btnconsultanp.setText("Consulta");
+        btnconsultanp.setToolTipText("Realizar Consulta");
         btnconsultanp.setEnabled(false);
         btnconsultanp.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -703,6 +735,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         IngresarnP.add(btnconsultanp, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 610, 190, 80));
 
         btnregistrar.setText("Registrar");
+        btnregistrar.setToolTipText("Registrar paciente");
         btnregistrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnregistrarMouseClicked(evt);
@@ -719,8 +752,10 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         Consulta.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnhome4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_35px.png"))); // NOI18N
+        btnhome4.setToolTipText("menú");
         btnhome4.setBorderPainted(false);
         btnhome4.setContentAreaFilled(false);
+        btnhome4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnhome4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Home_55px.png"))); // NOI18N
         btnhome4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -730,8 +765,10 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         Consulta.add(btnhome4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1056, 0, 80, 60));
 
         btnminimizar5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_35px.png"))); // NOI18N
+        btnminimizar5.setToolTipText("minimizar");
         btnminimizar5.setBorderPainted(false);
         btnminimizar5.setContentAreaFilled(false);
+        btnminimizar5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnminimizar5.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_55px.png"))); // NOI18N
         btnminimizar5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -746,8 +783,10 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         Consulta.add(btnminimizar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, -1, 60));
 
         btncerrar5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_35px_1.png"))); // NOI18N
+        btncerrar5.setToolTipText("cerrar");
         btncerrar5.setBorderPainted(false);
         btncerrar5.setContentAreaFilled(false);
+        btncerrar5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btncerrar5.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_55px_1.png"))); // NOI18N
         btncerrar5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -768,6 +807,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         jRadioButton1.setBackground(new java.awt.Color(214, 246, 255));
         jRadioButton1.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
         jRadioButton1.setText("No Referido");
+        jRadioButton1.setToolTipText("paciente NO referido de otro lugar de atención médica");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton1ActionPerformed(evt);
@@ -778,6 +818,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         jRadioButton2.setBackground(new java.awt.Color(214, 246, 255));
         jRadioButton2.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
         jRadioButton2.setText("Consulta");
+        jRadioButton2.setToolTipText("Primera consulta");
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton2ActionPerformed(evt);
@@ -788,6 +829,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         txtdiagnostico.setColumns(20);
         txtdiagnostico.setFont(new java.awt.Font("Microsoft JhengHei Light", 0, 18)); // NOI18N
         txtdiagnostico.setRows(5);
+        txtdiagnostico.setToolTipText("Diagnóstico");
         jScrollPane1.setViewportView(txtdiagnostico);
 
         Consulta.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 290, 450, 180));
@@ -803,6 +845,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         txtsintomas.setColumns(20);
         txtsintomas.setFont(new java.awt.Font("Microsoft JhengHei Light", 0, 18)); // NOI18N
         txtsintomas.setRows(5);
+        txtsintomas.setToolTipText("Síntomas que presenta el paciente");
         jScrollPane3.setViewportView(txtsintomas);
 
         Consulta.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, 450, 180));
@@ -810,6 +853,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         jTextArea4.setColumns(20);
         jTextArea4.setFont(new java.awt.Font("Microsoft JhengHei Light", 0, 18)); // NOI18N
         jTextArea4.setRows(5);
+        jTextArea4.setToolTipText("Exámenes sugeridos");
         jScrollPane4.setViewportView(jTextArea4);
 
         Consulta.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 550, 450, 180));
@@ -825,6 +869,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         jRadioButton3.setBackground(new java.awt.Color(214, 246, 255));
         jRadioButton3.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
         jRadioButton3.setText("Reconsulta");
+        jRadioButton3.setToolTipText("segunda o más consultas");
         jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton3ActionPerformed(evt);
@@ -835,6 +880,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         jRadioButton4.setBackground(new java.awt.Color(214, 246, 255));
         jRadioButton4.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
         jRadioButton4.setText("Referido");
+        jRadioButton4.setToolTipText("Paciente referido de otro lugar de atención médica");
         jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton4ActionPerformed(evt);
@@ -845,6 +891,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         txttratamiento.setColumns(20);
         txttratamiento.setFont(new java.awt.Font("Microsoft JhengHei Light", 0, 18)); // NOI18N
         txttratamiento.setRows(5);
+        txttratamiento.setToolTipText("Tratamiento recetado");
         jScrollPane5.setViewportView(txttratamiento);
 
         Consulta.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 550, 450, 180));
@@ -866,6 +913,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         Consulta.add(rSMaterialButtonRectangle22, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 280, 470, 200));
 
         rSMaterialButtonRectangle23.setText("Imprimir");
+        rSMaterialButtonRectangle23.setToolTipText("Imprimir diagnóstico");
         rSMaterialButtonRectangle23.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 rSMaterialButtonRectangle23MouseClicked(evt);
@@ -874,9 +922,16 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         Consulta.add(rSMaterialButtonRectangle23, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 230, 160, 50));
 
         rSMaterialButtonRectangle24.setText("Imprimir");
+        rSMaterialButtonRectangle24.setToolTipText("Imprimir exámenes sugeridos");
+        rSMaterialButtonRectangle24.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rSMaterialButtonRectangle24MouseClicked(evt);
+            }
+        });
         Consulta.add(rSMaterialButtonRectangle24, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 490, 160, 50));
 
         rSMaterialButtonRectangle25.setText("Imprimir");
+        rSMaterialButtonRectangle25.setToolTipText("Imprimir Tratamiento");
         rSMaterialButtonRectangle25.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 rSMaterialButtonRectangle25MouseClicked(evt);
@@ -884,6 +939,7 @@ public class Pacientes_Consultas extends javax.swing.JFrame {
         });
         Consulta.add(rSMaterialButtonRectangle25, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 490, 160, 50));
 
+        rSMaterialButtonRectangle26.setToolTipText("Guardar consulta");
         rSMaterialButtonRectangle26.setLabel("Guardar");
         rSMaterialButtonRectangle26.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1245,6 +1301,25 @@ try {
         }
             
     }//GEN-LAST:event_rSMaterialButtonRectangle25MouseClicked
+
+    private void rSMaterialButtonRectangle24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle24MouseClicked
+        try {
+            conexion con= new conexion();
+            String path = "src\\GUI\\Reportes\\Examenes.jasper";
+            Map parametro = new HashMap();
+            parametro.put("nombre",lbnombrep.getText());
+            parametro.put("apellido", lbapellidop.getText());
+            JasperReport jr = (JasperReport) JRLoader.loadObjectFromFile(path);
+            JasperPrint jp = JasperFillManager.fillReport(jr, parametro, con.getConnection());
+            JasperViewer jv = new JasperViewer(jp, false);
+            jv.setVisible(true);
+            jv.setTitle("Examenes");
+
+        } catch (JRException ex) {
+            System.out.println(ex.getMessage());
+             new rojerusan.RSNotifyFade("¡ERROR!", "No se puede imprimir", Color.white, Color.black, Color.black, SOMEBITS, RSNotifyFade.PositionNotify.BottomRight, RSNotifyFade.TypeNotify.ERROR).setVisible(true);
+        }
+    }//GEN-LAST:event_rSMaterialButtonRectangle24MouseClicked
 
     /**
      * @param args the command line arguments

@@ -8,7 +8,7 @@
 	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
 	<style name="Detail" fontName="Arial" fontSize="12"/>
 	<queryString language="SQL">
-		<![CDATA[SELECT B.cantidad, B.descripcion, B.precio_unitario, B.codigo, D.codigo AS codigo_departamento, D.descripcion AS d_departamento FROM bien B INNER JOIN departamento D ON B.departamento_id = D.id ORDER BY D.descripcion ]]>
+		<![CDATA[SELECT B.cantidad, B.descripcion, B.precio_unitario, B.codigo, D.codigo AS codigo_departamento, D.descripcion AS d_departamento FROM bien B INNER JOIN departamento D ON B.departamento_id = D.id ORDER BY D.descripcion]]>
 	</queryString>
 	<field name="cantidad" class="java.lang.Integer">
 		<fieldDescription><![CDATA[]]></fieldDescription>
@@ -28,19 +28,30 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="70" splitType="Stretch">
-			<image>
-				<reportElement x="275" y="0" width="300" height="64" uuid="7179bfa6-d1cd-47b0-969d-143c9fabccc1"/>
-				<imageExpression><![CDATA["leaf_banner_gray.png"]]></imageExpression>
-			</image>
+		<band height="108" splitType="Stretch">
 			<staticText>
-				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="9eec4804-f2f0-480d-ab96-75841e5db245"/>
+				<reportElement style="Title" x="170" y="0" width="263" height="33" forecolor="#003466" uuid="9eec4804-f2f0-480d-ab96-75841e5db245"/>
 				<textElement verticalAlignment="Middle"/>
-				<text><![CDATA[Leaf Gray Title]]></text>
+				<text><![CDATA[Centro de Salud ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="SubTitle" x="117" y="46" width="157" height="22" uuid="65b37ef8-a5bb-409b-99a5-0fd5f8beef08"/>
-				<text><![CDATA[Leaf Gray SubTitle]]></text>
+				<reportElement style="SubTitle" x="117" y="33" width="343" height="22" forecolor="#003466" uuid="65b37ef8-a5bb-409b-99a5-0fd5f8beef08"/>
+				<text><![CDATA[Santa María Chiquimula Totonicapán]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="197" y="55" width="171" height="20" uuid="3e7bb736-0d0b-4668-8d4d-1faddbba7396"/>
+				<text><![CDATA[Anatsu System Developers Work]]></text>
+			</staticText>
+			<image>
+				<reportElement x="421" y="0" width="161" height="70" uuid="b698ec8c-44ad-4cb3-aaf1-65d04c4d970a"/>
+				<imageExpression><![CDATA["C:\\Users\\Nahomi\\Desktop\\SGBD centro de salud\\Centro_de_Salud\\src\\GUI\\Reportes\\mlog.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="221" y="81" width="106" height="27" forecolor="#003466" uuid="57c67ab8-0cba-4ce8-aaff-45150ee1daf8"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Inventario]]></text>
 			</staticText>
 		</band>
 	</title>
@@ -56,28 +67,28 @@
 				</graphicElement>
 			</line>
 			<staticText>
-				<reportElement style="Column header" x="0" y="19" width="92" height="15" uuid="09bf740e-2f2b-4894-a6ad-42f79be1d7ab"/>
+				<reportElement style="Column header" x="0" y="19" width="58" height="15" uuid="09bf740e-2f2b-4894-a6ad-42f79be1d7ab"/>
 				<text><![CDATA[cantidad]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="92" y="19" width="92" height="15" uuid="574d8ae3-84d6-48bb-b806-e115ba0deee8"/>
+				<reportElement style="Column header" x="58" y="19" width="92" height="15" uuid="574d8ae3-84d6-48bb-b806-e115ba0deee8"/>
 				<text><![CDATA[descripcion]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="184" y="19" width="92" height="15" uuid="d2b40791-150a-49ba-8085-98d2f661fe5b"/>
-				<text><![CDATA[precio_unitario]]></text>
+				<reportElement style="Column header" x="150" y="19" width="92" height="15" uuid="d2b40791-150a-49ba-8085-98d2f661fe5b"/>
+				<text><![CDATA[precio unitario]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="276" y="19" width="92" height="15" uuid="e4aa0a6b-c4cd-4d2a-b8d3-0bcc9ad2a9e5"/>
+				<reportElement style="Column header" x="252" y="19" width="57" height="15" uuid="e4aa0a6b-c4cd-4d2a-b8d3-0bcc9ad2a9e5"/>
 				<text><![CDATA[codigo]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="368" y="19" width="92" height="15" uuid="08449fc5-f9c2-4a1c-93c1-dbba713cf957"/>
-				<text><![CDATA[codigo_departamento]]></text>
+				<reportElement style="Column header" x="317" y="19" width="126" height="15" uuid="08449fc5-f9c2-4a1c-93c1-dbba713cf957"/>
+				<text><![CDATA[codigo departamento]]></text>
 			</staticText>
 			<staticText>
 				<reportElement style="Column header" x="460" y="19" width="92" height="15" uuid="69e2f8d3-eb3c-49cd-8ef0-2e64805d72fb"/>
-				<text><![CDATA[d_departamento]]></text>
+				<text><![CDATA[Departamento]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
@@ -90,28 +101,28 @@
 				</graphicElement>
 			</line>
 			<textField>
-				<reportElement style="Detail" x="0" y="0" width="92" height="15" uuid="70fbbbe9-112e-4d45-8640-1d8998f996dd"/>
+				<reportElement style="Detail" x="0" y="0" width="58" height="15" uuid="70fbbbe9-112e-4d45-8640-1d8998f996dd"/>
 				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="Detail" x="92" y="0" width="92" height="15" uuid="07daac4d-e01b-4b9d-a032-0093cf82dc2d"/>
+				<reportElement style="Detail" x="58" y="0" width="92" height="15" uuid="07daac4d-e01b-4b9d-a032-0093cf82dc2d"/>
 				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="Detail" x="184" y="0" width="92" height="15" uuid="2eb7572e-300b-4a3c-ac44-1f6142240123"/>
-				<textFieldExpression><![CDATA[$F{precio_unitario}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement style="Detail" x="276" y="0" width="92" height="15" uuid="6bf52293-d631-43e2-8ec2-03e2fc12a901"/>
+				<reportElement style="Detail" x="252" y="0" width="75" height="15" uuid="6bf52293-d631-43e2-8ec2-03e2fc12a901"/>
 				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="Detail" x="368" y="0" width="92" height="15" uuid="0333e0a7-5fca-4f79-ac6b-16273f71191d"/>
+				<reportElement style="Detail" x="341" y="0" width="92" height="15" uuid="0333e0a7-5fca-4f79-ac6b-16273f71191d"/>
 				<textFieldExpression><![CDATA[$F{codigo_departamento}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement style="Detail" x="460" y="0" width="92" height="15" uuid="69a96bf0-6360-4d85-b482-10bb88af65d9"/>
 				<textFieldExpression><![CDATA[$F{d_departamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="150" y="1" width="92" height="15" uuid="2eb7572e-300b-4a3c-ac44-1f6142240123"/>
+				<textFieldExpression><![CDATA[$F{precio_unitario}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

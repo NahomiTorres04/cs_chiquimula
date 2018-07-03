@@ -96,7 +96,7 @@
 				</textField>
 			</frame>
 			<staticText>
-				<reportElement style="Column header" x="1" y="52" width="267" height="15" forecolor="#003466" uuid="d98bc8b4-adcf-4633-b763-fe8068c62a6f"/>
+				<reportElement style="Column header" x="1" y="39" width="267" height="15" forecolor="#003466" uuid="d98bc8b4-adcf-4633-b763-fe8068c62a6f"/>
 				<text><![CDATA[Tratamiento]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true">
@@ -106,7 +106,7 @@
 		</band>
 	</detail>
 	<columnFooter>
-		<band height="49" splitType="Stretch">
+		<band height="47" splitType="Stretch">
 			<line>
 				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="4bbc0238-0802-4d6e-ab9d-0048cf4c75e2"/>
 				<graphicElement>

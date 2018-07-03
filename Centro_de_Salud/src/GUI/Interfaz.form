@@ -78,6 +78,10 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Chevron_Down_35px.png"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="minimizaar"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Chevron_Down_55px.png"/>
                     </Property>
@@ -95,6 +99,10 @@
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Cancel_35px_1.png"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="cerrar"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
                     </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Cancel_55px_1.png"/>
@@ -127,6 +135,10 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/ingresar/icons8_Add_70px_2.png"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="ingresar articulo"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/ingresar/icons8_Add_100px.png"/>
                     </Property>
@@ -145,6 +157,10 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/ingresar/icons8_User_Account_70px_1.png"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Ingresa paciente"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/ingresar/icons8_User_Account_100px.png"/>
                     </Property>
@@ -162,15 +178,19 @@
                 <Component class="javax.swing.JButton" name="jButton3">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/imagenes/iconos/general/icons8_User_Groups_70px.png"/>
+                      <Image iconType="3" name="/imagenes/iconos/ingresar/icons8_Multicultural_People_70px.png"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="ver empleado"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/imagenes/iconos/general/icons8_User_Groups_100px.png"/>
+                      <Image iconType="3" name="/imagenes/iconos/ingresar/icons8_Multicultural_People_100px.png"/>
                     </Property>
                   </Properties>
                   <Events>
@@ -187,11 +207,15 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Bulleted_List_70px_1.png"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="balance general y estado de resultados"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Bulleted_List_100px.png"/>
                     </Property>
@@ -234,11 +258,15 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_User_Groups_70px.png"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="ingresar empleado"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_User_Groups_100px.png"/>
                     </Property>
@@ -268,6 +296,10 @@
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Bulleted_List_70px_1.png"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="ver inventario"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
                     </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Bulleted_List_100px.png"/>
@@ -316,7 +348,7 @@
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="670" y="680" width="290" height="40"/>
+                      <AbsoluteConstraints x="690" y="680" width="290" height="40"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -329,7 +361,7 @@
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="700" y="650" width="230" height="40"/>
+                      <AbsoluteConstraints x="710" y="650" width="230" height="40"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -342,7 +374,7 @@
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="420" y="620" width="200" height="80"/>
+                      <AbsoluteConstraints x="430" y="620" width="200" height="80"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -355,7 +387,7 @@
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="70" y="620" width="260" height="80"/>
+                      <AbsoluteConstraints x="80" y="620" width="260" height="80"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -368,7 +400,7 @@
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="90" y="390" width="250" height="80"/>
+                      <AbsoluteConstraints x="100" y="390" width="250" height="80"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -406,7 +438,7 @@
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="680" y="390" width="250" height="80"/>
+                      <AbsoluteConstraints x="710" y="390" width="250" height="80"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -455,6 +487,10 @@
                         <StringItem index="1" value="No"/>
                       </StringArray>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="&#xbf;Es fungible?"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -472,6 +508,7 @@
                       <Font name="Yu Gothic UI Light" size="18" style="0"/>
                     </Property>
                     <Property name="rows" type="int" value="5"/>
+                    <Property name="toolTipText" type="java.lang.String" value="descripci&#xf3;n o nombre del art&#xed;culo&#xa;"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
@@ -487,6 +524,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Yu Gothic UI Light" size="18" style="0"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Precio del art&#xed;culo"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
@@ -507,6 +545,10 @@
                     </Property>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="0"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="seleccionar departamento"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
                     </Property>
                   </Properties>
                   <AuxValues>
@@ -532,6 +574,10 @@
                         <StringItem index="1" value="No"/>
                       </StringArray>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="&#xbf;es donaci&#xf3;n?"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -547,8 +593,12 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Yu Gothic UI Light" size="18" style="0"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="C&#xf3;digo del art&#xed;culo"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
+                    </Property>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Texto"/>
                     </Property>
                   </Properties>
                   <Constraints>
@@ -561,6 +611,10 @@
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/ingresar/icons8_Save_70px.png"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Guardar art&#xed;culo"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
                     </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/ingresar/icons8_Save_100px.png"/>
@@ -586,6 +640,10 @@
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="0"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Seleccione la cuenta a la que pertenence el art&#xed;culo"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -610,6 +668,10 @@
                         <StringItem index="1" value="Malo"/>
                       </StringArray>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="&#xbf;En qu&#xe9; estado se encuentra el art&#xed;culo?"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -625,6 +687,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Yu Gothic UI Light" size="18" style="0"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Cantidad de art&#xed;culos"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
@@ -639,6 +702,10 @@
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/ingresar/icons8_Add_70px_2.png"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Ingresar otro art&#xed;culo"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
                     </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/ingresar/icons8_Add_100px.png"/>
@@ -656,10 +723,14 @@
                 <Component class="javax.swing.JButton" name="btnActualizar">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/imagenes/iconos/ingresar/icons8_Back_Arrow_70px.png"/>
+                      <Image iconType="3" name="/imagenes/iconos/ingresar/icons8_Refresh_70px.png"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Guardar actualizaci&#xf3;n"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
                     </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/imagenes/iconos/ingresar/icons8_Back_Arrow_100px.png"/>
+                      <Image iconType="3" name="/imagenes/iconos/ingresar/icons8_Refresh_100px.png"/>
                     </Property>
                   </Properties>
                   <Events>
@@ -675,6 +746,10 @@
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Chevron_Down_35px.png"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="minimizar"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
                     </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Chevron_Down_55px.png"/>
@@ -694,6 +769,10 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Cancel_35px_1.png"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="cerrar"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Cancel_55px_1.png"/>
                     </Property>
@@ -711,6 +790,10 @@
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Home_35px.png"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="menu"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
                     </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Home_55px.png"/>
@@ -734,10 +817,14 @@
                       <Font name="Microsoft JhengHei UI" size="18" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Otro"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Otra cuenta"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                   </Properties>
                   <Events>
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jRadioButton1MouseClicked"/>
@@ -748,10 +835,39 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="rojeru_san.componentes.RSDateChooser" name="fechaA">
+                <Component class="javax.swing.JLabel" name="jLabel67">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tempus Sans ITC" size="24" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Adquisici&#xf3;n:"/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="820" y="480" width="-1" height="-1"/>
+                      <AbsoluteConstraints x="670" y="480" width="160" height="80"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel66">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tempus Sans ITC" size="24" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Fecha de"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="700" y="450" width="120" height="80"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+                <Component class="rojeru_san.componentes.RSDateChooser" name="fechaA">
+                  <Properties>
+                    <Property name="toolTipText" type="java.lang.String" value="Fecha de compra"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="820" y="490" width="-1" height="-1"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -764,7 +880,7 @@
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="810" y="480" width="240" height="50"/>
+                      <AbsoluteConstraints x="810" y="490" width="240" height="50"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -878,7 +994,7 @@
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="890" y="510" width="190" height="80"/>
+                      <AbsoluteConstraints x="900" y="520" width="190" height="80"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -931,11 +1047,15 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Chevron_Down_35px.png"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="minimizar"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Chevron_Down_55px.png"/>
                     </Property>
@@ -945,7 +1065,7 @@
                   </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="1130" y="0" width="70" height="57"/>
+                      <AbsoluteConstraints x="1140" y="0" width="70" height="57"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -954,11 +1074,15 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Home_35px.png"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="men&#xfa;"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Home_55px.png"/>
                     </Property>
@@ -977,11 +1101,15 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Cancel_35px_1.png"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="cerrar"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Cancel_55px_1.png"/>
                     </Property>
@@ -1013,6 +1141,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Microsoft JhengHei UI Light" size="18" style="0"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="sueldo del empleado"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
@@ -1028,6 +1157,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Microsoft JhengHei UI Light" size="18" style="0"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Nombre o nombres del empleado"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
@@ -1092,6 +1222,7 @@
                         <StringItem index="2" value="Tipo B"/>
                       </StringArray>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="clasificaciones"/>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -1107,6 +1238,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Microsoft JhengHei UI Light" size="18" style="0"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="municipio o aldea de origen del empleado"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
@@ -1151,6 +1283,7 @@
                         <StringItem index="21" value="Jutiapa"/>
                       </StringArray>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="seleccione departamento de origen del empleado"/>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -1178,6 +1311,7 @@
                         <StringItem index="4" value="036"/>
                       </StringArray>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="seleccione rengl&#xf3;n presupuestario del empleado"/>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -1193,6 +1327,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Microsoft JhengHei UI Light" size="18" style="0"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Apellidos del empleado"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
@@ -1208,6 +1343,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Microsoft JhengHei UI Light" size="18" style="0"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="DPI del empleado"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
@@ -1236,6 +1372,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Microsoft JhengHei UI Light" size="18" style="0"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="ubicaci&#xf3;n del cetnro de atenci&#xf3;n"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
@@ -1269,6 +1406,7 @@
                         <StringItem index="9" value="Territorio VII"/>
                       </StringArray>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="seleccione tipo de lugar de atenci&#xf3;n m&#xe9;dica"/>
                   </Properties>
                   <Events>
                     <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="cmbtipoItemStateChanged"/>
@@ -1287,6 +1425,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Microsoft JhengHei UI Light" size="18" style="0"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="cargo del empleado"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
@@ -1302,6 +1441,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Microsoft JhengHei UI Light" size="18" style="0"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Profesi&#xf3;n del empleado"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
@@ -1317,6 +1457,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Microsoft JhengHei UI Light" size="18" style="0"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Tel&#xe9;fono en caso de emergencia"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
@@ -1335,6 +1476,9 @@
                   </Constraints>
                 </Component>
                 <Component class="rojeru_san.componentes.RSDateChooser" name="fechaiE">
+                  <Properties>
+                    <Property name="toolTipText" type="java.lang.String" value=""/>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="640" y="480" width="380" height="30"/>
@@ -1718,6 +1862,7 @@
                 <Component class="rojerusan.RSMaterialButtonRectangle" name="rSMaterialButtonRectangle1">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Alergias"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#xbf;Es alergico a algo?"/>
                   </Properties>
                   <Events>
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="rSMaterialButtonRectangle1MouseClicked"/>
@@ -1731,6 +1876,7 @@
                 <Component class="rojerusan.RSMaterialButtonRectangle" name="rSMaterialButtonRectangle2">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Guardar"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Gaurdar empleado"/>
                   </Properties>
                   <Events>
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="rSMaterialButtonRectangle2MouseClicked"/>
@@ -1843,6 +1989,7 @@
                             <Column editable="true" title="Profesi&#xf3;n" type="java.lang.Object"/>
                           </Table>
                         </Property>
+                        <Property name="toolTipText" type="java.lang.String" value="Lista de empleados"/>
                         <Property name="colorBackgoundHead" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="4d" green="36" red="16" type="rgb"/>
                         </Property>
@@ -1935,11 +2082,15 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Home_35px.png"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="men&#xfa;"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Home_55px.png"/>
                     </Property>
@@ -1958,11 +2109,15 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Chevron_Down_35px.png"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="minimizar"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Chevron_Down_55px.png"/>
                     </Property>
@@ -1972,7 +2127,7 @@
                   </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="1130" y="0" width="70" height="57"/>
+                      <AbsoluteConstraints x="1140" y="0" width="70" height="60"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -1981,11 +2136,15 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Cancel_35px_1.png"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="cerrar"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Cancel_55px_1.png"/>
                     </Property>
@@ -2072,6 +2231,8 @@
                 <Component class="rojerusan.RSMaterialButtonRectangle" name="rSMaterialButtonRectangle3">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Imprimir"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Imprimir"/>
+                    <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
                   <Events>
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="rSMaterialButtonRectangle3MouseClicked"/>
@@ -2115,11 +2276,15 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Home_35px.png"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="men&#xfa;"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Home_55px.png"/>
                     </Property>
@@ -2138,11 +2303,15 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Chevron_Down_35px.png"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="minimizar"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Chevron_Down_55px.png"/>
                     </Property>
@@ -2161,11 +2330,15 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Cancel_35px_1.png"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="cerrar"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Cancel_55px_1.png"/>
                     </Property>
@@ -2374,6 +2547,7 @@
                       <Color blue="66" green="34" red="0" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Inventario"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Ver inventario"/>
                   </Properties>
                   <Events>
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="rSMaterialButtonRectangle32MouseClicked"/>
@@ -2487,11 +2661,15 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Home_35px.png"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="men&#xfa;"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Home_55px.png"/>
                     </Property>
@@ -2510,11 +2688,15 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Chevron_Down_35px.png"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="minimizar"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Chevron_Down_55px.png"/>
                     </Property>
@@ -2533,11 +2715,15 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Cancel_35px_1.png"/>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="cerrar"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor de Mano"/>
+                    </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Cancel_55px_1.png"/>
                     </Property>
@@ -2587,6 +2773,7 @@
                             <Column editable="true" title="C&#xf3;digo" type="java.lang.Object"/>
                           </Table>
                         </Property>
+                        <Property name="toolTipText" type="java.lang.String" value="Resumen de inventario"/>
                         <Property name="colorBackgoundHead" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="4d" green="36" red="16" type="rgb"/>
                         </Property>
@@ -2970,6 +3157,7 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Yu Gothic UI Light" size="18" style="0"/>
                             </Property>
+                            <Property name="toolTipText" type="java.lang.String" value="C&#xf3;digo del art&#xed;culo que desea ver"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="null"/>
                             </Property>
@@ -2987,6 +3175,10 @@
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                               <Image iconType="3" name="/imagenes/iconos/general/icons8_Home_35px.png"/>
+                            </Property>
+                            <Property name="toolTipText" type="java.lang.String" value="men&#xfa;"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Cursor de Mano"/>
                             </Property>
                             <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                               <Image iconType="3" name="/imagenes/iconos/general/icons8_Home_55px.png"/>
@@ -3006,6 +3198,10 @@
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                               <Image iconType="3" name="/imagenes/iconos/general/icons8_Chevron_Down_35px.png"/>
                             </Property>
+                            <Property name="toolTipText" type="java.lang.String" value="minimizar"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Cursor de Mano"/>
+                            </Property>
                             <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                               <Image iconType="3" name="/imagenes/iconos/general/icons8_Chevron_Down_55px.png"/>
                             </Property>
@@ -3024,6 +3220,10 @@
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                               <Image iconType="3" name="/imagenes/iconos/general/icons8_Cancel_35px_1.png"/>
                             </Property>
+                            <Property name="toolTipText" type="java.lang.String" value="cerrar"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Cursor de Mano"/>
+                            </Property>
                             <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                               <Image iconType="3" name="/imagenes/iconos/general/icons8_Cancel_55px_1.png"/>
                             </Property>
@@ -3040,6 +3240,7 @@
                         <Component class="rojerusan.RSMaterialButtonRectangle" name="btnEditar">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Editar"/>
+                            <Property name="toolTipText" type="java.lang.String" value="Editar art&#xed;cuo seleccionado"/>
                           </Properties>
                           <Events>
                             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnEditarMouseClicked"/>
@@ -3053,6 +3254,7 @@
                         <Component class="rojerusan.RSMaterialButtonRectangle" name="btnMostrarTodo">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Ver todo"/>
+                            <Property name="toolTipText" type="java.lang.String" value="Ver todo el inventario"/>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Dialog" size="12" style="1"/>
                             </Property>
@@ -3069,6 +3271,7 @@
                         <Component class="rojerusan.RSMaterialButtonRectangle" name="btnImprimir">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="imprimir"/>
+                            <Property name="toolTipText" type="java.lang.String" value="Imprimir inventario"/>
                           </Properties>
                           <Events>
                             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnImprimirMouseClicked"/>
@@ -3120,6 +3323,7 @@
                                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Double_Left_70px.png"/>
                                     </Property>
+                                    <Property name="toolTipText" type="java.lang.String" value="Otras opciones de b&#xfa;squedas"/>
                                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Double_Left_100px.png"/>
                                     </Property>
@@ -3201,6 +3405,10 @@
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="              Buen Estado"/>
+                                    <Property name="toolTipText" type="java.lang.String" value="art&#xed;culos en buen estado"/>
+                                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                      <Color id="Cursor de Mano"/>
+                                    </Property>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                   <Events>
@@ -3225,6 +3433,10 @@
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="               Mal estado"/>
+                                    <Property name="toolTipText" type="java.lang.String" value="art&#xed;culos en mal estado"/>
+                                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                      <Color id="Cursor de Mano"/>
+                                    </Property>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                   <Events>
@@ -3248,6 +3460,10 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="                           Donado"/>
+                                    <Property name="toolTipText" type="java.lang.String" value="art&#xed;culos donados"/>
+                                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                      <Color id="Cursor de Mano"/>
+                                    </Property>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                   <Events>
@@ -3272,6 +3488,10 @@
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="                No Donado"/>
+                                    <Property name="toolTipText" type="java.lang.String" value="Art&#xed;culos no donados"/>
+                                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                      <Color id="Cursor de Mano"/>
+                                    </Property>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                   <Events>
@@ -3296,6 +3516,10 @@
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="               Fungible"/>
+                                    <Property name="toolTipText" type="java.lang.String" value="articulos fungibles"/>
+                                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                      <Color id="Cursor de Mano"/>
+                                    </Property>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                   <Events>
@@ -3312,6 +3536,7 @@
                                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Circled_Right_45px.png"/>
                                     </Property>
+                                    <Property name="toolTipText" type="java.lang.String" value="cerrar este men&#xfa;"/>
                                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                                       <Image iconType="3" name="/imagenes/iconos/general/icons8_Circled_Right_60px.png"/>
                                     </Property>

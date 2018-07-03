@@ -77,6 +77,7 @@ public class Doctor extends javax.swing.JFrame {
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 120, -1));
 
         txtnombreR.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
+        txtnombreR.setToolTipText("Nombre del profesional a cargo");
         txtnombreR.setBorder(null);
         txtnombreR.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -86,6 +87,7 @@ public class Doctor extends javax.swing.JFrame {
         jPanel1.add(txtnombreR, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 173, 310, 30));
 
         txtapellidoR.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
+        txtapellidoR.setToolTipText("Apellidos del profesional a cargp");
         txtapellidoR.setBorder(null);
         txtapellidoR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,6 +102,7 @@ public class Doctor extends javax.swing.JFrame {
         jPanel1.add(txtapellidoR, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, 310, 30));
 
         txtProfesionR.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 18)); // NOI18N
+        txtProfesionR.setToolTipText("");
         txtProfesionR.setBorder(null);
         txtProfesionR.setEnabled(false);
         txtProfesionR.addActionListener(new java.awt.event.ActionListener() {
@@ -135,6 +138,7 @@ public class Doctor extends javax.swing.JFrame {
 
         rSMaterialButtonRectangle4.setBackground(new java.awt.Color(0, 52, 102));
         rSMaterialButtonRectangle4.setText("Ingresar");
+        rSMaterialButtonRectangle4.setToolTipText("Ingresar paciente");
         rSMaterialButtonRectangle4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rSMaterialButtonRectangle4ActionPerformed(evt);
@@ -154,9 +158,11 @@ public class Doctor extends javax.swing.JFrame {
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 570, 120));
 
         btnminimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_35px.png"))); // NOI18N
+        btnminimizar.setToolTipText("minimizar");
         btnminimizar.setBorder(null);
         btnminimizar.setBorderPainted(false);
         btnminimizar.setContentAreaFilled(false);
+        btnminimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnminimizar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Chevron_Down_55px.png"))); // NOI18N
         btnminimizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -174,8 +180,10 @@ public class Doctor extends javax.swing.JFrame {
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 63, 110, 60));
 
         btncerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_35px_1.png"))); // NOI18N
+        btncerrar.setToolTipText("cerrar");
         btncerrar.setBorderPainted(false);
         btncerrar.setContentAreaFilled(false);
+        btncerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btncerrar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconos/general/icons8_Cancel_55px_1.png"))); // NOI18N
         btncerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -208,7 +216,8 @@ public class Doctor extends javax.swing.JFrame {
 
     private void btncerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncerrarMouseClicked
         this.dispose();
-        System.exit(0);
+        Interfaz i = new Interfaz();
+        i.setVisible(true);
     }//GEN-LAST:event_btncerrarMouseClicked
 
     private void txtapellidoRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtapellidoRActionPerformed

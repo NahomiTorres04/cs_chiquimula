@@ -18,7 +18,7 @@
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString>
-		<![CDATA[select nombres as nom, apellidos as ape, diagnostico dg from paciente P inner join consulta c on P.id = c.paciente_id where p.nombres = $P{nombre} and p.apellidos = $P{apellido};]]>
+		<![CDATA[select p.nombres as nom, p.apellidos as ape, c.examenes dg from paciente p inner join consulta c on p.id = c.paciente_id where p.nombres = $P{nombre} and p.apellidos = $P{apellido};]]>
 	</queryString>
 	<field name="nom" class="java.lang.String"/>
 	<field name="ape" class="java.lang.String"/>
@@ -85,7 +85,7 @@
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="150" splitType="Stretch">
+		<band height="159" splitType="Stretch">
 			<frame>
 				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="9df2303f-a4b3-49be-9f62-d776f5fefbad"/>
 				<textField isStretchWithOverflow="true">
@@ -98,17 +98,17 @@
 				</textField>
 			</frame>
 			<staticText>
-				<reportElement style="Column header" x="0" y="33" width="267" height="15" forecolor="#003466" uuid="60cba2a2-a53a-4ed5-8be3-de68321468bb"/>
-				<text><![CDATA[Diagnóstico]]></text>
+				<reportElement style="Column header" x="0" y="35" width="267" height="15" forecolor="#003466" uuid="60cba2a2-a53a-4ed5-8be3-de68321468bb"/>
+				<text><![CDATA[Exámenes]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true">
-				<reportElement style="Detail" x="1" y="59" width="801" height="48" uuid="3e1afa80-ee0b-4e93-8a50-f36c48b5b639"/>
+				<reportElement style="Detail" x="0" y="60" width="801" height="79" uuid="3e1afa80-ee0b-4e93-8a50-f36c48b5b639"/>
 				<textFieldExpression><![CDATA[$F{dg}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
 	<columnFooter>
-		<band height="114" splitType="Stretch">
+		<band height="124" splitType="Stretch">
 			<line>
 				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="610c4591-d3cf-41fc-a71b-d74037d490c2"/>
 				<graphicElement>
