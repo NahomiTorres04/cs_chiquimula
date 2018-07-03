@@ -205,7 +205,7 @@
                 <Component class="javax.swing.JButton" name="jButton4">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/imagenes/iconos/general/icons8_Bulleted_List_70px_1.png"/>
+                      <Image iconType="3" name="/imagenes/iconos/ingresar/icons8_Documents_70px_1.png"/>
                     </Property>
                     <Property name="toolTipText" type="java.lang.String" value="balance general y estado de resultados"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -217,7 +217,7 @@
                       <Color id="Cursor de Mano"/>
                     </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/imagenes/iconos/general/icons8_Bulleted_List_100px.png"/>
+                      <Image iconType="3" name="/imagenes/iconos/ingresar/icons8_Documents_100px.png"/>
                     </Property>
                   </Properties>
                   <Events>
